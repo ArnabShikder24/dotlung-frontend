@@ -8,6 +8,7 @@ export default {
   ],
   theme: {
     extend: {
+ 
       fontFamily: {
         caslon: ["ACaslonPro", "serif"],
         asty: ["CFAstyStd", "sans-serif"],
