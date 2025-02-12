@@ -10,7 +10,7 @@ export default function Home() {
         <img
           src="/assets/images/bg-sphere.png"
           width={30}
-          style={{ left: "30%", top: "90%",width:"100%" }}
+          style={{ left: "30%", top: "90%", }}
           className=" absolute"
         />
         <img
@@ -28,6 +28,7 @@ export default function Home() {
         />
         <div>
           <img
+          className="absolute top-20"
             src="/Dotlungimages/Dotlungimages/dragon-Dot.png"
             style={{ maxWidth: "1000px" }}
           />
