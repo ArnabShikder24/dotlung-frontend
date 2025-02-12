@@ -1,14 +1,14 @@
+import Image from "next/image";
 import React from "react";
+import Logo from "../../public/assets/svgs/logo.svg";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="w-full p-4">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="text-orange-500 font-bold text-xl">
-          DOT<br />LUNG
-        </div>
+    <nav className="w-full p-4 font-gilroy">
+      <div className="flex items-center justify-between">
+        <Image src={Logo} alt="Logo" width={50} />
         
-        <div className="max-w-2xl flex-1 mx-20">
+        <div className="max-w-3xl flex-1 mx-20 text-sm">
           <div className="relative">
             <div className="border border-white flex w-full">
               <a 
@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
               
               <div className="w-1/2 relative">
                 {/* Diagonal Line */}
-                <div className="absolute w-full h-[1px] bg-white transform -rotate-[6.5deg] top-1/2 -translate-y-1/2 z-10"></div>
+                <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.2deg] top-1/2 -translate-y-1/2 z-10"></div>
                 <div className="h-full" />
               </div>
 
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
 
         <a 
           href="/contact"
-          className="text-white hover:text-orange-500 transition-colors text-center"
+          className="text-white hover:text-orange-500 transition-colors text-center text-sm"
         >
           CONTACT
         </a>
