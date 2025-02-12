@@ -50,11 +50,10 @@ const Navbar = () => {
                     {menuItems.map((item, index) => (
                       <div
                         key={item}
-                        className={`border border-white border-t-0 
-                          animate-fadeIn opacity-0 transform translate-y-6
-                          ${index === 0 ? 'animation-delay-0' : ''}
-                          ${index === 1 ? 'animation-delay-150' : ''}
-                          ${index === 2 ? 'animation-delay-300' : ''}`}
+                        className={`border border-white border-t-0 opacity-0
+                          ${index === 0 ? 'animate-slide-in-1' : ''}
+                          ${index === 1 ? 'animate-slide-in-2' : ''}
+                          ${index === 2 ? 'animate-slide-in-3' : ''}`}
                       >
                         <a
                           href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}

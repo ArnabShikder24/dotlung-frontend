@@ -43,6 +43,10 @@ export default {
             transform: 'translateY(0)',
           },
         },
+        slideIn: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' }
+        }
       },
       animationDelay: {
         '0': '0ms',
@@ -54,8 +58,10 @@ export default {
       },
       animation: {
         scroll: "scroll 10s linear infinite",
-        'fadeIn': 'fadeIn 0.5s ease-out forwards',
         paused: "none",
+        'slide-in-1': 'slideIn 0.3s ease-out forwards',
+        'slide-in-2': 'slideIn 0.3s ease-out 0.1s forwards',
+        'slide-in-3': 'slideIn 0.3s ease-out 0.2s forwards',
       },
     },
   },
