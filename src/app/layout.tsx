@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import "./globals.css";
+import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
   title: "Dotlung",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+      <Navbar />
       {children}
       </body>
     </html>
