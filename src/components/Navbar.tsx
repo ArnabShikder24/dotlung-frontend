@@ -28,7 +28,7 @@ const Navbar = () => {
               </a>
               
               <div className="w-1/2 relative">
-                <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.2deg] top-1/2 -translate-y-1/2 z-10"></div>
+                <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
                 <div className="h-full" />
               </div>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
                 )}
               </div>
 
-              
+
             </div>
           </div>
         </div>
