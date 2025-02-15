@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full p-4 font-gilroy">
+    <nav className="w-full p-4 font-gilroy mt-2">
       <div className="flex items-center justify-between">
         <Image className="fixed" src={Logo} alt="Logo" width={50} />
         <div className="w-[50px]" />
@@ -76,7 +76,7 @@ const Navbar = () => {
         <div className="w-[50px]" />
         <a 
           href="/contact"
-          className="text-white hover:text-orange-500 transition-colors text-center text-xs fixed right-5"
+          className="text-white hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
         >
           CONTACT
         </a>
