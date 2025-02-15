@@ -1,10 +1,25 @@
 import Image from "next/image";
 import React from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
+import shape from "../../../public/assets/images/bg-sphere.png";
 
 const WorkWithDot = () => {
   return (
     <div className="container mx-auto">
+      <div>
+        <Image
+            src={shape}
+            width={30}
+            alt="shape"
+            className=" absolute right-[20%] top-[90%]"
+          />
+        <Image
+            src={shape}
+            width={30}
+            alt="shape"
+            className=" absolute right-[15%] top-[20%]"
+          />
+      </div>
       <div className="flex items-end">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
         <div className="-ml-40">
