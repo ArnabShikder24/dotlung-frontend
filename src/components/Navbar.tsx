@@ -2,20 +2,23 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "../../public/assets/svgs/logo.svg";
+import Link from "next/link";
+import { PathNames } from "../routes/index.route";
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   const menuItems = [
-    "WORK WITH DOT",
-    "LEARN WITH DOT",
-    "TRAVEL / EAT WITH DOT"
-  ];
+    { title: "WORK WITH DOT", path: PathNames.workWithDot },
+    { title: "LEARN WITH DOT", path: "/learn" },
+    { title: "TRAVEL / EAT WITH DOT", path: "/travel-eat" }
+];
 
   return (
-    <nav className="w-full p-4 font-gilroy">
+    <nav className="w-full p-4 font-gilroy mt-2">
       <div className="flex items-center justify-between">
-      <Image src={Logo} alt="Logo" width={50} />
+        <Image className="fixed" src={Logo} alt="Logo" width={50} />
+        <div className="w-[50px]" />
         
         <div className="max-w-3xl flex-1 mx-20 text-xs">
           <div className="relative">
@@ -49,18 +52,18 @@ const Navbar = () => {
                   <div className="absolute left-0 w-full z-20">
                     {menuItems.map((item, index) => (
                       <div
-                        key={item}
+                        key={item.title}
                         className={`border border-white border-t-0 opacity-0
                           ${index === 0 ? 'animate-slide-in-1' : ''}
                           ${index === 1 ? 'animate-slide-in-2' : ''}
                           ${index === 2 ? 'animate-slide-in-3' : ''}`}
                       >
-                        <a
-                          href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                        <Link
+                          href={item.path}
                           className="block px-4 py-3 text-white hover:text-orange-500 transition-colors text-center text-xs"
                         >
-                          {item}
-                        </a>
+                          {item.title}
+                        </Link>
                       </div>
                     ))}
                   </div>
@@ -71,10 +74,11 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
+        
+        <div className="w-[50px]" />
         <a 
           href="/contact"
-          className="text-white hover:text-orange-500 transition-colors text-center text-xs"
+          className="text-white hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
         >
           CONTACT
         </a>

@@ -5,8 +5,8 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="container mx-auto ">
-      <div className="flex justify-between items-center h-screen font-gilroy">
+    <div className="container mx-auto">
+      <div className="flex justify-between items-center font-gilroy">
         <img
           src="/assets/images/bg-sphere.png"
           width={30}
@@ -19,7 +19,6 @@ export default function Home() {
           style={{ top: "19%", left: "83%" }}
           className=" absolute"
         />
-
         <img
           src="/assets/images/bg-sphere.png"
           width={30}
@@ -42,7 +41,7 @@ export default function Home() {
             top: "26rem",
           }}
         >
-          <div className=" z-10 text-left max-w-2xl px-6 absolute ">
+          <div className="z-10 text-left max-w-2xl px-6 absolute ">
             <h1 className="text-5xl font-bold uppercase ">
               Hey, I am Dot. Mother of social media dragons
             </h1>
