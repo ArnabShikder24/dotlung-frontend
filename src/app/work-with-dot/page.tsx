@@ -1,27 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
-import shape from "../../../public/assets/images/bg-sphere.png";
+import ShapeBg from "../../components/ShapeBg";
 
 const WorkWithDot = () => {
   return (
     <div className="container mx-auto">
-      <div>
-        <Image
-            src={shape}
-            width={30}
-            alt="shape"
-            className=" absolute right-[20%] top-[90%]"
-          />
-        <Image
-            src={shape}
-            width={30}
-            alt="shape"
-            className=" absolute right-[15%] top-[20%]"
-          />
-      </div>
+      <ShapeBg />
       <div className="flex items-end">
-        <Image className="w-[980px]" src={DotImage} alt="dot Image" />
+        <Image className="w-[980px] bg-transparent" src={DotImage} alt="dot Image" />
         <div className="-ml-40">
           <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">WORK <br /> WITH DOT</h1>
           <p className="font-caslon text-lg w-[380px] mt-5 mb-14"><span className="italic text-secondary">Mythical digital magic.</span> I have worked worldwide weaving wonders for top brands, events, and concepts.</p>
