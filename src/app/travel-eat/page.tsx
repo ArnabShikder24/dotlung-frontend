@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import DotImage from "../../assets/images/work-with-Dot.png";
+import DotImage from "../../../public/Dotlungimages/Dotlungimages/Eat-Travel.png";
 import ShapeBg from "../../components/ShapeBg";
 import Image from "next/image";
 import { motion } from "framer-motion";
