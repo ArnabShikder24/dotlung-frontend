@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import ShapeBg from "../../components/ShapeBg";
 
-
 const WorkWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -33,8 +32,8 @@ const WorkWithDot = () => {
           alt="dot Image"
         />
         <div className="-ml-40">
-          <h1 className="text-[80px] w-[70%] font-extrabold font-gilroy leading-[85px]">
-            WORK WITH DOT
+          <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
+            WORK <br /> WITH DOT
           </h1>
           <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
             <span className="italic text-secondary">
@@ -181,7 +180,7 @@ const WorkWithDot = () => {
                     <p className="italic text-secondary mt-4">
                       Don’t miss out on this!
                     </p>
-                    <p className="mt-2 text-lg font-caslon w-[75%]">
+                    <p className="mt-2 text-lg font-caslon">
                       Get my top 5 tips to grow your Instagram / LinkedIn <br/>by
                       entering your e-mail address here:
                     </p>
