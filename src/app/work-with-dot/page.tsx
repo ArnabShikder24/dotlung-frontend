@@ -111,7 +111,7 @@ const WorkWithDot = () => {
           <div className="w-[50px]" />
         </div>
       </div>
-      <div className=" flex items-center justify-center ">
+      <div className=" flex items-center justify-center mt-16">
         <div className="text-white text-2xl font-serif">
           {items.map((item, index) => (
             <div key={index} className="mb-4 relative">
