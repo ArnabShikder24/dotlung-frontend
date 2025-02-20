@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const menuItems = [
     { title: "WORK WITH DOT", path: PathNames.workWithDot },
-    { title: "LEARN WITH DOT", path: "/learn" },
+    { title: "LEARN WITH DOT", path: "/learn-with-dot" },
     { title: "TRAVEL / EAT WITH DOT", path: "/travel-eat" }
 ];
 

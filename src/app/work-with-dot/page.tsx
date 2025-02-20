@@ -86,32 +86,27 @@ const WorkWithDot = () => {
           </div>
         </div>
       </div>
-      <div className="w-full p-4 font-gilroy mt-2">
-        <div className="flex items-center justify-between">
-          {/* <Image className="fixed" src={Logo} alt="Logo" width={50} /> */}
-          <div className="w-[50px]" />
 
-          <div className="max-w-3xl flex-1 mx-20 text-xs">
-            <div className="relative">
-              <div className="border border-white flex w-full">
-                <div className="w-3/4 relative">
-                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
-                  <div className="h-full" />
-                </div>
+      <div className="flex items-center justify-center font-gilroy">
+        <div className="max-w-3xl flex-1 mx-20 text-xs">
+          <div className="relative">
+            <div className="border border-white flex w-full">
+              <div className="w-3/4 relative">
+                <div className="absolute w-full h-[1px] bg-white transform -rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
+                <div className="h-full" />
+              </div>
 
-                <div className="relative w-1/4">
-                  <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
-                    PROJECTS
-                  </p>
-                </div>
+              <div className="relative w-1/4">
+                <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
+                  PROJECTS
+                </p>
               </div>
             </div>
           </div>
-
-          <div className="w-[50px]" />
         </div>
       </div>
-      <div className=" flex items-center justify-center ">
+
+      <div className=" flex items-center justify-center mt-16">
         <div className="text-white text-2xl font-serif">
           {items.map((item, index) => (
             <div key={index} className="mb-4 relative">
@@ -127,10 +122,8 @@ const WorkWithDot = () => {
           ))}
         </div>
       </div>
-      <nav className="w-full p-4 font-gilroy mt-32 mb-32">
-        <div className="flex items-center justify-between">
-          <div className="w-[50px]" />
 
+        <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
           <div className="max-w-3xl flex-1 mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
@@ -157,57 +150,8 @@ const WorkWithDot = () => {
               </div>
             </div>
           </div>
-
-          <div className="w-[50px]" />
         </div>
-      </nav>
-      <nav className="w-full p-4 font-gilroy mt-5">
-        <div className="flex items-center justify-center">
-          <div className="max-w-3xl flex-1 mx-20  flex justify-center">
-            <div className="  flex w-full">
-              <div style={{width:"85%"}}>
-                <div className="flex justify-between">
-                  <div>
-                    <h1 className="text-5xl font-bold">LET’S TALK</h1>
-                  </div>
-                  <div>
-                    <p className="text-lg font-caslon">+1 661 368 5864</p>
-                    <p className="text-lg font-caslon">hello@dotlung.com</p>
-                  </div>
-                </div>
-                <div className="flex justify-between mt-10">
-                  <div>
-                    <p className="italic text-secondary mt-4">
-                      Don’t miss out on this!
-                    </p>
-                    <p className="mt-2 text-lg font-caslon">
-                      Get my top 5 tips to grow your Instagram / LinkedIn <br/>by
-                      entering your e-mail address here:
-                    </p>
-                  </div>
-                  <div className="flex flex-col text-lg  mt-4" style={{width:140}}>
-                    <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                      FACEBOOK
-                    </a>
-                    <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                      INSTAGRAM
-                    </a>
-                    <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                      TWITTER
-                    </a>
-                    <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                      SNAPCHAT
-                    </a>
-                    <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                      SKYPE
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      
     </div>
   );
 };
