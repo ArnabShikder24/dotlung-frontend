@@ -29,13 +29,13 @@ const TravelEat = () => {
             />
             <div className="-ml-40">
               <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
-              Learn <br /> WITH DOT
+              TRAVEL <br /> & EAT <br /> WITH DOT
               </h1>
               <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
                 <span className="italic text-secondary">
-                  Magical minds develop strong dragon fire.
-                </span>{" "} <br />
-                  Step-by-step I show you the way to become the best dragon version of you!
+                  I&apos;ve never been a fan of the empty selfie.
+                </span>{" "}
+                You go and stand in front of some place famous, take a photo, smile, and walk away. That&apos;s just not what travel is about!
               </p>
               <p className="font-gilroy text-sm">EXPLORE</p>
               <div className="w-[1px] h-24 bg-secondary ml-6 mt-5" />
