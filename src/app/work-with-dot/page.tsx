@@ -86,31 +86,26 @@ const WorkWithDot = () => {
           </div>
         </div>
       </div>
-      <div className="w-full p-4 font-gilroy mt-2">
-        <div className="flex items-center justify-between">
-          {/* <Image className="fixed" src={Logo} alt="Logo" width={50} /> */}
-          <div className="w-[50px]" />
 
-          <div className="max-w-3xl flex-1 mx-20 text-xs">
-            <div className="relative">
-              <div className="border border-white flex w-full">
-                <div className="w-3/4 relative">
-                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
-                  <div className="h-full" />
-                </div>
+      <div className="flex items-center justify-center font-gilroy">
+        <div className="max-w-3xl flex-1 mx-20 text-xs">
+          <div className="relative">
+            <div className="border border-white flex w-full">
+              <div className="w-3/4 relative">
+                <div className="absolute w-full h-[1px] bg-white transform -rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
+                <div className="h-full" />
+              </div>
 
-                <div className="relative w-1/4">
-                  <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
-                    PROJECTS
-                  </p>
-                </div>
+              <div className="relative w-1/4">
+                <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
+                  PROJECTS
+                </p>
               </div>
             </div>
           </div>
-
-          <div className="w-[50px]" />
         </div>
       </div>
+
       <div className=" flex items-center justify-center mt-16">
         <div className="text-white text-2xl font-serif">
           {items.map((item, index) => (
@@ -127,10 +122,8 @@ const WorkWithDot = () => {
           ))}
         </div>
       </div>
-      <div className="w-full p-4 font-gilroy mt-32 mb-32">
-        <div className="flex items-center justify-between">
-          <div className="w-[50px]" />
 
+        <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
           <div className="max-w-3xl flex-1 mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
@@ -157,10 +150,7 @@ const WorkWithDot = () => {
               </div>
             </div>
           </div>
-
-          <div className="w-[50px]" />
         </div>
-      </div>
       
     </div>
   );
