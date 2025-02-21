@@ -1,8 +1,11 @@
+import Image from 'next/image';
 import React from 'react';
+import model1 from "../assets/images/SM_3_final copia.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full p-4 font-gilroy mt-5">
+    <footer className="w-full p-4 font-gilroy mt-5 relative">
+      <Image src={model1} alt='' width={280} className="absolute bottom-10 right-10 opacity-[1]" />
       <div className="flex items-center justify-center">
         <div className="max-w-3xl flex-1 mx-20  flex justify-center">
           <div className="  flex w-full">
