@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
+import girl1 from "../../assets/images/Asset 1.png";
 import ShapeBg from "../../components/ShapeBg";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -84,7 +85,7 @@ const LearnWithDot = () => {
           </div>
         </div>
     
-        <div className="flex items-center justify-center font-gilroy">
+        <div className="flex items-center justify-center font-gilroy mt-32">
           <div className="max-w-3xl flex-1 mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
@@ -120,7 +121,7 @@ const LearnWithDot = () => {
           </div>
         </div>
             
-        <div className="flex items-center justify-center font-gilroy mt-32">
+        <div className="flex items-center justify-center font-gilroy mt-44">
           <div className="max-w-4xl flex-1 mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
@@ -176,6 +177,41 @@ const LearnWithDot = () => {
           <div className="flex justify-end">
             <div className="flex items-center justify-between w-[50%] py-4 text-center text-white/60 text-sm uppercase">
               <h1 className="font-gilroy">Previous Events</h1> <span className="text-xl font-bold text-secondary">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-white min-h-screen flex items-center justify-center px-6">
+        <div className="max-w-3xl w-full grid grid-cols-1 md:grid-cols-2 gap-1 items-start">
+          <div className="-mt-10">
+            <p className="text-secondary italic text-lg">Every Monday — 11.30</p>
+            <h1 className="text-5xl md:text-[70px] font-asty font-extrabold mt-2">
+              SOCIAL <br /> MEDIA <br /> MONDAYS
+            </h1>
+            <p className="text-secondary uppercase font-semibold text-sm mt-3">
+              Every Monday going live on Facebook!
+            </p>
+          </div>
+
+          <div className="relative">
+            <p className="text-white text-lg">
+              Dragons meet other Dragons! I bring the fire to start your week with
+              Facebook Live where you’ll spend time with me and others who can
+              help you develop your powerful core for digital superiority!
+            </p>
+            <div className="absolute top-10 right-10 w-4 h-4 bg-white/20 rounded-full"></div>
+            <div className="absolute bottom-10 left-10 w-6 h-6 bg-white/20 rounded-full"></div>
+            <div className="mt-6 md:mt-0 w-full flex justify-end">
+              <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+                <Image
+                  src={girl1}
+                  alt="Speaker"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full opacity-80 -mt-20"
+                />
+              </div>
             </div>
           </div>
         </div>
