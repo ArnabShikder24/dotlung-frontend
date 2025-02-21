@@ -120,8 +120,8 @@ const LearnWithDot = () => {
           </div>
         </div>
             
-        <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
-          <div className="max-w-3xl flex-1 mx-20 text-xs">
+        <div className="flex items-center justify-center font-gilroy mt-32">
+          <div className="max-w-4xl flex-1 mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
                 <a
@@ -155,31 +155,33 @@ const LearnWithDot = () => {
           {events.map((event, index) => (
             <div
               key={index}
-              className="flex justify-between items-center border-t border-white/50 py-4"
+              className="flex justify-between items-center border-b border-white/50 py-4"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-10 w-[30%]">
                 <span
                   className={`w-2 h-2 rounded-full ${
-                    index < 4 ? "bg-orange-400" : "bg-blue-400"
+                    index < 4 ? "bg-secondary" : "bg-gray-400"
                   }`}
                 ></span>
-                <span className="text-sm font-semibold">
+                <span className="text-sm font-gilroy font-semibold">
                   {event.date} - {event.location}
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-lg font-medium">{event.name}</span>
-                <span className="text-xl font-bold">→</span>
+              <div className="w-[50%] flex items-center justify-between">
+                <span className="text-2xl font-caslon">{event.name}</span>
+                <span className="text-xl font-bold text-secondary">→</span>
               </div>
             </div>
           ))}
-          <div className="border-t border-white/50 py-4 text-center text-white/60 text-sm uppercase">
-            Previous Events →
+          <div className="flex justify-end">
+            <div className="flex items-center justify-between w-[50%] py-4 text-center text-white/60 text-sm uppercase">
+              <h1 className="font-gilroy">Previous Events</h1> <span className="text-xl font-bold text-secondary">→</span>
+            </div>
           </div>
         </div>
       </div>
       
-      <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
+      <div className="flex items-center justify-center font-gilroy mt-20 mb-32">
         <div className="max-w-3xl flex-1 mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
