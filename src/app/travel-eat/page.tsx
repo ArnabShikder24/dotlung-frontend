@@ -40,12 +40,6 @@ const TravelEat = () => {
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
-  const tableItems = [
-    { width: "160%", title: "Universitat de Barcelona" },
-    { width: "190%", title: "Toulouse Business School" },
-    { width: "180%", title: "ESdesign Barcelona" },
-    { width: "170%", title: "La Salle" },
-  ];
 
   return (
     <div className="container mx-auto">
@@ -141,7 +135,7 @@ const TravelEat = () => {
                     </a>
                     <a
                       href={post.link}
-                      className="text-white text-sm font-medium inline-block mt-3 font-bold"
+                      className="text-white text-sm inline-block mt-3 font-bold"
                     >
                       Read more →
                     </a>
