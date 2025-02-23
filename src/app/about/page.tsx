@@ -11,17 +11,6 @@ const WorkWithDot = () => {
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
-  const items = [
-    { width: "200%", title: "OFFF" },
-    { width: "180%", title: "Motionographer" },
-    { width: "200%", title: "F5" },
-    { width: "170%", title: "Sonar+D" },
-    { width: "180%", title: "DDD" },
-    { width: "200%", title: "Ladies Wine Design" },
-    { width: "170%", title: "Catalunya Cannabis" },
-    { width: "160%", title: "360VR.Barcelona" },
-  ];
-
   return (
     <div className="container mx-auto">
       <ShapeBg />
