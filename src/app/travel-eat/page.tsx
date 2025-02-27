@@ -46,7 +46,7 @@ const TravelEat = () => {
       <ShapeBg />
       <div className="flex items-end">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
-        <div className="-ml-40">
+        <div className="-ml-40 pt-28">
           <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
             TRAVEL <br /> & EAT <br /> WITH DOT
           </h1>
