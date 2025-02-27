@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import model1 from "../assets/images/SM_3_final copia.png";
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -51,6 +52,26 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="py-2 px-6 flex justify-between items-center">
+        <div>
+          <Link href="/blog" className="font-bold text-sm hover:text-indigo-200 transition-colors">
+            BLOG
+          </Link>
+        </div>
+        
+        <div className="text-xs text-indigo-200">
+          © 2018, by Dot Lang
+        </div>
+          
+        <div className="text-xs text-indigo-200">
+          Design by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Sofia</Link>, 
+          Code by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Lorenzo Bocchi</Link>
+        </div>
+        
+        <Link href="/live" className="text-xs font-semibold hover:text-indigo-200 transition-colors">
+          LIVE NOW!
+        </Link>
+    </div>
     </footer>
   );
 };
