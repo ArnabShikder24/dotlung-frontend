@@ -5,6 +5,7 @@ import ShapeBg from "../../components/ShapeBg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Blog1 from "../../../public/Dotlungimages/Dotlungimages/blog1.png";
+import Link from "next/link";
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const posts = [
@@ -169,9 +170,9 @@ const TravelEat = () => {
               </div>
 
               <div className="relative w-1/4">
-                <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
+                <Link href={'/blog'} className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
                   Blog
-                </p>
+                </Link>
               </div>
             </div>
           </div>
