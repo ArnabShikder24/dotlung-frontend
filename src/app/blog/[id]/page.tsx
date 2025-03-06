@@ -50,7 +50,7 @@ const BlogPage = () => {
       title: "Ladies, Wine, Barcelona.",
       description:
         "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/post-03/",
+      link: "/blog/1",
       image: Blog1,
     },
     {
@@ -59,7 +59,7 @@ const BlogPage = () => {
       title: "Ladies, Wine, Barcelona.",
       description:
         "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/post-02/",
+      link: "/blog/2",
       image: Blog1,
     },
     {
@@ -68,7 +68,7 @@ const BlogPage = () => {
       title: "Ladies, Wine, Barcelona.",
       description:
         "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/post-01/",
+      link: "/blog/3",
       image: Blog1,
     },
   ];
