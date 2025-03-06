@@ -3,6 +3,9 @@ import React from "react";
 import blog1 from "../../../assets/images/blog1.png";
 import blog2 from "../../../assets/images/blog2.png";
 import ImageCarousel from "../../../components/ImageCarousel";
+import image1 from "../../../assets/images/g1.png";
+import image2 from "../../../assets/images/g2.png";
+import ImageGallery from "../../../components/ImageGallery";
 
 const BlogPage = () => {
   const carouselImages = [
@@ -23,9 +26,23 @@ const BlogPage = () => {
       alt: "City view with buildings"
     }
   ];
+  const galleryImages = [
+    {
+      src: blog2,
+      alt: "Two friends holding drinks"
+    },
+    {
+      src: image1,
+      alt: "Person with unicorn headband in a crowd"
+    },
+    {
+      src: image2,
+      alt: "City view with buildings and bridges"
+    },
+  ];
   return (
     <>
-      <div className="lg:w-[1100px] mx-auto px-4 py-8 mt-20">
+      <div className="lg:w-[1100px] mx-auto px-4 py-10 mt-20">
         <div className="flex items-center justify-between font-caslon text-sm border-b-2 border-secondary pb-4">
           <p>12.01.2022</p>
           <p>BACK TO BLOG</p>
@@ -47,7 +64,7 @@ const BlogPage = () => {
         </div>
       </div>
       <ImageCarousel images={carouselImages} />
-      <div className="lg:w-[1100px] mx-auto px-4 py-8 mt-20">
+      <div className="lg:w-[1100px] mx-auto px-4 pb-8">
         <div className="flex justify-between mt-20">
           <p className="font-asty w-[350px] text-2xl mt-10">
             <span className="italic text-secondary">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
@@ -59,6 +76,7 @@ const BlogPage = () => {
           </div>
         </div>
       </div>
+      <ImageGallery images={galleryImages} />
     </>
   );
 };
