@@ -5,6 +5,7 @@ import ShapeBg from "../../components/ShapeBg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Blog1 from "../../../public/Dotlungimages/Dotlungimages/blog1.png";
+import Link from "next/link";
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const posts = [
@@ -14,7 +15,7 @@ const TravelEat = () => {
       title: "Ladies, Wine, Barcelona.",
       description:
         "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/post-03/",
+      link: "/blog/1",
       image: Blog1,
     },
     {
@@ -23,7 +24,7 @@ const TravelEat = () => {
       title: "Ladies, Wine, Barcelona.",
       description:
         "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/post-02/",
+      link: "/blog/2",
       image: Blog1,
     },
     {
@@ -32,7 +33,7 @@ const TravelEat = () => {
       title: "Ladies, Wine, Barcelona.",
       description:
         "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/post-01/",
+      link: "/blog/3",
       image: Blog1,
     },
   ];
@@ -46,7 +47,7 @@ const TravelEat = () => {
       <ShapeBg />
       <div className="flex items-end">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
-        <div className="-ml-40">
+        <div className="-ml-40 pt-28">
           <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
             TRAVEL <br /> & EAT <br /> WITH DOT
           </h1>
@@ -169,9 +170,9 @@ const TravelEat = () => {
               </div>
 
               <div className="relative w-1/4">
-                <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
+                <Link href={'/blog'} className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
                   Blog
-                </p>
+                </Link>
               </div>
             </div>
           </div>
