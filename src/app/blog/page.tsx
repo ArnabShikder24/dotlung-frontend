@@ -5,6 +5,8 @@ import BlogImage from "../../../public/Dotlungimages/Dotlungimages/blog1.png";
 import { useState } from "react";
 import Pagination from "../../components/Pagination";
 import Blog1 from "../../../public/Dotlungimages/Dotlungimages/blog1.png";
+import { PathNames } from "../../routes/index.route";
+import Link from "next/link";
 
 export default function FeaturedSection() {
   const [isHovering, setIsHovering] = useState(false);
@@ -56,7 +58,7 @@ export default function FeaturedSection() {
           onMouseLeave={() => setIsHovering(false)}
         >
           <a
-            href="/what-i-do"
+            href="#"
             className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border border-white"
           >
             FILTER BY
@@ -318,12 +320,12 @@ export default function FeaturedSection() {
           <div className="flex-1  text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
-                <a
-                  href="/about"
+                <Link
+                  href={PathNames.travelEat}
                   className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
                 >
                   TRAVEL & EAT WITH DOT
-                </a>
+                </Link>
 
                 <div className="w-1/2 relative">
                   <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
@@ -331,12 +333,12 @@ export default function FeaturedSection() {
                 </div>
 
                 <div className="relative w-1/4">
-                  <a
-                    href="/what-i-do"
+                  <Link
+                    href={PathNames.learnWithDot}
                     className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
                   >
                     LEARN WITH DOT
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

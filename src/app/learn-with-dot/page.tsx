@@ -5,6 +5,8 @@ import girl1 from "../../assets/images/Asset 1.png";
 import ShapeBg from "../../components/ShapeBg";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PathNames } from "../../routes/index.route";
+import Link from "next/link";
 
 const LearnWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -126,7 +128,7 @@ const LearnWithDot = () => {
             <div className="relative">
               <div className="border border-white flex w-full">
                 <a
-                  href="/about"
+                  href="#"
                   className="w-[30%] px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
                 >
                   DATE & LOCATION
@@ -139,7 +141,7 @@ const LearnWithDot = () => {
 
                 <div className="relative w-[80%]">
                   <a
-                    href="/what-i-do"
+                    href="#"
                     className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-start border-l border-white"
                   >
                     SPEAKING ENGAGEMENTS
@@ -221,12 +223,12 @@ const LearnWithDot = () => {
         <div className="max-w-3xl flex-1 mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
-              <a
-                href="/about"
+              <Link
+                href={PathNames.travelEat}
                 className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
               >
                 TRAVEL & EAT WITH DOT
-              </a>
+              </Link>
 
               <div className="w-1/2 relative">
                 <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
@@ -234,12 +236,12 @@ const LearnWithDot = () => {
               </div>
 
               <div className="relative w-1/4">
-                <a
-                  href="/what-i-do"
+                <Link
+                  href={PathNames.learnWithDot}
                   className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
                 >
                   LEARN WITH DOT
-                </a>
+                </Link>
               </div>
             </div>
           </div>
