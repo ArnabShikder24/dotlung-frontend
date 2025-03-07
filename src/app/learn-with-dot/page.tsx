@@ -2,7 +2,6 @@
 import { useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import girl1 from "../../assets/images/Asset 1.png";
-import ShapeBg from "../../components/ShapeBg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PathNames } from "../../routes/index.route";
@@ -34,7 +33,6 @@ const LearnWithDot = () => {
 
   return (
       <div className="container mx-auto">
-        <ShapeBg />
         <div className="flex items-end">
           <Image
             className="w-[980px]"

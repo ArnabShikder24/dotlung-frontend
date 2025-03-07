@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import DotImage from "../../assets/images/work-with-Dot.png";
-import ShapeBg from "../../components/ShapeBg";
 import Link from "next/link";
 import { PathNames } from "../../routes/index.route";
 
@@ -26,7 +25,6 @@ const WorkWithDot = () => {
 
   return (
     <div className="container mx-auto">
-      <ShapeBg />
       <div className="flex items-end">
         <Image
           className="w-[980px] bg-transparent"

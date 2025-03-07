@@ -4,6 +4,7 @@ import React from "react";
 import { PathNames } from "../routes/index.route";
 import Navbar from "../components/Navbar";
 import { usePathname } from "next/navigation";
+import ShapeBg from "../components/ShapeBg";
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const path = usePathname();
@@ -14,6 +15,7 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <>
       {!hideNavbar && <Navbar />}
+      {path !== PathNames.home && <ShapeBg />}
       {children}
     </>
   );
