@@ -10,25 +10,27 @@ const Navbar = () => {
 
   const menuItems = [
     { title: "WORK WITH DOT", path: PathNames.workWithDot },
-    { title: "LEARN WITH DOT", path: "/learn-with-dot" },
-    { title: "TRAVEL / EAT WITH DOT", path: "/travel-eat" }
+    { title: "LEARN WITH DOT", path: PathNames.learnWithDot },
+    { title: "TRAVEL / EAT WITH DOT", path: PathNames.travelEat }
 ];
 
   return (
     <nav className="w-full p-4 font-gilroy mt-2">
       <div className="flex items-center justify-between">
-        <Image className="fixed" src={Logo} alt="Logo" width={50} />
+        <Link href={PathNames.home} className="fixed">
+          <Image src={Logo} alt="Logo" width={50} />
+        </Link>
         <div className="w-[50px]" />
         
         <div className="max-w-3xl flex-1 mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
-              <a 
-                href="/about"
+              <Link
+                href={PathNames.about}
                 className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
               >
                 ABOUT
-              </a>
+              </Link>
               
               <div className="w-1/2 relative">
                 <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
@@ -40,12 +42,11 @@ const Navbar = () => {
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
               >
-                <a 
-                  href="/what-i-do"
-                  className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
+                <div
+                  className="block px-6 py-3 cursor-pointer text-white hover:text-orange-500 transition-colors text-center border-l border-white"
                 >
                   WHAT I DO
-                </a>
+                </div>
                 
                 {/* Dropdown Menu */}
                 {isHovering && (
@@ -76,12 +77,12 @@ const Navbar = () => {
         </div>
         
         <div className="w-[50px]" />
-        <a 
-          href="/contact"
+        <Link
+          href={PathNames.contact}
           className="text-white hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
         >
           CONTACT
-        </a>
+        </Link>
       </div>
     </nav>
   );
