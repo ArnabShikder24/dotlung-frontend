@@ -4,5 +4,6 @@ export const PathNames = {
   learnWithDot: "/learn-with-dot",
   contact: "/contact",
   travelEat: "/travel-eat",
-  about: "/about"
+  about: "/about",
+  blog: "/blog",
 }
