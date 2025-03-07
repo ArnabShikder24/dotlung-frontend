@@ -3,6 +3,19 @@ import React from 'react';
 import model1 from "../assets/images/SM_3_final copia.png";
 import Link from 'next/link';
 
+const EmailInput = () => {
+  return (
+    <div className="flex items-center border border-white px-3 py-2 w-[350px] mt-5">
+      <input
+        type="email"
+        placeholder="Your e-mail"
+        className="flex-1 bg-transparent text-white placeholder-white focus:outline-none"
+      />
+      <button className="text-white font-bold text-sm">LET&apos;S GO</button>
+    </div>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="w-full p-4 font-gilroy mt-5 relative">
@@ -29,6 +42,7 @@ const Footer = () => {
                     Get my top 5 tips to grow your Instagram / LinkedIn <br/>by
                     entering your e-mail address here:
                   </p>
+                  <EmailInput />
                 </div>
                 <div className="flex flex-col text-lg  mt-4" style={{width:140}}>
                   <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
