@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Link from "next/link";
 import React from "react";
 
 export default function Home() {
@@ -71,6 +72,17 @@ export default function Home() {
               ></span>
             </p>
           </div>
+        </div>
+      </div>
+      <div className="absolute left-0 bottom-5 w-full">
+        <div className="flex items-center justify-between px-5">
+          <Link href="/blog" className="font-bold text-sm hover:text-indigo-200">
+            BLOG
+          </Link>
+          
+          <Link href="/live" className="text-xs font-semibold hover:text-indigo-200">
+            LIVE NOW!
+          </Link>
         </div>
       </div>
     </div>
