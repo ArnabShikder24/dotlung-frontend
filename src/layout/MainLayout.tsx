@@ -15,7 +15,7 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <>
       {!hideNavbar && <Navbar />}
-      {path !== PathNames.home && <ShapeBg />}
+      <ShapeBg />
       {children}
     </>
   );
