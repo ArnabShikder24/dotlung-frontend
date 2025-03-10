@@ -3,7 +3,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import DotImage from "../../assets/images/work-with-Dot.png";
-import ShapeBg from "../../components/ShapeBg";
+import Link from "next/link";
+import { PathNames } from "../../routes/index.route";
 
 const WorkWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -24,7 +25,6 @@ const WorkWithDot = () => {
 
   return (
     <div className="container mx-auto">
-      <ShapeBg />
       <div className="flex items-end">
         <Image
           className="w-[980px] bg-transparent"
@@ -127,12 +127,12 @@ const WorkWithDot = () => {
           <div className="max-w-3xl flex-1 mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
-                <a
-                  href="/about"
+                <Link
+                  href={PathNames.travelEat}
                   className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
                 >
                   TRAVEL & EAT WITH DOT
-                </a>
+                </Link>
 
                 <div className="w-1/2 relative">
                   <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
@@ -140,12 +140,12 @@ const WorkWithDot = () => {
                 </div>
 
                 <div className="relative w-1/4">
-                  <a
-                    href="/what-i-do"
+                  <Link
+                    href={PathNames.learnWithDot}
                     className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
                   >
                     LEARN WITH DOT
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

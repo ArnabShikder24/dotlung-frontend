@@ -2,5 +2,8 @@ export const PathNames = {
   home: "/",
   workWithDot: "/work-with-dot",
   learnWithDot: "/learn-with-dot",
-  contact: "/contact"
+  contact: "/contact",
+  travelEat: "/travel-eat",
+  about: "/about",
+  blog: "/blog",
 }

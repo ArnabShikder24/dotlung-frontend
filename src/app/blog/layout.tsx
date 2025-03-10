@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import React from "react";
 import Footer from "../../components/Footer";
-import ShapeBg from "../../components/ShapeBg";
 
 export const metadata: Metadata = {
   title: "Travel / Eat With Dot",
@@ -15,7 +14,6 @@ export default function TravelLayout({
 }>) {
   return (
     <>
-      <ShapeBg />
       {children}
       <Footer />
     </>

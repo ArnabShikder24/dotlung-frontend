@@ -2,9 +2,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import DotImage from "../../assets/images/work-with-Dot.png";
-import ShapeBg from "../../components/ShapeBg";
+import DotImage from "../../assets/images/about.png";
 import Link from "next/link";
+import { PathNames } from "../../routes/index.route";
 
 const WorkWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -14,16 +14,15 @@ const WorkWithDot = () => {
   };
   return (
     <div className="container mx-auto">
-      <ShapeBg />
       <div className="flex items-end">
         <Image
-          className="w-[980px] bg-transparent"
+          className="w-[780px]"
           src={DotImage}
           alt="dot Image"
         />
-        <div className="-ml-40">
-          <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
-            WORK <br /> WITH DOT
+        <div>
+          <h1 className="text-[80px] w-[400px] font-extrabold font-gilroy leading-[85px]">
+            CREATING DIGITAL EXPERIENCES
           </h1>
           <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
             <span className="italic text-secondary">
@@ -53,25 +52,19 @@ const WorkWithDot = () => {
 
           <div className="absolute left-10 top-1/4 max-w-md font-caslon">
             <p className="text-2xl italic text-secondary">
-              Together we can make my magic.
+              Digital equals life in todo
             </p>
             <p className="text-2xl mt-2">
-              I create dominant and in demand online identities and communities
-              by developing kick ass campaigns utilizing unique content specific
-              to your brand ethos.
+            I can help you navigate the challenging landscape that is digital to showcae your best you!
             </p>
           </div>
 
           <div className="absolute right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
-              The digital world can be a difficult one to navigate. Sometimes
-              you need that unicorn to guide you through the good and the bad to
-              enhance, target, and execute your best strategy. This is where I
-              thrive. I&apos;ve run campaigns for agencies, headed up social
-              media teams for a variety of companies, and have initiated my own
-              start ups in graphic design, video production and more. I can not
-              only lend my expertise and experience, but I&apos;ve walked the
-              walk, not just talked the talk!
+              I&apos;m Dot Lung. Dot stands for Dorothy, and Lung means Dragon in Chinese. After growing up in Los Angeles, I traveled the world working on a variety of campaigns until I found a home in Barcelona. Since (), Barcelona has inspired me to be the magical and fierce being I am today.
+            </p>
+            <p className="text-sm leading-relaxed mt-5 font-asty">
+              You don&apos;t have to be a digital extremist like me, but based upon my total digital immersion, I can help you create the optimum digital experience for your brand, your identity or your campaign, because I literally have been breathing digital magic since the days of MySpace and even before. Plus I have access to the top talent to incorporate your most magical aspirations to achieve your greatest goals.
             </p>
           </div>
         </div>
@@ -84,7 +77,7 @@ const WorkWithDot = () => {
           <div className="relative">
             <div className="border border-white flex w-full">
               <Link
-                href="/about"
+                href={PathNames.learnWithDot}
                 className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
               >
                 LEARN WITH DOT
@@ -97,7 +90,7 @@ const WorkWithDot = () => {
 
               <div className="relative w-1/4">
                 <Link
-                  href="/what-i-do"
+                  href={PathNames.workWithDot}
                   className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
                 >
                   WORK WITH DOT

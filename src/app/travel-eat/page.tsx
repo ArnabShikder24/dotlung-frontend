@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
-import ShapeBg from "../../components/ShapeBg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Blog1 from "../../../public/Dotlungimages/Dotlungimages/blog1.png";
@@ -44,7 +43,6 @@ const TravelEat = () => {
 
   return (
     <div className="container mx-auto">
-      <ShapeBg />
       <div className="flex items-end">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
         <div className="-ml-40 pt-28">
