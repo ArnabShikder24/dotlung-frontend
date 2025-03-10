@@ -6,7 +6,7 @@ import dot from "../../public/Dotlungimages/Dotlungimages/dragon-Dot.png";
 export default function Home() {
   return (
     <div className="container mx-auto">
-      <div className="flex items-center font-gilroy">
+      <div className="lg:flex items-center font-gilroy">
         <div>
           <Image
             className="w-[1000px]"
@@ -15,7 +15,7 @@ export default function Home() {
           />
         </div>
         <div
-          className="flex justify-center items-center h-auto w-[390px] -ml-[300px]"
+          className="h-auto w-[390px] mx-auto lg:-ml-[300px]"
         >
           <div className="z-10 text-left max-w-2xl px-6">
             <h1 className="text-5xl font-bold uppercase">

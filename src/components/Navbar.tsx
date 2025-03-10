@@ -91,34 +91,40 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <nav className="w-full p-4 font-gilroy mt-2 md:hidden flex flex-col items-center relative  text-white z-50">
         <div className="flex justify-between w-full items-center">
-          <Link href={PathNames.home}>
+          <Link className="fixed" href={PathNames.home}>
             <Image src={Logo} alt="Logo" width={50} />
           </Link>
           <button
             onClick={toggleMobileMenu}
-            className="text-white focus:outline-none"
+            className="text-white focus:outline-none fixed right-6"
           >
             {/* Hamburger Icon (Simple representation, replace with an SVG or icon library) */}
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            {
+              isMobileMenuOpen ? (
+                <p>CLOSE <span className="text-secondary">X</span></p>
+              ) : (
+                <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+                </svg>
+              )
+            }
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="w-full mt-4 flex flex-col items-center">
+          <div className="w-3/4 mt-4 flex flex-col items-center fixed left-1/2 transform -translate-x-1/2 top-20 z-50">
             {menuItems.map((item) => (
               <Link
                 key={item.title}
