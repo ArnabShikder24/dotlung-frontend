@@ -18,6 +18,12 @@ const Navbar = () => {
     { title: "CONTACT", path: PathNames.contact },
   ];
 
+  const desktopMenuItems = [
+    { title: "WORK WITH DOT", path: PathNames.workWithDot },
+    { title: "LEARN WITH DOT", path: PathNames.learnWithDot },
+    { title: "TRAVEL & EAT WITH DOT", path: PathNames.travelEat },
+  ]
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -51,19 +57,22 @@ const Navbar = () => {
                   WHAT I DO
                 </div>
                 {isHovering && (
-                  <div className="absolute left-0 w-full z-20 bg-[#4D05E8] border-white border-t">
-                    {[
-                      { title: "WORK WITH DOT", path: PathNames.workWithDot },
-                      { title: "LEARN WITH DOT", path: PathNames.learnWithDot },
-                      { title: "TRAVEL & EAT WITH DOT", path: PathNames.travelEat },
-                    ].map((item) => (
-                      <Link
+                  <div className="absolute left-0 w-full z-20">
+                    {desktopMenuItems.map((item, index) => (
+                      <div
                         key={item.title}
-                        href={item.path}
-                        className="block px-4 py-3 text-white hover:text-orange-500 transition-colors text-center text-xs border border-white border-t-0"
+                        className={`border border-white opacity-0
+                          ${index === 0 ? 'animate-slide-in-1' : ''}
+                          ${index === 1 ? 'animate-slide-in-2' : ''}
+                          ${index === 2 ? 'animate-slide-in-3' : ''}`}
                       >
-                        {item.title}
-                      </Link>
+                        <Link
+                          href={item.path}
+                          className="block px-4 py-3 text-white hover:text-orange-500 transition-colors text-center text-xs"
+                        >
+                          {item.title}
+                        </Link>
+                      </div>
                     ))}
                   </div>
                 )}
