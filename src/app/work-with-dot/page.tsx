@@ -96,7 +96,7 @@ const WorkWithDot = () => {
                 <div className="h-full" />
               </div>
 
-              <div className="relative w-[40%]">
+              <div className="relative w-[40%] lg:w-[30%]">
                 <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
                   PROJECTS
                 </p>
