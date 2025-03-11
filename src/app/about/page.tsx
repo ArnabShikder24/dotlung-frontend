@@ -14,14 +14,14 @@ const WorkWithDot = () => {
   };
   return (
     <div className="container mx-auto">
-      <div className="flex items-end">
+      <div className="lg:flex items-end">
         <Image
           className="w-[780px]"
           src={DotImage}
           alt="dot Image"
         />
-        <div>
-          <h1 className="text-[80px] w-[400px] font-extrabold font-gilroy leading-[85px]">
+        <div className="w-[360px] lg:w-[400px] mx-auto lg:ml-0">
+          <h1 className="text-[55px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
             CREATING DIGITAL EXPERIENCES
           </h1>
           <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
@@ -42,7 +42,7 @@ const WorkWithDot = () => {
           onMouseMove={handleMouseMove}
         >
           <motion.div
-            className="absolute w-[500px] h-[500px] bg-[#e74c3c] rounded-full"
+            className="absolute w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
             animate={{
               x: mousePosition.x / 10 - 50,
               y: mousePosition.y / 10 - 50,
@@ -50,7 +50,7 @@ const WorkWithDot = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute left-10 top-1/4 max-w-md font-caslon">
+          <div className="absolute left-4 lg:left-10 top-1/4 w-[95%] lg:max-w-md font-caslon">
             <p className="text-2xl italic text-secondary">
               Digital equals life in todo
             </p>
@@ -59,7 +59,7 @@ const WorkWithDot = () => {
             </p>
           </div>
 
-          <div className="absolute right-10 top-1/2 max-w-sm">
+          <div className="absolute lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               I&apos;m Dot Lung. Dot stands for Dorothy, and Lung means Dragon in Chinese. After growing up in Los Angeles, I traveled the world working on a variety of campaigns until I found a home in Barcelona. Since (), Barcelona has inspired me to be the magical and fierce being I am today.
             </p>
@@ -78,17 +78,17 @@ const WorkWithDot = () => {
             <div className="border border-white flex w-full">
               <Link
                 href={PathNames.learnWithDot}
-                className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
               >
                 LEARN WITH DOT
               </Link>
 
-              <div className="w-1/2 relative">
+              <div className="w-[40%] lg:w-1/2 relative">
                 <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
                 <div className="h-full" />
               </div>
 
-              <div className="relative w-1/4">
+              <div className="relative w-[30%] lg:w-1/4">
                 <Link
                   href={PathNames.workWithDot}
                   className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"

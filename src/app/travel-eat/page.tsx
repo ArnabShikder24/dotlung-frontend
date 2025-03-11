@@ -43,13 +43,13 @@ const TravelEat = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex items-end">
+      <div className="lg:flex items-end">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
-        <div className="-ml-40 pt-28">
+        <div className="lg:-ml-40 w-[380px] mx-auto lg:pt-28">
           <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
             TRAVEL <br /> & EAT <br /> WITH DOT
           </h1>
-          <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
+          <p className="font-caslon text-lg mt-5 mb-14">
             <span className="italic text-secondary">
               I&apos;ve never been a fan of the empty selfie.
             </span>{" "}
@@ -67,7 +67,7 @@ const TravelEat = () => {
           onMouseMove={handleMouseMove}
         >
           <motion.div
-            className="absolute w-[500px] h-[500px] bg-[#e74c3c] rounded-full"
+            className="absolute w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
             animate={{
               x: mousePosition.x / 10 - 50,
               y: mousePosition.y / 10 - 50,
@@ -75,7 +75,7 @@ const TravelEat = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute left-10 top-1/4 max-w-md font-caslon">
+          <div className="absolute left-6 lg:left-10 top-1/4 w-[95%] lg:max-w-md font-caslon">
             <p className="text-2xl mt-2">
               <span className="text-2xl italic text-secondary">
                 Make your mind magic.
@@ -87,7 +87,7 @@ const TravelEat = () => {
             </p>
           </div>
 
-          <div className="absolute right-10 top-1/2 max-w-sm">
+          <div className="absolute lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               I have been teaching social media, online marketing, digital
               design and more at several institutions based in Barcelona,
@@ -167,7 +167,7 @@ const TravelEat = () => {
                 <div className="h-full" />
               </div>
 
-              <div className="relative w-1/4">
+              <div className="relative w-[30%] lg:w-1/4">
                 <Link href={'/blog'} className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
                   Blog
                 </Link>

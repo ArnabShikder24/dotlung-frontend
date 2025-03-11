@@ -32,18 +32,18 @@ const LearnWithDot = () => {
   ];
 
   return (
-      <div className="container mx-auto">
-        <div className="flex items-end">
+      <div className="container mx-auto overflow-hidden">
+        <div className="lg:flex items-end">
           <Image
             className="w-[980px]"
             src={DotImage}
             alt="dot Image"
           />
-          <div className="-ml-40">
+          <div className="lg:-ml-40 w-[380px] mx-auto">
             <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
             Learn <br /> WITH DOT
             </h1>
-            <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
+            <p className="font-caslon text-lg mt-5 mb-14">
               <span className="italic text-secondary">
                 Magical minds develop strong dragon fire.
               </span>{" "} <br />
@@ -60,7 +60,7 @@ const LearnWithDot = () => {
             onMouseMove={handleMouseMove}
           >
             <motion.div
-              className="absolute w-[500px] h-[500px] bg-[#e74c3c] rounded-full"
+              className="absolute w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
               animate={{
                 x: mousePosition.x / 10 - 50,
                 y: mousePosition.y / 10 - 50,
@@ -68,7 +68,7 @@ const LearnWithDot = () => {
               transition={{ type: "spring", stiffness: 100, damping: 10 }}
             />
 
-            <div className="absolute left-10 top-1/4 max-w-md font-caslon">
+            <div className="absolute left-4 lg:left-10 top-1/4 w-[95%] lg:max-w-md font-caslon">
               <p className="text-2xl mt-2">
               <span className="text-2xl italic text-secondary">
                 Make your mind magic.
@@ -77,7 +77,7 @@ const LearnWithDot = () => {
               </p>
             </div>
 
-            <div className="absolute right-10 top-1/2 max-w-sm">
+            <div className="absolute lg:right-10 top-1/2 max-w-sm">
               <p className="text-sm leading-relaxed font-asty">
                 I have been teaching social media, online marketing, digital design and more at several institutions based in Barcelona, including Universitat de Barcelona, Toulouse Business School, ESdesign Escuela Superior de Diseño de Barcelona, and more. My teaching is not just in the classroom, as I love to share my knowledge with my clients in order for them to share the great message of social! I also create learning communities online between many of my clients, in order to leverage all the great things we can learn from each. So yes, I teach, but I also facilitate, led and direct you in the best ways to become your own fabulous unicorns!
               </p>
@@ -94,7 +94,7 @@ const LearnWithDot = () => {
                   <div className="h-full" />
                 </div>
 
-                <div className="relative w-[30%]">
+                <div className="relative w-[40%] lg:w-[30%]">
                   <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
                   TEACHING ENGAGEMENTS
                   </p>
@@ -156,9 +156,9 @@ const LearnWithDot = () => {
           {events.map((event, index) => (
             <div
               key={index}
-              className="flex justify-between items-center border-b border-white/50 py-4"
+              className="lg:flex justify-between items-center border-b border-white/50 py-4"
             >
-              <div className="flex items-center gap-10 w-[30%]">
+              <div className="flex items-center gap-10 lg:w-[30%]">
                 <span
                   className={`w-2 h-2 rounded-full ${
                     index < 4 ? "bg-secondary" : "bg-gray-400"
@@ -168,7 +168,7 @@ const LearnWithDot = () => {
                   {event.date} - {event.location}
                 </span>
               </div>
-              <div className="w-[50%] flex items-center justify-between">
+              <div className="lg:w-[50%] mt-8 lg:mt-0 flex items-center justify-between">
                 <span className="text-2xl font-caslon">{event.name}</span>
                 <span className="text-xl font-bold text-secondary">→</span>
               </div>

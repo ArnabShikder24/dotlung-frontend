@@ -24,18 +24,18 @@ const WorkWithDot = () => {
   ];
 
   return (
-    <div className="container mx-auto">
-      <div className="flex items-end">
+    <div className="container mx-auto overflow-hidden">
+      <div className="lg:flex items-end">
         <Image
           className="w-[980px] bg-transparent"
           src={DotImage}
           alt="dot Image"
         />
-        <div className="-ml-40">
+        <div className="lg:-ml-40 w-[380px] mx-auto">
           <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
             WORK <br /> WITH DOT
           </h1>
-          <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
+          <p className="font-caslon text-lg mt-5 mb-14">
             <span className="italic text-secondary">
               Mythical digital magic.
             </span>{" "}
@@ -53,7 +53,7 @@ const WorkWithDot = () => {
           onMouseMove={handleMouseMove}
         >
           <motion.div
-            className="absolute w-[500px] h-[500px] bg-[#e74c3c] rounded-full"
+            className="absolute w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
             animate={{
               x: mousePosition.x / 10 - 50,
               y: mousePosition.y / 10 - 50,
@@ -61,7 +61,7 @@ const WorkWithDot = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute left-10 top-1/4 max-w-md font-caslon">
+          <div className="absolute left-6 lg:left-10 top-1/4 max-w-md font-caslon">
             <p className="text-2xl italic text-secondary">
               Together we can make my magic.
             </p>
@@ -72,7 +72,7 @@ const WorkWithDot = () => {
             </p>
           </div>
 
-          <div className="absolute right-10 top-1/2 max-w-sm">
+          <div className="absolute lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               The digital world can be a difficult one to navigate. Sometimes
               you need that unicorn to guide you through the good and the bad to
@@ -96,7 +96,7 @@ const WorkWithDot = () => {
                 <div className="h-full" />
               </div>
 
-              <div className="relative w-1/4">
+              <div className="relative w-[40%] lg:w-[30%]">
                 <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
                   PROJECTS
                 </p>
@@ -106,13 +106,13 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-      <div className=" flex items-center justify-center mt-16">
+      <div className="flex items-center justify-center mt-16 overflow-hidden">
         <div className="text-white text-2xl font-serif">
           {items.map((item, index) => (
             <div key={index} className="mb-4 relative">
               <span className="block pb-2 ">{item.title}</span>
               <div
-                className=" border-b-2 absolute top-4"
+                className="border-b-2 absolute top-4"
                 style={{
                   border: "1px solid rgb(241, 67, 54)",
                   width: item.width,
@@ -123,34 +123,34 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-        <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
-          <div className="max-w-3xl flex-1 mx-20 text-xs">
-            <div className="relative">
-              <div className="border border-white flex w-full">
+      <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
+        <div className="max-w-3xl flex-1 mx-20 text-xs">
+          <div className="relative">
+            <div className="border border-white flex w-full">
+              <Link
+                href={PathNames.travelEat}
+                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+              >
+                TRAVEL & EAT WITH DOT
+              </Link>
+
+              <div className="w-[40%] lg:w-1/2 relative">
+                <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
+                <div className="h-full" />
+              </div>
+
+              <div className="relative w-[30%] lg:w-1/4">
                 <Link
-                  href={PathNames.travelEat}
-                  className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                  href={PathNames.learnWithDot}
+                  className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
                 >
-                  TRAVEL & EAT WITH DOT
+                  LEARN WITH DOT
                 </Link>
-
-                <div className="w-1/2 relative">
-                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
-                  <div className="h-full" />
-                </div>
-
-                <div className="relative w-1/4">
-                  <Link
-                    href={PathNames.learnWithDot}
-                    className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
-                  >
-                    LEARN WITH DOT
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
         </div>
+    </div>
       
     </div>
   );
