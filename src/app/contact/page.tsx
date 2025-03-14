@@ -28,16 +28,16 @@ const Contact = () => {
       </div>
 
       <div className="w-full flex-1 flex items-center justify-center">
-        <div className="w-[50%] flex justify-between items-center">
+        <div className="lg:w-[50%] lg:flex justify-between items-center px-5 lg:px-0 py-10 lg:py-0">
           <div className="max-w-lg">
-            <h1 className="text-6xl font-bold w-[500px]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold lg:w-[500px]">
               LET&apos;S GROW YOUR SOCIAL MEDIA EMPIRE TOGETHER.
             </h1>
-            <p className="text-lg font-caslon mt-5 w-[300px]">
+            <p className="text-lg font-caslon mt-5 lg:w-[300px]">
               <span className="italic text-secondary">Book time with me!</span> 
               Enter your e-mail address right here:
             </p>
-            <div className="w-[300px]">
+            <div className="w-[95%] mb-5 lg:mb-0 lg:w-[300px]">
               <EmailInput />
             </div>
           </div>
@@ -47,7 +47,7 @@ const Contact = () => {
               <p>+1 661 368 5864</p>
               <p>hello@dotlung.com</p>
             </div>
-            <div className="flex flex-col text-lg gap-5 space-y-3 mt-28">
+            <div className="flex flex-col text-lg gap-5 space-y-3 mt-28 text-center lg:text-start">
               {["FACEBOOK", "INSTAGRAM", "TWITTER", "SNAPCHAT", "SKYPE"].map((platform) => (
                 <a key={platform} href="#" className="text-sm hover:underline font-bold">
                   {platform}
@@ -58,7 +58,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="py-5 px-20 flex justify-between items-center w-full">
+      <div className="py-5 px-20 lg:flex justify-between items-center w-full">
         <div className="text-xs text-indigo-200">© 2018, by Dot Lang</div>
         <div className="text-xs text-indigo-200">
           Design by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Sofia</Link>, 
