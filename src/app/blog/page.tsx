@@ -17,7 +17,6 @@ export default function FeaturedSection() {
           
         );
         const data = await res.json();
-        console.log(data);
         setPosts(data);
       } catch (error) {
         console.error("Error fetching posts:", error);
@@ -48,15 +47,7 @@ export default function FeaturedSection() {
           <Link href={`/blog/${post.slug}`} className="text-secondary font-semibold hover:underline">
             READ MORE →
           </Link>
-          {/* {post._embedded?.["wp:featuredmedia"] && (
-            <Image
-              src={post._embedded["wp:featuredmedia"][0].source_url}
-              width={450}
-              height={300}
-              alt={post.title.rendered}
-              className="mt-4"
-            />
-          )} */}
+
           {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ? (
             <Image
               src={post._embedded["wp:featuredmedia"][0].source_url}
