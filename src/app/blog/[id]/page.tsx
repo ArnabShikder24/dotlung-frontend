@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import { useParams } from "next/navigation";
+import React, { useEffect, useState } from "react";
 import blog1 from "../../../assets/images/blog1.png";
 import blog2 from "../../../assets/images/blog2.png";
 import ImageCarousel from "../../../components/ImageCarousel";
@@ -72,27 +74,64 @@ const BlogPage = () => {
       image: Blog1,
     },
   ];
+  const { id } = useParams();
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchPost() {
+      try {
+        const res = await fetch(
+          `https://dotlung.com/wp-json/wp/v2/posts?slug=${id}&_embed`
+        );
+        const data = await res.json();
+        if (data.length > 0) {
+          setPost(data[0]);
+        }
+      } catch (error) {
+        console.error("Error fetching post:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    if (id) fetchPost();
+  }, [id]);
+
+  if (loading) return <p className="text-white">Loading...</p>;
+  if (!post) return <p className="text-white">Post not found</p>;
   return (
     <>
       <div className="lg:w-[1100px] mx-auto px-4 py-10 mt-20">
         <div className="flex items-center justify-between font-caslon text-sm border-b-2 border-secondary pb-4">
-          <p>12.01.2022</p>
+          <p>{new Date(post.date).toLocaleDateString()}</p>
           <p>BACK TO BLOG</p>
         </div>
         <div className="flex justify-between mt-10">
-          <p className="font-asty text-secondary">#eatwithdot</p>
-          <p className="font-asty w-[530px] text-3xl">
-            <span className="italic text-secondary">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass campaigns.
+          <p className="font-asty text-secondary">#{post.tags?.[0] || "blog"}</p>
+          <p className="font-asty w-[530px] text-3xl" >
+            <span className="italic text-secondary">{post.title.rendered}</span> 
+            <span dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
           </p>
         </div>
+
+        {/* <div className="flex justify-center mt-20">
+          <Image className="w-[90%]" src={post.featured_media} alt={post.title.rendered} />
+        </div> */}
+        {post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
         <div className="flex justify-center mt-20">
-          <Image className="w-[90%]" src={blog1} alt="blog 1" />
+          <Image
+            src={post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
+            alt={post.title.rendered}
+            width={800}
+            height={800}
+          />
         </div>
+      )}
         <div className="flex justify-between mt-20">
           <p className="font-asty w-[350px] text-2xl">
-            <span className="italic text-secondary">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
+            <span className="italic text-secondary">{post.title.rendered}</span> <span dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
           </p>
-          <p className="font-asty w-[600px]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
+          <p className="font-asty w-[600px]"><span dangerouslySetInnerHTML={{ __html: post.content.rendered }} /></p>
         </div>
       </div>
       <ImageCarousel images={carouselImages} />
