@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -36,6 +36,25 @@ const TravelEat = () => {
       image: Blog1,
     },
   ];
+
+  const [recentPosts, setRecentPosts] = useState([]);
+
+useEffect(() => {
+  async function fetchRecentPosts() {
+    try {
+      const res = await fetch(
+        "https://dotlung.com/wp-json/wp/v2/posts?per_page=5&_embed"
+      );
+      const data = await res.json();
+      setRecentPosts(data);
+    } catch (error) {
+      console.error("Error fetching recent posts:", error);
+    }
+  }
+
+  fetchRecentPosts();
+}, []);
+
 
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
@@ -113,7 +132,7 @@ const TravelEat = () => {
           </header>
 
           <div className="">
-            {posts.map((post, index) => (
+            {recentPosts.map((post, index) => (
               <article
                 key={index}
                 className="grid md:grid-cols-2 items-center gap-4"
@@ -121,19 +140,18 @@ const TravelEat = () => {
                 <div className="flex justify-center items-center border-b-2 border-secondary" style={{height:'100%'}}>
                   <div>
                     <div className="text-sm opacity-80 flex justify-between  pr-5">
-                      <p>{post.date}</p>
-                      <p className="text-secondary">{post.tag}</p>
+                      <p>{new Date(post.date).toLocaleDateString()}</p>
+                      <p className="text-secondary">#{post.tags?.[0] || "blog"}</p>
                     </div>
                     <a href={post.link} className="block mt-2">
                       <span className="text-2xl  italic text-secondary">
-                        {post.title}{" "}
+                      {post.title.rendered}{" "}
                       </span>
-                      <span className="text-white text-lg mt-1">
-                        {post.description}
-                      </span>
+                      <span className="text-white text-lg mt-1" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+                      
                     </a>
                     <a
-                      href={post.link}
+                      href={`/blog/${post.slug}`}
                       className="text-white text-sm inline-block mt-3 font-bold"
                     >
                       Read more →
@@ -141,12 +159,14 @@ const TravelEat = () => {
                   </div>
                 </div>
 
-                {post.image && (
+                {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
                   <figure className="relative w-full ">
-                    <a href={post.link}>
+                    <a href={`/blog/${post.slug}`}>
                       <Image
-                        src={Blog1}
-                        alt={post.title}
+                          src={post._embedded["wp:featuredmedia"][0].source_url}
+                          alt={post.title.rendered}
+                          width={500}
+                          height={500}
                         // fill
                         style={{ objectFit: "cover", }}
                       />

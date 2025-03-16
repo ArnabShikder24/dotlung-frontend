@@ -10,7 +10,7 @@ import image2 from "../../../assets/images/g2.png";
 import ImageGallery from "../../../components/ImageGallery";
 import BlogFooter from "../../../components/BlogFooter";
 import Link from "next/link";
-import Blog1 from "../../../../public/Dotlungimages/Dotlungimages/blog1.png";
+// import Blog1 from "../../../../public/Dotlungimages/Dotlungimages/blog1.png";
 
 const BlogPage = () => {
   const carouselImages = [
@@ -45,38 +45,39 @@ const BlogPage = () => {
       alt: "City view with buildings and bridges"
     },
   ];
-  const posts = [
-    {
-      date: "11.02.2018",
-      tag: "#learnwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/1",
-      image: Blog1,
-    },
-    {
-      date: "11.02.2018",
-      tag: "#travelwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/2",
-      image: Blog1,
-    },
-    {
-      date: "10.02.2018",
-      tag: "#workwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/3",
-      image: Blog1,
-    },
-  ];
+  // const posts = [
+  //   {
+  //     date: "11.02.2018",
+  //     tag: "#learnwithdot",
+  //     title: "Ladies, Wine, Barcelona.",
+  //     description:
+  //       "But not on their own. I create strong online identities & communities and develop kickass.",
+  //     link: "/blog/1",
+  //     image: Blog1,
+  //   },
+  //   {
+  //     date: "11.02.2018",
+  //     tag: "#travelwithdot",
+  //     title: "Ladies, Wine, Barcelona.",
+  //     description:
+  //       "But not on their own. I create strong online identities & communities and develop kickass.",
+  //     link: "/blog/2",
+  //     image: Blog1,
+  //   },
+  //   {
+  //     date: "10.02.2018",
+  //     tag: "#workwithdot",
+  //     title: "Ladies, Wine, Barcelona.",
+  //     description:
+  //       "But not on their own. I create strong online identities & communities and develop kickass.",
+  //     link: "/blog/3",
+  //     image: Blog1,
+  //   },
+  // ];
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
     async function fetchPost() {
@@ -86,7 +87,10 @@ const BlogPage = () => {
         );
         const data = await res.json();
         if (data.length > 0) {
-          setPost(data[0]);
+          const fetchedPost = data[0];
+          setPost(fetchedPost);
+  
+          fetchRelatedPosts(fetchedPost.tags, fetchedPost.id);
         }
       } catch (error) {
         console.error("Error fetching post:", error);
@@ -94,8 +98,36 @@ const BlogPage = () => {
         setLoading(false);
       }
     }
+  
     if (id) fetchPost();
   }, [id]);
+  
+
+  async function fetchRelatedPosts(tags, currentPostId) {
+    try {
+      if (tags && tags.length > 1) {
+        const tagQuery = tags.join(",");
+        const res = await fetch(
+          `https://dotlung.com/wp-json/wp/v2/posts?tags=${tagQuery}&exclude=${currentPostId}&per_page=3&_embed`
+        );
+        const data = await res.json();
+        setRelatedPosts(data);
+        console.log(tags);
+      } else {
+        // Optional: Fallback if no tags - maybe fetch latest posts
+        const res = await fetch(
+          `https://dotlung.com/wp-json/wp/v2/posts?exclude=${currentPostId}&per_page=3&_embed`
+        );
+        const data = await res.json();
+        setRelatedPosts(data);
+        console.log(currentPostId);
+      }
+    } catch (error) {
+      console.error("Error fetching related posts:", error);
+    }
+  }
+  
+  // if (id) fetchPost();
 
   if (loading) return <p className="text-white">Loading...</p>;
   if (!post) return <p className="text-white">Post not found</p>;
@@ -187,9 +219,8 @@ const BlogPage = () => {
             </div>
           </div>
         </div>
-
         <div className="mt-10 mb-20">
-            {posts.map((post, index) => (
+            {relatedPosts.map((post, index) => (
               <article
                 key={index}
                 className="grid md:grid-cols-2 items-center gap-4"
@@ -197,19 +228,18 @@ const BlogPage = () => {
                 <div className="flex justify-center items-center border-b-2 border-secondary" style={{height:'100%'}}>
                   <div>
                     <div className="text-sm opacity-80 flex justify-between  pr-5">
-                      <p>{post.date}</p>
-                      <p className="text-secondary">{post.tag}</p>
+                      <p>{new Date(post.date).toLocaleDateString()}</p>
+                      <p className="text-secondary">{post.tags?.[0]}</p>
                     </div>
-                    <a href={post.link} className="block mt-2">
+                    <a href={`/blog/${post.slug}`}className="block mt-2">
                       <span className="text-2xl  italic text-secondary">
-                        {post.title}{" "}
+                      {post.title.rendered}{" "}
                       </span>
-                      <span className="text-white text-lg mt-1">
-                        {post.description}
-                      </span>
+                      <span className="text-white text-lg mt-1" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}/>
+                      
                     </a>
                     <a
-                      href={post.link}
+                      href={`/blog/${post.slug}`}
                       className="text-white text-sm inline-block mt-3 font-bold"
                     >
                       Read more →
@@ -217,12 +247,14 @@ const BlogPage = () => {
                   </div>
                 </div>
 
-                {post.image && (
+                {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url &&(
                   <figure className="relative w-full ">
-                    <a href={post.link}>
+                    <a href={`/blog/${post.slug}`}>
                       <Image
-                        src={Blog1}
-                        alt={post.title}
+                        src={post._embedded["wp:featuredmedia"][0].source_url}
+                        alt={post.title.rendered}
+                        width={500}
+                        height={500}
                         // fill
                         style={{ objectFit: "cover", }}
                       />
@@ -232,6 +264,55 @@ const BlogPage = () => {
               </article>
             ))}
           </div>
+        {/* <div className="mt-10 mb-20">
+          {relatedPosts.map((post, index) => (
+            <article key={index} className="grid md:grid-cols-2 items-center gap-4">
+              <div className="flex justify-center items-center border-b-2 border-secondary" style={{ height: "100%" }}>
+                <div>
+                  <div className="text-sm opacity-80 flex justify-between pr-5">
+                    <p>{new Date(post.date).toLocaleDateString()}</p>
+                    <p className="text-secondary">
+                      {/* Show first tag name or tag id */}
+                      {/* #{post.tags?.[0]} */}
+                    {/* </p>
+                  </div> */}
+
+                  {/* <a href={`/blog/${post.slug}`} className="block mt-2">
+                    <span className="text-2xl italic text-secondary">
+                      {post.title.rendered}
+                    </span>
+
+                    {/* Excerpt */}
+                    {/* <div
+                      className="text-white text-lg mt-1"
+                      dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                    />
+                  </a> */}
+
+                  {/* <a href={`/blog/${post.slug}`} className="text-white text-sm inline-block mt-3 font-bold">
+                    Read more →
+                  </a>
+                </div>
+              </div> */} 
+
+              {/* Featured Image */}
+              {/* {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
+                <figure className="relative w-full">
+                  <a href={`/blog/${post.slug}`}>
+                    <Image
+                      src={post._embedded["wp:featuredmedia"][0].source_url}
+                      alt={post.title.rendered}
+                      width={500}
+                      height={500}
+                      style={{ objectFit: "cover" }}
+                    />
+                  </a>
+                </figure>
+              )}
+            </article>
+          ))}
+        </div>  */}
+
       </div>
     </>
   );
