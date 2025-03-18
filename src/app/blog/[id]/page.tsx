@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import blog1 from "../../../assets/images/blog1.png";
 import blog2 from "../../../assets/images/blog2.png";
@@ -78,6 +78,7 @@ const BlogPage = () => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [relatedPosts, setRelatedPosts] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     async function fetchPost() {
@@ -136,7 +137,7 @@ const BlogPage = () => {
       <div className="lg:w-[1100px] mx-auto px-4 py-10 mt-20">
         <div className="flex items-center justify-between font-caslon text-sm border-b-2 border-secondary pb-4">
           <p>{new Date(post.date).toLocaleDateString()}</p>
-          <p>BACK TO BLOG</p>
+          <p className="cursor-pointer" onClick={() => router.back()}>BACK TO BLOG</p>
         </div>
         <div className="lg:flex justify-between mt-10">
           <p className="font-asty text-secondary">#{post.tags?.[0] || "blog"}</p>
