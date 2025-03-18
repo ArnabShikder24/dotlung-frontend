@@ -18,10 +18,10 @@ const EmailInput = () => {
 
 const Footer = () => {
   return (
-    <footer className="w-full p-4 font-gilroy mt-5 relative">
+    <footer className="w-full p-5 font-gilroy mt-5 relative">
       <Image src={model1} alt='' width={280} className="absolute bottom-10 right-10 opacity-[1] hidden lg:block" />
       <div className="flex items-center justify-center">
-        <div className="max-w-3xl flex-1 mx-20  flex justify-center">
+        <div className="max-w-3xl flex-1 lg:mx-20  flex justify-center">
           <div className="  flex w-full">
             <div className="mx-auto w-full lg:w-[85%]">
               <div className="lg:flex justify-between">
