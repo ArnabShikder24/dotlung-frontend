@@ -49,7 +49,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
         className="flex items-center justify-center w-full px-12"
       >
         {/* Previous Image (Partially Visible) */}
-        <div className="relative mx-4 transform transition-all duration-500 cursor-pointer opacity-60 hover:opacity-80"
+        <div className="relative mx-4 hidden md:block transform transition-all duration-500 cursor-pointer opacity-60 hover:opacity-80"
              onClick={goToPrevious}>
           <Image 
             src={images[(currentIndex - 1 + images.length) % images.length].src}
@@ -73,7 +73,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
         </div>
         
         {/* Next Image (Partially Visible) */}
-        <div className="relative mx-4 transform transition-all duration-500 cursor-pointer opacity-60 hover:opacity-80"
+        <div className="relative mx-4 hidden md:block transform transition-all duration-500 cursor-pointer opacity-60 hover:opacity-80"
              onClick={goToNext}>
           <Image 
             src={images[(currentIndex + 1) % images.length].src}

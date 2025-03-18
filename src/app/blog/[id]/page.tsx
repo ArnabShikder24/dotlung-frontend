@@ -140,7 +140,7 @@ const BlogPage = () => {
         </div>
         <div className="lg:flex justify-between mt-10">
           <p className="font-asty text-secondary">#{post.tags?.[0] || "blog"}</p>
-          <p className="font-asty lg:w-[530px] text-3xl" >
+          <p className="font-asty lg:w-[530px] text-2xl lg:text-3xl" >
             <span className="italic text-secondary">{post.title.rendered}</span> 
             <span dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
           </p>
@@ -179,8 +179,8 @@ const BlogPage = () => {
           </div>
         </div>
       </div>
-      <ImageGallery images={galleryImages} />
-      <div className="lg:w-[1100px] mx-auto px-4 pb-8">
+      {/* <ImageGallery images={galleryImages} /> */}
+      <div className="w-[100%] lg:w-[1100px] mx-auto px-4 pb-8">
         <div className="lg:flex justify-between my-20">
           <p className="font-asty lg:w-[350px] text-2xl">
             
@@ -192,22 +192,22 @@ const BlogPage = () => {
         </div>
         <BlogFooter />
         <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
-          <div className="max-w-3xl flex-1 mx-20 text-xs">
+          <div className="max-w-3xl flex-1 lg:mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
                 <Link
                   href="#"
-                  className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                  className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
                 >
                   PREVIOUS POST
                 </Link>
 
-                <div className="w-1/2 relative">
+                <div className="w-[40%] lg:w-1/2 relative">
                   <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
                   <div className="h-full" />
                 </div>
 
-                <div className="relative w-1/4">
+                <div className="relative w-[30%] lg:w-1/4">
                   <Link
                     href="#"
                     className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
@@ -225,7 +225,7 @@ const BlogPage = () => {
                 key={index}
                 className="grid md:grid-cols-2 items-center gap-4"
               >
-                <div className="flex justify-center items-center border-b-2 border-secondary" style={{height:'100%'}}>
+                <div className="lg:flex justify-center items-center border-b-2 border-secondary">
                   <div>
                     <div className="text-sm opacity-80 flex justify-between ">
                       <p>{new Date(post.date).toLocaleDateString()}</p>
@@ -248,13 +248,14 @@ const BlogPage = () => {
                 </div>
 
                 {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url &&(
-                  <figure className="relative w-full ">
+                  <figure className="relative w-full">
                     <a href={`/blog/${post.slug}`}>
                       <Image
                         src={post._embedded["wp:featuredmedia"][0].source_url}
                         alt={post.title.rendered}
                         width={500}
                         height={500}
+                        className="w-[100%]"
                         // fill
                         style={{ objectFit: "cover", }}
                       />
