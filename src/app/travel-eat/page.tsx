@@ -180,7 +180,7 @@ useEffect(() => {
         </section>
       </div>
       <div className="flex items-center justify-center font-gilroy py-40">
-        <div className="max-w-3xl flex-1 mx-20 text-xs">
+        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
               <div className="w-3/4 relative">
