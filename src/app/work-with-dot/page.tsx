@@ -32,7 +32,7 @@ const WorkWithDot = () => {
           alt="dot Image"
         />
         <div className="lg:-ml-40 w-[380px] mx-auto">
-          <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
+          <h1 className="text-[65px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
             WORK <br /> WITH DOT
           </h1>
           <p className="font-caslon text-lg mt-5 mb-14">
@@ -88,7 +88,7 @@ const WorkWithDot = () => {
       </div>
 
       <div className="flex items-center justify-center font-gilroy">
-        <div className="max-w-3xl flex-1 mx-20 text-xs">
+        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
               <div className="w-3/4 relative">
@@ -106,7 +106,7 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center mt-16 overflow-hidden">
+      <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
         <div className="text-white text-2xl font-serif">
           {items.map((item, index) => (
             <div key={index} className="mb-4 relative">
@@ -124,7 +124,7 @@ const WorkWithDot = () => {
       </div>
 
       <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
-        <div className="max-w-3xl flex-1 mx-20 text-xs">
+        <div className="max-w-3xl flex-1  mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
               <Link

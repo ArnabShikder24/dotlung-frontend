@@ -31,9 +31,8 @@ export default function FeaturedSection() {
   if (loading) return <p className="text-white">Loading...</p>;
 
   return (
-    <div className="container mx-auto max-w-3xl">
-      <h1 className="text-7xl text-white">Blog</h1>
-
+    <div className="container mx-auto max-w-3xl py-20 px-5 lg:px-0">
+      <h1 className="text-6xl md:text-7xl text-white">Blog</h1>
       {posts.map((post) => (
         <article key={post.id} className="my-10 border-b border-orange-500 pb-4">
           <div className="flex justify-between text-xs text-orange-400">
@@ -61,7 +60,6 @@ export default function FeaturedSection() {
           )}
         </article>
       ))}
-
       <Pagination currentPage={1} totalPages={10} onPageChange={(page) => console.log(page)} />
     </div>
   );

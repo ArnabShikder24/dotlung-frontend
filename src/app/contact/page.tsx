@@ -1,8 +1,9 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Logo from "../../../public/assets/svgs/logo.svg";
-import { PathNames } from '../../routes/index.route';
+import { useRouter } from 'next/navigation';
 
 const EmailInput = () => {
   return (
@@ -18,13 +19,14 @@ const EmailInput = () => {
 };
 
 const Contact = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-col items-center justify-between w-full h-screen">
       <div className="flex items-center justify-between p-4 w-full">
         <Image src={Logo} alt="Logo" width={50} />
-        <Link href={PathNames.home} className="font-gilroy cursor-pointer transition-colors text-center text-sm">
+        <p onClick={() => router.back()} className="font-gilroy cursor-pointer transition-colors text-center text-sm">
           CLOSE <span className="text-secondary">X</span>
-        </Link>
+        </p>
       </div>
 
       <div className="w-full flex-1 flex items-center justify-center">
