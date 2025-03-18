@@ -106,7 +106,7 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center mt-16 overflow-hidden">
+      <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
         <div className="text-white text-2xl font-serif">
           {items.map((item, index) => (
             <div key={index} className="mb-4 relative">

@@ -86,7 +86,7 @@ const LearnWithDot = () => {
         </div>
     
         <div className="flex items-center justify-center font-gilroy mt-32">
-          <div className="max-w-3xl flex-1 mx-20 text-xs">
+          <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
                 <div className="w-3/4 relative">
@@ -104,7 +104,7 @@ const LearnWithDot = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center mt-16">
+        <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
           <div className="text-white text-2xl font-serif">
             {tableItems.map((data, index) => (
               <div key={index} className="mb-4 relative">
@@ -122,7 +122,7 @@ const LearnWithDot = () => {
         </div>
             
         <div className="flex items-center justify-center font-gilroy mt-44">
-          <div className="max-w-4xl flex-1 mx-20 text-xs">
+          <div className="max-w-4xl flex-1 mx-5 lg:mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
                 <a
@@ -137,7 +137,7 @@ const LearnWithDot = () => {
                   <div className="h-full" />
                 </div>
 
-                <div className="relative w-[80%]">
+                <div className="relative w-[50%]">
                   <a
                     href="#"
                     className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-start border-l border-white"
@@ -218,7 +218,7 @@ const LearnWithDot = () => {
       </div>
       
       <div className="flex items-center justify-center font-gilroy mt-20 mb-32">
-        <div className="max-w-3xl flex-1 mx-20 text-xs">
+        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
               <Link
@@ -233,7 +233,7 @@ const LearnWithDot = () => {
                 <div className="h-full" />
               </div>
 
-              <div className="relative w-1/4">
+              <div className="relative w-[20%] lg:w-1/4">
                 <Link
                   href={PathNames.learnWithDot}
                   className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
