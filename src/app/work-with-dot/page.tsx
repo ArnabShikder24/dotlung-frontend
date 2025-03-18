@@ -88,7 +88,7 @@ const WorkWithDot = () => {
       </div>
 
       <div className="flex items-center justify-center font-gilroy">
-        <div className="max-w-3xl flex-1 mx-20 text-xs">
+        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
               <div className="w-3/4 relative">
@@ -124,7 +124,7 @@ const WorkWithDot = () => {
       </div>
 
       <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
-        <div className="max-w-3xl flex-1 mx-20 text-xs">
+        <div className="max-w-3xl flex-1  mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
               <Link
