@@ -32,7 +32,7 @@ const WorkWithDot = () => {
           alt="dot Image"
         />
         <div className="lg:-ml-40 w-[380px] mx-auto">
-          <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
+          <h1 className="text-[65px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
             WORK <br /> WITH DOT
           </h1>
           <p className="font-caslon text-lg mt-5 mb-14">

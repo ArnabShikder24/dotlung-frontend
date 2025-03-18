@@ -65,7 +65,7 @@ useEffect(() => {
       <div className="lg:flex items-end">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
         <div className="lg:-ml-40 w-[380px] mx-auto lg:pt-28">
-          <h1 className="text-[80px] font-extrabold font-gilroy leading-[85px]">
+          <h1 className="text-[65px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
             TRAVEL <br /> & EAT <br /> WITH DOT
           </h1>
           <p className="font-caslon text-lg mt-5 mb-14">
@@ -166,7 +166,8 @@ useEffect(() => {
                           src={post._embedded["wp:featuredmedia"][0].source_url}
                           alt={post.title.rendered}
                           width={500}
-                          height={500}
+                        height={500}
+                        className="w-full"
                         // fill
                         style={{ objectFit: "cover", }}
                       />
