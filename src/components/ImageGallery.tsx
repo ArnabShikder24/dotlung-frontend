@@ -15,7 +15,7 @@ const ImageGallery: React.FC<GalleryProps> = ({ images }) => {
         {/* Custom absolute positioning to match the exact layout in the image */}
         
         {/* Top left image - person with unicorn headband */}
-        <div className="absolute left-20 top-0 w-[45%] h-[45%] md:w-[35%] md:h-[45%] rounded-md overflow-hidden shadow-lg">
+        <div className="lg:absolute left-20 top-0 w-[45%] h-[45%] md:w-[35%] md:h-[45%] rounded-md overflow-hidden shadow-lg">
           <Image
             src={images[0].src}
             alt={images[0].alt}
@@ -25,7 +25,7 @@ const ImageGallery: React.FC<GalleryProps> = ({ images }) => {
         </div>
         
         {/* Top right image - city view with bridge */}
-        <div className="absolute right-36 top-[15%] w-[45%] h-[55%] md:w-[30%] md:h-[75%] rounded-md overflow-hidden shadow-lg">
+        <div className="lg:absolute right-36 top-[15%] w-[45%] h-[55%] md:w-[30%] md:h-[75%] rounded-md overflow-hidden shadow-lg">
           <Image
             src={images[1].src}
             alt={images[1].alt}
@@ -35,7 +35,7 @@ const ImageGallery: React.FC<GalleryProps> = ({ images }) => {
         </div>
         
         {/* Bottom left image - two friends */}
-        <div className="absolute left-20 bottom-0 w-[45%] h-[45%] md:w-[35%] md:h-[45%] rounded-md overflow-hidden shadow-lg">
+        <div className="lg:absolute left-20 bottom-0 w-[45%] h-[45%] md:w-[35%] md:h-[45%] rounded-md overflow-hidden shadow-lg">
           <Image
             src={images[2].src}
             alt={images[2].alt}

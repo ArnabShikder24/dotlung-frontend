@@ -179,7 +179,7 @@ const BlogPage = () => {
           </div>
         </div>
       </div>
-      {/* <ImageGallery images={galleryImages} /> */}
+      <ImageGallery images={galleryImages} />
       <div className="w-[100%] lg:w-[1100px] mx-auto px-4 pb-8">
         <div className="lg:flex justify-between my-20">
           <p className="font-asty lg:w-[350px] text-2xl">
