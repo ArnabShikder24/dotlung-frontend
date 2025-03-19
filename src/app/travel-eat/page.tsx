@@ -3,40 +3,10 @@ import { useEffect, useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Blog1 from "../../../public/Dotlungimages/Dotlungimages/blog1.png";
+
 import Link from "next/link";
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const posts = [
-    {
-      date: "11.02.2018",
-      tag: "#learnwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/1",
-      image: Blog1,
-    },
-    {
-      date: "11.02.2018",
-      tag: "#travelwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/2",
-      image: Blog1,
-    },
-    {
-      date: "10.02.2018",
-      tag: "#workwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/3",
-      image: Blog1,
-    },
-  ];
-
   const [recentPosts, setRecentPosts] = useState([]);
 
 useEffect(() => {

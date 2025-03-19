@@ -8,16 +8,42 @@ import Pagination from "../../components/Pagination";
 export default function FeaturedSection() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
+  // useEffect(() => {
+  //   async function fetchPosts() {
+  //     try {
+  //       const res = await fetch(
+  //         "https://dotlung.com/wp-json/wp/v2/posts?_embed"
+          
+  //       );
+  //       const data = await res.json();
+  //       setPosts(data);
+  //     } catch (error) {
+  //       console.error("Error fetching posts:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   }
+
+  //   fetchPosts();
+  // }, []);
   useEffect(() => {
     async function fetchPosts() {
+      setLoading(true);
       try {
         const res = await fetch(
-          "https://dotlung.com/wp-json/wp/v2/posts?_embed"
-          
+          `https://dotlung.com/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=5`
         );
+
+        if (!res.ok) {
+          throw new Error("Error fetching posts");
+        }
+
         const data = await res.json();
         setPosts(data);
+        setTotalPages(parseInt(res.headers.get("X-WP-TotalPages")) || 1);
       } catch (error) {
         console.error("Error fetching posts:", error);
       } finally {
@@ -26,7 +52,7 @@ export default function FeaturedSection() {
     }
 
     fetchPosts();
-  }, []);
+  }, [currentPage]);
 
   if (loading) return <p className="text-white">Loading...</p>;
 
@@ -60,7 +86,11 @@ export default function FeaturedSection() {
           )}
         </article>
       ))}
-      <Pagination currentPage={1} totalPages={10} onPageChange={(page) => console.log(page)} />
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={(page) => setCurrentPage(page)}
+      />
     </div>
   );
 }
