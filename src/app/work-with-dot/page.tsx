@@ -53,7 +53,7 @@ const WorkWithDot = () => {
           onMouseMove={handleMouseMove}
         >
           <motion.div
-            className="absolute w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
+            className="absolute w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
             animate={{
               x: mousePosition.x / 10 - 50,
               y: mousePosition.y / 10 - 50,
@@ -61,7 +61,7 @@ const WorkWithDot = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute left-6 lg:left-10 top-1/4 max-w-md font-caslon">
+          <div className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-md font-caslon">
             <p className="text-2xl italic text-secondary">
               Together we can make my magic.
             </p>
@@ -72,7 +72,7 @@ const WorkWithDot = () => {
             </p>
           </div>
 
-          <div className="absolute lg:right-10 top-1/2 max-w-sm">
+          <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               The digital world can be a difficult one to navigate. Sometimes
               you need that unicorn to guide you through the good and the bad to

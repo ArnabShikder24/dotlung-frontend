@@ -42,7 +42,7 @@ const WorkWithDot = () => {
           onMouseMove={handleMouseMove}
         >
           <motion.div
-            className="absolute w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
+            className="absolute w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
             animate={{
               x: mousePosition.x / 10 - 50,
               y: mousePosition.y / 10 - 50,
@@ -50,7 +50,7 @@ const WorkWithDot = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute left-4 lg:left-10 top-1/4 w-[95%] lg:max-w-md font-caslon">
+          <div className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-md font-caslon">
             <p className="text-2xl italic text-secondary">
               Digital equals life in todo
             </p>
@@ -59,7 +59,7 @@ const WorkWithDot = () => {
             </p>
           </div>
 
-          <div className="absolute lg:right-10 top-1/2 max-w-sm">
+          <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               I&apos;m Dot Lung. Dot stands for Dorothy, and Lung means Dragon in Chinese. After growing up in Los Angeles, I traveled the world working on a variety of campaigns until I found a home in Barcelona. Since (), Barcelona has inspired me to be the magical and fierce being I am today.
             </p>
