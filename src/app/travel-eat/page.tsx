@@ -32,10 +32,10 @@ useEffect(() => {
 
   return (
     <div className="container mx-auto">
-      <div className="lg:flex items-end">
+      <div className="lg:flex items-end mx-5 lg:mx-0">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
-        <div className="lg:-ml-40 w-[380px] mx-auto lg:pt-28">
-          <h1 className="text-[65px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
+        <div className="lg:-ml-40 lg:w-[380px] mx-auto lg:pt-28">
+          <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
             TRAVEL <br /> & EAT <br /> WITH DOT
           </h1>
           <p className="font-caslon text-lg mt-5 mb-14">
