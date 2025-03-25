@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
 import Link from "next/link";
+
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [recentPosts, setRecentPosts] = useState([]);
@@ -113,19 +113,19 @@ useEffect(() => {
                       <p>{new Date(post.date).toLocaleDateString()}</p>
                       <p className="text-secondary">#{post.tags?.[0] || "blog"}</p>
                     </div>
-                    <a href={post.link} className="block mt-2">
+                    <Link href={`/blog/${post.slug}`} className="block mt-2">
                       <span className="text-2xl  italic text-secondary">
                       {post.title.rendered}{" "}
                       </span>
                       <span className="text-white text-lg mt-1" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href={`/blog/${post.slug}`}
                       className="text-white text-sm inline-block mt-3 font-bold"
                     >
                       Read more →
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
