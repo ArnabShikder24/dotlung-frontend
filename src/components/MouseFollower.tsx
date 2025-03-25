@@ -17,7 +17,7 @@ const MouseFollower = () => {
 
   return (
     <motion.div
-      className="fixed w-2 h-2 bg-orange-500 rounded-full pointer-events-none z-50"
+      className="hidden md:block fixed w-2 h-2 bg-orange-500 rounded-full pointer-events-none z-50"
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 100, damping: 10 }}
     />

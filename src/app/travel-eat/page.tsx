@@ -3,40 +3,10 @@ import { useEffect, useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Blog1 from "../../../public/Dotlungimages/Dotlungimages/blog1.png";
 import Link from "next/link";
+
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const posts = [
-    {
-      date: "11.02.2018",
-      tag: "#learnwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/1",
-      image: Blog1,
-    },
-    {
-      date: "11.02.2018",
-      tag: "#travelwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/2",
-      image: Blog1,
-    },
-    {
-      date: "10.02.2018",
-      tag: "#workwithdot",
-      title: "Ladies, Wine, Barcelona.",
-      description:
-        "But not on their own. I create strong online identities & communities and develop kickass.",
-      link: "/blog/3",
-      image: Blog1,
-    },
-  ];
-
   const [recentPosts, setRecentPosts] = useState([]);
 
 useEffect(() => {
@@ -62,10 +32,10 @@ useEffect(() => {
 
   return (
     <div className="container mx-auto">
-      <div className="lg:flex items-end">
+      <div className="lg:flex items-end mx-5 lg:mx-0">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
-        <div className="lg:-ml-40 w-[380px] mx-auto lg:pt-28">
-          <h1 className="text-[65px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
+        <div className="lg:-ml-40 lg:w-[380px] mx-auto lg:pt-28">
+          <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
             TRAVEL <br /> & EAT <br /> WITH DOT
           </h1>
           <p className="font-caslon text-lg mt-5 mb-14">
@@ -86,7 +56,7 @@ useEffect(() => {
           onMouseMove={handleMouseMove}
         >
           <motion.div
-            className="absolute w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
+            className="absolute w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] bg-[#e74c3c] rounded-full"
             animate={{
               x: mousePosition.x / 10 - 50,
               y: mousePosition.y / 10 - 50,
@@ -94,7 +64,7 @@ useEffect(() => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute left-6 lg:left-10 top-1/4 w-[95%] lg:max-w-md font-caslon">
+          <div className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-md font-caslon">
             <p className="text-2xl mt-2">
               <span className="text-2xl italic text-secondary">
                 Make your mind magic.
@@ -106,7 +76,7 @@ useEffect(() => {
             </p>
           </div>
 
-          <div className="absolute lg:right-10 top-1/2 max-w-sm">
+          <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               I have been teaching social media, online marketing, digital
               design and more at several institutions based in Barcelona,
@@ -143,19 +113,19 @@ useEffect(() => {
                       <p>{new Date(post.date).toLocaleDateString()}</p>
                       <p className="text-secondary">#{post.tags?.[0] || "blog"}</p>
                     </div>
-                    <a href={post.link} className="block mt-2">
+                    <Link href={`/blog/${post.slug}`} className="block mt-2">
                       <span className="text-2xl  italic text-secondary">
                       {post.title.rendered}{" "}
                       </span>
                       <span className="text-white text-lg mt-1" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href={`/blog/${post.slug}`}
                       className="text-white text-sm inline-block mt-3 font-bold"
                     >
                       Read more →
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

@@ -15,7 +15,7 @@ export default function Home() {
           />
         </div>
         <div
-          className="h-auto w-[390px] mx-auto lg:-ml-[300px]"
+          className="h-auto lg:w-[390px] mx-auto lg:-ml-[300px]"
         >
           <div className="z-10 text-left max-w-2xl px-6">
             <h1 className="text-5xl font-bold uppercase">
