@@ -110,11 +110,10 @@ const WorkWithDot = () => {
         <div className="text-white text-2xl font-serif">
           {items.map((item, index) => (
             <div key={index} className="mb-4 relative">
-              <span className="block pb-2 ">{item.title}</span>
+              <span className="block pb-2 cursor-pointer lg:hover:text-secondary">{item.title}</span>
               <div
-                className="border-b-2 absolute top-4"
+                className="border-b-[1px] border-secondary absolute top-4"
                 style={{
-                  border: "1px solid rgb(241, 67, 54)",
                   width: item.width,
                 }}
               ></div>

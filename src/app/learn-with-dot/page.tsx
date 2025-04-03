@@ -108,11 +108,10 @@ const LearnWithDot = () => {
           <div className="text-white text-2xl font-serif">
             {tableItems.map((data, index) => (
               <div key={index} className="mb-4 relative">
-                  <span className="block pb-2 ">{data.title}</span>
+                  <span className="block pb-2  cursor-pointer lg:hover:text-secondary">{data.title}</span>
                   <div
-                  className=" border-b-2 absolute top-4"
+                  className="border-b-[1px] border-secondary absolute top-4"
                   style={{
-                      border: "1px solid rgb(241, 67, 54)",
                       width: data.width,
                   }}
                   ></div>
