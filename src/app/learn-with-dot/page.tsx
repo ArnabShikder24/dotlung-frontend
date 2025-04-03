@@ -40,7 +40,7 @@ const LearnWithDot = () => {
             alt="dot Image"
           />
           <div className="lg:-ml-40 lg:w-[380px] mx-auto">
-            <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
+            <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[70px] lg:leading-[85px]">
             Learn <br /> WITH DOT
             </h1>
             <p className="font-caslon text-lg mt-5 mb-14">
@@ -77,7 +77,7 @@ const LearnWithDot = () => {
               </p>
             </div>
 
-            <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
+            <div className="absolute pt-4 lg:pt-0 mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
               <p className="text-sm leading-relaxed font-asty">
                 I have been teaching social media, online marketing, digital design and more at several institutions based in Barcelona, including Universitat de Barcelona, Toulouse Business School, ESdesign Escuela Superior de Diseño de Barcelona, and more. My teaching is not just in the classroom, as I love to share my knowledge with my clients in order for them to share the great message of social! I also create learning communities online between many of my clients, in order to leverage all the great things we can learn from each. So yes, I teach, but I also facilitate, led and direct you in the best ways to become your own fabulous unicorns!
               </p>
@@ -108,11 +108,10 @@ const LearnWithDot = () => {
           <div className="text-white text-2xl font-serif">
             {tableItems.map((data, index) => (
               <div key={index} className="mb-4 relative">
-                  <span className="block pb-2 ">{data.title}</span>
+                  <span className="block pb-2  cursor-pointer lg:hover:text-secondary">{data.title}</span>
                   <div
-                  className=" border-b-2 absolute top-4"
+                  className="border-b-[1px] border-secondary absolute top-4"
                   style={{
-                      border: "1px solid rgb(241, 67, 54)",
                       width: data.width,
                   }}
                   ></div>

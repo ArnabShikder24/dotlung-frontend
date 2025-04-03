@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <div className="flex flex-col items-center justify-between w-full h-screen">
       <div className="flex items-center justify-between p-4 w-full">
-        <Image src={Logo} alt="Logo" width={50} />
+        <Image onClick={() => router.push("/")} src={Logo} alt="Logo" width={50} />
         <p onClick={() => router.back()} className="font-gilroy cursor-pointer transition-colors text-center text-sm">
           CLOSE <span className="text-secondary">X</span>
         </p>
@@ -32,11 +32,11 @@ const Contact = () => {
       <div className="w-full flex-1 flex items-center justify-center">
         <div className="lg:w-[50%] lg:flex justify-between items-center px-5 lg:px-0 py-10 lg:py-0">
           <div className="max-w-lg">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold lg:w-[500px]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-gilroy lg:w-[500px]">
               LET&apos;S GROW YOUR SOCIAL MEDIA EMPIRE TOGETHER.
             </h1>
             <p className="text-lg font-caslon mt-5 lg:w-[300px]">
-              <span className="italic text-secondary">Book time with me!</span> 
+              <span className="italic text-secondary">Book time with me! </span> 
               Enter your e-mail address right here:
             </p>
             <div className="w-[95%] mb-5 lg:mb-0 lg:w-[300px]">
@@ -51,7 +51,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-col text-lg gap-5 space-y-3 mt-28 text-center lg:text-start">
               {["FACEBOOK", "INSTAGRAM", "TWITTER", "SNAPCHAT", "SKYPE"].map((platform) => (
-                <a key={platform} href="#" className="text-sm hover:underline font-bold">
+                <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy">
                   {platform}
                 </a>
               ))}
@@ -60,7 +60,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="py-5 px-20 lg:flex justify-between items-center w-full">
+      <div className="py-5 px-20 hidden lg:flex justify-between items-center w-full">
         <div className="text-xs text-indigo-200">© 2018, by Dot Lang</div>
         <div className="text-xs text-indigo-200">
           Design by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Sofia</Link>, 

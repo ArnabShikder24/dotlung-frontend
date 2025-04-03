@@ -13,15 +13,15 @@ const WorkWithDot = () => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto overflow-x-hidden">
       <div className="lg:flex items-end mx-5 lg:mx-0">
         <Image
           className="w-[780px]"
           src={DotImage}
           alt="dot Image"
         />
-        <div className="w-[360px] lg:w-[400px] mx-auto lg:ml-0">
-          <h1 className="text-[50px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
+        <div className="md:w-[360px] lg:w-[400px] mx-auto lg:ml-0">
+          <h1 className="text-[50px] lg:text-[80px] font-extrabold font-gilroy leading-[60px] lg:leading-[85px]">
             CREATING DIGITAL EXPERIENCES
           </h1>
           <p className="font-caslon text-lg w-[380px] mt-5 mb-14">

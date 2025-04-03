@@ -32,7 +32,7 @@ const WorkWithDot = () => {
           alt="dot Image"
         />
         <div className="lg:-ml-40 lg:w-[380px] mx-auto">
-          <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
+          <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[70px] lg:leading-[85px]">
             WORK <br /> WITH DOT
           </h1>
           <p className="font-caslon text-lg mt-5 mb-14">
@@ -72,7 +72,7 @@ const WorkWithDot = () => {
             </p>
           </div>
 
-          <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
+          <div className="absolute pt-4 lg:pt-0 mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               The digital world can be a difficult one to navigate. Sometimes
               you need that unicorn to guide you through the good and the bad to
@@ -110,11 +110,10 @@ const WorkWithDot = () => {
         <div className="text-white text-2xl font-serif">
           {items.map((item, index) => (
             <div key={index} className="mb-4 relative">
-              <span className="block pb-2 ">{item.title}</span>
+              <span className="block pb-2 cursor-pointer lg:hover:text-secondary">{item.title}</span>
               <div
-                className="border-b-2 absolute top-4"
+                className="border-b-[1px] border-secondary absolute top-4"
                 style={{
-                  border: "1px solid rgb(241, 67, 54)",
                   width: item.width,
                 }}
               ></div>

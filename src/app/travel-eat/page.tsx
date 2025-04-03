@@ -35,7 +35,7 @@ useEffect(() => {
       <div className="lg:flex items-end mx-5 lg:mx-0">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
         <div className="lg:-ml-40 lg:w-[380px] mx-auto lg:pt-28">
-          <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
+          <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[65px] lg:leading-[85px]">
             TRAVEL <br /> & EAT <br /> WITH DOT
           </h1>
           <p className="font-caslon text-lg mt-5 mb-14">
@@ -76,7 +76,7 @@ useEffect(() => {
             </p>
           </div>
 
-          <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
+          <div className="absolute pt-4 lg:pt-0 mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               I have been teaching social media, online marketing, digital
               design and more at several institutions based in Barcelona,

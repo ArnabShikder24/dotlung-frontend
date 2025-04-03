@@ -113,7 +113,7 @@ const Navbar = () => {
           </Link>
           <button
             onClick={toggleMobileMenu}
-            className="text-white focus:outline-none fixed right-6"
+            className="text-white focus:outline-none fixed right-4"
           >
             {/* Hamburger Icon (Simple representation, replace with an SVG or icon library) */}
             {isMobileMenuOpen ? (
