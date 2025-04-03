@@ -60,7 +60,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="py-5 px-20 lg:flex justify-between items-center w-full">
+      <div className="py-5 px-20 hidden lg:flex justify-between items-center w-full">
         <div className="text-xs text-indigo-200">© 2018, by Dot Lang</div>
         <div className="text-xs text-indigo-200">
           Design by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Sofia</Link>, 
