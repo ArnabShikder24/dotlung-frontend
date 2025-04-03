@@ -21,7 +21,7 @@ export default function Home() {
             <h1 className="text-4xl lg:text-5xl font-bold uppercase">
               Hey, I am Dot. Mother of social media dragons
             </h1>
-            <p className="font-caslon mt-8 mb-12">
+            <p className="font-caslon mt-8 mb-6">
               <span className="text-secondary italic">
                 Hatching new eggs and startups
               </span>{" "}
