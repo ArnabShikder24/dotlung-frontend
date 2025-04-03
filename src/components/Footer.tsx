@@ -18,7 +18,7 @@ const EmailInput = () => {
 
 const Footer = () => {
   return (
-    <footer className="w-full p-5 font-gilroy mt-5 relative">
+    <footer className="w-full p-5 mt-5 relative">
       <Image src={model1} alt='' width={280} className="absolute bottom-16 right-10 opacity-[1] hidden lg:block" />
       <div className="flex items-center justify-center">
         <div className="max-w-3xl flex-1 lg:mx-20  flex justify-center">
@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="mx-auto w-full lg:w-[85%]">
               <div className="lg:flex justify-between">
                 <div>
-                  <h1 className="text-5xl font-bold">LET’S TALK</h1>
+                  <h1 className="text-5xl font-extrabold font-gilroy">LET’S TALK</h1>
                 </div>
                 <div>
                   <p className="text-lg font-caslon">+1 661 368 5864</p>
@@ -35,7 +35,7 @@ const Footer = () => {
               </div>
               <div className="lg:flex justify-between mt-10">
                 <div>
-                  <p className="italic text-secondary mt-4">
+                  <p className="italic text-secondary font-caslon mt-4">
                     Don’t miss out on this!
                   </p>
                   <p className="mt-2 text-lg font-caslon">
@@ -44,7 +44,7 @@ const Footer = () => {
                   </p>
                   <EmailInput />
                 </div>
-                <div className="flex flex-col text-lg  mt-4" style={{width:140}}>
+                <div className="flex flex-col text-lg font-gilroy mt-4" style={{width:140}}>
                   <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
                     FACEBOOK
                   </a>
