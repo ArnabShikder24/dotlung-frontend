@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-2 px-6 text-center lg:flex justify-between items-center">
+      <div className="py-2 px-6 text-center hidden lg:flex justify-between items-center">
         <div>
           <Link href="/blog" className="font-bold text-sm hover:text-indigo-200 transition-colors">
             BLOG
