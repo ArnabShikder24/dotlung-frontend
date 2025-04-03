@@ -21,7 +21,7 @@ const WorkWithDot = () => {
           alt="dot Image"
         />
         <div className="w-[360px] lg:w-[400px] mx-auto lg:ml-0">
-          <h1 className="text-[50px] lg:text-[80px] font-extrabold font-gilroy leading-[85px]">
+          <h1 className="text-[50px] lg:text-[80px] font-extrabold font-gilroy leading-[60px] lg:leading-[85px]">
             CREATING DIGITAL EXPERIENCES
           </h1>
           <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
