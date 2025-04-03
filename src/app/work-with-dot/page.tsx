@@ -72,7 +72,7 @@ const WorkWithDot = () => {
             </p>
           </div>
 
-          <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
+          <div className="absolute pt-4 lg:pt-0 mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
             <p className="text-sm leading-relaxed font-asty">
               The digital world can be a difficult one to navigate. Sometimes
               you need that unicorn to guide you through the good and the bad to

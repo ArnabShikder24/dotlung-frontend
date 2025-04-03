@@ -77,7 +77,7 @@ const LearnWithDot = () => {
               </p>
             </div>
 
-            <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
+            <div className="absolute pt-4 lg:pt-0 mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
               <p className="text-sm leading-relaxed font-asty">
                 I have been teaching social media, online marketing, digital design and more at several institutions based in Barcelona, including Universitat de Barcelona, Toulouse Business School, ESdesign Escuela Superior de Diseño de Barcelona, and more. My teaching is not just in the classroom, as I love to share my knowledge with my clients in order for them to share the great message of social! I also create learning communities online between many of my clients, in order to leverage all the great things we can learn from each. So yes, I teach, but I also facilitate, led and direct you in the best ways to become your own fabulous unicorns!
               </p>
