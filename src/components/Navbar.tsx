@@ -5,11 +5,20 @@ import Logo from "../../public/assets/svgs/logo.svg";
 import Link from "next/link";
 import { PathNames } from "../routes/index.route";
 import { Squash as Hamburger } from "hamburger-react";
+import { usePathname } from "next/navigation";
+import { cn } from "../lib/cn";
+
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef(null);
+  const currentPath = usePathname();
+
+  const navItemActive = (path: string) => {
+    if (path == currentPath) return "text-secondary";
+
+  };
 
   const menuItems = [
     { title: "ABOUT", path: PathNames.about, border: true },
@@ -64,7 +73,7 @@ const Navbar = () => {
           <div className="border border-white flex w-full">
             <Link
               href={PathNames.about}
-              className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+              className={cn("w-1/4 px-6 py-3 hover:text-orange-500 transition-colors text-center border-r border-white", navItemActive(PathNames.about))}
             >
               ABOUT
             </Link>
@@ -92,7 +101,7 @@ const Navbar = () => {
                     >
                       <Link
                         href={item.path}
-                        className="block px-4 py-3 text-white hover:text-orange-500 transition-colors text-center text-xs"
+                        className={`block px-4 py-3 hover:text-orange-500 transition-colors text-center text-xs ${navItemActive(item.path)}`}
                       >
                         {item.title}
                       </Link>
@@ -105,7 +114,7 @@ const Navbar = () => {
         </div>
         <Link
           href={PathNames.contact}
-          className="text-white hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
+          className="hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
         >
           CONTACT
         </Link>
@@ -134,7 +143,7 @@ const Navbar = () => {
                     <Link
                       key={idx}
                       href={item.path}
-                      className={`w-full ${item.border ? "border" : "border-r border-l"} border-white text-center py-3 text-white hover:text-orange-500 transition-colors`}
+                      className={`w-full ${item.border ? "border" : "border-r border-l"} border-white text-center py-3 ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-orange-500 transition-colors`}
                       onClick={toggleMobileMenu}
                     >
                       {item.title}
