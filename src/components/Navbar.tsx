@@ -32,9 +32,13 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      const hamburgerBtn = document.querySelector(".hamburger-react");
+  
       if (
         mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target as Node)
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        hamburgerBtn &&
+        !hamburgerBtn.contains(event.target as Node)
       ) {
         setIsMobileMenuOpen(false);
       }
@@ -44,7 +48,8 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [isMobileMenuOpen]);
+  
   
 
   return (
@@ -114,32 +119,6 @@ const Navbar = () => {
           <div className="fixed right-3 top-3 z-50">
             <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} color="#F64C3E"/>
           </div>
-          {/* <button
-            onClick={toggleMobileMenu}
-            className="text-white focus:outline-none fixed right-4"
-          > */}
-            {/* Hamburger Icon (Simple representation, replace with an SVG or icon library) */}
-            {/* {isMobileMenuOpen ? (
-              <p>
-                CLOSE <span className="text-secondary">X</span>
-              </p>
-            ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            )} */}
-          {/* </button> */}
         </div>
 
         {/* Mobile Menu */}
