@@ -31,7 +31,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-16 md:mt-0">
       <div className="lg:flex items-end mx-5 lg:mx-0">
         <Image className="w-[980px]" src={DotImage} alt="dot Image" />
         <div className="lg:-ml-40 lg:w-[380px] mx-auto lg:pt-28">

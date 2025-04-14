@@ -57,7 +57,7 @@ export default function FeaturedSection() {
   if (loading) return <p className="text-white">Loading...</p>;
 
   return (
-    <div className="container mx-auto max-w-3xl py-20 px-5 lg:px-0">
+    <div className="container mx-auto max-w-3xl py-20 px-5 lg:px-0 mt-14 md:mt-0">
       <h1 className="text-6xl md:text-7xl font-gilroy text-white">BLOG</h1>
       {posts.map((post) => (
         <article key={post.id} className="my-10 border-b border-orange-500 pb-4">
