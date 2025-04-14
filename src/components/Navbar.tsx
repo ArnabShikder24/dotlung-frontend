@@ -12,12 +12,13 @@ const Navbar = () => {
   const mobileMenuRef = useRef(null);
 
   const menuItems = [
-    { title: "ABOUT", path: PathNames.about },
-    { title: "WORK WITH DOT", path: PathNames.workWithDot },
-    { title: "LEARN WITH DOT", path: PathNames.learnWithDot },
-    { title: "TRAVEL & EAT WITH DOT", path: PathNames.travelEat },
-    { title: "BLOG", path: PathNames.blog },
-    { title: "CONTACT", path: PathNames.contact },
+    { title: "ABOUT", path: PathNames.about, border: true },
+    {title: false},
+    { title: "WORK WITH DOT", path: PathNames.workWithDot, border: false },
+    { title: "LEARN WITH DOT", path: PathNames.learnWithDot, border: false },
+    { title: "TRAVEL & EAT WITH DOT", path: PathNames.travelEat, border: false },
+    { title: "BLOG", path: PathNames.blog, border: true },
+    { title: "CONTACT", path: PathNames.contact, border: true },
   ];
 
   const desktopMenuItems = [
@@ -125,18 +126,27 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="w-full h-screen fixed bg-gradient-to-b from-[#4D05E8]/100 to-[#4D05E8]/80 z-50">
             <div
-              className="w-3/4 mt-4 flex flex-col items-center absolute left-1/2 transform -translate-x-1/2 top-20"
+              className="w-[55%] mt-4 flex flex-col items-center absolute left-1/2 transform -translate-x-1/2 top-20"
             >
-              {menuItems.map((item) => (
-                <Link
-                  key={item.title}
-                  href={item.path}
-                  className="w-full border border-white text-center py-3 text-white hover:text-orange-500 transition-colors"
-                  onClick={toggleMobileMenu} 
-                >
-                  {item.title}
-                </Link>
-              ))}
+              {menuItems.map((item, idx) => {
+                if (item.title) {
+                  return (
+                    <Link
+                      key={idx}
+                      href={item.path}
+                      className={`w-full ${item.border ? "border" : "border-r border-l"} border-white text-center py-3 text-white hover:text-orange-500 transition-colors`}
+                      onClick={toggleMobileMenu}
+                    >
+                      {item.title}
+                    </Link>
+                  );
+                } else {
+                  return (<div key={idx} className="relative border w-full h-14">
+                    <div className="absolute w-full h-[1px] bg-white transform -rotate-[9deg] top-1/2 -translate-y-1/2"></div>
+                    <div className="h-full" />
+                  </div>);
+                }
+              })}
             </div>
           </div>
         )}
