@@ -41,7 +41,7 @@ const LearnWithDot = () => {
           />
           <div className="lg:-ml-40 lg:w-[380px] mx-auto">
             <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[70px] lg:leading-[85px]">
-            Learn <br /> WITH DOT
+            LEARN <br /> WITH DOT
             </h1>
             <p className="font-caslon text-lg mt-5 mb-14">
               <span className="italic text-secondary">
