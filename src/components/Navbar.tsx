@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "../../public/assets/svgs/logo.svg";
 import Link from "next/link";
 import { PathNames } from "../routes/index.route";
+import { Squash as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState(false);
@@ -26,26 +27,25 @@ const Navbar = () => {
   ];
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
         setIsMobileMenuOpen(false);
       }
     };
-
-    if (isMobileMenuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
+  
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMobileMenuOpen]);
+  }, []);
+  
 
   return (
     <>
@@ -106,17 +106,20 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="w-full p-4 font-gilroy mt-2 md:hidden flex flex-col items-center relative text-white z-50">
+      <nav className="w-full p-4 font-gilroy mt-5 md:hidden flex flex-col items-center relative text-white z-50">
         <div className="flex justify-between w-full items-center">
           <Link className="fixed" href={PathNames.home}>
             <Image src={Logo} alt="Logo" width={50} />
           </Link>
-          <button
+          <div className="fixed right-3 top-3 z-50">
+            <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} color="#F64C3E"/>
+          </div>
+          {/* <button
             onClick={toggleMobileMenu}
             className="text-white focus:outline-none fixed right-4"
-          >
+          > */}
             {/* Hamburger Icon (Simple representation, replace with an SVG or icon library) */}
-            {isMobileMenuOpen ? (
+            {/* {isMobileMenuOpen ? (
               <p>
                 CLOSE <span className="text-secondary">X</span>
               </p>
@@ -135,8 +138,8 @@ const Navbar = () => {
                   d="M4 6h16M4 12h16m-7 6h7"
                 />
               </svg>
-            )}
-          </button>
+            )} */}
+          {/* </button> */}
         </div>
 
         {/* Mobile Menu */}
@@ -150,7 +153,7 @@ const Navbar = () => {
                 key={item.title}
                 href={item.path}
                 className="w-full border border-white bg-[#4D05E8] text-center py-3 text-white hover:text-orange-500 transition-colors"
-                onClick={toggleMobileMenu} // Close menu when clicking a menu item
+                onClick={toggleMobileMenu} 
               >
                 {item.title}
               </Link>
