@@ -4,19 +4,30 @@ import Image from "next/image";
 import Logo from "../../public/assets/svgs/logo.svg";
 import Link from "next/link";
 import { PathNames } from "../routes/index.route";
+import { Squash as Hamburger } from "hamburger-react";
+import { usePathname } from "next/navigation";
+import { cn } from "../lib/cn";
+
 
 const Navbar = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef(null);
+  const currentPath = usePathname();
+
+  const navItemActive = (path: string) => {
+    if (path == currentPath) return "text-secondary";
+
+  };
 
   const menuItems = [
-    { title: "ABOUT", path: PathNames.about },
-    { title: "WORK WITH DOT", path: PathNames.workWithDot },
-    { title: "LEARN WITH DOT", path: PathNames.learnWithDot },
-    { title: "TRAVEL & EAT WITH DOT", path: PathNames.travelEat },
-    { title: "BLOG", path: PathNames.blog },
-    { title: "CONTACT", path: PathNames.contact },
+    { title: "ABOUT", path: PathNames.about, border: true },
+    {title: false},
+    { title: "WORK WITH DOT", path: PathNames.workWithDot, border: false },
+    { title: "LEARN WITH DOT", path: PathNames.learnWithDot, border: false },
+    { title: "TRAVEL & EAT WITH DOT", path: PathNames.travelEat, border: false },
+    { title: "BLOG", path: PathNames.blog, border: true },
+    { title: "CONTACT", path: PathNames.contact, border: true },
   ];
 
   const desktopMenuItems = [
@@ -26,26 +37,30 @@ const Navbar = () => {
   ];
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+      const hamburgerBtn = document.querySelector(".hamburger-react");
+  
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        hamburgerBtn &&
+        !hamburgerBtn.contains(event.target as Node)
+      ) {
         setIsMobileMenuOpen(false);
       }
     };
-
-    if (isMobileMenuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
+  
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMobileMenuOpen]);
+  
+  
 
   return (
     <>
@@ -58,7 +73,7 @@ const Navbar = () => {
           <div className="border border-white flex w-full">
             <Link
               href={PathNames.about}
-              className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+              className={cn("w-1/4 px-6 py-3 hover:text-orange-500 transition-colors text-center border-r border-white", navItemActive(PathNames.about))}
             >
               ABOUT
             </Link>
@@ -86,7 +101,7 @@ const Navbar = () => {
                     >
                       <Link
                         href={item.path}
-                        className="block px-4 py-3 text-white hover:text-orange-500 transition-colors text-center text-xs"
+                        className={`block px-4 py-3 hover:text-orange-500 transition-colors text-center text-xs ${navItemActive(item.path)}`}
                       >
                         {item.title}
                       </Link>
@@ -99,62 +114,49 @@ const Navbar = () => {
         </div>
         <Link
           href={PathNames.contact}
-          className="text-white hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
+          className="hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
         >
           CONTACT
         </Link>
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="w-full p-4 font-gilroy mt-2 md:hidden flex flex-col items-center relative text-white z-50">
+      <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[99999]">
         <div className="flex justify-between w-full items-center">
-          <Link className="fixed" href={PathNames.home}>
+          <Link className="fixed top-4 left-3 z-[99999]" href={PathNames.home}>
             <Image src={Logo} alt="Logo" width={50} />
           </Link>
-          <button
-            onClick={toggleMobileMenu}
-            className="text-white focus:outline-none fixed right-4"
-          >
-            {/* Hamburger Icon (Simple representation, replace with an SVG or icon library) */}
-            {isMobileMenuOpen ? (
-              <p>
-                CLOSE <span className="text-secondary">X</span>
-              </p>
-            ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            )}
-          </button>
+          <div className="fixed top-3 right-3 z-[99999]">
+            <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} color="#F64C3E"/>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div
-            ref={mobileMenuRef}
-            className="w-3/4 mt-4 flex flex-col items-center fixed left-1/2 transform -translate-x-1/2 top-20 z-50"
-          >
-            {menuItems.map((item) => (
-              <Link
-                key={item.title}
-                href={item.path}
-                className="w-full border border-white bg-[#4D05E8] text-center py-3 text-white hover:text-orange-500 transition-colors"
-                onClick={toggleMobileMenu} // Close menu when clicking a menu item
-              >
-                {item.title}
-              </Link>
-            ))}
+          <div className="w-full h-screen fixed bg-gradient-to-b from-[#4D05E8]/100 to-[#4D05E8]/80 z-50">
+            <div
+              className="w-[55%] mt-4 flex flex-col items-center absolute left-1/2 transform -translate-x-1/2 top-20"
+            >
+              {menuItems.map((item, idx) => {
+                if (item.title) {
+                  return (
+                    <Link
+                      key={idx}
+                      href={item.path}
+                      className={`w-full ${item.border ? "border" : "border-r border-l"} border-white text-center py-3 ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-orange-500 transition-colors`}
+                      onClick={toggleMobileMenu}
+                    >
+                      {item.title}
+                    </Link>
+                  );
+                } else {
+                  return (<div key={idx} className="relative border w-full h-14">
+                    <div className="absolute w-full h-[1px] bg-white transform -rotate-[9deg] top-1/2 -translate-y-1/2"></div>
+                    <div className="h-full" />
+                  </div>);
+                }
+              })}
+            </div>
           </div>
         )}
       </nav>

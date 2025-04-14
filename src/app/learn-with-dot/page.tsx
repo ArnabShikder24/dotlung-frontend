@@ -41,7 +41,7 @@ const LearnWithDot = () => {
           />
           <div className="lg:-ml-40 lg:w-[380px] mx-auto">
             <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[70px] lg:leading-[85px]">
-            Learn <br /> WITH DOT
+            LEARN <br /> WITH DOT
             </h1>
             <p className="font-caslon text-lg mt-5 mb-14">
               <span className="italic text-secondary">
@@ -184,17 +184,17 @@ const LearnWithDot = () => {
       <div className="text-white min-h-screen flex items-center justify-center px-6">
         <div className="max-w-3xl w-full grid grid-cols-1 md:grid-cols-2 gap-1 items-start">
           <div className="-mt-10">
-            <p className="text-secondary italic text-lg">Every Monday — 11.30</p>
-            <h1 className="text-5xl md:text-[70px] font-asty font-extrabold mt-2">
+            <p className="text-secondary font-caslon italic text-lg">Every Monday — 11.30</p>
+            <h1 className="text-5xl md:text-[70px] font-gilroy font-extrabold mt-2">
               SOCIAL <br /> MEDIA <br /> MONDAYS
             </h1>
-            <p className="text-secondary uppercase font-semibold text-sm mt-3">
+            <p className="text-secondary uppercase font-extrabold font-asty text-sm mt-3">
               Every Monday going live on Facebook!
             </p>
           </div>
 
           <div className="relative">
-            <p className="text-white text-lg">
+            <p className="text-white text-lg font-asty">
               Dragons meet other Dragons! I bring the fire to start your week with
               Facebook Live where you’ll spend time with me and others who can
               help you develop your powerful core for digital superiority!

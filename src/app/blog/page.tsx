@@ -58,18 +58,18 @@ export default function FeaturedSection() {
 
   return (
     <div className="container mx-auto max-w-3xl py-20 px-5 lg:px-0">
-      <h1 className="text-6xl md:text-7xl text-white">Blog</h1>
+      <h1 className="text-6xl md:text-7xl font-gilroy text-white">BLOG</h1>
       {posts.map((post) => (
         <article key={post.id} className="my-10 border-b border-orange-500 pb-4">
           <div className="flex justify-between text-xs text-orange-400">
-            <span>{new Date(post.date).toLocaleDateString()}</span>
-            <span className="text-secondary">#{post.categories}</span>
+            <span className="font-asty">{new Date(post.date).toLocaleDateString()}</span>
+            <span className="text-secondary font-asty">#{post.categories}</span>
           </div>
           <Link href={`/blog/${post.slug}`}>
-            <h2 className="text-2xl text-secondary italic">{post.title.rendered}</h2>
+            <h2 className="text-3xl font-caslon text-secondary italic">{post.title.rendered}</h2>
           </Link>
-          <p className="text-white" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-          <Link href={`/blog/${post.slug}`} className="text-secondary font-semibold hover:underline">
+          <p className="text-white font-asty" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+          <Link href={`/blog/${post.slug}`} className="text-secondary font-semibold font-caslon hover:underline">
             READ MORE →
           </Link>
 

@@ -67,8 +67,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-2 px-6 text-center hidden lg:flex justify-between items-center">
+        <h1></h1>
         <div>
-          <Link href="/blog" className="font-bold text-sm hover:text-indigo-200 transition-colors">
+          <Link href="/blog" className="font-bold text-sm hover:text-indigo-200 transition-colors fixed bottom-5 left-4">
             BLOG
           </Link>
         </div>
@@ -82,9 +83,11 @@ const Footer = () => {
           Code by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Lorenzo Bocchi</Link>
         </div>
         
-        <Link href="/live" className="text-xs font-semibold hover:text-indigo-200 transition-colors">
+        <Link href="/live" className="text-xs font-semibold hover:text-indigo-200 transition-colors fixed bottom-5 right-4">
           LIVE NOW!
         </Link>
+        <h1></h1>
+        <h1></h1>
     </div>
     </footer>
   );

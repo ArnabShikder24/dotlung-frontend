@@ -110,21 +110,21 @@ useEffect(() => {
                 <div className="flex justify-center items-center border-b-2 border-secondary" style={{height:'100%'}}>
                   <div>
                     <div className="text-sm opacity-80 flex justify-between  pr-5">
-                      <p>{new Date(post.date).toLocaleDateString()}</p>
-                      <p className="text-secondary">#{post.tags?.[0] || "blog"}</p>
+                      <p className="font-asty">{new Date(post.date).toLocaleDateString()}</p>
+                      <p className="text-secondary font-caslon">#{post.tags?.[0] || "blog"}</p>
                     </div>
                     <Link href={`/blog/${post.slug}`} className="block mt-2">
-                      <span className="text-2xl  italic text-secondary">
+                      <span className="text-3xl font-caslon italic text-secondary">
                       {post.title.rendered}{" "}
                       </span>
-                      <span className="text-white text-lg mt-1" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+                      <span className="text-white font-asty text-lg mt-1" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
                     </Link>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-white text-sm inline-block mt-3 font-bold"
+                      className="text-white text-sm inline-block font-caslon mt-3 font-bold"
                     >
-                      Read more →
+                      READ MORE →
                     </Link>
                   </div>
                 </div>
