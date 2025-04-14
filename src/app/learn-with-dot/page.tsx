@@ -32,7 +32,7 @@ const LearnWithDot = () => {
   ];
 
   return (
-      <div className="container mx-auto overflow-hidden">
+      <div className="container mx-auto overflow-hidden mt-20 md:mt-0">
         <div className="lg:flex items-end mx-5 lg:mx-0">
           <Image
             className="w-[980px]"

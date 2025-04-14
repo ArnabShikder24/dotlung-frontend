@@ -136,14 +136,14 @@ const BlogPage = () => {
     <>
       <div className="lg:w-[1100px] mx-auto px-4 py-10 mt-20">
         <div className="flex items-center justify-between font-caslon text-sm border-b-2 border-secondary pb-4">
-          <p>{new Date(post.date).toLocaleDateString()}</p>
+          <p className="font-caslon">{new Date(post.date).toLocaleDateString()}</p>
           <p className="cursor-pointer" onClick={() => router.back()}>BACK TO BLOG</p>
         </div>
         <div className="lg:flex justify-between mt-10">
           <p className="font-asty text-secondary">#{post.tags?.[0] || "blog"}</p>
           <p className="font-asty lg:w-[530px] text-2xl lg:text-3xl" >
-            <span className="italic text-secondary">{post.title.rendered}</span> 
-            <span dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+            <span className="italic font-caslon text-3xl text-secondary">{post.title.rendered}</span> 
+            <span className="font-asty" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
           </p>
         </div>
 
@@ -162,21 +162,21 @@ const BlogPage = () => {
       )}
         <div className="lg:flex justify-between mt-20">
           <p className="font-asty lg:w-[350px] text-2xl">
-            <span className="italic text-secondary">{post.title.rendered}</span> <span dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+            <span className="italic font-caslon text-3xl text-secondary">{post.title.rendered}</span> <span className="font-caslon" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
           </p>
-          <p className="font-asty lg:w-[600px] mt-5 lg:mt-0"><span dangerouslySetInnerHTML={{ __html: post.content.rendered }} /></p>
+          <p className="font-caslon lg:w-[600px] mt-5 lg:mt-0"><span dangerouslySetInnerHTML={{ __html: post.content.rendered }} /></p>
         </div>
       </div>
       <ImageCarousel images={carouselImages} />
       <div className="lg:w-[1100px] mx-auto px-4 pb-8">
         <div className="lg:flex justify-between mt-20">
           <p className="font-asty lg:w-[350px] text-2xl mt-10">
-            <span className="italic text-secondary">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
+            <span className="italic font-caslon text-3xl text-secondary">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
           </p>
           <div className="lg:w-[600px] mt-5 lg:mt-0 font-asty">
             <p className="uppercase font-asty text-xs mb-5 text-secondary">SIENNA</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
-            <p className="mt-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
+            <p className="font-asty">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
+            <p className="mt-5 font-asty">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
           </div>
         </div>
       </div>
@@ -188,7 +188,7 @@ const BlogPage = () => {
           </p>
           <div className="lg:w-[600px] font-asty">
             <p className="uppercase font-asty text-xs mb-5 text-secondary">SANTA MARIA</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
+            <p className="font-asty">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
           </div>
         </div>
         <BlogFooter />
@@ -229,21 +229,21 @@ const BlogPage = () => {
                 <div className="lg:flex justify-center items-center border-b-2 border-secondary">
                   <div>
                     <div className="text-sm opacity-80 flex justify-between ">
-                      <p>{new Date(post.date).toLocaleDateString()}</p>
+                      <p className="font-asty">{new Date(post.date).toLocaleDateString()}</p>
                       <p className="text-secondary">{post.tags?.[0]}</p>
                     </div>
                     <a href={`/blog/${post.slug}`}className="block mt-2">
-                      <span className="text-2xl  italic text-secondary">
+                      <span className="text-3xl font-caslon italic text-secondary">
                       {post.title.rendered}{" "}
                       </span>
-                      <span className="text-white text-lg mt-1" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}/>
+                      <span className="text-white font-caslon text-lg mt-1" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}/>
                       
                     </a>
                     <a
                       href={`/blog/${post.slug}`}
-                      className="text-white text-sm inline-block mt-3 font-bold"
+                      className="text-white text-sm font-caslon inline-block mt-3 font-bold"
                     >
-                      Read more →
+                      READ MORE →
                     </a>
                   </div>
                 </div>

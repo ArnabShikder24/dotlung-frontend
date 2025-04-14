@@ -5,7 +5,7 @@ import dot from "../../public/Dotlungimages/Dotlungimages/dragon-Dot.png";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-10 md:mt-0">
       <div className="lg:flex items-center font-gilroy">
         <div>
           <Image
