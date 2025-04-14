@@ -151,7 +151,7 @@ const Navbar = () => {
                   );
                 } else {
                   return (<div key={idx} className="relative border w-full h-14">
-                    <div className="absolute w-full h-[1px] bg-white transform -rotate-[9deg] top-1/2 -translate-y-1/2"></div>
+                    <div className="absolute w-full h-[1px] bg-white transform -rotate-[13.5deg] top-1/2 -translate-y-1/2"></div>
                     <div className="h-full" />
                   </div>);
                 }
