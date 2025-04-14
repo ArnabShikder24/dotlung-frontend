@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 const EmailInput = () => {
   return (
-    <div className="flex items-center border border-white px-3 py-2 w-[350px] mt-5">
+    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[350px] mt-5">
       <input
         type="email"
         placeholder="Your e-mail"
@@ -21,7 +21,7 @@ const EmailInput = () => {
 const Contact = () => {
   const router = useRouter();
   return (
-    <div className="flex flex-col items-center justify-between w-full h-screen">
+    <div className="flex flex-col items-center justify-between w-full lg:h-screen border-secondary border-0 lg:border-[50px]">
       <div className="flex items-center justify-between p-4 w-full">
         <Image onClick={() => router.push("/")} src={Logo} alt="Logo" width={50} />
         <p onClick={() => router.back()} className="font-gilroy cursor-pointer transition-colors text-center text-sm">
@@ -49,7 +49,7 @@ const Contact = () => {
               <p>+1 661 368 5864</p>
               <p>hello@dotlung.com</p>
             </div>
-            <div className="flex flex-col text-lg gap-5 space-y-3 mt-28 text-center lg:text-start">
+            <div className="flex flex-col text-lg gap-5 space-y-3 mt-28">
               {["FACEBOOK", "INSTAGRAM", "TWITTER", "SNAPCHAT", "SKYPE"].map((platform) => (
                 <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy">
                   {platform}
