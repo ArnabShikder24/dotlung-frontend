@@ -9,30 +9,30 @@ export default function Home() {
       <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[100%] lg:h-auto">
         <div className="flex-1 flex justify-center items-center lg:flex-none">
           <Image
-            className="w-full scale-[1.4] md:scale-100 md:w-[1000px]"
+            className="w-full scale-[1.4] md:scale-100 md:w-[1000px] -z-20"
             src={dot}
             alt="Dotlung"
           />
         </div>
         <div
-          className="h-auto lg:w-[390px] mx-auto lg:-ml-[300px] z-50"
+          className="h-auto lg:w-[465px] mx-auto lg:mt-16 lg:-ml-[200px]"
         >
           <div className="z-10 text-left max-w-2xl px-6">
-            <h1 className="text-[2rem] lg:text-5xl font-bold uppercase leading-[32px]">
+            <h1 className="text-[2rem] lg:text-[3.5rem] font-bold uppercase leading-[33px] lg:leading-[55px] -z-10">
               Hey, I am Dot. Mother of social media dragons
             </h1>
-            <p className="font-caslon mt-8 mb-6">
-              <span className="text-secondary italic">
+            <p className="font-caslon lg:text-2xl mt-6 lg:mt-8">
+              <p className="text-secondary italic">
                 Hatching new eggs and startups
-              </span>{" "}
-              nurturing and growing them using my methodology into fully fledged
+              </p>{" "}
+              nurturing and <br /> growing them using my methodology into fully <br /> fledged
               digital dragons with
-              <span className="text-secondary italic">
+              <p className="text-secondary italic">
                 {" "}
                 strong online identities & communities
-              </span>
+              </p>
             </p>
-            <p className="flex items-center gap-6 mt-6 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
+            <p className="flex uppercase items-center gap-6 mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
               Comm&apos;on Chase the Dragon!
               <span
                 className="block w-24 h-[1.5px] bg-red-600"
