@@ -5,20 +5,20 @@ import dot from "../../public/Dotlungimages/Dotlungimages/dragon-Dot.png";
 
 export default function Home() {
   return (
-    <div className="container mx-auto mt-10 md:mt-0">
-      <div className="lg:flex items-center font-gilroy">
-        <div>
+    <div className="container mx-auto mt-10 md:mt-0 overflow-hidden h-[90vh] lg:h-auto">
+      <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[100%] lg:h-auto">
+        <div className="flex-1 flex justify-center items-center lg:flex-none">
           <Image
-            className="w-[1000px]"
+            className="w-full scale-[1.4] md:scale-100 md:w-[1000px]"
             src={dot}
             alt="Dotlung"
           />
         </div>
         <div
-          className="h-auto lg:w-[390px] mx-auto lg:-ml-[300px]"
+          className="h-auto lg:w-[390px] mx-auto lg:-ml-[300px] z-50"
         >
           <div className="z-10 text-left max-w-2xl px-6">
-            <h1 className="text-4xl lg:text-5xl font-bold uppercase">
+            <h1 className="text-[2rem] lg:text-5xl font-bold uppercase leading-[32px]">
               Hey, I am Dot. Mother of social media dragons
             </h1>
             <p className="font-caslon mt-8 mb-6">
@@ -41,7 +41,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="absolute left-0 bottom-4 w-full">
+      <div className="hidden md:block absolute left-0 bottom-4 w-full">
         <div className="flex items-center justify-between px-5">
           <Link href="/blog" className="font-bold text-sm hover:text-indigo-200">
             BLOG
