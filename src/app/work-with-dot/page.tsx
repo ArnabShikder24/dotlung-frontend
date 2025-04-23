@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import Link from "next/link";
 import { PathNames } from "../../routes/index.route";
+import DotSection from "../../components/DotSection";
 
 const WorkWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -122,7 +123,7 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
+      <div className="lg:flex items-center justify-center font-gilroy mt-32 mb-32 hidden">
         <div className="max-w-3xl flex-1  mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
@@ -150,7 +151,7 @@ const WorkWithDot = () => {
           </div>
         </div>
     </div>
-      
+    <DotSection />
     </div>
   );
 };
