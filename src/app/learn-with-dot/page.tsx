@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { PathNames } from "../../routes/index.route";
 import Link from "next/link";
+import DotSection from "../../components/DotSection";
 
 const LearnWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -120,7 +121,7 @@ const LearnWithDot = () => {
           </div>
         </div>
             
-        <div className="flex items-center justify-center font-gilroy mt-44">
+        <div className="lg:flex items-center justify-center font-gilroy mt-44 hidden">
           <div className="max-w-4xl flex-1 mx-5 lg:mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
@@ -148,7 +149,7 @@ const LearnWithDot = () => {
             </div>
           </div>
       </div>
-      
+      <DotSection />
 
       <div className="text-white min-h-screen flex flex-col items-center py-10 px-6">
         <div className="max-w-4xl w-full">
