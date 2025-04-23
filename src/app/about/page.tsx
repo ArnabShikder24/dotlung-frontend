@@ -14,25 +14,34 @@ const WorkWithDot = () => {
   };
   return (
     <div className="container mx-auto overflow-x-hidden mt-20 md:mt-0">
-      <div className="lg:flex items-end mx-5 lg:mx-0">
-        <Image
-          className="w-[780px]"
-          src={DotImage}
-          alt="dot Image"
-        />
-        <div className="md:w-[360px] lg:w-[400px] mx-auto lg:ml-0">
-          <h1 className="text-[50px] lg:text-[80px] font-extrabold font-gilroy leading-[60px] lg:leading-[85px]">
-            CREATING DIGITAL EXPERIENCES
-          </h1>
-          <p className="font-caslon text-lg w-[380px] mt-5 mb-14">
-            <span className="italic text-secondary">
-              Mythical digital magic.
-            </span>{" "}
-            I have worked worldwide weaving wonders for top brands, events, and
-            concepts.
-          </p>
-          <p className="font-gilroy text-sm">EXPLORE</p>
-          <div className="w-[1px] h-24 bg-secondary ml-6 mt-5" />
+      <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[100vh] lg:h-auto">
+        <div className="flex-1 flex justify-center items-center lg:flex-none">
+          <Image
+            className="w-full scale-[1.2] md:scale-100 md:w-[780px] -z-20"
+            src={DotImage}
+            alt="Dotlung"
+          />
+        </div>
+        <div
+          className="h-auto lg:w-[510px]"
+        >
+          <div className="z-10 text-left max-w-2xl px-6">
+            <h1 className="text-[2rem] lg:text-[4.9rem] font-bold uppercase leading-[33px] lg:leading-[75px] -z-10">
+              CREATING DIGITAL EXPERIENCES
+            </h1>
+            <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>
+              <span className="text-secondary italic">
+                Digital is literally my life.
+              </span>{" "}
+                I live 24/7 on all platforms, whether it’s Facebook, Instagram or the latest and greatest app wanting to change the world.
+            </p>
+            <p className="uppercase items-center mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
+              Explore
+              <span
+                className="block w-[1px] h-24 bg-secondary ml-5 mt-3"
+              ></span>
+            </p>
+          </div>
         </div>
       </div>
 
