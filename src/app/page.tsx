@@ -15,7 +15,7 @@ export default function Home() {
           />
         </div>
         <div
-          className="h-auto lg:w-[465px] mx-auto lg:mt-16 lg:-ml-[200px]"
+          className="h-auto lg:w-[510px] mx-auto lg:mt-16 lg:-ml-[200px]"
         >
           <div className="z-10 text-left max-w-2xl px-6">
             <h1 className="text-[2rem] lg:text-[3.5rem] font-bold uppercase leading-[33px] lg:leading-[55px] -z-10">
