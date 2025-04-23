@@ -47,7 +47,7 @@ const WorkWithDot = () => {
 
       <div className="flex items-center justify-center">
         <div
-          className="relative h-screen w-[1000px] flex items-center justify-center overflow-hidden"
+          className="relative h-screen w-[1000px] flex items-center justify-center"
           onMouseMove={handleMouseMove}
         >
           <motion.div
@@ -59,22 +59,31 @@ const WorkWithDot = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-md font-caslon">
-            <p className="text-2xl italic text-secondary">
-              Digital equals life in todo
-            </p>
-            <p className="text-2xl mt-2">
+          <p className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-[30rem] font-caslon text-[1.375rem] lg:text-[1.75rem]">
+            <span className="italic text-secondary mr-1">
+              Digital equals life in todo 
+            </span>
             I can help you navigate the challenging landscape that is digital to showcae your best you!
-            </p>
-          </div>
+          </p>
 
-          <div className="absolute mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
-            <p className="text-sm leading-relaxed font-asty">
-              I&apos;m Dot Lung. Dot stands for Dorothy, and Lung means Dragon in Chinese. After growing up in Los Angeles, I traveled the world working on a variety of campaigns until I found a home in Barcelona. Since (), Barcelona has inspired me to be the magical and fierce being I am today.
-            </p>
-            <p className="text-sm leading-relaxed mt-5 font-asty">
-              You don&apos;t have to be a digital extremist like me, but based upon my total digital immersion, I can help you create the optimum digital experience for your brand, your identity or your campaign, because I literally have been breathing digital magic since the days of MySpace and even before. Plus I have access to the top talent to incorporate your most magical aspirations to achieve your greatest goals.
-            </p>
+          <div className="absolute mx-5 lg:mx-0 lg:right-0 top-[350px] md:top-[40%] lg:top-1/2 max-w-[500px] text-sm md:text-base leading-relaxed font-asty">
+              I&apos;m Dot Lung. Dot stands for Dorothy, and Lung means “Dragon”
+              in Mandarin. After growing up in Los Angeles, I traveled the world
+              working on a variety of campaigns until I found a home in
+              Barcelona. Since 2011, Barcelona has inspired me to be the
+              magical and fierce being I am today. I started my social media
+              career formally at OFFF Festival, where I was in charge of the
+              online community and audience engagement. We developed their
+              first steps of an authentic, organic messages which continues to
+              this day. Before OFFF, I had been an active social media user since
+              the days of MySpace where I had not only my personal profile, but
+              was also selling real estate through the platform! Not a digital
+              extremist like me? It&apos;s not for everyone, but based on my total
+              immersion, I can help you create the optimum digital experience
+              for your brand, your personal identity, or your campaign. My goal
+              is to empower creatives to achieve their dreams. Plus, I have
+              access to the top talent to incorporate your most magical
+              aspiration and achieve your greatest goals.
           </div>
         </div>
       </div>
