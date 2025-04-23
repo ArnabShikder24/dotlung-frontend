@@ -52,13 +52,10 @@ const Footer = () => {
                     INSTAGRAM
                   </a>
                   <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                    TWITTER
+                    LINKEDIN
                   </a>
                   <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                    SNAPCHAT
-                  </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                    SKYPE
+                    Messenger
                   </a>
                 </div>
               </div>
