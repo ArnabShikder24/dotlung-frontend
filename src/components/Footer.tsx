@@ -83,7 +83,7 @@ const Footer = () => {
           Code by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Lorenzo Bocchi</Link>
         </div>
         
-        <Link href="/live" className="text-xs font-semibold hover:text-indigo-200 transition-colors fixed bottom-5 right-4">
+        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="text-xs font-semibold hover:text-indigo-200 transition-colors fixed bottom-5 right-4">
           LIVE NOW!
         </Link>
         <h1></h1>

@@ -65,11 +65,11 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="w-full p-4 font-gilroy mt-2 hidden md:flex justify-between items-center z-50">
+      <nav className="w-full p-4 font-gilroy mt-2 hidden md:flex justify-between items-center z-[999999]">
         <Link href={PathNames.home} className="fixed">
           <Image src={Logo} alt="Logo" width={50} />
         </Link>
-        <div className="max-w-3xl flex-1 mx-auto justify-center text-xs">
+        <div className="max-w-3xl flex-1 mx-auto justify-center text-xs z-[99999]">
           <div className="border border-white flex w-full">
             <Link
               href={PathNames.about}
@@ -90,18 +90,18 @@ const Navbar = () => {
                 WHAT I DO
               </div>
               {isHovering && (
-                <div className="absolute left-0 w-full z-20">
+                <div className="absolute left-0 w-full z-[99999]">
                   {desktopMenuItems.map((item, index) => (
                     <div
                       key={item.title}
-                      className={`border border-white opacity-0
+                      className={`border border-white opacity-0 bg-primary
                         ${index === 0 ? 'animate-slide-in-1' : ''}
                         ${index === 1 ? 'animate-slide-in-2' : ''}
                         ${index === 2 ? 'animate-slide-in-3' : ''}`}
                     >
                       <Link
                         href={item.path}
-                        className={`block px-4 py-3 hover:text-orange-500 transition-colors text-center text-xs ${navItemActive(item.path)}`}
+                        className={`block px-4 py-3 hover:text-orange-500 transition-colors text-center z-[999999] text-xs ${navItemActive(item.path)}`}
                       >
                         {item.title}
                       </Link>
@@ -121,7 +121,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[99999]">
+      <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[999999]">
         <div className="flex justify-between w-full items-center">
           <Link className="fixed top-4 left-3 z-[99999]" href={PathNames.home}>
             <Image src={Logo} alt="Logo" width={50} />
@@ -143,7 +143,7 @@ const Navbar = () => {
                     <Link
                       key={idx}
                       href={item.path}
-                      className={`w-full ${item.border ? "border" : "border-r border-l"} border-white text-center py-3 ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-orange-500 transition-colors`}
+                      className={`w-full ${item.title === "CONTACT" && "border-b"} ${item.border ? "border-t border-r border-l" : "border-r border-l"} border-white font-gilroy text-[0.8125rem] text-center py-3 ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-secondary transition-colors`}
                       onClick={toggleMobileMenu}
                     >
                       {item.title}
@@ -151,7 +151,7 @@ const Navbar = () => {
                   );
                 } else {
                   return (<div key={idx} className="relative border w-full h-14">
-                    <div className="absolute w-full h-[1px] bg-white transform -rotate-[13.5deg] top-1/2 -translate-y-1/2"></div>
+                    <div className="absolute w-[103%] h-[1px] bg-white transform -rotate-[14deg] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"></div>
                     <div className="h-full" />
                   </div>);
                 }
