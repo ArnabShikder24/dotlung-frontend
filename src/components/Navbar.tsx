@@ -143,7 +143,7 @@ const Navbar = () => {
                     <Link
                       key={idx}
                       href={item.path}
-                      className={`w-full ${item.border ? "border" : "border-r border-l"} border-white text-center py-3 ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-orange-500 transition-colors`}
+                      className={`w-full ${item.title === "CONTACT" && "border-b"} ${item.border ? "border-t border-r border-l" : "border-r border-l"} border-white font-gilroy text-[0.8125rem] text-center py-3 ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-secondary transition-colors`}
                       onClick={toggleMobileMenu}
                     >
                       {item.title}
@@ -151,7 +151,7 @@ const Navbar = () => {
                   );
                 } else {
                   return (<div key={idx} className="relative border w-full h-14">
-                    <div className="absolute w-full h-[1px] bg-white transform -rotate-[13.5deg] top-1/2 -translate-y-1/2"></div>
+                    <div className="absolute w-[103%] h-[1px] bg-white transform -rotate-[14deg] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"></div>
                     <div className="h-full" />
                   </div>);
                 }
