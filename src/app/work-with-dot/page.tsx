@@ -64,7 +64,7 @@ const WorkWithDot = () => {
 
       <div className="flex items-center justify-center">
         <div
-          className="relative h-screen w-[1000px] flex items-center justify-center overflow-hidden"
+          className="relative h-screen w-[1000px] flex items-center justify-center"
           onMouseMove={handleMouseMove}
         >
           <motion.div
@@ -76,28 +76,26 @@ const WorkWithDot = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-md font-caslon">
-            <p className="text-2xl italic text-secondary">
-              Together we can make my magic.
-            </p>
-            <p className="text-2xl mt-2">
-              I create dominant and in demand online identities and communities
-              by developing kick ass campaigns utilizing unique content specific
-              to your brand ethos.
-            </p>
-          </div>
+          <p className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-[30rem] font-caslon text-[1.375rem] lg:text-[1.75rem]">
+            <span className="italic text-secondary mr-1">
+              Miracles happen.
+            </span>
+              But on their own. I create
+              strong online identities & communities and
+              develop kickass digital campaigns all over the
+              world.
+          </p>
 
-          <div className="absolute pt-4 lg:pt-0 mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
-            <p className="text-sm leading-relaxed font-asty">
-              The digital world can be a difficult one to navigate. Sometimes
-              you need that unicorn to guide you through the good and the bad to
-              enhance, target, and execute your best strategy. This is where I
-              thrive. I&apos;ve run campaigns for agencies, headed up social
-              media teams for a variety of companies, and have initiated my own
-              start ups in graphic design, video production and more. I can not
-              only lend my expertise and experience, but I&apos;ve walked the
-              walk, not just talked the talk!
-            </p>
+          <div className="absolute mx-5 mt-10 md:mt-0 lg:mx-0 lg:right-0 top-[350px] md:top-[40%] lg:top-1/2 max-w-[500px] text-sm md:text-base leading-relaxed font-asty">
+              I&apos;m Dot Lung. Dot stands for Dorothy, and Lung means “Dragon”
+              in Mandarin. After growing up in Los Angeles, I traveled the world
+              working on a variety of campaigns until I found a home in
+              Barcelona. Since 2011, Barcelona has inspired me to be the
+              magical and fierce being I am today. I started my social media
+              career formally at OFFF Festival, where I was in charge of the
+              online community and audience engagement. We developed their
+              first steps of an authentic, organic messages which continues to
+              this day.
           </div>
         </div>
       </div>
