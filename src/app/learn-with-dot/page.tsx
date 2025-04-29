@@ -218,7 +218,7 @@ const LearnWithDot = () => {
           </div>
 
           <div className="relative mt-10 md:-mt-10">
-            <p className="text-white text-lg font-asty">
+            <p className="text-white text-[.875rem] md:text-[1rem] font-asty">
               Dragons meet other Dragons! I bring the fire to start your week with
               Facebook Live where you’ll spend time with me and others who can
               help you develop your powerful core for digital superiority!
