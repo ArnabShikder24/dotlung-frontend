@@ -26,31 +26,45 @@ const WorkWithDot = () => {
 
   return (
     <div className="container mx-auto overflow-hidden mt-20 md:mt-0">
-      <div className="lg:flex items-end mx-5 lg:mx-0">
-        <Image
-          className="w-[980px] bg-transparent"
-          src={DotImage}
-          alt="dot Image"
-        />
-        <div className="lg:-ml-40 lg:w-[380px] mx-auto">
-          <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[70px] lg:leading-[85px]">
-            WORK <br /> WITH DOT
-          </h1>
-          <p className="font-caslon text-lg mt-5 mb-14">
-            <span className="italic text-secondary">
-              Mythical digital magic.
-            </span>{" "}
-            I have worked worldwide weaving wonders for top brands, events, and
-            concepts.
-          </p>
-          <p className="font-gilroy text-sm">EXPLORE</p>
-          <div className="w-[1px] h-24 bg-secondary ml-6 mt-5" />
+      <div className="flex flex-col justify-between lg:justify-start lg:flex-row lg:items-center font-gilroy h-[100vh] lg:h-auto mt-0 md:mt-12">
+        <div className="flex-1 flex justify-center items-center lg:flex-none">
+          <Image
+            className="w-full scale-[1.2] md:scale-100 md:w-[980px] -z-20"
+            src={DotImage}
+            alt="Dotlung"
+          />
+        </div>
+        <div
+          className="h-auto lg:w-[510px] lg:-ml-40"
+        >
+          <div className="z-10 text-left max-w-2xl px-6">
+            <h1 className="text-[2.4rem] lg:text-[4.9rem] font-bold uppercase leading-[36px] lg:leading-[75px] -z-10">
+              WORK <br /> WITH DOT
+            </h1>
+            <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>
+              <p className="text-secondary italic">
+                Together we can work miracles.
+              </p>{" "}
+                <p>I create strong</p>
+                <p>online identities & communities and develop</p>
+                <p>kickass digital campaigns &</p>
+              <p className="text-secondary italic">
+                strong online identities and communities
+              </p>{" "}
+            </p>
+            <p className="uppercase items-center mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
+              Explore
+              <span
+                className="block w-[1px] h-24 bg-secondary ml-5 mt-3"
+              ></span>
+            </p>
+          </div>
         </div>
       </div>
 
       <div className="flex items-center justify-center">
         <div
-          className="relative h-screen w-[1000px] flex items-center justify-center overflow-hidden"
+          className="relative h-screen w-[1100px] flex items-center justify-center"
           onMouseMove={handleMouseMove}
         >
           <motion.div
@@ -62,28 +76,26 @@ const WorkWithDot = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <div className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-md font-caslon">
-            <p className="text-2xl italic text-secondary">
-              Together we can make my magic.
-            </p>
-            <p className="text-2xl mt-2">
-              I create dominant and in demand online identities and communities
-              by developing kick ass campaigns utilizing unique content specific
-              to your brand ethos.
-            </p>
-          </div>
+          <p className="absolute mx-5 lg:mx-0 lg:left-10 top-[22%] max-w-[30rem] font-caslon text-[1.375rem] lg:text-[1.75rem]">
+            <span className="italic text-secondary mr-1">
+              Miracles happen.
+            </span>
+              But on their own. I create
+              strong online identities & communities and
+              develop kickass digital campaigns all over the
+              world.
+          </p>
 
-          <div className="absolute pt-4 lg:pt-0 mx-5 lg:mx-0 lg:right-10 top-1/2 max-w-sm">
-            <p className="text-sm leading-relaxed font-asty">
-              The digital world can be a difficult one to navigate. Sometimes
-              you need that unicorn to guide you through the good and the bad to
-              enhance, target, and execute your best strategy. This is where I
-              thrive. I&apos;ve run campaigns for agencies, headed up social
-              media teams for a variety of companies, and have initiated my own
-              start ups in graphic design, video production and more. I can not
-              only lend my expertise and experience, but I&apos;ve walked the
-              walk, not just talked the talk!
-            </p>
+          <div className="absolute mx-5 mt-10 md:mt-0 lg:mx-0 lg:right-0 top-[350px] md:top-[40%] lg:top-1/2 max-w-[500px] text-sm md:text-base leading-relaxed font-asty">
+              I&apos;m Dot Lung. Dot stands for Dorothy, and Lung means “Dragon”
+              in Mandarin. After growing up in Los Angeles, I traveled the world
+              working on a variety of campaigns until I found a home in
+              Barcelona. Since 2011, Barcelona has inspired me to be the
+              magical and fierce being I am today. I started my social media
+              career formally at OFFF Festival, where I was in charge of the
+              online community and audience engagement. We developed their
+              first steps of an authentic, organic messages which continues to
+              this day.
           </div>
         </div>
       </div>
@@ -123,7 +135,7 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-      <div className="lg:flex items-center justify-center font-gilroy mt-32 mb-32 hidden">
+      <div className="md:flex items-center justify-center font-gilroy mt-32 mb-32 hidden">
         <div className="max-w-3xl flex-1  mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
