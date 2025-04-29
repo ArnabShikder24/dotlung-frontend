@@ -135,7 +135,7 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-      <div className="lg:flex items-center justify-center font-gilroy mt-32 mb-32 hidden">
+      <div className="md:flex items-center justify-center font-gilroy mt-32 mb-32 hidden">
         <div className="max-w-3xl flex-1  mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">

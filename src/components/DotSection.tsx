@@ -8,7 +8,7 @@ const DotSection = ({
   bottomLeftLink = '#',
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center lg:hidden my-24 font-gilroy">
+    <div className="flex flex-col items-center justify-center md:hidden my-24 font-gilroy">
       <div className="grid grid-cols-3 grid-rows-2 w-[350px] h-[120px] border border-white relative">
 
         {/* Top Left Triangle */}
