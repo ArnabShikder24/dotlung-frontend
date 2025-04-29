@@ -18,7 +18,10 @@ const LearnWithDot = () => {
     { width: "160%", title: "Universitat de Barcelona" },
     { width: "190%", title: "Toulouse Business School" },
     { width: "180%", title: "ESdesign Barcelona" },
-    { width: "170%", title: "La Salle" },
+    { width: "170%", title: "Instituto Europeo de Design" },
+    { width: "190%", title: "Geneva Business School" },
+    { width: "160%", title: "BAU, College of Arts & Design" },
+    { width: "180%", title: "Barreira Arte + Diseño" },
   ];
 
   const events = [
@@ -111,11 +114,11 @@ const LearnWithDot = () => {
             <div className="relative">
               <div className="border border-white flex w-full">
                 <div className="w-3/4 relative">
-                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
+                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[6deg] md:-rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
                   <div className="h-full" />
                 </div>
 
-                <div className="relative w-[40%] lg:w-[30%]">
+                <div className="relative w-[50%] md:w-[40%] lg:w-[30%]">
                   <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
                   TEACHING ENGAGEMENTS
                   </p>
@@ -169,7 +172,7 @@ const LearnWithDot = () => {
             </div>
           </div>
       </div>
-      <DotSection />
+      <DotSection topRightText="DATE & LOCATION" bottomLeftText="SPEAKING ENGAGEMENTS" />
 
       <div className="text-white min-h-screen flex flex-col items-center py-10 px-6">
         <div className="max-w-4xl w-full">
@@ -205,16 +208,16 @@ const LearnWithDot = () => {
       <div className="text-white min-h-screen flex items-center justify-center px-6">
         <div className="max-w-3xl w-full grid grid-cols-1 md:grid-cols-2 gap-1 items-start">
           <div className="-mt-10">
-            <p className="text-secondary font-caslon italic text-lg">Every Monday — 11.30</p>
-            <h1 className="text-5xl md:text-[70px] font-gilroy font-extrabold mt-2">
+            <p className="text-secondary font-caslon italic text-lg">Share — Learn — Network</p>
+            <h1 className="text-[2.5rem] md:text-[4rem] leading-[40px] md:leading-[65px] font-gilroy font-extrabold mt-2">
               SOCIAL <br /> MEDIA <br /> MONDAYS
             </h1>
-            <p className="text-secondary uppercase font-extrabold font-asty text-sm mt-3">
-              Every Monday going live on Facebook!
+            <p className="text-secondary uppercase font-extrabold font-gilroy text-sm mt-3">
+              Live from Facebook Playground Tel Aviv
             </p>
           </div>
 
-          <div className="relative">
+          <div className="relative mt-10 md:-mt-10">
             <p className="text-white text-lg font-asty">
               Dragons meet other Dragons! I bring the fire to start your week with
               Facebook Live where you’ll spend time with me and others who can
@@ -237,7 +240,7 @@ const LearnWithDot = () => {
         </div>
       </div>
       
-      <div className="flex items-center justify-center font-gilroy mt-20 mb-32">
+      <div className="md:flex items-center justify-center font-gilroy mt-20 mb-32 hidden">
         <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
           <div className="relative">
             <div className="border border-white flex w-full">
@@ -265,7 +268,12 @@ const LearnWithDot = () => {
           </div>
         </div>
       </div>
-
+      <DotSection
+        topRightText="TRAVEL & EAT WITH DOT"
+        topRightLink={PathNames.travelEat}
+        bottomLeftText="LEARN WITH DOT"
+        bottomLeftLink={PathNames.learnWithDot}
+      />
     </div>
   );
 };
