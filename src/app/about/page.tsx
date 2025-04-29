@@ -48,7 +48,7 @@ const WorkWithDot = () => {
 
       <div className="flex items-center justify-center">
         <div
-          className="relative h-screen w-[1000px] flex items-center justify-center"
+          className="relative h-screen w-[1050px] flex items-center justify-center"
           onMouseMove={handleMouseMove}
         >
           <motion.div

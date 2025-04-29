@@ -64,7 +64,7 @@ const WorkWithDot = () => {
 
       <div className="flex items-center justify-center">
         <div
-          className="relative h-screen w-[1000px] flex items-center justify-center"
+          className="relative h-screen w-[1100px] flex items-center justify-center"
           onMouseMove={handleMouseMove}
         >
           <motion.div
@@ -76,7 +76,7 @@ const WorkWithDot = () => {
             transition={{ type: "spring", stiffness: 100, damping: 10 }}
           />
 
-          <p className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-[30rem] font-caslon text-[1.375rem] lg:text-[1.75rem]">
+          <p className="absolute mx-5 lg:mx-0 lg:left-10 top-[22%] max-w-[30rem] font-caslon text-[1.375rem] lg:text-[1.75rem]">
             <span className="italic text-secondary mr-1">
               Miracles happen.
             </span>
