@@ -24,7 +24,7 @@ const BlogFooter: React.FC<FooterProps> = ({
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-medium text-orange-500 mb-4">RELATED LINKS</h3>
+            <h3 className="font-gilroy text-[.625rem] md:text-[0.85rem] text-secondary mb-4">RELATED LINKS</h3>
           </div>
           
           <div className="space-y-2">
@@ -32,7 +32,7 @@ const BlogFooter: React.FC<FooterProps> = ({
               <Link 
                 key={index} 
                 href={link.url}
-                className="block text-sm hover:text-secondary transition-colors"
+                className="block font-gilroy text-[.625rem] md:text-[0.85rem] hover:text-secondary transition-colors"
               >
                 {link.title}
               </Link>
@@ -44,7 +44,7 @@ const BlogFooter: React.FC<FooterProps> = ({
               <Link 
                 key={index + 3} 
                 href={link.url}
-                className="block text-sm hover:text-secondary transition-colors"
+                className="block font-gilroy text-[.625rem] md:text-[0.85rem] hover:text-secondary transition-colors"
               >
                 {link.title}
               </Link>
@@ -54,17 +54,17 @@ const BlogFooter: React.FC<FooterProps> = ({
       </div>
       
       {/* Divider */}
-      <div className="border-t border-purple-600 my-8 mx-4 md:mx-8"></div>
+      <div className="border-t border-secondary my-8 mx-4 md:mx-8"></div>
       
       {/* Social Media Sharing Section */}
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-medium text-orange-500">SHARE</h3>
+            <h3 className="font-gilroy text-[.625rem] md:text-[0.85rem] text-secondary">SHARE</h3>
           </div>
           
-          <div className="space-y-2">
-            {['FACEBOOK', 'INSTAGRAM', 'TWITTER', 'SNAPCHAT', 'SKYPE'].map((platform, index) => (
+          <div className="space-y-2 font-gilroy text-[.625rem] md:text-[0.85rem]">
+            {['FACEBOOK', 'INSTAGRAM', 'LINKEDIN'].map((platform, index) => (
               <Link 
                 key={index} 
                 href={`#share-${platform.toLowerCase()}`}
@@ -80,15 +80,15 @@ const BlogFooter: React.FC<FooterProps> = ({
               href="/blog"
               className="flex items-center text-sm hover:text-secondary transition-colors"
             >
-              <ArrowLeft size={16} className="mr-2 text-orange-500" />
-              BACK TO BLOG
+              <ArrowLeft size={16} className="mr-2 text-secondary" />
+              <p className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary">BACK TO BLOG</p>
             </Link>
           </div>
         </div>
       </div>
       
       {/* Bottom Divider */}
-      <div className="border-t border-purple-600 mt-8 mx-4 md:mx-8"></div>
+      <div className="border-t border-secondary mt-8 mx-4 md:mx-8"></div>
     </div>
   );
 };

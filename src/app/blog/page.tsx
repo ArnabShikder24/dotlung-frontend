@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Pagination from "../../components/Pagination";
+import { ArrowRight } from "lucide-react";
 
 export default function FeaturedSection() {
   const [posts, setPosts] = useState([]);
@@ -60,17 +61,17 @@ export default function FeaturedSection() {
     <div className="container mx-auto max-w-3xl py-20 px-5 lg:px-0 mt-14 md:mt-0">
       <h1 className="text-6xl md:text-7xl font-gilroy text-white">BLOG</h1>
       {posts.map((post) => (
-        <article key={post.id} className="my-10 border-b border-orange-500 pb-4">
-          <div className="flex justify-between text-xs text-orange-400">
-            <span className="font-asty">{new Date(post.date).toLocaleDateString()}</span>
-            <span className="text-secondary font-asty">#{post.categories}</span>
+        <article key={post.id} className="my-10 border-b border-secondary pb-4">
+          <div className="flex justify-between text-secondary mb-2">
+            <span className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</span>
+            <span className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.categories}</span>
           </div>
           <Link href={`/blog/${post.slug}`}>
-            <h2 className="text-3xl font-caslon text-secondary italic">{post.title.rendered}</h2>
+            <h2 className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">{post.title.rendered}</h2>
           </Link>
-          <p className="text-white font-asty" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-          <Link href={`/blog/${post.slug}`} className="text-secondary font-semibold font-caslon hover:underline">
-            READ MORE →
+          <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3] mb-4" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+          <Link href={`/blog/${post.slug}`} className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold">
+            READ MORE {" "}<ArrowRight size={16} className="mr-2 text-secondary" />
           </Link>
 
           {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ? (

@@ -10,6 +10,7 @@ import image2 from "../../../assets/images/g2.png";
 import ImageGallery from "../../../components/ImageGallery";
 import BlogFooter from "../../../components/BlogFooter";
 import Link from "next/link";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 // import Blog1 from "../../../../public/Dotlungimages/Dotlungimages/blog1.png";
 
 const BlogPage = () => {
@@ -79,7 +80,9 @@ const BlogPage = () => {
   const [loading, setLoading] = useState(true);
   const [relatedPosts, setRelatedPosts] = useState([]);
   const router = useRouter();
-
+  // need to change
+  const nextBlogPath = relatedPosts[0]?.slug;
+  
   useEffect(() => {
     async function fetchPost() {
       try {
@@ -113,7 +116,6 @@ const BlogPage = () => {
         );
         const data = await res.json();
         setRelatedPosts(data);
-        console.log(tags);
       } else {
         // Optional: Fallback if no tags - maybe fetch latest posts
         const res = await fetch(
@@ -121,7 +123,6 @@ const BlogPage = () => {
         );
         const data = await res.json();
         setRelatedPosts(data);
-        console.log(currentPostId);
       }
     } catch (error) {
       console.error("Error fetching related posts:", error);
@@ -135,21 +136,18 @@ const BlogPage = () => {
   return (
     <>
       <div className="lg:w-[1100px] mx-auto px-4 py-10 mt-20">
-        <div className="flex items-center justify-between font-caslon text-sm border-b-2 border-secondary pb-4">
-          <p className="font-caslon">{new Date(post.date).toLocaleDateString()}</p>
-          <p className="cursor-pointer" onClick={() => router.back()}>BACK TO BLOG</p>
+        <div className="flex items-center justify-between font-caslon text-sm border-b border-secondary pb-4">
+          <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
+          <p className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary flex items-center" onClick={() => router.push("/blog")}><ArrowLeft size={16} className="mr-2 text-secondary" /> BACK TO BLOG</p>
         </div>
         <div className="lg:flex justify-between mt-10">
-          <p className="font-asty text-secondary">#{post.tags?.[0] || "blog"}</p>
-          <p className="font-asty lg:w-[530px] text-2xl lg:text-3xl" >
-            <span className="italic font-caslon text-3xl text-secondary">{post.title.rendered}</span> 
-            <span className="font-asty" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
-          </p>
+          <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
+          <div className="lg:w-[530px]" >
+            <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">{post.title.rendered}</p> 
+            <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+          </div>
         </div>
 
-        {/* <div className="flex justify-center mt-20">
-          <Image className="w-[90%]" src={post.featured_media} alt={post.title.rendered} />
-        </div> */}
         {post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
         <div className="flex justify-center mt-20">
           <Image
@@ -161,34 +159,32 @@ const BlogPage = () => {
         </div>
       )}
         <div className="lg:flex justify-between mt-20">
-          <p className="font-asty lg:w-[350px] text-2xl">
-            <span className="italic font-caslon text-3xl text-secondary">{post.title.rendered}</span> <span className="font-caslon" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
-          </p>
-          <p className="font-caslon lg:w-[600px] mt-5 lg:mt-0"><span dangerouslySetInnerHTML={{ __html: post.content.rendered }} /></p>
+          <div className="font-asty lg:w-[350px] text-[1.25rem] md:text-[1.5rem]">
+            <p className="font-caslon mb-4 leading-[1.5] md:leading-[1.3] text-secondary">{post.title.rendered}</p> <span className="font-caslon" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+          </div>
+          <p className="font-asty lg:w-[600px] leading-6 mt-5 lg:mt-0"><span dangerouslySetInnerHTML={{ __html: post.content.rendered }} /></p>
         </div>
       </div>
       <ImageCarousel images={carouselImages} />
       <div className="lg:w-[1100px] mx-auto px-4 pb-8">
         <div className="lg:flex justify-between mt-20">
-          <p className="font-asty lg:w-[350px] text-2xl mt-10">
-            <span className="italic font-caslon text-3xl text-secondary">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
+          <p className="lg:w-[350px] mt-10 text-[1.06rem] md:text-[1.75rem] text-secondary italic font-caslon">
+            <span className=" mb-4 leading-[1.5] md:leading-[1.3] ">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
           </p>
           <div className="lg:w-[600px] mt-5 lg:mt-0 font-asty">
-            <p className="uppercase font-asty text-xs mb-5 text-secondary">SIENNA</p>
-            <p className="font-asty">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
-            <p className="mt-5 font-asty">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
+            <p className="font-asty leading-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
+            <p className="mt-5 font-asty leading-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
           </div>
         </div>
       </div>
       <ImageGallery images={galleryImages} />
       <div className="w-[100%] lg:w-[1100px] mx-auto px-4 pb-8">
         <div className="lg:flex justify-between my-20">
-          <p className="font-asty lg:w-[350px] text-2xl">
-            
+          <p className="lg:w-[350px] mt-10 text-[1.06rem] md:text-[1.75rem] text-secondary italic font-caslon">
+            <span className="mb-4 leading-[1.5] md:leading-[1.3] ">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
           </p>
-          <div className="lg:w-[600px] font-asty">
-            <p className="uppercase font-asty text-xs mb-5 text-secondary">SANTA MARIA</p>
-            <p className="font-asty">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
+          <div className="lg:w-[600px]">
+            <p className="font-asty leading-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
           </div>
         </div>
         <BlogFooter />
@@ -198,7 +194,7 @@ const BlogPage = () => {
               <div className="border border-white flex w-full">
                 <Link
                   href="#"
-                  className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                  className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
                 >
                   PREVIOUS POST
                 </Link>
@@ -210,8 +206,8 @@ const BlogPage = () => {
 
                 <div className="relative w-[30%] lg:w-1/4">
                   <Link
-                    href="#"
-                    className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
+                    href={`/blog/${nextBlogPath ?? nextBlogPath}`}
+                    className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
                   >
                     NEXT POST
                   </Link>
@@ -220,43 +216,43 @@ const BlogPage = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10 mb-20">
+        <div className="">
             {relatedPosts.map((post, index) => (
               <article
                 key={index}
                 className="grid md:grid-cols-2 items-center gap-4"
               >
-                <div className="lg:flex justify-center items-center border-b-2 border-secondary">
+                <div className="flex justify-center items-center border-b-2 border-secondary" style={{height:'100%'}}>
                   <div>
-                    <div className="text-sm opacity-80 flex justify-between ">
-                      <p className="font-asty">{new Date(post.date).toLocaleDateString()}</p>
-                      <p className="text-secondary">{post.tags?.[0]}</p>
+                    <div className="flex justify-between mb-5">
+                      <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
+                      <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
                     </div>
-                    <a href={`/blog/${post.slug}`}className="block mt-2">
-                      <span className="text-3xl font-caslon italic text-secondary">
-                      {post.title.rendered}{" "}
-                      </span>
-                      <span className="text-white font-caslon text-lg mt-1" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}/>
+                    <Link href={`/blog/${post.slug}`} className="block mt-2 mb-4">
+                      <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
+                        {post.title.rendered}{" "}
+                      </p>
+                      <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href={`/blog/${post.slug}`}
-                      className="text-white text-sm font-caslon inline-block mt-3 font-bold"
+                      className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
                     >
-                      READ MORE →
-                    </a>
+                      READ MORE{" "}<ArrowRight size={16} className="mr-2 text-secondary" />
+                    </Link>
                   </div>
                 </div>
 
-                {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url &&(
-                  <figure className="relative w-full">
+                {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
+                  <figure className="relative w-full ">
                     <a href={`/blog/${post.slug}`}>
                       <Image
-                        src={post._embedded["wp:featuredmedia"][0].source_url}
-                        alt={post.title.rendered}
-                        width={500}
+                          src={post._embedded["wp:featuredmedia"][0].source_url}
+                          alt={post.title.rendered}
+                          width={500}
                         height={500}
-                        className="w-[100%]"
+                        className="w-full"
                         // fill
                         style={{ objectFit: "cover", }}
                       />
