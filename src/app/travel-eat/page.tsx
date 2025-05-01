@@ -32,7 +32,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="container mx-auto mt-16 md:mt-0">
+    <div className="container mx-auto mt-16 md:mt-0 overflow-x-hidden">
       <div className="flex flex-col justify-between lg:justify-start lg:flex-row lg:items-center font-gilroy h-[100vh] lg:h-auto mt-0 md:mt-12">
         <div className="flex-1 flex justify-center items-center lg:flex-none">
           <Image
