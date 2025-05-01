@@ -32,21 +32,37 @@ useEffect(() => {
 
   return (
     <div className="container mx-auto mt-16 md:mt-0">
-      <div className="lg:flex items-end mx-5 lg:mx-0">
-        <Image className="w-[980px]" src={DotImage} alt="dot Image" />
-        <div className="lg:-ml-40 lg:w-[380px] mx-auto lg:pt-28">
-          <h1 className="text-[60px] lg:text-[80px] font-extrabold font-gilroy leading-[65px] lg:leading-[85px]">
-            TRAVEL <br /> & EAT <br /> WITH DOT
-          </h1>
-          <p className="font-caslon text-lg mt-5 mb-14">
-            <span className="italic text-secondary">
-              I&apos;ve never been a fan of the empty selfie.
-            </span>{" "}
-            You go and stand in front of some place famous, take a photo, smile,
-            and walk away. That&apos;s just not what travel is about!
-          </p>
-          <p className="font-gilroy text-sm">EXPLORE</p>
-          <div className="w-[1px] h-24 bg-secondary ml-6 mt-5" />
+      <div className="flex flex-col justify-between lg:justify-start lg:flex-row lg:items-center font-gilroy h-[100vh] lg:h-auto mt-0 md:mt-12">
+        <div className="flex-1 flex justify-center items-center lg:flex-none">
+          <Image
+            className="w-full scale-[1.2] md:scale-100 md:w-[980px] -z-20"
+            src={DotImage}
+            alt="Dotlung"
+          />
+        </div>
+        <div
+          className="h-auto lg:w-[510px] lg:-ml-40 lg:mt-10"
+        >
+          <div className="z-10 text-left max-w-2xl px-6">
+            <h1 className="text-[2.4rem] lg:text-[4.9rem] font-bold uppercase leading-[36px] lg:leading-[75px] -z-10">
+              TRAVEL <br /> & EAT <br /> WITH DOT
+            </h1>
+            <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>
+              <p className="text-secondary italic">
+                I’ve never been a fan of the empty selfie.
+              </p>{" "}
+                <p>You go
+                  and stand in front of some place famous, take a
+                  photo, smile, and walk away. That’s just not
+                  what travel is about!</p>
+            </p>
+            <p className="uppercase items-center mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
+              Explore
+              <span
+                className="block w-[1px] h-24 bg-secondary ml-5 mt-3"
+              ></span>
+            </p>
+          </div>
         </div>
       </div>
 

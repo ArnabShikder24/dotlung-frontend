@@ -174,7 +174,7 @@ const LearnWithDot = () => {
       </div>
       <DotSection topRightText="DATE & LOCATION" bottomLeftText="SPEAKING ENGAGEMENTS" />
 
-      <div className="text-white min-h-screen flex flex-col items-center py-10 px-6">
+      <div className="text-white flex flex-col items-center py-10 px-6">
         <div className="max-w-4xl w-full">
           {events.map((event, index) => (
             <div
@@ -205,7 +205,7 @@ const LearnWithDot = () => {
         </div>
       </div>
 
-      <div className="text-white min-h-screen flex items-center justify-center px-6">
+      <div className="text-white flex items-center justify-center mt-40 px-6">
         <div className="max-w-3xl w-full grid grid-cols-1 md:grid-cols-2 gap-1 items-start">
           <div className="-mt-10">
             <p className="text-secondary font-caslon italic text-lg">Share — Learn — Network</p>
