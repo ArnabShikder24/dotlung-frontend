@@ -1,3 +1,5 @@
+import { ArrowLeft, ArrowRight } from "lucide-react";
+
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const generatePages = () => {
     const pages = new Set();
@@ -36,21 +38,23 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
   const pages = generatePages();
 
+  if (totalPages === 1) return <></>;
+
   return (
-    <div className="row flex justify-end">
+    <div className="row flex justify-end gap-4">
       {/* Previous Button */}
       <button
         className="py-2 px-3 text-center text-sm shadow-sm hover:shadow-lg text-secondary"
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
       >
-        &lt;
+        <ArrowLeft size={16} className="mr-2 text-secondary cursor-pointer" />
       </button>
 
       {/* Dynamic Page Buttons */}
       {pages.map((page, idx) =>
         page === "ellipsis" ? (
-          <span key={idx} className="py-2 px-3 text-sm">...</span>
+          <span key={idx} className="py-2 text-sm">...</span>
         ) : (
           <button
             key={idx}
@@ -70,7 +74,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         disabled={currentPage === totalPages}
         onClick={() => onPageChange(currentPage + 1)}
       >
-        &gt;
+        <ArrowRight size={16} className="mr-2 text-secondary cursor-pointer" />
       </button>
     </div>
   );
