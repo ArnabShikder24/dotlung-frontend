@@ -27,7 +27,7 @@ const Footer = () => {
             <div className="mx-auto w-full">
               <div className="lg:flex items-center gap-12 justify-between">
                 <div className="mb-7 md:mb-0">
-                  <h1 className="text-[4.1875rem] font-extrabold font-gilroy">LET’S TALK</h1>
+                  <h1 className="text-[3.25rem] md:text-[4.1875rem] font-extrabold font-gilroy">LET’S TALK</h1>
                 </div>
                 <div className="mb-8 md:mb-0">
                   <p className="text-lg font-caslon">+1 661 368 5864</p>

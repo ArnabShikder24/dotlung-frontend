@@ -21,7 +21,7 @@ const EmailInput = () => {
 const Contact = () => {
   const router = useRouter();
   return (
-    <div className="flex flex-col items-center justify-between w-full lg:h-screen border-secondary border-0 lg:border-[50px]">
+    <div className="flex flex-col items-center justify-between w-full h-screen border-secondary border-[10px] lg:border-[50px]">
       <div className="flex items-center justify-between p-4 w-full">
         <Image onClick={() => router.push("/")} src={Logo} alt="Logo" width={50} />
         <p onClick={() => router.back()} className="font-gilroy cursor-pointer transition-colors text-center text-sm">
@@ -30,7 +30,7 @@ const Contact = () => {
       </div>
 
       <div className="w-full flex-1 flex items-center justify-center">
-        <div className="lg:w-[50%] lg:flex justify-between items-center px-5 lg:px-0 py-10 lg:py-0">
+        <div className="lg:w-[50%] lg:flex justify-start items-start px-5 lg:px-0 py-10 lg:py-0">
           <div className="max-w-lg">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-gilroy lg:w-[500px]">
               LET&apos;S GROW YOUR SOCIAL MEDIA EMPIRE TOGETHER.
@@ -50,7 +50,7 @@ const Contact = () => {
               <p>hello@dotlung.com</p>
             </div>
             <div className="flex flex-col text-lg gap-5 space-y-3 mt-28">
-              {["FACEBOOK", "INSTAGRAM", "TWITTER", "SNAPCHAT", "SKYPE"].map((platform) => (
+              {["FACEBOOK", "INSTAGRAM", "LINKEDIN"].map((platform) => (
                 <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy">
                   {platform}
                 </a>
