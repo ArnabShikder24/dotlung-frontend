@@ -121,22 +121,22 @@ useEffect(() => {
               >
                 <div className="flex justify-center items-center border-b-2 border-secondary" style={{height:'100%'}}>
                   <div>
-                    <div className="text-sm opacity-80 flex justify-between  pr-5">
-                      <p className="font-asty">{new Date(post.date).toLocaleDateString()}</p>
-                      <p className="text-secondary font-caslon">#{post.tags?.[0] || "blog"}</p>
+                    <div className="text-sm opacity-80 flex justify-between mb-5">
+                      <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
+                      <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
                     </div>
-                    <Link href={`/blog/${post.slug}`} className="block mt-2">
-                      <span className="text-3xl font-caslon italic text-secondary">
-                      {post.title.rendered}{" "}
-                      </span>
-                      <span className="text-white font-asty text-lg mt-1" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+                    <Link href={`/blog/${post.slug}`} className="block mt-2 mb-4">
+                      <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
+                        {post.title.rendered}{" "}
+                      </p>
+                      <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
                     </Link>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-white text-sm inline-block font-caslon mt-3 font-bold"
+                      className="text-[0.75rem] inline-block font-gilroy mt-3 font-bold"
                     >
-                      READ MORE →
+                      READ MORE{" "}<span className="text-secondary">→</span>
                     </Link>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ useEffect(() => {
 
               <div className="relative w-[30%] lg:w-1/4">
                 <Link href={'/blog'} className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
-                  Blog
+                  BLOG
                 </Link>
               </div>
             </div>
