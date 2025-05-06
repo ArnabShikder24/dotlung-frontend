@@ -49,7 +49,7 @@ const LearnWithDot = () => {
           className="h-auto lg:w-[510px] lg:-ml-40"
         >
           <div className="z-10 text-left max-w-2xl px-6">
-            <h1 className="text-[2.4rem] lg:text-[4.9rem] font-bold uppercase leading-[36px] lg:leading-[75px] -z-10">
+            <h1 className="text-[2.5rem] lg:text-[4.9rem] font-bold uppercase leading-[38px] lg:leading-[75px] -z-10">
               LEARN <br /> WITH DOT
             </h1>
             <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>

@@ -27,7 +27,7 @@ const WorkWithDot = () => {
           className="h-auto lg:w-[510px]"
         >
           <div className="z-10 text-left max-w-2xl px-6">
-            <h1 className="text-[2rem] lg:text-[4.9rem] font-bold uppercase leading-[33px] lg:leading-[75px] -z-10">
+            <h1 className="text-[2.5rem] lg:text-[4.9rem] font-bold uppercase leading-[38px] lg:leading-[75px] -z-10">
               CREATING DIGITAL EXPERIENCES
             </h1>
             <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>
