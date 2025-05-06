@@ -9,10 +9,10 @@ const EmailInput = () => {
     <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[350px] mt-5 relative">
       <input
         type="email"
-        placeholder="Your e-mail"
-        className="flex-1 bg-transparent font-asty placeholder-white focus:outline-none"
+        placeholder="Your email"
+        className="flex-1 bg-transparent font-gilroy placeholder-[#ffffff33] focus:outline-none"
       />
-      <button className="text-white font-bold text-sm">LET&apos;S GO</button>
+      <button className="text-[#ffffff33] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
       <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5" />
     </div>
   );
