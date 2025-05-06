@@ -43,7 +43,7 @@ const Contact = () => {
                 <p>hello@dotlung.com</p>
               </div>
               <div className="flex flex-col text-lg gap-5 my-10">
-                {["FACEBOOK", "INSTAGRAM", "LINKEDIN"].map((platform) => (
+                {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (
                   <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy">
                     {platform}
                   </a>
@@ -76,8 +76,8 @@ const Contact = () => {
                 <p>+1 661 368 5864</p>
                 <p>hello@dotlung.com</p>
               </div>
-              <div className="flex flex-col text-lg gap-5 space-y-3 mt-28">
-                {["FACEBOOK", "INSTAGRAM", "LINKEDIN"].map((platform) => (
+              <div className="flex flex-col text-lg gap-5 mt-28">
+                {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (
                   <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy">
                     {platform}
                   </a>
