@@ -133,7 +133,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="w-full h-screen fixed bg-gradient-to-b from-[#4D05E8]/100 to-[#4D05E8]/80 z-50">
+          <div className="w-full h-screen fixed bg-gradient-to-b from-[#4D05E8]/90 to-[#4D05E8]/90 z-50">
             <div
               className="w-[220px] mt-4 flex flex-col items-center absolute left-1/2 transform -translate-x-1/2 top-20"
             >
