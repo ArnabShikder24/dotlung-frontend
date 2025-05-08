@@ -5,8 +5,8 @@ import girl1 from "../../assets/images/Asset 1.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PathNames } from "../../routes/index.route";
-import Link from "next/link";
 import DotSection from "../../components/DotSection";
+import SectionHeader from "../../components/SectionHeader";
 
 const LearnWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -109,24 +109,7 @@ const LearnWithDot = () => {
         </div>
       </div>
 
-        <div className="flex items-center justify-center font-gilroy mt-32">
-          <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
-            <div className="relative">
-              <div className="border border-white flex w-full">
-                <div className="w-3/4 relative">
-                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[6deg] md:-rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
-                  <div className="h-full" />
-                </div>
-
-                <div className="relative w-[50%] md:w-[40%] lg:w-[30%]">
-                  <p className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white">
-                  TEACHING ENGAGEMENTS
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <SectionHeader title="TEACHING ENGAGEMENTS" />
 
         <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
           <div className="text-white text-2xl font-serif">
@@ -144,34 +127,6 @@ const LearnWithDot = () => {
           </div>
         </div>
             
-        <div className="md:flex items-center justify-center font-gilroy mt-44 hidden">
-          <div className="max-w-4xl flex-1 mx-5 lg:mx-20 text-xs">
-            <div className="relative">
-              <div className="border border-white flex w-full">
-                <a
-                  href="#"
-                  className="w-[30%] px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
-                >
-                  DATE & LOCATION
-                </a>
-
-                <div className="w-1/2 relative">
-                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
-                  <div className="h-full" />
-                </div>
-
-                <div className="relative w-[50%]">
-                  <a
-                    href="#"
-                    className="block px-6 py-3 text-white hover:text-secondary transition-colors text-start border-l border-white"
-                  >
-                    SPEAKING ENGAGEMENTS
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
       <DotSection topRightText="DATE & LOCATION" bottomLeftText="SPEAKING ENGAGEMENTS" />
 
       <div className="text-white flex flex-col items-center py-10 px-6">
@@ -240,34 +195,6 @@ const LearnWithDot = () => {
         </div>
       </div>
       
-      <div className="md:flex items-center justify-center font-gilroy mt-20 mb-32 hidden">
-        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-[0.75rem]">
-          <div className="relative">
-            <div className="border border-white flex w-full">
-              <Link
-                href={PathNames.travelEat}
-                className="w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
-              >
-                TRAVEL & EAT WITH DOT
-              </Link>
-
-              <div className="w-1/2 relative">
-                <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
-                <div className="h-full" />
-              </div>
-
-              <div className="relative w-[20%] lg:w-1/4">
-                <Link
-                  href={PathNames.learnWithDot}
-                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
-                >
-                  LEARN WITH DOT
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <DotSection
         topRightText="TRAVEL & EAT WITH DOT"
         topRightLink={PathNames.travelEat}

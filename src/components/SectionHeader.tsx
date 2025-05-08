@@ -30,7 +30,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
             />
           </svg>
         </span>
-        <p className="block px-6 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-l border-white">
+        <p className="whitespace-nowrap block px-6 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-l border-white">
           {title}
         </p>
       </header>

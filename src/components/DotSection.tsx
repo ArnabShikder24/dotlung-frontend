@@ -61,7 +61,7 @@ const DotSection: React.FC<DotSectionProps> = ({
               {/* Bottom Left Text */}
               <Link
                 href={bottomLeftLink}
-                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
+                className="w-[30%] lg:w-1/4 whitespace-nowrap px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
               >
                 {bottomLeftText}
               </Link>
