@@ -97,7 +97,7 @@ const WorkWithDot = () => {
             <div className="border border-white flex w-full">
               <Link
                 href={PathNames.learnWithDot}
-                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
               >
                 LEARN WITH DOT
               </Link>
@@ -110,7 +110,7 @@ const WorkWithDot = () => {
               <div className="relative w-[30%] lg:w-1/4">
                 <Link
                   href={PathNames.workWithDot}
-                  className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
+                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
                 >
                   WORK WITH DOT
                 </Link>

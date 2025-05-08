@@ -73,7 +73,7 @@ const Navbar = () => {
           <div className="border border-white flex w-full">
             <Link
               href={PathNames.about}
-              className={cn("w-1/4 px-6 py-3 hover:text-orange-500 transition-colors text-center border-r border-white", navItemActive(PathNames.about))}
+              className={cn("w-1/4 px-6 py-3 hover:text-secondary transition-colors text-center border-r border-white", navItemActive(PathNames.about))}
             >
               ABOUT
             </Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              <div className="block px-6 py-3 cursor-pointer text-white hover:text-orange-500 transition-colors text-center border-l border-white">
+              <div className="block px-6 py-3 cursor-pointer text-white hover:text-secondary transition-colors text-center border-l border-white">
                 WHAT I DO
               </div>
               {isHovering && (
@@ -101,7 +101,7 @@ const Navbar = () => {
                     >
                       <Link
                         href={item.path}
-                        className={`block px-4 py-3 hover:text-orange-500 transition-colors text-center z-[999999] text-xs ${navItemActive(item.path)}`}
+                        className={`block px-4 py-3 hover:text-secondary transition-colors text-center z-[999999] text-xs ${navItemActive(item.path)}`}
                       >
                         {item.title}
                       </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
         </div>
         <Link
           href={PathNames.contact}
-          className="hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
+          className="hover:text-secondary transition-colors text-center text-xs fixed right-6"
         >
           CONTACT
         </Link>

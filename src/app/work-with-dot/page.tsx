@@ -6,6 +6,7 @@ import DotImage from "../../assets/images/work-with-Dot.png";
 import Link from "next/link";
 import { PathNames } from "../../routes/index.route";
 import DotSection from "../../components/DotSection";
+import SectionHeader from "../../components/SectionHeader";
 
 const WorkWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -100,24 +101,7 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center font-gilroy">
-        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
-          <div className="relative">
-            <div className="border border-white flex w-full">
-              <div className="w-3/4 relative">
-                <div className="absolute w-full h-[1px] bg-white transform -rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
-                <div className="h-full" />
-              </div>
-
-              <div className="relative w-[40%] lg:w-[30%]">
-                <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
-                  PROJECTS
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SectionHeader title="PROJECTS" />
 
       <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
         <div className="text-white text-2xl font-serif">
@@ -141,7 +125,7 @@ const WorkWithDot = () => {
             <div className="border border-white flex w-full">
               <Link
                 href={PathNames.travelEat}
-                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
               >
                 TRAVEL & EAT WITH DOT
               </Link>
@@ -154,7 +138,7 @@ const WorkWithDot = () => {
               <div className="relative w-[30%] lg:w-1/4">
                 <Link
                   href={PathNames.learnWithDot}
-                  className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
+                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
                 >
                   LEARN WITH DOT
                 </Link>

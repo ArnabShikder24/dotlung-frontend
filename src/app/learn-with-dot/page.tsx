@@ -119,7 +119,7 @@ const LearnWithDot = () => {
                 </div>
 
                 <div className="relative w-[50%] md:w-[40%] lg:w-[30%]">
-                  <p className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white">
+                  <p className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white">
                   TEACHING ENGAGEMENTS
                   </p>
                 </div>
@@ -150,7 +150,7 @@ const LearnWithDot = () => {
               <div className="border border-white flex w-full">
                 <a
                   href="#"
-                  className="w-[30%] px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                  className="w-[30%] px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
                 >
                   DATE & LOCATION
                 </a>
@@ -163,7 +163,7 @@ const LearnWithDot = () => {
                 <div className="relative w-[50%]">
                   <a
                     href="#"
-                    className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-start border-l border-white"
+                    className="block px-6 py-3 text-white hover:text-secondary transition-colors text-start border-l border-white"
                   >
                     SPEAKING ENGAGEMENTS
                   </a>
@@ -246,7 +246,7 @@ const LearnWithDot = () => {
             <div className="border border-white flex w-full">
               <Link
                 href={PathNames.travelEat}
-                className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                className="w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
               >
                 TRAVEL & EAT WITH DOT
               </Link>
@@ -259,7 +259,7 @@ const LearnWithDot = () => {
               <div className="relative w-[20%] lg:w-1/4">
                 <Link
                   href={PathNames.learnWithDot}
-                  className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
+                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
                 >
                   LEARN WITH DOT
                 </Link>
