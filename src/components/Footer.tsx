@@ -9,11 +9,13 @@ const EmailInput = () => {
     <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[350px] mt-5 relative">
       <input
         type="email"
-        placeholder="Your e-mail"
-        className="flex-1 bg-transparent font-asty placeholder-white focus:outline-none"
+        placeholder="Your email"
+        className="flex-1 bg-transparent font-gilroy placeholder-[#ffffff33] focus:outline-none"
       />
-      <button className="text-white font-bold text-sm">LET&apos;S GO</button>
-      <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5" />
+      <div className="flex items-center">
+        <button className="text-[#ffffff33] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
+        <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" />
+      </div>
     </div>
   );
 };
@@ -26,6 +28,16 @@ const Footer = () => {
           <div className="flex w-full">
             <div className="mx-auto w-full">
               <div className="lg:flex items-center gap-12 justify-between">
+                <div className="md:hidden mb-10">
+                  <p className="italic text-secondary font-caslon text-[1.3rem] md:text-[1.375rem] mt-4">
+                    Don’t miss out on this!
+                  </p>
+                  <p className="mt-2 text-base font-asty">
+                    Get my top 5 tips to grow your Instagram / LinkedIn <br/>by
+                    entering your e-mail address here:
+                  </p>  
+                  <EmailInput />
+                </div>
                 <div className="mb-7 md:mb-0">
                   <h1 className="text-[3.25rem] md:text-[4.1875rem] font-extrabold font-gilroy">LET’S TALK</h1>
                 </div>
@@ -35,7 +47,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="lg:flex gap-4 justify-between mt-3">
-                <div>
+                <div className="hidden md:block">
                   <p className="italic text-secondary font-caslon text-[1.3rem] md:text-[1.375rem] mt-4">
                     Don’t miss out on this!
                   </p>
@@ -56,7 +68,7 @@ const Footer = () => {
                     LINKEDIN
                   </a>
                   <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                    Messenger
+                    MESSENGER
                   </a>
                 </div>
               </div>

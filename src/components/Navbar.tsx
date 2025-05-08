@@ -73,7 +73,7 @@ const Navbar = () => {
           <div className="border border-white flex w-full">
             <Link
               href={PathNames.about}
-              className={cn("w-1/4 px-6 py-3 hover:text-orange-500 transition-colors text-center border-r border-white", navItemActive(PathNames.about))}
+              className={cn("w-1/4 px-6 py-3 hover:text-secondary transition-colors text-center border-r border-white", navItemActive(PathNames.about))}
             >
               ABOUT
             </Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              <div className="block px-6 py-3 cursor-pointer text-white hover:text-orange-500 transition-colors text-center border-l border-white">
+              <div className="block px-6 py-3 cursor-pointer text-white hover:text-secondary transition-colors text-center border-l border-white">
                 WHAT I DO
               </div>
               {isHovering && (
@@ -101,7 +101,7 @@ const Navbar = () => {
                     >
                       <Link
                         href={item.path}
-                        className={`block px-4 py-3 hover:text-orange-500 transition-colors text-center z-[999999] text-xs ${navItemActive(item.path)}`}
+                        className={`block px-4 py-3 hover:text-secondary transition-colors text-center z-[999999] text-xs ${navItemActive(item.path)}`}
                       >
                         {item.title}
                       </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
         </div>
         <Link
           href={PathNames.contact}
-          className="hover:text-orange-500 transition-colors text-center text-xs fixed right-6"
+          className="hover:text-secondary transition-colors text-center text-xs fixed right-6"
         >
           CONTACT
         </Link>
@@ -133,9 +133,9 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="w-full h-screen fixed bg-gradient-to-b from-[#4D05E8]/100 to-[#4D05E8]/80 z-50">
+          <div className="w-full h-screen fixed bg-gradient-to-b from-[#4D05E8]/90 to-[#4D05E8]/90 z-50">
             <div
-              className="w-[55%] mt-4 flex flex-col items-center absolute left-1/2 transform -translate-x-1/2 top-20"
+              className="w-[220px] mt-4 flex flex-col items-center absolute left-1/2 transform -translate-x-1/2 top-20"
             >
               {menuItems.map((item, idx) => {
                 if (item.title) {
@@ -143,15 +143,15 @@ const Navbar = () => {
                     <Link
                       key={idx}
                       href={item.path}
-                      className={`w-full ${item.title === "CONTACT" && "border-b"} ${item.border ? "border-t border-r border-l" : "border-r border-l"} border-white font-gilroy text-[0.8125rem] text-center py-3 ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-secondary transition-colors`}
+                      className={`w-full ${item.title === "CONTACT" && "border-b"} ${item.border ? "border-t border-r border-l" : "border-r border-l"} border-white font-gilroy text-[0.8125rem] h-[50px] flex items-center justify-center ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-secondary transition-colors`}
                       onClick={toggleMobileMenu}
                     >
                       {item.title}
                     </Link>
                   );
                 } else {
-                  return (<div key={idx} className="relative border w-full h-14">
-                    <div className="absolute w-[103%] h-[1px] bg-white transform -rotate-[14deg] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"></div>
+                  return (<div key={idx} className="relative border w-full h-[50px] overflow-hidden">
+                    <div className="absolute w-[103%] h-[1px] bg-white transform -rotate-[12.5deg] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"></div>
                     <div className="h-full" />
                   </div>);
                 }

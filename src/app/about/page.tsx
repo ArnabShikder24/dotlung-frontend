@@ -27,7 +27,7 @@ const WorkWithDot = () => {
           className="h-auto lg:w-[510px]"
         >
           <div className="z-10 text-left max-w-2xl px-6">
-            <h1 className="text-[2rem] lg:text-[4.9rem] font-bold uppercase leading-[33px] lg:leading-[75px] -z-10">
+            <h1 className="text-[2.5rem] lg:text-[4.9rem] font-bold uppercase leading-[38px] lg:leading-[75px] -z-10">
               CREATING DIGITAL EXPERIENCES
             </h1>
             <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>
@@ -97,7 +97,7 @@ const WorkWithDot = () => {
             <div className="border border-white flex w-full">
               <Link
                 href={PathNames.learnWithDot}
-                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
               >
                 LEARN WITH DOT
               </Link>
@@ -110,7 +110,7 @@ const WorkWithDot = () => {
               <div className="relative w-[30%] lg:w-1/4">
                 <Link
                   href={PathNames.workWithDot}
-                  className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
+                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
                 >
                   WORK WITH DOT
                 </Link>

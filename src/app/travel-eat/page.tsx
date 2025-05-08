@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import SectionHeader from "../../components/SectionHeader";
 
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -45,7 +46,7 @@ useEffect(() => {
           className="h-auto lg:w-[510px] lg:-ml-40 lg:mt-10"
         >
           <div className="z-10 text-left max-w-2xl px-6">
-            <h1 className="text-[2.4rem] lg:text-[4.9rem] font-bold uppercase leading-[36px] lg:leading-[75px] -z-10">
+            <h1 className="text-[2.5rem] lg:text-[4.9rem] font-bold uppercase leading-[38px] lg:leading-[75px] -z-10">
               TRAVEL <br /> & EAT <br /> WITH DOT
             </h1>
             <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>
@@ -162,23 +163,8 @@ useEffect(() => {
           </div>
         </section>
       </div>
-      <div className="flex items-center justify-center font-gilroy py-40">
-        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
-          <div className="relative">
-            <div className="border border-white flex w-full">
-              <div className="w-3/4 relative">
-                <div className="absolute w-full h-[1px] bg-white transform -rotate-[3.9deg] top-1/2 -translate-y-1/2 z-10"></div>
-                <div className="h-full" />
-              </div>
-
-              <div className="relative w-[30%] lg:w-1/4">
-                <Link href={'/blog'} className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white">
-                  BLOG
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="py-32">
+        <SectionHeader title="BLOG" />
       </div>
     </div>
   );

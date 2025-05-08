@@ -158,7 +158,7 @@ export default function FeaturedSection() {
 //         >
 //           <a
 //             href="#"
-//             className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border border-white"
+//             className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border border-white"
 //           >
 //             FILTER BY
 //           </a>
@@ -174,7 +174,7 @@ export default function FeaturedSection() {
 //                           ${index === 1 ? "animate-slide-in-2" : ""}
 //                           ${index === 2 ? "animate-slide-in-3" : ""}}
 //                 >
-//                   <span className="block px-4 py-3 text-white hover:text-orange-500 transition-colors text-center text-xs">
+//                   <span className="block px-4 py-3 text-white hover:text-secondary transition-colors text-center text-xs">
 //                     {item.title}
 //                   </span>
 //                 </div>
@@ -421,7 +421,7 @@ export default function FeaturedSection() {
 //               <div className="border border-white flex w-full">
 //                 <Link
 //                   href={PathNames.travelEat}
-//                   className="w-1/4 px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-r border-white"
+//                   className="w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
 //                 >
 //                   TRAVEL & EAT WITH DOT
 //                 </Link>
@@ -434,7 +434,7 @@ export default function FeaturedSection() {
 //                 <div className="relative w-1/4">
 //                   <Link
 //                     href={PathNames.learnWithDot}
-//                     className="block px-6 py-3 text-white hover:text-orange-500 transition-colors text-center border-l border-white"
+//                     className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
 //                   >
 //                     LEARN WITH DOT
 //                   </Link>
