@@ -1,3 +1,4 @@
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -33,7 +34,7 @@ const DotSection: React.FC<DotSectionProps> = ({
                 {word}
               </span>
             ))}
-            <span className="text-secondary ml-2">&#8594;</span>
+            <ArrowRight size={18} className="ml-2 text-secondary" />
           </Link>
 
           {/* Bottom Left - Customizable Link */}
@@ -42,7 +43,7 @@ const DotSection: React.FC<DotSectionProps> = ({
             className="border-t border-r border-white text-[0.75rem] col-span-2 row-span-1 relative flex items-start justify-start "
           >
             <div className="flex items-center justify-center px-3 text-white font-bold relative z-10 text-left h-full w-full transition-colors hover:text-secondary">
-              <span className="text-secondary">&#8592;</span>
+              <ArrowLeft size={18} className="text-secondary" />
               <span className="ml-2 block">{bottomLeftText}</span>
             </div>
           </Link>
@@ -54,7 +55,7 @@ const DotSection: React.FC<DotSectionProps> = ({
       </div>
 
       {/* Desktop View (md and up) */}
-      <div className="md:flex items-center justify-center font-gilroy mt-32 mb-32 hidden">
+      <div className="md:flex items-center justify-center font-gilroy mt-32 mb-32 hidden relative">
         <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-[0.75rem]">
           <div className="relative">
             <div className="border border-white flex w-full">
@@ -65,6 +66,7 @@ const DotSection: React.FC<DotSectionProps> = ({
               >
                 {bottomLeftText}
               </Link>
+              <ArrowLeft size={18} className="mr-2 text-secondary absolute -left-3 top-3" />
 
               {/* Middle Line */}
               <div className="w-[40%] lg:w-1/2 relative">
@@ -80,6 +82,7 @@ const DotSection: React.FC<DotSectionProps> = ({
                 >
                   {topRightText}
                 </Link>
+                <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5 top-3" />
               </div>
             </div>
           </div>
