@@ -241,7 +241,7 @@ const LearnWithDot = () => {
       </div>
       
       <div className="md:flex items-center justify-center font-gilroy mt-20 mb-32 hidden">
-        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-xs">
+        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-[0.75rem]">
           <div className="relative">
             <div className="border border-white flex w-full">
               <Link

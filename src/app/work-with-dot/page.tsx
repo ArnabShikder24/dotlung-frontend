@@ -120,7 +120,7 @@ const WorkWithDot = () => {
       </div>
 
       <div className="md:flex items-center justify-center font-gilroy mt-32 mb-32 hidden">
-        <div className="max-w-3xl flex-1  mx-5 lg:mx-20 text-xs">
+        <div className="max-w-3xl flex-1  mx-5 lg:mx-20 text-[0.75rem]">
           <div className="relative">
             <div className="border border-white flex w-full">
               <Link
@@ -131,7 +131,7 @@ const WorkWithDot = () => {
               </Link>
 
               <div className="w-[40%] lg:w-1/2 relative">
-                <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
+                <div className="absolute w-full h-[1px] bg-white transform -rotate-[6deg] top-1/2 -translate-y-1/2 z-10"></div>
                 <div className="h-full" />
               </div>
 
@@ -146,7 +146,7 @@ const WorkWithDot = () => {
             </div>
           </div>
         </div>
-    </div>
+      </div>
     <DotSection />
     </div>
   );
