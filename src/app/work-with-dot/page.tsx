@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import DotImage from "../../assets/images/work-with-Dot.png";
-import Link from "next/link";
 import { PathNames } from "../../routes/index.route";
 import DotSection from "../../components/DotSection";
 import SectionHeader from "../../components/SectionHeader";
@@ -119,35 +118,13 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-      <div className="md:flex items-center justify-center font-gilroy mt-32 mb-32 hidden">
-        <div className="max-w-3xl flex-1  mx-5 lg:mx-20 text-[0.75rem]">
-          <div className="relative">
-            <div className="border border-white flex w-full">
-              <Link
-                href={PathNames.travelEat}
-                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
-              >
-                TRAVEL & EAT WITH DOT
-              </Link>
+      <DotSection
+        topRightText="LEARN WITH DOT"
+        topRightLink={PathNames.learnWithDot}
+        bottomLeftText="TRAVEL & EAT WITH DOT"
+        bottomLeftLink={PathNames.travelEat}
+      />
 
-              <div className="w-[40%] lg:w-1/2 relative">
-                <div className="absolute w-full h-[1px] bg-white transform -rotate-[6deg] top-1/2 -translate-y-1/2 z-10"></div>
-                <div className="h-full" />
-              </div>
-
-              <div className="relative w-[30%] lg:w-1/4">
-                <Link
-                  href={PathNames.learnWithDot}
-                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
-                >
-                  LEARN WITH DOT
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <DotSection />
     </div>
   );
 };
