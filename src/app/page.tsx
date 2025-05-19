@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import dot from "../../public/Dotlungimages/Dotlungimages/dragon-Dot.png";
+import RippleButton from "../components/RippleButton";
 
 export default function Home() {
   return (
@@ -43,9 +44,11 @@ export default function Home() {
       </div>
       <div className="hidden md:block absolute left-0 bottom-4 w-full">
         <div className="flex items-center justify-between px-5">
-          <Link href="/blog" className="font-bold text-sm hover:text-indigo-200">
-            BLOG
-          </Link>
+          {/* <Link href="/blog" className="font-bold text-sm hover:text-indigo-200">
+          </Link> */}
+            <RippleButton href="/blog" className="font-bold text-sm hover:text-indigo-200">
+              BLOG
+            </RippleButton>
           
           <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="text-xs font-semibold hover:text-indigo-200">
             LIVE NOW!

@@ -65,11 +65,11 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="w-full p-4 font-gilroy mt-2 hidden md:flex justify-between items-center z-[999999]">
+      <nav className="w-full p-4 font-gilroy mt-2 hidden md:flex justify-between items-center z-[100]">
         <Link href={PathNames.home} className="fixed">
           <Image src={Logo} alt="Logo" width={50} />
         </Link>
-        <div className="max-w-3xl flex-1 mx-auto justify-center text-xs z-[99999]">
+        <div className="max-w-3xl flex-1 mx-auto justify-center text-xs z-[100]">
           <div className="border border-white flex w-full">
             <Link
               href={PathNames.about}
@@ -121,7 +121,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[999999]">
+      <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[100]">
         <div className="flex justify-between w-full items-center">
           <Link className="fixed top-4 left-3 z-[99999]" href={PathNames.home}>
             <Image src={Logo} alt="Logo" width={50} />
