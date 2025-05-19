@@ -2,11 +2,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Logo from "../../public/assets/svgs/logo.svg";
-import Link from "next/link";
 import { PathNames } from "../routes/index.route";
 import { Squash as Hamburger } from "hamburger-react";
 import { usePathname } from "next/navigation";
 import { cn } from "../lib/cn";
+import RippleButton from "./RippleButton";
 
 
 const Navbar = () => {
@@ -65,18 +65,18 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop Navbar */}
-      <nav className="w-full p-4 font-gilroy mt-2 hidden md:flex justify-between items-center z-[999999]">
-        <Link href={PathNames.home} className="fixed">
+      <nav className="w-full p-4 font-gilroy mt-2 hidden md:flex justify-between items-center z-[100]">
+        <RippleButton href={PathNames.home} className="fixed">
           <Image src={Logo} alt="Logo" width={50} />
-        </Link>
-        <div className="max-w-3xl flex-1 mx-auto justify-center text-xs z-[99999]">
+        </RippleButton>
+        <div className="max-w-3xl flex-1 mx-auto justify-center text-xs z-[100]">
           <div className="border border-white flex w-full">
-            <Link
+            <RippleButton
               href={PathNames.about}
               className={cn("w-1/4 px-6 py-3 hover:text-secondary transition-colors text-center border-r border-white", navItemActive(PathNames.about))}
             >
               ABOUT
-            </Link>
+            </RippleButton>
             <div className="w-1/2 relative">
               <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
               <div className="h-full" />
@@ -99,12 +99,12 @@ const Navbar = () => {
                         ${index === 1 ? 'animate-slide-in-2' : ''}
                         ${index === 2 ? 'animate-slide-in-3' : ''}`}
                     >
-                      <Link
+                      <RippleButton
                         href={item.path}
                         className={`block px-4 py-3 hover:text-secondary transition-colors text-center z-[999999] text-xs ${navItemActive(item.path)}`}
                       >
                         {item.title}
-                      </Link>
+                      </RippleButton>
                     </div>
                   ))}
                 </div>
@@ -112,21 +112,21 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <Link
+        <RippleButton
           href={PathNames.contact}
           className="hover:text-secondary transition-colors text-center text-xs fixed right-6"
         >
           CONTACT
-        </Link>
+        </RippleButton>
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[999999]">
+      <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[100]">
         <div className="flex justify-between w-full items-center">
-          <Link className="fixed top-4 left-3 z-[99999]" href={PathNames.home}>
+          <RippleButton className="fixed top-4 left-3 z-[100]" href={PathNames.home}>
             <Image src={Logo} alt="Logo" width={50} />
-          </Link>
-          <div className="fixed top-3 right-3 z-[99999]">
+          </RippleButton>
+          <div className="fixed top-3 right-3 z-[100]">
             <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} color="#F64C3E"/>
           </div>
         </div>
@@ -140,14 +140,14 @@ const Navbar = () => {
               {menuItems.map((item, idx) => {
                 if (item.title) {
                   return (
-                    <Link
+                    <RippleButton 
                       key={idx}
                       href={item.path}
                       className={`w-full ${item.title === "CONTACT" && "border-b"} ${item.border ? "border-t border-r border-l" : "border-r border-l"} border-white font-gilroy text-[0.8125rem] h-[50px] flex items-center justify-center ${(item.path != PathNames.contact) && navItemActive(item.path)} hover:text-secondary transition-colors`}
                       onClick={toggleMobileMenu}
                     >
                       {item.title}
-                    </Link>
+                    </RippleButton>
                   );
                 } else {
                   return (<div key={idx} className="relative border w-full h-[50px] overflow-hidden">

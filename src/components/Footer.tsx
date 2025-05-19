@@ -3,6 +3,7 @@ import React from 'react';
 import model1 from "../assets/images/SM_3_final copia.png";
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import RippleButton from './RippleButton';
 
 const EmailInput = () => {
   return (
@@ -80,9 +81,9 @@ const Footer = () => {
       <div className="py-2 px-6 text-center hidden lg:flex justify-between items-center">
         <h1></h1>
         <div>
-          <Link href="/blog" className="font-bold text-sm hover:text-indigo-200 transition-colors fixed bottom-5 left-4">
+          <RippleButton href="/blog" className="font-bold text-sm hover:text-indigo-200 transition-colors fixed bottom-5 left-4">
             BLOG
-          </Link>
+          </RippleButton>
         </div>
         
         <div className="text-xs text-indigo-200">

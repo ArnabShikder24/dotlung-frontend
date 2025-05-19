@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Link from "next/link";
 import React from "react";
+import RippleButton from "./RippleButton";
 
 interface DotSectionProps {
   topRightText?: string;
@@ -25,20 +25,20 @@ const DotSection: React.FC<DotSectionProps> = ({
               before:content-[''] before:absolute before:w-[111%] before:h-[1px] before:bg-white before:rotate-[-27.5deg] before:top-1/2 before:left-[-5%]" />
 
           {/* Top Right - Customizable Link */}
-          <Link
+          <RippleButton
             href={topRightLink}
             className="flex items-center justify-center px-3 text-[0.75rem] text-white font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
           >
-            {topRightText.split(" ").map((word, i) => (
-              <span key={i} className={i === 2 ? "block" : "mr-2"}>
-                {word}
-              </span>
-            ))}
-            <ArrowRight size={18} className="ml-2 text-secondary" />
-          </Link>
+          {topRightText.split(" ").map((word, i) => (
+            <span key={i} className={i === 2 ? "block" : "mr-2"}>
+              {word}
+            </span>
+          ))}
+          <ArrowRight size={18} className="ml-2 text-secondary" />
+          </RippleButton>
 
           {/* Bottom Left - Customizable Link */}
-          <Link
+          <RippleButton
             href={bottomLeftLink}
             className="border-t border-r border-white text-[0.75rem] col-span-2 row-span-1 relative flex items-start justify-start "
           >
@@ -46,7 +46,7 @@ const DotSection: React.FC<DotSectionProps> = ({
               <ArrowLeft size={18} className="text-secondary" />
               <span className="ml-2 block">{bottomLeftText}</span>
             </div>
-          </Link>
+          </RippleButton>
 
           {/* Bottom Right Triangle */}
           <div className="border-t border-white col-span-1 row-span-1 relative flex items-end justify-end h-full
@@ -60,12 +60,12 @@ const DotSection: React.FC<DotSectionProps> = ({
           <div className="relative">
             <div className="border border-white flex w-full">
               {/* Bottom Left Text */}
-              <Link
+              <RippleButton
                 href={bottomLeftLink}
                 className="w-[30%] lg:w-1/4 whitespace-nowrap px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
               >
                 {bottomLeftText}
-              </Link>
+              </RippleButton>
               <ArrowLeft size={18} className="mr-2 text-secondary absolute -left-3 top-3" />
 
               {/* Middle Line */}
@@ -76,12 +76,12 @@ const DotSection: React.FC<DotSectionProps> = ({
 
               {/* Top Right Text */}
               <div className="relative w-[30%] lg:w-1/4">
-                <Link
+                <RippleButton
                   href={topRightLink}
                   className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
                 >
                   {topRightText}
-                </Link>
+                </RippleButton>
                 <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5 top-3" />
               </div>
             </div>
