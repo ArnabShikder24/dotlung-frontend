@@ -9,7 +9,8 @@ const RippleButton = ({
   className = '',
   rippleColor1 = 'bg-secondary', // First ripple color
   rippleColor2 = 'bg-primary', // Second ripple color
-  transitionTime = 800 // Time in ms before navigation happens
+  transitionTime = 700, // Time in ms before navigation happens
+  onClick = () => {}
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -166,8 +167,9 @@ const RippleButton = ({
   return (
     <Link
       href={href}
-      className={`relative inline-block ${className}`}
+      className={`${className}`}
       onClick={(e) => {
+        onClick();
         handleRippleTransition(e);
       }}
     >
