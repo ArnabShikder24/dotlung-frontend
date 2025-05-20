@@ -8,6 +8,7 @@ import { PathNames } from "../../routes/index.route";
 import DotSection from "../../components/DotSection";
 import SectionHeader from "../../components/SectionHeader";
 import AccordionItem from "../../components/AccordionItem";
+import NavigationArrowRight from "../../components/NavigationArrowRight";
 
 const LearnWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -191,13 +192,14 @@ const LearnWithDot = () => {
               </div>
               <div className="lg:w-[50%] mt-8 lg:mt-0 flex items-center justify-between">
                 <span className="text-2xl font-caslon">{event.name}</span>
-                <span className="font-bold text-secondary">→</span>
+                {/* <span className="font-bold text-secondary">→</span> */}
+                <NavigationArrowRight />
               </div>
             </div>
           ))}
           <div className="flex justify-end">
             <div className="flex items-center justify-between w-[50%] py-4 text-center text-white/60 text-sm uppercase">
-              <h1 className="font-gilroy">Previous Events</h1> <span className="text-xl font-bold text-secondary">→</span>
+              <h1 className="font-gilroy">Previous Events</h1> <NavigationArrowRight />
             </div>
           </div>
         </div>
