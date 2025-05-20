@@ -170,10 +170,10 @@ const LearnWithDot = () => {
         </div>
       </div>
             
-      <DotSection topRightText="DATE & LOCATION" bottomLeftText="SPEAKING ENGAGEMENTS" />
+      <DotSection bottomLeftText="DATE & LOCATION" topRightText="SPEAKING ENGAGEMENTS" />
 
       <div className="text-white flex flex-col items-center py-10 px-6">
-        <div className="max-w-4xl w-full">
+        <div className="max-w-3xl w-full">
           {events.map((event, index) => (
             <div
               key={index}

@@ -78,7 +78,7 @@ const DotSection: React.FC<DotSectionProps> = ({
               <div className="relative w-[30%] lg:w-1/4">
                 <RippleButton
                   href={topRightLink}
-                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
+                  className="block px-6 py-3 whitespace-nowrap text-white hover:text-secondary transition-colors text-center border-l border-white"
                 >
                   {topRightText}
                 </RippleButton>
