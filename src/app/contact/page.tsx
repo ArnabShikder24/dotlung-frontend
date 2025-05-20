@@ -46,8 +46,8 @@ const Contact = () => {
                 <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
               </div>
               <div className="flex flex-col text-lg gap-5 my-10">
-                {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (
-                  <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy">
+                {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "THREADS"].map((platform) => (
+                  <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy uppercase">
                     {platform}
                   </a>
                 ))}
