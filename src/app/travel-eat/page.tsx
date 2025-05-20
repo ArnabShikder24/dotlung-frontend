@@ -123,7 +123,7 @@ useEffect(() => {
               >
                 <div className="flex justify-center items-center border-b-[1px] border-secondary relative" style={{height:'100%'}}>
                   <div>
-                    <div className="flex justify-between mb-5">
+                    <div className="flex items-center justify-between mb-5">
                       <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
                       <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
                     </div>
