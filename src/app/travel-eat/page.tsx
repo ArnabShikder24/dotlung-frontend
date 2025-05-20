@@ -128,7 +128,7 @@ useEffect(() => {
                       <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
                     </div>
                     <Link href={`/blog/${post.slug}`} className="block mt-2 mb-4">
-                      <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
+                      <p className="text-[1.25rem] md:text-[1.5rem] text-secondary font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
                         {post.title.rendered}{" "}
                       </p>
                       <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
