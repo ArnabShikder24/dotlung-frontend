@@ -34,9 +34,9 @@ export default function Home() {
               </p>
             </p>
             <p className="flex uppercase items-center gap-6 mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
-              Comm&apos;on Chase the Dragon!
+              COME ON CHASE THE DRAGON
               <span
-                className="block w-24 h-[1.5px] bg-red-600"
+                className="block w-24 h-[1px] bg-red-600"
               ></span>
             </p>
           </div>
