@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import NavigationArrow from './NavigationArrow';
 
 interface FooterProps {
   relatedLinks?: {
@@ -80,7 +80,7 @@ const BlogFooter: React.FC<FooterProps> = ({
               href="/blog"
               className="flex items-center text-sm hover:text-secondary transition-colors"
             >
-              <ArrowLeft size={16} className="mr-2 text-secondary" />
+              <NavigationArrow direction="left" className="mr-2 text-secondary" />
               <p className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary">BACK TO BLOG</p>
             </Link>
           </div>

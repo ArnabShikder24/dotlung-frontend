@@ -10,7 +10,7 @@ import image2 from "../../../assets/images/g2.png";
 import ImageGallery from "../../../components/ImageGallery";
 import BlogFooter from "../../../components/BlogFooter";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import NavigationArrow from "../../../components/NavigationArrow";
 // import Blog1 from "../../../../public/Dotlungimages/Dotlungimages/blog1.png";
 
 const BlogPage = () => {
@@ -138,7 +138,7 @@ const BlogPage = () => {
       <div className="lg:w-[1100px] mx-auto px-4 py-10 mt-20">
         <div className="flex items-center justify-between font-caslon text-sm border-b border-secondary pb-4">
           <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
-          <p className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary flex items-center" onClick={() => router.push("/blog")}><ArrowLeft size={16} className="mr-2 text-secondary" /> BACK TO BLOG</p>
+          <p className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary flex items-center" onClick={() => router.push("/blog")}><NavigationArrow direction="left" className="mr-2 text-secondary" /> BACK TO BLOG</p>
         </div>
         <div className="lg:flex justify-between mt-10">
           <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
@@ -239,7 +239,7 @@ const BlogPage = () => {
                       href={`/blog/${post.slug}`}
                       className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
                     >
-                      READ MORE{" "}<ArrowRight size={16} className="mr-2 text-secondary" />
+                      READ MORE{" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
                     </Link>
                   </div>
                 </div>
