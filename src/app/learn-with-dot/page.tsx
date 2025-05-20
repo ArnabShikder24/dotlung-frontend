@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { PathNames } from "../../routes/index.route";
 import DotSection from "../../components/DotSection";
 import SectionHeader from "../../components/SectionHeader";
+import AccordionItem from "../../components/AccordionItem";
+import NavigationArrowRight from "../../components/NavigationArrowRight";
 
 const LearnWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -14,15 +16,60 @@ const LearnWithDot = () => {
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
+  // const tableItems = [
+  //   { width: "160%", title: "Universitat de Barcelona" },
+  //   { width: "190%", title: "Toulouse Business School" },
+  //   { width: "180%", title: "ESdesign Barcelona" },
+  //   { width: "170%", title: "Instituto Europeo de Design" },
+  //   { width: "190%", title: "Geneva Business School" },
+  //   { width: "160%", title: "BAU, College of Arts & Design" },
+  //   { width: "180%", title: "Barreira Arte + Diseño" },
+  // ];
+
   const tableItems = [
-    { width: "160%", title: "Universitat de Barcelona" },
-    { width: "190%", title: "Toulouse Business School" },
-    { width: "180%", title: "ESdesign Barcelona" },
-    { width: "170%", title: "Instituto Europeo de Design" },
-    { width: "190%", title: "Geneva Business School" },
-    { width: "160%", title: "BAU, College of Arts & Design" },
-    { width: "180%", title: "Barreira Arte + Diseño" },
+  { 
+    width: "95%", 
+    title: "Universitat de Barcelona", 
+    content: "Founded in 1450, Universitat de Barcelona is one of the oldest and most prestigious academic institutions in Spain, known for its excellent programs in humanities, sciences, and arts."
+  },
+  { 
+    width: "87%", 
+    title: "Toulouse Business School", 
+    content: "A triple-accredited business school established in 1903, offering innovative programs focused on sustainable business practices, entrepreneurship, and global management."
+  },
+  { 
+    width: "92%", 
+    title: "ESdesign Barcelona", 
+    content: "A specialized design school in the heart of Barcelona focusing on graphic design, digital design, and creative direction with strong industry connections."
+  },
+  { 
+    width: "78%", 
+    title: "Instituto Europeo de Design", 
+    content: "IED is an international network of design schools with a campus in Barcelona that offers programs in fashion, visual communication, and product design with an innovative methodology."
+  },
+  { 
+    width: "90%", 
+    title: "Geneva Business School", 
+    content: "A dynamic international business school with campuses in Barcelona, Geneva, and Madrid, offering practical business education with a focus on digital innovation."
+  },
+  { 
+    width: "76%", 
+    title: "BAU, College of Arts & Design", 
+    content: "A center for higher education in design located in Barcelona's Poblenou district, featuring experimental approaches to design thinking and creative practices."
+  },
+  { 
+    width: "83%", 
+    title: "Barreira Arte + Diseño", 
+    content: "A leading educational institution that combines traditional arts with modern design disciplines to create innovative programs that bridge art, design, and technology."
+  }
   ];
+  // State to track which accordion item is currently open
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Toggle accordion function
+  const toggleAccordion = (index: number | null) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   const events = [
     { date: "05 APRIL 2018", location: "MILAN", name: "Digital Design Days" },
@@ -111,26 +158,23 @@ const LearnWithDot = () => {
 
       <SectionHeader title="TEACHING ENGAGEMENTS" />
 
-        <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
-          <div className="text-white text-2xl font-serif">
-            {tableItems.map((data, index) => (
-              <div key={index} className="mb-4 relative">
-                  <span className="block pb-2  cursor-pointer lg:hover:text-secondary">{data.title}</span>
-                  <div
-                  className="border-b-[1px] border-secondary absolute top-4"
-                  style={{
-                      width: data.width,
-                  }}
-                  ></div>
-              </div>
-            ))}
-          </div>
+      <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden lg:ml-[320px]">
+        <div className="text-white text-2xl max-w-[500px]">
+          {tableItems.map((item, index) => (
+          <AccordionItem
+            key={index}
+            item={item}
+            isActive={activeIndex === index}
+            onToggle={() => toggleAccordion(index)}
+          />
+        ))}
         </div>
+      </div>
             
-      <DotSection topRightText="DATE & LOCATION" bottomLeftText="SPEAKING ENGAGEMENTS" />
+      <DotSection bottomLeftText="DATE & LOCATION" topRightText="SPEAKING ENGAGEMENTS" />
 
       <div className="text-white flex flex-col items-center py-10 px-6">
-        <div className="max-w-4xl w-full">
+        <div className="max-w-3xl w-full">
           {events.map((event, index) => (
             <div
               key={index}
@@ -148,13 +192,13 @@ const LearnWithDot = () => {
               </div>
               <div className="lg:w-[50%] mt-8 lg:mt-0 flex items-center justify-between">
                 <span className="text-2xl font-caslon">{event.name}</span>
-                <span className="text-xl font-bold text-secondary">→</span>
+                <NavigationArrowRight />
               </div>
             </div>
           ))}
           <div className="flex justify-end">
             <div className="flex items-center justify-between w-[50%] py-4 text-center text-white/60 text-sm uppercase">
-              <h1 className="font-gilroy">Previous Events</h1> <span className="text-xl font-bold text-secondary">→</span>
+              <h1 className="font-gilroy">Previous Events</h1> <NavigationArrowRight />
             </div>
           </div>
         </div>

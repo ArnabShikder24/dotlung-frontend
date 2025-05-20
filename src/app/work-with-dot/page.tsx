@@ -8,6 +8,7 @@ import DotSection from "../../components/DotSection";
 import SectionHeader from "../../components/SectionHeader";
 import RevealOnScroll from "../../components/RevealOnScroll";
 import RevealOnScrollSpan from "../../components/RevealOnScrollSpan";
+import AccordionItem from "../../components/AccordionItem";
 
 const WorkWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -15,16 +16,57 @@ const WorkWithDot = () => {
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
+
   const items = [
-    { width: "200%", title: "OFFF" },
-    { width: "180%", title: "Motionographer" },
-    { width: "200%", title: "F5" },
-    { width: "170%", title: "Sonar+D" },
-    { width: "180%", title: "DDD" },
-    { width: "200%", title: "Ladies Wine Design" },
-    { width: "170%", title: "Catalunya Cannabis" },
-    { width: "160%", title: "360VR.Barcelona" },
+    { 
+      width: "95%", 
+      title: "OFFF", 
+      content: "OFFF is a community inviting all those who are eager to learn to participate and get inspired in a three-day journey of conferences, workshops, activities, and performances."
+    },
+    { 
+      width: "85%", 
+      title: "Motionographer", 
+      content: "Motionographer sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    { 
+      width: "90%", 
+      title: "F5", 
+      content: "F5 is a creativity festival that brings together diverse creative professionals across design, art, and technology to share ideas and inspire innovation."
+    },
+    { 
+      width: "70%", 
+      title: "Sonar+D", 
+      content: "Sonar+D is the international conference that brings together creativity, technology, and business, exploring how creativity is changing our present and imagining new futures."
+    },
+    { 
+      width: "80%", 
+      title: "DDD", 
+      content: "Design, Development, and Digital arts conference focusing on the intersection of creative disciplines and technical innovation."
+    },
+    { 
+      width: "85%", 
+      title: "Ladies Wine Design", 
+      content: "A global non-profit initiative started by Jessica Walsh to foster creative community among women in design through mentorship circles, portfolio reviews, and creative meetups."
+    },
+    { 
+      width: "70%", 
+      title: "Catalunya Cannabis", 
+      content: "Information and community forum discussing policies, research, and cultural aspects of cannabis in Catalunya."
+    },
+    { 
+      width: "66%", 
+      title: "360VR.Barcelona", 
+      content: "Platform for immersive technology and virtual reality experiences showcasing the latest innovations in 360° content creation and VR applications." 
+    },
   ];
+
+  // State to track which accordion item is currently open
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Toggle accordion function
+  const toggleAccordion = (index: number | null) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <div className="container mx-auto overflow-hidden mt-20 md:mt-0">
@@ -150,21 +192,16 @@ const WorkWithDot = () => {
         <SectionHeader title="PROJECTS" />
       </RevealOnScroll>
 
-      <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
-        <div className="text-white text-2xl font-serif">
+      <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden lg:ml-[320px]">
+        <div className="text-white text-2xl max-w-[500px]">
           {items.map((item, index) => (
-            <div key={index} className="mb-4 relative">
-              <RevealOnScroll>
-                <span className="block pb-2 cursor-pointer lg:hover:text-secondary">{item.title}</span>
-                <div
-                  className="border-b-[1px] border-secondary absolute top-4"
-                  style={{
-                    width: item.width,
-                  }}
-                ></div>
-              </RevealOnScroll>
-            </div>
-          ))}
+          <AccordionItem
+            key={index}
+            item={item}
+            isActive={activeIndex === index}
+            onToggle={() => toggleAccordion(index)}
+          />
+        ))}
         </div>
       </div>
 

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import Logo from "../../../public/assets/svgs/logo.svg";
 import { useRouter } from 'next/navigation';
-import { ArrowRight } from 'lucide-react';
+import NavigationArrow from '../../components/NavigationArrow';
 
 const EmailInput = () => {
   return (
@@ -12,11 +12,12 @@ const EmailInput = () => {
       <input
         type="email"
         placeholder="Your email"
-        className="flex-1 bg-transparent font-gilroy placeholder-[#ffffff33] focus:outline-none"
+        className="flex-1 bg-transparent text-white font-asty text-[14px] placeholder-[#ffffff77] focus:outline-none"
       />
       <div className="flex items-center">
-        <button className="text-[#ffffff33] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
-        <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" />
+        <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
+        {/* <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" /> */}
+        <NavigationArrow direction="right" className="mr-2 text-secondary relative -right-2 md:absolute md:-right-6" />
       </div>
     </div>
   );
@@ -40,13 +41,13 @@ const Contact = () => {
               LET&apos;S GROW YOUR SOCIAL MEDIA EMPIRE TOGETHER.
             </h1>
             <div className="text-left md:hidden">
-              <div className="text-lg font-caslon mt-10">
-                <p>+1 661 368 5864</p>
-                <p>hello@dotlung.com</p>
+              <div className="text-[0.875rem] font-asty mt-10">
+                <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
+                <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
               </div>
               <div className="flex flex-col text-lg gap-5 my-10">
-                {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (
-                  <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy">
+                {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "THREADS"].map((platform) => (
+                  <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy uppercase">
                     {platform}
                   </a>
                 ))}
@@ -74,9 +75,9 @@ const Contact = () => {
               </div>
             </div>
             <div className="hidden md:block text-left">
-              <div className="text-lg font-caslon">
-                <p>+1 661 368 5864</p>
-                <p>hello@dotlung.com</p>
+              <div className="text-[1rem] font-asty">
+                <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
+                <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
               </div>
               <div className="flex flex-col text-lg gap-5 mt-28">
                 {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (

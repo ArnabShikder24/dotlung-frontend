@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import model1 from "../assets/images/SM_3_final copia.png";
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import RippleButton from './RippleButton';
+import NavigationArrow from './NavigationArrow';
 
 const EmailInput = () => {
   return (
@@ -11,11 +11,12 @@ const EmailInput = () => {
       <input
         type="email"
         placeholder="Your email"
-        className="flex-1 bg-transparent font-gilroy placeholder-[#ffffff33] focus:outline-none"
+        className="flex-1 bg-transparent text-white font-asty text-[14px] placeholder-[#ffffff77] focus:outline-none"
       />
       <div className="flex items-center">
-        <button className="text-[#ffffff33] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
-        <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" />
+        <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
+        {/* <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" /> */}
+        <NavigationArrow direction="right" className="mr-2 text-secondary relative -right-2 md:absolute md:-right-6" />
       </div>
     </div>
   );
@@ -34,7 +35,7 @@ const Footer = () => {
                     Don’t miss out on this!
                   </p>
                   <p className="mt-2 text-base font-asty">
-                    Get my top 5 tips to grow your Instagram / LinkedIn <br/>by
+                    Get my top 5 tips to grow your Instagram / LinkedIn by
                     entering your e-mail address here:
                   </p>  
                   <EmailInput />
@@ -42,9 +43,9 @@ const Footer = () => {
                 <div className="mb-7 md:mb-0">
                   <h1 className="text-[3.25rem] md:text-[4.1875rem] font-extrabold font-gilroy">LET’S TALK</h1>
                 </div>
-                <div className="mb-8 md:mb-0">
-                  <p className="text-lg font-caslon">+1 661 368 5864</p>
-                  <p className="text-lg font-caslon">hello@dotlung.com</p>
+                <div className="text-[0.95rem] font-asty mb-8 md:mb-0">
+                  <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
+                <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
                 </div>
               </div>
               <div className="lg:flex gap-4 justify-between mt-3">
@@ -59,17 +60,17 @@ const Footer = () => {
                   <EmailInput />
                 </div>
                 <div className="flex flex-col text-[0.75rem] font-gilroy mt-10 lg:mt-4" style={{width:140}}>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
+                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
                     FACEBOOK
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
+                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
                     INSTAGRAM
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
+                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
                     LINKEDIN
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3">
-                    MESSENGER
+                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    THREADS
                   </a>
                 </div>
               </div>

@@ -1,6 +1,6 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import React from "react";
 import RippleButton from "./RippleButton";
+import NavigationArrow from "./NavigationArrow";
 
 interface DotSectionProps {
   topRightText?: string;
@@ -34,7 +34,8 @@ const DotSection: React.FC<DotSectionProps> = ({
               {word}
             </span>
           ))}
-          <ArrowRight size={18} className="ml-2 text-secondary" />
+            {/* <ArrowRight size={18} className="ml-2 text-secondary" /> */}
+            <NavigationArrow direction="right" className="ml-2 text-secondary" />
           </RippleButton>
 
           {/* Bottom Left - Customizable Link */}
@@ -43,7 +44,8 @@ const DotSection: React.FC<DotSectionProps> = ({
             className="border-t border-r border-white text-[0.75rem] col-span-2 row-span-1 relative flex items-start justify-start "
           >
             <div className="flex items-center justify-center px-3 text-white font-bold relative z-10 text-left h-full w-full transition-colors hover:text-secondary">
-              <ArrowLeft size={18} className="text-secondary" />
+              {/* <ArrowLeft size={18} className="text-secondary" /> */}
+              <NavigationArrow direction="left" className="text-secondary" />
               <span className="ml-2 block">{bottomLeftText}</span>
             </div>
           </RippleButton>
@@ -66,7 +68,8 @@ const DotSection: React.FC<DotSectionProps> = ({
               >
                 {bottomLeftText}
               </RippleButton>
-              <ArrowLeft size={18} className="mr-2 text-secondary absolute -left-3 top-3" />
+              {/* <ArrowLeft size={18} className="mr-2 text-secondary absolute -left-3 top-3" /> */}
+              <NavigationArrow direction="left" className="mr-2 text-secondary absolute -left-4 top-[9px]" />
 
               {/* Middle Line */}
               <div className="w-[40%] lg:w-1/2 relative">
@@ -78,11 +81,12 @@ const DotSection: React.FC<DotSectionProps> = ({
               <div className="relative w-[30%] lg:w-1/4">
                 <RippleButton
                   href={topRightLink}
-                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
+                  className="block px-6 py-3 whitespace-nowrap text-white hover:text-secondary transition-colors text-center border-l border-white"
                 >
                   {topRightText}
                 </RippleButton>
-                <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5 top-3" />
+                {/* <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5 top-3" /> */}
+                <NavigationArrow direction="right" className="mr-2 text-secondary absolute -right-6 top-[9px]" />
               </div>
             </div>
           </div>

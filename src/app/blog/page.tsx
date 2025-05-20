@@ -62,7 +62,7 @@ export default function FeaturedSection() {
       <h1 className="text-6xl md:text-7xl font-gilroy text-white">BLOG</h1>
       {posts.map((post) => (
         <article key={post.id} className="my-10 border-b border-secondary pb-4">
-          <div className="flex justify-between text-secondary mb-2">
+          <div className="flex items-center justify-between text-secondary mb-2">
             <span className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</span>
             <span className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.categories}</span>
           </div>

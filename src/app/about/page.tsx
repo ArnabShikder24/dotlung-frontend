@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import DotImage from "../../assets/images/about.png";
-import Link from "next/link";
 import { PathNames } from "../../routes/index.route";
 import DotSection from "../../components/DotSection";
 
@@ -89,37 +88,12 @@ const WorkWithDot = () => {
         </div>
       </div>
 
-
-
-      <div className="md:flex items-center justify-center font-gilroy mt-40 mb-40 hidden">
-        <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-[0.75rem]">
-          <div className="relative">
-            <div className="border border-white flex w-full">
-              <Link
-                href={PathNames.learnWithDot}
-                className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
-              >
-                LEARN WITH DOT
-              </Link>
-
-              <div className="w-[40%] lg:w-1/2 relative">
-                <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
-                <div className="h-full" />
-              </div>
-
-              <div className="relative w-[30%] lg:w-1/4">
-                <Link
-                  href={PathNames.workWithDot}
-                  className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
-                >
-                  WORK WITH DOT
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <DotSection />
+      <DotSection
+        bottomLeftText="LEARN WITH DOT"
+        bottomLeftLink={PathNames.learnWithDot}
+        topRightText="WORK WITH DOT"
+        topRightLink={PathNames.workWithDot}
+      />
     </div>
   );
 };
