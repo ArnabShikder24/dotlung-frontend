@@ -12,7 +12,7 @@ const EmailInput = () => {
       <input
         type="email"
         placeholder="Your email"
-        className="flex-1 bg-transparent text-white text-[14px] placeholder-[#ffffff77] focus:outline-none"
+        className="flex-1 bg-transparent text-white font-asty text-[14px] placeholder-[#ffffff77] focus:outline-none"
       />
       <div className="flex items-center">
         <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
