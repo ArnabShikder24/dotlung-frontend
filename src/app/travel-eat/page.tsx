@@ -110,7 +110,7 @@ useEffect(() => {
       <div className=" text-white py-10 px-6">
         <section className="max-w-5xl mx-auto">
           <header className="mb-6">
-            <h1 className="text-1xl font-bold text-center text-secondary">
+            <h1 className="text-[0.8125rem] font-gilroy lg:text-center text-secondary uppercase">
               Latest Posts
             </h1>
           </header>
@@ -119,16 +119,16 @@ useEffect(() => {
             {recentPosts.map((post, index) => (
               <article
                 key={index}
-                className="grid md:grid-cols-2 items-center gap-4"
+                className="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-4"
               >
-                <div className="flex justify-center items-center border-b-[1px] border-secondary" style={{height:'100%'}}>
+                <div className="flex justify-center items-center border-b-[1px] border-secondary relative" style={{height:'100%'}}>
                   <div>
                     <div className="flex justify-between mb-5">
                       <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
                       <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
                     </div>
                     <Link href={`/blog/${post.slug}`} className="block mt-2 mb-4">
-                      <p className="text-[1.25rem] md:text-[1.5rem] text-secondary font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
+                      <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
                         {post.title.rendered}{" "}
                       </p>
                       <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
@@ -136,7 +136,7 @@ useEffect(() => {
                     </Link>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold mb-1"
+                      className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold relative bottom-2 md:absolute md:bottom-4"
                     >
                       READ MORE{" "}<ArrowRight size={16} className="mr-2 text-secondary" />
                     </Link>
@@ -144,7 +144,7 @@ useEffect(() => {
                 </div>
 
                 {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
-                  <figure className="relative w-full ">
+                  <figure className="relative w-full mt-4 md:mt-0">
                     <a href={`/blog/${post.slug}`}>
                       <Image
                           src={post._embedded["wp:featuredmedia"][0].source_url}
