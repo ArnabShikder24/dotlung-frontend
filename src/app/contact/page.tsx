@@ -41,8 +41,8 @@ const Contact = () => {
             </h1>
             <div className="text-left md:hidden">
               <div className="text-[0.875rem] font-asty mt-10">
-                <p>+1 661 368 5864</p>
-                <p>hello@dotlung.com</p>
+                <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
+                <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
               </div>
               <div className="flex flex-col text-lg gap-5 my-10">
                 {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (
@@ -74,9 +74,9 @@ const Contact = () => {
               </div>
             </div>
             <div className="hidden md:block text-left">
-              <div className="text-lg font-caslon">
-                <p>+1 661 368 5864</p>
-                <p>hello@dotlung.com</p>
+              <div className="text-[1rem] font-asty">
+                <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
+                <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
               </div>
               <div className="flex flex-col text-lg gap-5 mt-28">
                 {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (
