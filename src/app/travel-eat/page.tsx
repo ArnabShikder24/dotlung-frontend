@@ -4,8 +4,8 @@ import DotImage from "../../assets/images/work-with-Dot.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import SectionHeader from "../../components/SectionHeader";
+import NavigationArrow from "../../components/NavigationArrow";
 
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -138,7 +138,7 @@ useEffect(() => {
                       href={`/blog/${post.slug}`}
                       className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold relative bottom-2 md:absolute md:bottom-4"
                     >
-                      READ MORE{" "}<ArrowRight size={16} className="mr-2 text-secondary" />
+                      READ MORE{" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
                     </Link>
                   </div>
                 </div>

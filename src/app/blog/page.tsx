@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Pagination from "../../components/Pagination";
-import { ArrowRight } from "lucide-react";
+import NavigationArrow from "../../components/NavigationArrow";
 
 export default function FeaturedSection() {
   const [posts, setPosts] = useState([]);
@@ -71,7 +71,7 @@ export default function FeaturedSection() {
           </Link>
           <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3] mb-4" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
           <Link href={`/blog/${post.slug}`} className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold">
-            READ MORE {" "}<ArrowRight size={16} className="mr-2 text-secondary" />
+            READ MORE {" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
           </Link>
 
           {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ? (

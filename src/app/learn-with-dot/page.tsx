@@ -178,7 +178,7 @@ const LearnWithDot = () => {
           {events.map((event, index) => (
             <div
               key={index}
-              className="lg:flex justify-between items-center border-b border-white/50 py-4"
+              className="lg:flex justify-between items-center border-b-[0.8px] border-white/50 py-4"
             >
               <div className="flex items-center gap-10 lg:w-[30%]">
                 <span
