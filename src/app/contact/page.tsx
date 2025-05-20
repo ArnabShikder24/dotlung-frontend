@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import Logo from "../../../public/assets/svgs/logo.svg";
 import { useRouter } from 'next/navigation';
-import { ArrowRight } from 'lucide-react';
+import NavigationArrow from '../../components/NavigationArrow';
 
 const EmailInput = () => {
   return (
@@ -16,7 +16,8 @@ const EmailInput = () => {
       />
       <div className="flex items-center">
         <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
-        <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" />
+        {/* <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" /> */}
+        <NavigationArrow direction="right" className="mr-2 text-secondary relative -right-2 md:absolute md:-right-6" />
       </div>
     </div>
   );

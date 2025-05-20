@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import model1 from "../assets/images/SM_3_final copia.png";
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import RippleButton from './RippleButton';
+import NavigationArrow from './NavigationArrow';
 
 const EmailInput = () => {
   return (
@@ -15,7 +15,8 @@ const EmailInput = () => {
       />
       <div className="flex items-center">
         <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
-        <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" />
+        {/* <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" /> */}
+        <NavigationArrow direction="right" className="mr-2 text-secondary relative -right-2 md:absolute md:-right-6" />
       </div>
     </div>
   );
