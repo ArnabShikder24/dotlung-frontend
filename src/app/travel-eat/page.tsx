@@ -121,7 +121,7 @@ useEffect(() => {
                 key={index}
                 className="grid md:grid-cols-2 items-center gap-4"
               >
-                <div className="flex justify-center items-center border-b-2 border-secondary" style={{height:'100%'}}>
+                <div className="flex justify-center items-center border-b-[1px] border-secondary" style={{height:'100%'}}>
                   <div>
                     <div className="flex justify-between mb-5">
                       <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
@@ -136,7 +136,7 @@ useEffect(() => {
                     </Link>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
+                      className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold mb-1"
                     >
                       READ MORE{" "}<ArrowRight size={16} className="mr-2 text-secondary" />
                     </Link>
