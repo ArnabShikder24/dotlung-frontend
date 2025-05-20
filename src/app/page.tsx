@@ -4,6 +4,7 @@ import React from "react";
 import dot from "../../public/Dotlungimages/Dotlungimages/dragon-Dot.png";
 import RippleButton from "../components/RippleButton";
 import { PathNames } from "../routes/index.route";
+import AnimatedLine from "../components/AnimatedLine";
 
 export default function Home() {
   return (
@@ -36,9 +37,10 @@ export default function Home() {
             </p>
             <p className="flex uppercase items-center gap-6 mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
               <RippleButton href={PathNames.about}>COME ON CHASE THE DRAGON</RippleButton>
-              <span
+              {/* <span
                 className="block w-24 h-[1px] bg-secondary"
-              ></span>
+              ></span> */}
+              <AnimatedLine />
             </p>
           </div>
         </div>
