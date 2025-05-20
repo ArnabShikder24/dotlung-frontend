@@ -151,11 +151,11 @@ const WorkWithDot = () => {
       </RevealOnScroll>
 
       <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
-        <div className="text-white text-2xl font-serif">
+        <div className="text-white text-2xl">
           {items.map((item, index) => (
             <div key={index} className="mb-4 relative">
               <RevealOnScroll>
-                <span className="block pb-2 cursor-pointer lg:hover:text-secondary">{item.title}</span>
+                <span className="block pb-2 cursor-pointer lg:hover:text-secondary font-caslon">{item.title}</span>
                 <div
                   className="border-b-[1px] border-secondary absolute top-4"
                   style={{

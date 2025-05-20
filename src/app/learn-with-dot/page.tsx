@@ -111,21 +111,21 @@ const LearnWithDot = () => {
 
       <SectionHeader title="TEACHING ENGAGEMENTS" />
 
-        <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
-          <div className="text-white text-2xl font-serif">
-            {tableItems.map((data, index) => (
-              <div key={index} className="mb-4 relative">
-                  <span className="block pb-2  cursor-pointer lg:hover:text-secondary">{data.title}</span>
-                  <div
-                  className="border-b-[1px] border-secondary absolute top-4"
-                  style={{
-                      width: data.width,
-                  }}
-                  ></div>
-              </div>
-            ))}
-          </div>
+      <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden">
+        <div className="text-white text-2xl">
+          {tableItems.map((data, index) => (
+            <div key={index} className="mb-4 relative">
+                <span className="block pb-2  cursor-pointer lg:hover:text-secondary font-caslon">{data.title}</span>
+                <div
+                className="border-b-[1px] border-secondary absolute top-4"
+                style={{
+                    width: data.width,
+                }}
+                ></div>
+            </div>
+          ))}
         </div>
+      </div>
             
       <DotSection topRightText="DATE & LOCATION" bottomLeftText="SPEAKING ENGAGEMENTS" />
 
