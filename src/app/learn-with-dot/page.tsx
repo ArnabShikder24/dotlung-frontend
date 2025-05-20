@@ -192,7 +192,6 @@ const LearnWithDot = () => {
               </div>
               <div className="lg:w-[50%] mt-8 lg:mt-0 flex items-center justify-between">
                 <span className="text-2xl font-caslon">{event.name}</span>
-                {/* <span className="font-bold text-secondary">→</span> */}
                 <NavigationArrowRight />
               </div>
             </div>
