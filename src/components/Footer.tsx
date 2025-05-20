@@ -11,10 +11,10 @@ const EmailInput = () => {
       <input
         type="email"
         placeholder="Your email"
-        className="flex-1 bg-transparent font-gilroy placeholder-[#ffffff33] focus:outline-none"
+        className="flex-1 bg-transparent text-white text-[14px] placeholder-[#ffffff77] focus:outline-none"
       />
       <div className="flex items-center">
-        <button className="text-[#ffffff33] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
+        <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
         <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" />
       </div>
     </div>
@@ -34,7 +34,7 @@ const Footer = () => {
                     Don’t miss out on this!
                   </p>
                   <p className="mt-2 text-base font-asty">
-                    Get my top 5 tips to grow your Instagram / LinkedIn <br/>by
+                    Get my top 5 tips to grow your Instagram / LinkedIn by
                     entering your e-mail address here:
                   </p>  
                   <EmailInput />
@@ -43,8 +43,8 @@ const Footer = () => {
                   <h1 className="text-[3.25rem] md:text-[4.1875rem] font-extrabold font-gilroy">LET’S TALK</h1>
                 </div>
                 <div className="mb-8 md:mb-0">
-                  <p className="text-lg font-caslon">+1 661 368 5864</p>
-                  <p className="text-lg font-caslon">hello@dotlung.com</p>
+                  <p className="text-[0.95rem] font-asty">+1 661 368 5864</p>
+                  <p className="text-[0.95rem] font-asty">hello@dotlung.com</p>
                 </div>
               </div>
               <div className="lg:flex gap-4 justify-between mt-3">

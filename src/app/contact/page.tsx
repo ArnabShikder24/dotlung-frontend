@@ -12,10 +12,10 @@ const EmailInput = () => {
       <input
         type="email"
         placeholder="Your email"
-        className="flex-1 bg-transparent font-gilroy placeholder-[#ffffff33] focus:outline-none"
+        className="flex-1 bg-transparent text-white text-[14px] placeholder-[#ffffff77] focus:outline-none"
       />
       <div className="flex items-center">
-        <button className="text-[#ffffff33] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
+        <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
         <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" />
       </div>
     </div>
@@ -40,7 +40,7 @@ const Contact = () => {
               LET&apos;S GROW YOUR SOCIAL MEDIA EMPIRE TOGETHER.
             </h1>
             <div className="text-left md:hidden">
-              <div className="text-lg font-caslon mt-10">
+              <div className="text-[0.875rem] font-asty mt-10">
                 <p>+1 661 368 5864</p>
                 <p>hello@dotlung.com</p>
               </div>
