@@ -61,10 +61,10 @@ const WorkWithDot = () => {
   ];
 
   // State to track which accordion item is currently open
-  const [activeIndex, setActiveIndex] = useState(0); // Default to Motionographer being open
+  const [activeIndex, setActiveIndex] = useState(0);
 
   // Toggle accordion function
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index: number | null) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
