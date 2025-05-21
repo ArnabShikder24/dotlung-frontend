@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 // Fixed RippleButton component that works with Tailwind
 const RippleButton = ({ 
-  href = "#", 
+  href = "#",
   children, 
   className = '',
   rippleColor1 = 'bg-secondary', // First ripple color

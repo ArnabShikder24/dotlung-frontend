@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import blog1 from "../../../assets/images/blog1.png";
 import blog2 from "../../../assets/images/blog2.png";
@@ -9,9 +9,8 @@ import image1 from "../../../assets/images/g1.png";
 import image2 from "../../../assets/images/g2.png";
 import ImageGallery from "../../../components/ImageGallery";
 import BlogFooter from "../../../components/BlogFooter";
-import Link from "next/link";
 import NavigationArrow from "../../../components/NavigationArrow";
-// import Blog1 from "../../../../public/Dotlungimages/Dotlungimages/blog1.png";
+import RippleButton from "../../../components/RippleButton";
 
 const BlogPage = () => {
   const carouselImages = [
@@ -46,40 +45,11 @@ const BlogPage = () => {
       alt: "City view with buildings and bridges"
     },
   ];
-  // const posts = [
-  //   {
-  //     date: "11.02.2018",
-  //     tag: "#learnwithdot",
-  //     title: "Ladies, Wine, Barcelona.",
-  //     description:
-  //       "But not on their own. I create strong online identities & communities and develop kickass.",
-  //     link: "/blog/1",
-  //     image: Blog1,
-  //   },
-  //   {
-  //     date: "11.02.2018",
-  //     tag: "#travelwithdot",
-  //     title: "Ladies, Wine, Barcelona.",
-  //     description:
-  //       "But not on their own. I create strong online identities & communities and develop kickass.",
-  //     link: "/blog/2",
-  //     image: Blog1,
-  //   },
-  //   {
-  //     date: "10.02.2018",
-  //     tag: "#workwithdot",
-  //     title: "Ladies, Wine, Barcelona.",
-  //     description:
-  //       "But not on their own. I create strong online identities & communities and develop kickass.",
-  //     link: "/blog/3",
-  //     image: Blog1,
-  //   },
-  // ];
+
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [relatedPosts, setRelatedPosts] = useState([]);
-  const router = useRouter();
   // need to change
   const nextBlogPath = relatedPosts[0]?.slug;
   
@@ -138,7 +108,7 @@ const BlogPage = () => {
       <div className="lg:w-[1100px] mx-auto px-4 py-10 mt-20">
         <div className="flex items-center justify-between font-caslon text-sm border-b border-secondary pb-4">
           <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
-          <p className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary flex items-center" onClick={() => router.push("/blog")}><NavigationArrow direction="left" className="mr-2 text-secondary" /> BACK TO BLOG</p>
+          <RippleButton href="/blog" className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary flex items-center"><NavigationArrow direction="left" className="mr-2 text-secondary" /> BACK TO BLOG</RippleButton>
         </div>
         <div className="lg:flex justify-between mt-10">
           <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
@@ -192,12 +162,12 @@ const BlogPage = () => {
           <div className="max-w-3xl flex-1 lg:mx-20 text-xs">
             <div className="relative">
               <div className="border border-white flex w-full">
-                <Link
+                <RippleButton
                   href="#"
                   className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
                 >
                   PREVIOUS POST
-                </Link>
+                </RippleButton>
 
                 <div className="w-[40%] lg:w-1/2 relative">
                   <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
@@ -205,12 +175,12 @@ const BlogPage = () => {
                 </div>
 
                 <div className="relative w-[30%] lg:w-1/4">
-                  <Link
+                  <RippleButton
                     href={`/blog/${nextBlogPath ?? nextBlogPath}`}
                     className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
                   >
                     NEXT POST
-                  </Link>
+                  </RippleButton>
                 </div>
               </div>
             </div>
@@ -228,19 +198,19 @@ const BlogPage = () => {
                       <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
                       <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
                     </div>
-                    <Link href={`/blog/${post.slug}`} className="block mt-2 mb-4">
+                    <RippleButton href={`/blog/${post.slug}`} className="block mt-2 mb-4">
                       <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
                         {post.title.rendered}{" "}
                       </p>
                       <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
-                    </Link>
-                    <Link
+                    </RippleButton>
+                    <RippleButton
                       href={`/blog/${post.slug}`}
                       className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
                     >
                       READ MORE{" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
-                    </Link>
+                    </RippleButton>
                   </div>
                 </div>
 

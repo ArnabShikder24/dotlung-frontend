@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import SectionHeader from "../../components/SectionHeader";
 import NavigationArrow from "../../components/NavigationArrow";
 import AnimatedLineVertical from "../../components/AnimatedLineVertical";
 import RevealOnScroll from "../../components/RevealOnScroll";
 import RevealOnScrollSpan from "../../components/RevealOnScrollSpan";
 import { PathNames } from "../../routes/index.route";
+import RippleButton from "../../components/RippleButton";
 
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -143,19 +143,19 @@ useEffect(() => {
                       <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
                       <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
                     </div>
-                    <Link href={`/blog/${post.slug}`} className="block mt-2 mb-4">
+                    <RippleButton href={`/blog/${post.slug}`} className="block mt-2 mb-4">
                       <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
                         {post.title.rendered}{" "}
                       </p>
                       <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
-                    </Link>
-                    <Link
+                    </RippleButton>
+                    <RippleButton
                       href={`/blog/${post.slug}`}
                       className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold relative bottom-2 md:absolute md:bottom-4"
                     >
                       READ MORE{" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
-                    </Link>
+                    </RippleButton>
                   </div>
                 </div>
 

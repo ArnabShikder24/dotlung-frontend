@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import NavigationArrow from './NavigationArrow';
+import RippleButton from './RippleButton';
 
 interface FooterProps {
   relatedLinks?: {
@@ -76,13 +77,13 @@ const BlogFooter: React.FC<FooterProps> = ({
           </div>
           
           <div className="flex justify-end items-start">
-            <Link 
+            <RippleButton
               href="/blog"
               className="flex items-center text-sm hover:text-secondary transition-colors"
             >
               <NavigationArrow direction="left" className="mr-2 text-secondary" />
               <p className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary">BACK TO BLOG</p>
-            </Link>
+            </RippleButton>
           </div>
         </div>
       </div>
