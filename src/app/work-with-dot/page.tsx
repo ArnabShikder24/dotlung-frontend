@@ -212,7 +212,6 @@ const WorkWithDot = () => {
           bottomLeftLink={PathNames.travelEat}
         />
       </RevealOnScroll>
-
     </div>
   );
 };
