@@ -11,6 +11,8 @@ import ImageGallery from "../../../components/ImageGallery";
 import BlogFooter from "../../../components/BlogFooter";
 import NavigationArrow from "../../../components/NavigationArrow";
 import RippleButton from "../../../components/RippleButton";
+import RevealOnScroll from "../../../components/RevealOnScroll";
+import DotSection from "../../../components/DotSection";
 
 const BlogPage = () => {
   const carouselImages = [
@@ -158,34 +160,14 @@ const BlogPage = () => {
           </div>
         </div>
         <BlogFooter />
-        <div className="flex items-center justify-center font-gilroy mt-32 mb-32">
-          <div className="max-w-3xl flex-1 lg:mx-20 text-xs">
-            <div className="relative">
-              <div className="border border-white flex w-full">
-                <RippleButton
-                  href="#"
-                  className="w-[30%] lg:w-1/4 px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
-                >
-                  PREVIOUS POST
-                </RippleButton>
-
-                <div className="w-[40%] lg:w-1/2 relative">
-                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[5.8deg] top-1/2 -translate-y-1/2 z-10"></div>
-                  <div className="h-full" />
-                </div>
-
-                <div className="relative w-[30%] lg:w-1/4">
-                  <RippleButton
-                    href={`/blog/${nextBlogPath ?? nextBlogPath}`}
-                    className="block px-6 py-3 text-white hover:text-secondary transition-colors text-center border-l border-white"
-                  >
-                    NEXT POST
-                  </RippleButton>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <RevealOnScroll>
+          <DotSection
+            bottomLeftText="PREVIOUS POST"
+            bottomLeftLink="#"
+            topRightText="NEXT POST"
+            topRightLink={`/blog/${nextBlogPath ?? nextBlogPath}`}
+          />
+        </RevealOnScroll>
         <div className="">
             {relatedPosts.map((post, index) => (
               <article
