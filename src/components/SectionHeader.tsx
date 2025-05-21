@@ -1,12 +1,14 @@
 import React from 'react';
 import NavigationArrow from './NavigationArrow';
+import RippleButton from './RippleButton';
 
 interface SectionHeaderProps {
   title: string;
-  icon?: boolean
+  icon?: boolean;
+  href?: string;
 }
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({ title, icon = false }) => {
+const SectionHeader: React.FC<SectionHeaderProps> = ({ title, href, icon = false }) => {
   return (
     <div className="flex justify-center mx-5">
       <header
@@ -33,7 +35,10 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, icon = false }) =>
           </svg>
         </span>
         <p className="flex items-center whitespace-nowrap px-6 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-l border-white relative">
-          {title}
+          {!href && title}
+          {href &&
+            <RippleButton href={href}>{title}</RippleButton>
+          }
           {icon &&
             <NavigationArrow direction="right" className="ml-2 text-secondary md:absolute md:top-2 md:-right-4" />
           }

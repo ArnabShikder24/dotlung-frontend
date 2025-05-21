@@ -9,6 +9,7 @@ import NavigationArrow from "../../components/NavigationArrow";
 import AnimatedLineVertical from "../../components/AnimatedLineVertical";
 import RevealOnScroll from "../../components/RevealOnScroll";
 import RevealOnScrollSpan from "../../components/RevealOnScrollSpan";
+import { PathNames } from "../../routes/index.route";
 
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -180,7 +181,7 @@ useEffect(() => {
       </div>
       <div className="py-32">
         <RevealOnScroll>
-          <SectionHeader title="BLOG" icon={true} />
+          <SectionHeader title="BLOG" href={PathNames.blog} icon={true} />
         </RevealOnScroll>
       </div>
     </div>
