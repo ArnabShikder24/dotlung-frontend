@@ -1,10 +1,12 @@
 import React from 'react';
+import NavigationArrow from './NavigationArrow';
 
 interface SectionHeaderProps {
   title: string;
+  icon?: boolean
 }
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
+const SectionHeader: React.FC<SectionHeaderProps> = ({ title, icon = false }) => {
   return (
     <div className="flex justify-center mx-5">
       <header
@@ -30,8 +32,11 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
             />
           </svg>
         </span>
-        <p className="whitespace-nowrap block px-6 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-l border-white">
+        <p className="flex items-center whitespace-nowrap px-6 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-l border-white relative">
           {title}
+          {icon &&
+            <NavigationArrow direction="right" className="ml-2 text-secondary md:absolute md:top-2 md:-right-4" />
+          }
         </p>
       </header>
     </div>

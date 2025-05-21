@@ -19,15 +19,6 @@ const LearnWithDot = () => {
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
-  // const tableItems = [
-  //   { width: "160%", title: "Universitat de Barcelona" },
-  //   { width: "190%", title: "Toulouse Business School" },
-  //   { width: "180%", title: "ESdesign Barcelona" },
-  //   { width: "170%", title: "Instituto Europeo de Design" },
-  //   { width: "190%", title: "Geneva Business School" },
-  //   { width: "160%", title: "BAU, College of Arts & Design" },
-  //   { width: "180%", title: "Barreira Arte + Diseño" },
-  // ];
 
   const tableItems = [
   { 
