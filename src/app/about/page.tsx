@@ -15,7 +15,7 @@ const WorkWithDot = () => {
   };
   return (
     <div className="container mx-auto overflow-x-hidden mt-20 md:mt-0">
-      <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[100vh] lg:h-auto">
+      <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[90vh] lg:h-auto">
         <div className="flex-1 flex justify-center items-center lg:flex-none">
           <Image
             className="w-full scale-[1.2] md:scale-100 md:w-[780px] -z-20"
@@ -24,7 +24,7 @@ const WorkWithDot = () => {
           />
         </div>
         <div
-          className="h-auto lg:w-[510px]"
+          className="h-auto lg:w-[510px] -mt-20 lg:-mt-0"
         >
           <div className="z-10 text-left max-w-2xl px-6">
             <h1 className="text-[2.5rem] lg:text-[4.9rem] font-bold uppercase leading-[38px] lg:leading-[75px] -z-10">

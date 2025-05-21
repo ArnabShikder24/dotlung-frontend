@@ -205,12 +205,12 @@ const WorkWithDot = () => {
       </div>
 
       <RevealOnScroll>
-      <DotSection
-        topRightText="LEARN WITH DOT"
-        topRightLink={PathNames.learnWithDot}
-        bottomLeftText="TRAVEL & EAT WITH DOT"
-        bottomLeftLink={PathNames.travelEat}
-      />
+        <DotSection
+          topRightText="LEARN WITH DOT"
+          topRightLink={PathNames.learnWithDot}
+          bottomLeftText="TRAVEL & EAT WITH DOT"
+          bottomLeftLink={PathNames.travelEat}
+        />
       </RevealOnScroll>
 
     </div>
