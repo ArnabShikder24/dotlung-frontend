@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import DotImage from "../../assets/images/about.png";
+import DotImage from "../../assets/images/Trapezoid.png";
 import { PathNames } from "../../routes/index.route";
 import DotSection from "../../components/DotSection";
 
