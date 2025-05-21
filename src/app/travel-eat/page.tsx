@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import SectionHeader from "../../components/SectionHeader";
 import NavigationArrow from "../../components/NavigationArrow";
+import AnimatedLineVertical from "../../components/AnimatedLineVertical";
 
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -60,9 +61,7 @@ useEffect(() => {
             </p>
             <p className="uppercase items-center mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
               Explore
-              <span
-                className="block w-[1px] h-24 bg-secondary ml-5 mt-3"
-              ></span>
+              <AnimatedLineVertical />
             </p>
           </div>
         </div>

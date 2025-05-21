@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import DotImage from "../../assets/images/Trapezoid.png";
 import { PathNames } from "../../routes/index.route";
 import DotSection from "../../components/DotSection";
+import AnimatedLineVertical from "../../components/AnimatedLineVertical";
 
 const WorkWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -37,9 +38,7 @@ const WorkWithDot = () => {
             </p>
             <p className="uppercase items-center mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
               Explore
-              <span
-                className="block w-[1px] h-24 bg-secondary ml-5 mt-3"
-              ></span>
+              <AnimatedLineVertical />
             </p>
           </div>
         </div>

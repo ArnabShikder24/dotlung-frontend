@@ -9,6 +9,7 @@ import DotSection from "../../components/DotSection";
 import SectionHeader from "../../components/SectionHeader";
 import AccordionItem from "../../components/AccordionItem";
 import NavigationArrowRight from "../../components/NavigationArrowRight";
+import AnimatedLineVertical from "../../components/AnimatedLineVertical";
 
 const LearnWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -108,9 +109,7 @@ const LearnWithDot = () => {
             </p>
             <p className="uppercase items-center mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
               Explore
-              <span
-                className="block w-[1px] h-24 bg-secondary ml-5 mt-3"
-              ></span>
+              <AnimatedLineVertical />
             </p>
           </div>
         </div>
