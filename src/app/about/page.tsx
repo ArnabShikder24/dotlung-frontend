@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import DotImage from "../../assets/images/Trapezoid 2.png";
+import DotImage1 from "../../assets/images/Trapezoid.png";
 import { PathNames } from "../../routes/index.route";
 import DotSection from "../../components/DotSection";
 import AnimatedLineVertical from "../../components/AnimatedLineVertical";
@@ -17,20 +18,25 @@ const WorkWithDot = () => {
   };
   return (
     <div className="container mx-auto overflow-x-hidden mt-20 md:mt-0">
-      <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[90vh] lg:h-auto">
-        <div className="flex-1 flex justify-center items-center lg:flex-none">
-          <RevealOnScroll className="-z-10">
+      <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[90vh] lg:h-[75vh]">
+        <div className="lg:w-[50%] flex-1 flex justify-center items-center lg:flex-none">
+          <RevealOnScroll className="-z-10 lg:absolute">
             <Image
-              className="w-full scale-[1.2] md:scale-100 md:w-[780px] -z-20"
+              className="w-full scale-[1.2] md:scale-100 md:w-[780px] -z-20 hidden lg:block"
               src={DotImage}
+              alt="Dotlung"
+            />
+            <Image
+              className="w-full scale-[1.2] md:scale-100 md:w-[780px] -z-20 block lg:hidden"
+              src={DotImage1}
               alt="Dotlung"
             />
           </RevealOnScroll>
         </div>
         <div
-          className="h-auto lg:w-[510px] -mt-20 lg:-mt-0"
+          className="h-auto lg:w-[510px] -mt-24 lg:mt-0"
         >
-          <div className="z-10 text-left max-w-2xl px-6">
+          <div className="z-10 text-left max-w-2xl px-6 lg:mt-52">
             <RevealOnScroll>
               <h1 className="text-[2.5rem] lg:text-[4.9rem] font-bold uppercase leading-[38px] lg:leading-[75px] -z-10">
                 CREATING DIGITAL EXPERIENCES
