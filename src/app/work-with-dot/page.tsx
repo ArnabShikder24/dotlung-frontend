@@ -9,6 +9,7 @@ import SectionHeader from "../../components/SectionHeader";
 import RevealOnScroll from "../../components/RevealOnScroll";
 import RevealOnScrollSpan from "../../components/RevealOnScrollSpan";
 import AccordionItem from "../../components/AccordionItem";
+import AnimatedLineVertical from "../../components/AnimatedLineVertical";
 
 const WorkWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -115,9 +116,7 @@ const WorkWithDot = () => {
                 Explore
               </RevealOnScroll>
               <RevealOnScroll>
-                <span
-                  className="block w-[1px] h-24 bg-secondary ml-5 mt-3"
-                ></span>
+                <AnimatedLineVertical />
               </RevealOnScroll>
               </p>
           </div>
@@ -206,14 +205,13 @@ const WorkWithDot = () => {
       </div>
 
       <RevealOnScroll>
-      <DotSection
-        topRightText="LEARN WITH DOT"
-        topRightLink={PathNames.learnWithDot}
-        bottomLeftText="TRAVEL & EAT WITH DOT"
-        bottomLeftLink={PathNames.travelEat}
-      />
+        <DotSection
+          topRightText="LEARN WITH DOT"
+          topRightLink={PathNames.learnWithDot}
+          bottomLeftText="TRAVEL & EAT WITH DOT"
+          bottomLeftLink={PathNames.travelEat}
+        />
       </RevealOnScroll>
-
     </div>
   );
 };

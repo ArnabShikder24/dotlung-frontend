@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Pagination from "../../components/Pagination";
 import NavigationArrow from "../../components/NavigationArrow";
+import RippleButton from "../../components/RippleButton";
 
 export default function FeaturedSection() {
   const [posts, setPosts] = useState([]);
@@ -66,13 +66,13 @@ export default function FeaturedSection() {
             <span className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</span>
             <span className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.categories}</span>
           </div>
-          <Link href={`/blog/${post.slug}`}>
+          <RippleButton href={`/blog/${post.slug}`}>
             <h2 className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">{post.title.rendered}</h2>
-          </Link>
+          </RippleButton>
           <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3] mb-4" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-          <Link href={`/blog/${post.slug}`} className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold">
+          <RippleButton href={`/blog/${post.slug}`} className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold">
             READ MORE {" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
-          </Link>
+          </RippleButton>
 
           {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ? (
             <Image

@@ -5,6 +5,8 @@ import React from 'react';
 import Logo from "../../../public/assets/svgs/logo.svg";
 import { useRouter } from 'next/navigation';
 import NavigationArrow from '../../components/NavigationArrow';
+import RevealOnScroll from '../../components/RevealOnScroll';
+import RevealOnScrollSpan from '../../components/RevealOnScrollSpan';
 
 const EmailInput = () => {
   return (
@@ -37,29 +39,43 @@ const Contact = () => {
       <div className="w-full flex-1 flex items-center justify-center">
         <div className="lg:w-[50%] lg:flex justify-start items-start px-5 lg:px-0 py-10 lg:py-0">
           <div className="max-w-lg">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-gilroy lg:w-[500px]">
-              LET&apos;S GROW YOUR SOCIAL MEDIA EMPIRE TOGETHER.
-            </h1>
+            <RevealOnScroll>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-gilroy lg:w-[500px]">
+                LET&apos;S GROW YOUR SOCIAL MEDIA EMPIRE TOGETHER.
+              </h1>
+            </RevealOnScroll>
             <div className="text-left md:hidden">
               <div className="text-[0.875rem] font-asty mt-10">
-                <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
-                <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
+                <RevealOnScroll>
+                  <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
+                </RevealOnScroll>
+                <RevealOnScroll>
+                  <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
+                </RevealOnScroll>
               </div>
               <div className="flex flex-col text-lg gap-5 my-10">
                 {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "THREADS"].map((platform) => (
-                  <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy uppercase">
-                    {platform}
-                  </a>
+                  <RevealOnScrollSpan key={platform}>
+                    <a href="#" className="text-sm hover:underline font-bold font-gilroy uppercase">
+                          {platform}
+                    </a>
+                  </RevealOnScrollSpan>
                 ))}
               </div>
             </div>
             <div className="hidden md:block">
               <p className="text-lg font-caslon mt-5 lg:w-[300px]">
-                <span className="italic text-secondary">Book time with me! </span> 
-                Enter your e-mail address right here:
+                <RevealOnScrollSpan>
+                  <span className="italic text-secondary">Book time with me! </span> 
+                </RevealOnScrollSpan>
+                <RevealOnScrollSpan>
+                  Enter your e-mail address right here:
+                </RevealOnScrollSpan>
               </p>
               <div className="w-[95%] mb-5 lg:mb-0 lg:w-[300px]">
-                <EmailInput />
+                <RevealOnScroll>
+                  <EmailInput />
+                </RevealOnScroll>
               </div>
             </div>
           </div>
@@ -67,11 +83,17 @@ const Contact = () => {
           <div>
             <div className="md:hidden">
               <p className="text-lg font-caslon mt-5 lg:w-[300px]">
-                <span className="italic text-secondary">Book time with me! </span> 
-                Enter your e-mail address right here:
+                <RevealOnScrollSpan>
+                  <span className="italic text-secondary">Book time with me! </span> 
+                </RevealOnScrollSpan>
+                <RevealOnScrollSpan>
+                  Enter your e-mail address right here:
+                </RevealOnScrollSpan>
               </p>
               <div className="w-[95%] mb-5 lg:mb-0 lg:w-[300px]">
-                <EmailInput />
+                <RevealOnScroll>
+                  <EmailInput />
+                </RevealOnScroll>
               </div>
             </div>
             <div className="hidden md:block text-left">
@@ -81,9 +103,11 @@ const Contact = () => {
               </div>
               <div className="flex flex-col text-lg gap-5 mt-28">
                 {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (
-                  <a key={platform} href="#" className="text-sm hover:underline font-bold font-gilroy">
-                    {platform}
+                  <RevealOnScrollSpan key={platform}>
+                  <a href="#" className="text-sm hover:underline font-bold font-gilroy">
+                        {platform}
                   </a>
+                  </RevealOnScrollSpan>
                 ))}
               </div>
             </div>
