@@ -181,7 +181,7 @@ const LearnWithDot = () => {
         </div>
       </div>
       <RevealOnScroll>
-        <DotSection bottomLeftText="DATE & LOCATION" topRightText="SPEAKING ENGAGEMENTS" />
+        <DotSection topRightText="DATE & LOCATION" bottomLeftText="SPEAKING ENGAGEMENTS" isShowArrow={false} />
       </RevealOnScroll>
 
       <div className="text-white flex flex-col items-center py-10 px-6">

@@ -7,6 +7,7 @@ interface DotSectionProps {
   topRightLink?: string;
   bottomLeftText?: string;
   bottomLeftLink?: string;
+  isShowArrow?: boolean;
 }
 
 const DotSection: React.FC<DotSectionProps> = ({
@@ -14,6 +15,7 @@ const DotSection: React.FC<DotSectionProps> = ({
   topRightLink = "#",
   bottomLeftText = "TRAVEL & EAT WITH DOT",
   bottomLeftLink = "#",
+  isShowArrow = true,
 }) => {
   return (
     <>
@@ -35,7 +37,9 @@ const DotSection: React.FC<DotSectionProps> = ({
             </span>
           ))}
             {/* <ArrowRight size={18} className="ml-2 text-secondary" /> */}
-            <NavigationArrow direction="right" className="ml-2 text-secondary" />
+            {
+              isShowArrow && <NavigationArrow direction="right" className="ml-2 text-secondary" />
+            }
           </RippleButton>
 
           {/* Bottom Left - Customizable Link */}
@@ -45,7 +49,9 @@ const DotSection: React.FC<DotSectionProps> = ({
           >
             <div className="flex items-center justify-center px-3 text-white font-bold relative z-10 text-left h-full w-full transition-colors hover:text-secondary">
               {/* <ArrowLeft size={18} className="text-secondary" /> */}
-              <NavigationArrow direction="left" className="text-secondary" />
+              {
+                isShowArrow && <NavigationArrow direction="left" className="text-secondary" />
+              }
               <span className="ml-2 block">{bottomLeftText}</span>
             </div>
           </RippleButton>
@@ -69,7 +75,9 @@ const DotSection: React.FC<DotSectionProps> = ({
                 {bottomLeftText}
               </RippleButton>
               {/* <ArrowLeft size={18} className="mr-2 text-secondary absolute -left-3 top-3" /> */}
-              <NavigationArrow direction="left" className="mr-2 text-secondary absolute -left-4 top-[9px]" />
+              {
+                isShowArrow && <NavigationArrow direction="left" className="mr-2 text-secondary absolute -left-4 top-[9px]" />
+              }
 
               {/* Middle Line */}
               <div className="w-[40%] lg:w-1/2 relative">
@@ -85,8 +93,10 @@ const DotSection: React.FC<DotSectionProps> = ({
                 >
                   {topRightText}
                 </RippleButton>
-                {/* <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5 top-3" /> */}
-                <NavigationArrow direction="right" className="mr-2 text-secondary absolute -right-6 top-[9px]" />
+                {/* <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5 top-3" /> */}\
+                {
+                  isShowArrow && <NavigationArrow direction="right" className="mr-2 text-secondary absolute -right-6 top-[9px]" />
+                }
               </div>
             </div>
           </div>
