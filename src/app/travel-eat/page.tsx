@@ -181,7 +181,7 @@ useEffect(() => {
       </div>
       <div className="py-32">
         <RevealOnScroll>
-          <SectionHeader title="BLOG" href={PathNames.blog} icon={true} />
+          <SectionHeader title="BLOG" href={PathNames.blog} boxClassName="px-24 lg:px-24" icon={true} />
         </RevealOnScroll>
       </div>
     </div>

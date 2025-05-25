@@ -1,14 +1,16 @@
 import React from 'react';
 import NavigationArrow from './NavigationArrow';
 import RippleButton from './RippleButton';
+import { cn } from '../lib/cn';
 
 interface SectionHeaderProps {
   title: string;
   icon?: boolean;
   href?: string;
+  boxClassName?: string;
 }
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({ title, href, icon = false }) => {
+const SectionHeader: React.FC<SectionHeaderProps> = ({ title, href, boxClassName, icon = false }) => {
   return (
     <div className="flex justify-center mx-5">
       <header
@@ -34,13 +36,13 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, href, icon = false
             />
           </svg>
         </span>
-        <p className="flex items-center whitespace-nowrap px-6 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-none relative">
+        <p className={cn("flex items-center whitespace-nowrap px-10 lg:px-12 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-none relative", boxClassName)}>
           {!href && title}
           {href &&
             <RippleButton href={href}>{title}</RippleButton>
           }
           {icon &&
-            <NavigationArrow direction="right" className="ml-2 text-secondary md:absolute md:top-2 md:-right-4" />
+            <NavigationArrow direction="right" className="ml-2 text-secondary absolute right-2 md:top-2 md:-right-4" />
           }
         </p>
       </header>
