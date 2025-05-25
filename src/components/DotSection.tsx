@@ -93,7 +93,7 @@ const DotSection: React.FC<DotSectionProps> = ({
                 >
                   {topRightText}
                 </RippleButton>
-                {/* <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5 top-3" /> */}\
+                {/* <ArrowRight size={18} className="mr-2 text-secondary absolute -right-5 top-3" /> */}
                 {
                   isShowArrow && <NavigationArrow direction="right" className="mr-2 text-secondary absolute -right-6 top-[9px]" />
                 }

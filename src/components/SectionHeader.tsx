@@ -34,7 +34,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, href, icon = false
             />
           </svg>
         </span>
-        <p className="flex items-center whitespace-nowrap px-6 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-l border-white relative">
+        <p className="flex items-center whitespace-nowrap px-6 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-none relative">
           {!href && title}
           {href &&
             <RippleButton href={href}>{title}</RippleButton>
