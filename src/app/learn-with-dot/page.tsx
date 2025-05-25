@@ -247,14 +247,14 @@ const LearnWithDot = () => {
             <div className="absolute top-10 right-10 w-4 h-4 bg-white/20 rounded-full"></div>
             <div className="absolute bottom-10 left-10 w-6 h-6 bg-white/20 rounded-full"></div>
             <div className="mt-6 md:mt-0 w-full flex justify-end">
-              <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+              <div className="absolute -top-[160px] -right-4 md:top-20 md:-right-0 md:relative w-[230px] h-[230px] md:w-[380px] md:h-[380px]">
                 <RevealOnScrollSpan>
                   <Image
                     src={girl1}
                     alt="Speaker"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-full opacity-80 -mt-20"
+                    className="rounded-full -mt-20"
                   />
               </RevealOnScrollSpan>
               </div>
