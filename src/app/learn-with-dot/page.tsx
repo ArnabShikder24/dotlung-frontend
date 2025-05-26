@@ -267,8 +267,8 @@ const LearnWithDot = () => {
         <DotSection
           topRightText="TRAVEL & EAT WITH DOT"
           topRightLink={PathNames.travelEat}
-          bottomLeftText="LEARN WITH DOT"
-          bottomLeftLink={PathNames.learnWithDot}
+          bottomLeftText="WORK WITH DOT"
+          bottomLeftLink={PathNames.workWithDot}
         />
       </RevealOnScroll>
     </div>
