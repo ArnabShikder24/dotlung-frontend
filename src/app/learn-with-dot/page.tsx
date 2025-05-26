@@ -219,21 +219,21 @@ const LearnWithDot = () => {
               <div className="border border-white flex w-full">
                 {/* Bottom Left Text */}
                 <div
-                  className="w-[30%] lg:w-1/4 whitespace-nowrap px-6 py-3 text-secondary transition-colors text-center border-r border-white"
+                  className="w-[30%] lg:w-[25%] whitespace-nowrap px-6 py-3 text-secondary transition-colors text-center border-r border-white"
                 >
                   DATE & LOCATION
                 </div>
 
                 {/* Middle Line */}
-                <div className="w-[40%] lg:w-1/2 relative">
-                  <div className="absolute w-full h-[1px] bg-white transform -rotate-[6deg] top-1/2 -translate-y-1/2 z-10"></div>
+                <div className="w-[40%] lg:w-[20%] relative">
+                  <div className="absolute w-[101%] h-[1px] bg-white transform -rotate-[14.5deg] top-1/2 -translate-y-1/2 z-10"></div>
                   <div className="h-full" />
                 </div>
 
                 {/* Top Right Text */}
-                <div className="relative w-[30%] lg:w-1/4">
+                <div className="relative w-[30%] lg:w-[55%]">
                   <div
-                    className="block px-6 py-3 whitespace-nowrap text-secondary transition-colors text-center border-l border-white"
+                    className="block px-6 py-3 whitespace-nowrap text-secondary transition-colors text-start border-l border-white"
                   >
                     SPEAKING ENGAGEMENTS
                   </div>
