@@ -31,8 +31,16 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-between w-full h-screen border-secondary border-[10px] lg:border-[50px]">
       <div className="flex items-center justify-between p-4 w-full">
         <Image onClick={() => router.push("/")} src={Logo} alt="Logo" width={50} />
-        <p onClick={() => router.back()} className="font-gilroy cursor-pointer transition-colors text-center text-sm">
-          CLOSE <span className="text-secondary">X</span>
+        <p 
+          onClick={() => router.back()} 
+          className="group font-gilroy cursor-pointer transition-colors text-center text-[0.8125rem] flex items-center gap-2"
+        >
+          CLOSE 
+          <span className="text-secondary transition-transform duration-300 group-hover:rotate-90">
+            <svg className="w-4 h-4 close" fill="#f14336" viewBox="0 0 30 29" xmlns="http://www.w3.org/2000/svg">
+              <path d="M84,99.7928932 L97.7885822,86.004311 L98.495689,86.7114178 L84.7071068,100.5 L98.495689,114.288582 L97.7885822,114.995689 L84,101.207107 L70.2114178,114.995689 L69.504311,114.288582 L83.2928932,100.5 L69.504311,86.7114178 L70.2114178,86.004311 L84,99.7928932 Z" transform="translate(-69 -86)" fillRule="evenodd" />
+            </svg>
+          </span>
         </p>
       </div>
 
