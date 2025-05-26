@@ -10,7 +10,7 @@ import RevealOnScrollSpan from '../../components/RevealOnScrollSpan';
 
 const EmailInput = () => {
   return (
-    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[350px] mt-5 relative">
+    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[370px] mt-5 relative">
       <input
         type="email"
         placeholder="Your email"
@@ -72,7 +72,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <p className="text-lg font-caslon mt-5 lg:w-[300px]">
+              <p className="text-lg font-caslon mt-5 lg:w-[370px]">
                 <RevealOnScrollSpan>
                   <span className="italic text-secondary">Book time with me! </span> 
                 </RevealOnScrollSpan>

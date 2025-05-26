@@ -7,7 +7,7 @@ import NavigationArrow from './NavigationArrow';
 
 const EmailInput = () => {
   return (
-    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[350px] mt-5 relative">
+    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[400px] mt-5 relative">
       <input
         type="email"
         placeholder="Your email"
