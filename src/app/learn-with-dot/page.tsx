@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
-import girl1 from "../../assets/images/Asset 1.png";
+import girl1 from "../../assets/images/bg-sphere.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PathNames } from "../../routes/index.route";
@@ -316,7 +316,7 @@ const LearnWithDot = () => {
                     alt="Speaker"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-full -mt-20"
+                    className="rounded-full -mt-20 -z-40"
                   />
               </RevealOnScrollSpan>
               </div>
