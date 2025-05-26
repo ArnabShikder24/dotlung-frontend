@@ -87,13 +87,13 @@ const Footer = () => {
           </RippleButton>
         </div>
         
-        <div className="text-xs text-indigo-200">
+        <div className="text-[0.75rem] lg:text-[0.875rem] text-[#ffffff66]">
           © 2018, by Dot Lang
         </div>
           
-        <div className="text-xs text-indigo-200">
-          Design by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Sofia</Link>, 
-          Code by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Lorenzo Bocchi</Link>
+        <div className="text-[0.75rem] lg:text-[0.875rem] text-[#ffffff66]">
+          Design by <Link href="#" className="border-b pb-2 border-secondary text-[#ffffff66] hover:text-white transition-colors">Sofia</Link>, 
+          Code by <Link href="#" className="border-b pb-2 border-secondary text-[#ffffff66] hover:text-white transition-colors">Lorenzo Bocchi</Link>
         </div>
         
         <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="text-xs font-semibold hover:text-indigo-200 transition-colors fixed bottom-5 right-4">
