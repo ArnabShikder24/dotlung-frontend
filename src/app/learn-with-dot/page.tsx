@@ -192,7 +192,7 @@ const LearnWithDot = () => {
 
             {/* Top Right - Link */}
             <div
-              className="flex items-center justify-center px-3 text-[0.75rem] text-white font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
+              className="flex items-center justify-center px-3 text-[0.75rem] text-secondary font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
             >
               DATE & LOCATION
             </div>
@@ -201,7 +201,7 @@ const LearnWithDot = () => {
             <div
               className="border-t border-r border-white text-[0.75rem] col-span-2 row-span-1 relative flex items-start justify-start "
             >
-              <div className="flex items-center justify-center px-3 text-white font-bold relative z-10 text-left h-full w-full transition-colors hover:text-secondary">
+              <div className="flex items-center justify-center px-3 text-secondary font-bold relative z-10 text-left h-full w-full transition-colors hover:text-secondary">
                 <span className="ml-2 block">SPEAKING ENGAGEMENTS</span>
               </div>
             </div>
@@ -219,7 +219,7 @@ const LearnWithDot = () => {
               <div className="border border-white flex w-full">
                 {/* Bottom Left Text */}
                 <div
-                  className="w-[30%] lg:w-1/4 whitespace-nowrap px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
+                  className="w-[30%] lg:w-1/4 whitespace-nowrap px-6 py-3 text-secondary transition-colors text-center border-r border-white"
                 >
                   DATE & LOCATION
                 </div>
@@ -233,7 +233,7 @@ const LearnWithDot = () => {
                 {/* Top Right Text */}
                 <div className="relative w-[30%] lg:w-1/4">
                   <div
-                    className="block px-6 py-3 whitespace-nowrap text-white hover:text-secondary transition-colors text-center border-l border-white"
+                    className="block px-6 py-3 whitespace-nowrap text-secondary transition-colors text-center border-l border-white"
                   >
                     SPEAKING ENGAGEMENTS
                   </div>
