@@ -96,8 +96,8 @@ useEffect(() => {
 
           <p className="absolute mx-5 lg:mx-0 lg:left-10 top-[21%] max-w-[32rem] font-caslon text-[1.375rem] lg:text-[1.75rem]">
             <span className="italic text-secondary mr-1">
-              <RevealOnScrollSpan>
-                Travel
+            <RevealOnScrollSpan>
+              Travel
             </RevealOnScrollSpan>
             </span>{" "}
             <RevealOnScrollSpan>allows you to become your best beast.</RevealOnScrollSpan>
@@ -135,7 +135,7 @@ useEffect(() => {
             {recentPosts.map((post, index) => (
               <article
                 key={index}
-                className="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-4"
+                className="flex flex-col-reverse md:grid md:grid-cols-[44.5%_55.5%] items-center gap-4"
               >
                 <div className="flex justify-center items-center border-b-[1px] border-secondary" style={{height:'100%'}}>
                   <div>
