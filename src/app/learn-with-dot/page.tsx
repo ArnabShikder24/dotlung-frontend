@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
-import girl1 from "../../assets/images/Asset 1.png";
+import girl1 from "../../assets/images/bg-sphere.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PathNames } from "../../routes/index.route";
@@ -180,8 +180,70 @@ const LearnWithDot = () => {
         ))}
         </div>
       </div>
+
       <RevealOnScroll>
-        <DotSection topRightText="DATE & LOCATION" bottomLeftText="SPEAKING ENGAGEMENTS" isShowArrow={false} />
+        <>
+        {/* Mobile View (below md) */}
+        <div className="flex flex-col items-center justify-center md:hidden my-24 font-gilroy">
+          <div className="grid grid-cols-3 grid-rows-2 w-[350px] h-[120px] border border-white relative">
+            {/* Top Left Triangle */}
+            <div className="border-r border-white col-span-1 row-span-1 relative flex items-start justify-start h-full
+                before:content-[''] before:absolute before:w-[111%] before:h-[1px] before:bg-white before:rotate-[-27.5deg] before:top-1/2 before:left-[-5%]" />
+
+            {/* Top Right - Link */}
+            <div
+              className="flex items-center justify-center px-3 text-[0.75rem] text-secondary font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
+            >
+              DATE & LOCATION
+            </div>
+
+            {/* Bottom Left - Link */}
+            <div
+              className="border-t border-r border-white text-[0.75rem] col-span-2 row-span-1 relative flex items-start justify-start "
+            >
+              <div className="flex items-center justify-center px-3 text-secondary font-bold relative z-10 text-left h-full w-full transition-colors hover:text-secondary">
+                <span className="ml-2 block">SPEAKING ENGAGEMENTS</span>
+              </div>
+            </div>
+
+            {/* Bottom Right Triangle */}
+            <div className="border-t border-white col-span-1 row-span-1 relative flex items-end justify-end h-full
+              before:content-[''] before:absolute before:w-[111%] before:h-[1px] before:bg-white before:rotate-[26.5deg] before:top-1/2 before:left-[-5%]" />
+          </div>
+        </div>
+
+        {/* Desktop View (md and up) */}
+        <div className="md:flex items-center justify-center font-gilroy mt-32 mb-32 hidden relative">
+          <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-[0.75rem]">
+            <div className="relative">
+              <div className="border border-white flex w-full">
+                {/* Bottom Left Text */}
+                <div
+                  className="w-[30%] lg:w-[25%] whitespace-nowrap px-6 py-3 text-secondary transition-colors text-center border-r border-white"
+                >
+                  DATE & LOCATION
+                </div>
+
+                {/* Middle Line */}
+                <div className="w-[40%] lg:w-[20%] relative">
+                  <div className="absolute w-[101%] h-[1px] bg-white transform -rotate-[14.5deg] top-1/2 -translate-y-1/2 z-10"></div>
+                  <div className="h-full" />
+                </div>
+
+                {/* Top Right Text */}
+                <div className="relative w-[30%] lg:w-[55%]">
+                  <div
+                    className="block px-6 py-3 whitespace-nowrap text-secondary transition-colors text-start border-l border-white"
+                  >
+                    SPEAKING ENGAGEMENTS
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+
       </RevealOnScroll>
 
       <div className="text-white flex flex-col items-center py-10 px-6">
@@ -254,7 +316,7 @@ const LearnWithDot = () => {
                     alt="Speaker"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-full -mt-20"
+                    className="rounded-full -mt-20 -z-40"
                   />
               </RevealOnScrollSpan>
               </div>
@@ -267,8 +329,8 @@ const LearnWithDot = () => {
         <DotSection
           topRightText="TRAVEL & EAT WITH DOT"
           topRightLink={PathNames.travelEat}
-          bottomLeftText="LEARN WITH DOT"
-          bottomLeftLink={PathNames.learnWithDot}
+          bottomLeftText="WORK WITH DOT"
+          bottomLeftLink={PathNames.workWithDot}
         />
       </RevealOnScroll>
     </div>

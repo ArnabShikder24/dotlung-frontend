@@ -37,7 +37,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title, href, boxClassName
           </svg>
         </span>
         <p className={cn("flex items-center whitespace-nowrap px-10 lg:px-12 py-3 text-[0.8125rem] text-white font-gilroy hover:text-secondary transition-colors uppercase text-center border-none relative", boxClassName)}>
-          {!href && title}
+          {!href && <span className="text-secondary">{title}</span>}
           {href &&
             <RippleButton href={href}>{title}</RippleButton>
           }

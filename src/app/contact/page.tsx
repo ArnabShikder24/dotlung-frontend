@@ -10,14 +10,14 @@ import RevealOnScrollSpan from '../../components/RevealOnScrollSpan';
 
 const EmailInput = () => {
   return (
-    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[350px] mt-5 relative">
+    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[370px] mt-5 relative">
       <input
         type="email"
         placeholder="Your email"
-        className="flex-1 bg-transparent text-white font-asty text-[14px] placeholder-[#ffffff77] focus:outline-none"
+        className="flex-1 bg-transparent text-white font-asty text-[14px] placeholder-white placeholder:opacity-35 focus:outline-none"
       />
       <div className="flex items-center">
-        <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
+        <button className="text-white opacity-20 font-gilroy text-[0.75rem] hover:text-secondary hover:opacity-100">LET&apos;S GO</button>
         {/* <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" /> */}
         <NavigationArrow direction="right" className="mr-2 text-secondary relative -right-2 md:absolute md:-right-6" />
       </div>
@@ -31,8 +31,16 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-between w-full h-screen border-secondary border-[10px] lg:border-[50px]">
       <div className="flex items-center justify-between p-4 w-full">
         <Image onClick={() => router.push("/")} src={Logo} alt="Logo" width={50} />
-        <p onClick={() => router.back()} className="font-gilroy cursor-pointer transition-colors text-center text-sm">
-          CLOSE <span className="text-secondary">X</span>
+        <p 
+          onClick={() => router.back()} 
+          className="group font-gilroy cursor-pointer transition-colors text-center text-[0.8125rem] flex items-center gap-2"
+        >
+          CLOSE 
+          <span className="text-secondary transition-transform duration-300 group-hover:rotate-90">
+            <svg className="w-4 h-4 close" fill="#f14336" viewBox="0 0 30 29" xmlns="http://www.w3.org/2000/svg">
+              <path d="M84,99.7928932 L97.7885822,86.004311 L98.495689,86.7114178 L84.7071068,100.5 L98.495689,114.288582 L97.7885822,114.995689 L84,101.207107 L70.2114178,114.995689 L69.504311,114.288582 L83.2928932,100.5 L69.504311,86.7114178 L70.2114178,86.004311 L84,99.7928932 Z" transform="translate(-69 -86)" fillRule="evenodd" />
+            </svg>
+          </span>
         </p>
       </div>
 
@@ -64,7 +72,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="hidden md:block">
-              <p className="text-lg font-caslon mt-5 lg:w-[300px]">
+              <p className="text-lg font-caslon mt-5 lg:w-[370px]">
                 <RevealOnScrollSpan>
                   <span className="italic text-secondary">Book time with me! </span> 
                 </RevealOnScrollSpan>

@@ -29,13 +29,9 @@ const DotSection: React.FC<DotSectionProps> = ({
           {/* Top Right - Customizable Link */}
           <RippleButton
             href={topRightLink}
-            className="flex items-center justify-center px-3 text-[0.75rem] text-white font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
+            className="flex items-center justify-center whitespace-nowrap px-3 text-[0.75rem] text-white font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
           >
-          {topRightText.split(" ").map((word, i) => (
-            <span key={i} className={i === 2 ? "block" : "mr-2"}>
-              {word}
-            </span>
-          ))}
+            {topRightText}
             {/* <ArrowRight size={18} className="ml-2 text-secondary" /> */}
             {
               isShowArrow && <NavigationArrow direction="right" className="ml-2 text-secondary" />

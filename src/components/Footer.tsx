@@ -7,14 +7,14 @@ import NavigationArrow from './NavigationArrow';
 
 const EmailInput = () => {
   return (
-    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[350px] mt-5 relative">
+    <div className="flex items-center border border-white px-3 py-2 w-[100%] lg:w-[400px] mt-5 relative">
       <input
         type="email"
         placeholder="Your email"
-        className="flex-1 bg-transparent text-white font-asty text-[14px] placeholder-[#ffffff77] focus:outline-none"
+        className="flex-1 bg-transparent text-white font-asty text-[14px] placeholder-white placeholder:opacity-35 focus:outline-none"
       />
       <div className="flex items-center">
-        <button className="text-[#ffffff77] font-gilroy text-[0.75rem] hover:text-secondary">LET&apos;S GO</button>
+        <button className="text-white opacity-20 font-gilroy text-[0.75rem] hover:text-secondary hover:opacity-100">LET&apos;S GO</button>
         {/* <ArrowRight size={18} className="mr-2 text-secondary relative -right-2 md:absolute md:-right-5" /> */}
         <NavigationArrow direction="right" className="mr-2 text-secondary relative -right-2 md:absolute md:-right-6" />
       </div>
@@ -87,13 +87,13 @@ const Footer = () => {
           </RippleButton>
         </div>
         
-        <div className="text-xs text-indigo-200">
+        <div className="text-[0.75rem] lg:text-[0.875rem] text-[#ffffff66]">
           © 2018, by Dot Lang
         </div>
           
-        <div className="text-xs text-indigo-200">
-          Design by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Sofia</Link>, 
-          Code by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Lorenzo Bocchi</Link>
+        <div className="text-[0.75rem] lg:text-[0.875rem] text-[#ffffff66]">
+          Design by <Link href="#" className="border-b pb-2 border-secondary text-[#ffffff66] hover:text-white transition-colors">Sofia</Link>, 
+          Code by <Link href="#" className="border-b pb-2 border-secondary text-[#ffffff66] hover:text-white transition-colors">Lorenzo Bocchi</Link>
         </div>
         
         <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="text-xs font-semibold hover:text-indigo-200 transition-colors fixed bottom-5 right-4">
