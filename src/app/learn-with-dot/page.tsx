@@ -213,7 +213,7 @@ const LearnWithDot = () => {
         </div>
 
         {/* Desktop View (md and up) */}
-        <div className="md:flex items-center justify-center font-gilroy mt-32 mb-32 hidden relative">
+        <div className="md:flex items-center justify-center font-gilroy mt-24 mb-14 hidden relative">
           <div className="max-w-3xl flex-1 mx-5 lg:mx-20 text-[0.75rem]">
             <div className="relative">
               <div className="border border-white flex w-full">
