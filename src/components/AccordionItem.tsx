@@ -17,7 +17,7 @@ const AccordionItem = ({ item, isActive, onToggle }) => {
       {/* Accordion content */}
       <div 
         className={`overflow-hidden transition-all duration-500 ${
-          isActive ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+          isActive ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <p className="text-base font-light pr-12 font-asty">{item.content}</p>
