@@ -1,6 +1,5 @@
 "use client";
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import Logo from "../../../public/assets/svgs/logo.svg";
 import { useRouter } from 'next/navigation';
@@ -123,13 +122,13 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="py-5 px-20 hidden lg:flex justify-between items-center w-full">
-        <div className="text-xs text-indigo-200">© 2018, by Dot Lang</div>
+      {/* <div className="py-5 px-20 hidden lg:flex justify-between items-center w-full">
+        <div className="text-xs text-indigo-200">© 2018, by Dot Lung</div>
         <div className="text-xs text-indigo-200">
           Design by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Sofia</Link>, 
           Code by <Link href="#" className="border-b border-secondary text-white hover:text-indigo-200 transition-colors">Lorenzo Bocchi</Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
