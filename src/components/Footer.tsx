@@ -80,27 +80,24 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-2 text-start hidden lg:block mt-36 max-w-[766px] mx-auto">
-        {/* <h1></h1> */}
         <div>
-          <RippleButton href="/blog" className="font-bold text-sm hover:text-indigo-200 transition-colors fixed bottom-5 left-4">
+          <RippleButton href="/blog" className="font-gilroy text-[0.75rem] text-white hover:text-secondary transition-colors fixed bottom-5 left-4">
             BLOG
           </RippleButton>
         </div>
         
-        <div className="text-[0.75rem] lg:text-[0.875rem] text-[#ffffff66]">
+        <div className="text-[0.75rem] lg:text-[0.875rem] text-white opacity-20 font-asty">
           © 2025, by Mother of Social Dragons
         </div>
           
-        {/* <div className="text-[0.75rem] lg:text-[0.875rem] text-[#ffffff66]">
-          Design by <Link href="#" className="border-b pb-2 border-secondary text-[#ffffff66] hover:text-white transition-colors">Sofia</Link>, 
-          Code by <Link href="#" className="border-b pb-2 border-secondary text-[#ffffff66] hover:text-white transition-colors">Lorenzo Bocchi</Link>
+        {/* <div className="text-[0.75rem] lg:text-[0.875rem] text-white opacity-20">
+          Design by <Link href="#" className="border-b pb-2 border-secondary text-white opacity-20 hover:text-white transition-colors">Sofia</Link>, 
+          Code by <Link href="#" className="border-b pb-2 border-secondary text-white opacity-20 hover:text-white transition-colors">Lorenzo Bocchi</Link>
         </div> */}
         
-        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="text-xs font-semibold hover:text-indigo-200 transition-colors fixed bottom-5 right-4">
+        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors fixed bottom-5 right-4">
           LIVE NOW!
         </Link>
-        {/* <h1></h1> */}
-        {/* <h1></h1> */}
     </div>
     </footer>
   );
