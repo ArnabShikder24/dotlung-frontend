@@ -7,6 +7,7 @@ import { Squash as Hamburger } from "hamburger-react";
 import { usePathname } from "next/navigation";
 import { cn } from "../lib/cn";
 import RippleButton from "./RippleButton";
+import { motion } from "framer-motion";
 
 
 const Navbar = () => {
@@ -14,6 +15,11 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef(null);
   const currentPath = usePathname();
+  const [mousePosition, setMousePosition] = useState({ x: 0 });
+  
+  const handleMouseMove = (event) => {
+    setMousePosition({ x: event.clientX });
+  };
 
   const navItemActive = (path: string) => {
     if (path == currentPath) return "text-secondary";
@@ -66,8 +72,18 @@ const Navbar = () => {
     <>
       {/* Desktop Navbar */}
       <nav className="w-full p-4 font-gilroy mt-2 hidden md:flex justify-between items-center z-[100]">
-        <RippleButton href={PathNames.home} className="fixed">
-          <Image src={Logo} alt="Logo" width={50} />
+        <RippleButton  href={PathNames.home} onMouseMove={handleMouseMove} className="fixed">
+          <motion.div
+            className="absolute w-[17px] h-[17px] bg-primary top-[8px] left-[40px] rounded-full"
+            animate={{
+              x: mousePosition.x / 5 - 50, 
+            }}
+            whileHover={{
+              x: (mousePosition.x / 5 - 50) - 15, 
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          />
+          <Image src={Logo} alt="Logo" width={55} height={40}/>
         </RippleButton>
         <div className="max-w-3xl flex-1 mx-auto justify-center text-xs z-[100]">
           <div className="border border-white flex w-full">

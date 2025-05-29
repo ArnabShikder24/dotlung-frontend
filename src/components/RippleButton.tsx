@@ -3,15 +3,27 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 // Fixed RippleButton component that works with Tailwind
-const RippleButton = ({ 
+type RippleButtonProps = {
+  href?: string;
+  children: React.ReactNode;
+  className?: string;
+  rippleColor1?: string;
+  rippleColor2?: string;
+  transitionTime?: number;
+  onClick?: () => void;
+  onMouseMove?: (e: React.MouseEvent) => void;
+};
+
+const RippleButton = ({
   href = "#",
-  children, 
+  children,
   className = '',
-  rippleColor1 = 'bg-secondary', // First ripple color
-  rippleColor2 = 'bg-primary', // Second ripple color
-  transitionTime = 700, // Time in ms before navigation happens
-  onClick = () => {}
-}) => {
+  rippleColor1 = 'bg-secondary',
+  rippleColor2 = 'bg-primary',
+  transitionTime = 700,
+  onClick = () => {},
+  onMouseMove = () => {},
+}: RippleButtonProps) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   // Function to handle the ripple effect and navigation
@@ -168,6 +180,7 @@ const RippleButton = ({
     <Link
       href={href}
       className={`${className}`}
+      onMouseMove={onMouseMove}
       onClick={(e) => {
         onClick();
         handleRippleTransition(e);
