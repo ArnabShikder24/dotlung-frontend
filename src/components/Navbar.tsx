@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "../lib/cn";
 import RippleButton from "./RippleButton";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 const Navbar = () => {
@@ -29,6 +30,7 @@ const Navbar = () => {
   const menuItems = [
     { title: "ABOUT", path: PathNames.about, border: true },
     {title: false},
+    { title: "HOME", path: PathNames.home, border: false },
     { title: "WORK WITH DOT", path: PathNames.workWithDot, border: false },
     { title: "LEARN WITH DOT", path: PathNames.learnWithDot, border: false },
     { title: "TRAVEL & EAT WITH DOT", path: PathNames.travelEat, border: false },
@@ -140,12 +142,41 @@ const Navbar = () => {
       <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[100]">
         <div className="flex justify-between w-full items-center">
           <RippleButton className="fixed top-4 left-3 z-[100]" href={PathNames.home}>
+              <motion.div
+              className="absolute w-[17px] h-[17px] bg-primary top-[8px] left-[40px] rounded-full"
+              animate={{
+                x: mousePosition.x / 5 - 50, 
+              }}
+              whileHover={{
+                x: (mousePosition.x / 5 - 50) - 15, 
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            />
             <Image src={Logo} alt="Logo" width={50} />
           </RippleButton>
           <div className="fixed top-3 right-3 z-[100]">
             <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} color="#F64C3E"/>
           </div>
         </div>
+
+        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors flex items-center gap-2 absolute right-[80px] top-[26px]">
+          LIVE NOW!
+          <div className="w-[10px] h-[10px] rounded-full bg-secondary animate-fade-loop" />
+          <style jsx>{`
+            @keyframes fadeLoop {
+              0%, 100% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+            }
+
+            .animate-fade-loop {
+              animation: fadeLoop 2s ease-in-out infinite;
+            }
+          `}</style>
+        </Link>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (

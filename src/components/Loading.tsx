@@ -1,7 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-// import Image from 'next/image'; // Removed as it causes compilation issues in this environment
-// import Logo from "../../public/assets/svgs/logo.svg"; // Removed direct SVG import
 
 // Main Preloader component
 const Loading = () => {

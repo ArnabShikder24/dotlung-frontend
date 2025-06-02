@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import model1 from "../assets/images/SM_3_final copia.png";
-import Link from 'next/link';
 import RippleButton from './RippleButton';
 import NavigationArrow from './NavigationArrow';
 
@@ -95,9 +94,9 @@ const Footer = () => {
           Code by <Link href="#" className="border-b pb-2 border-secondary text-white opacity-20 hover:text-white transition-colors">Lorenzo Bocchi</Link>
         </div> */}
         
-        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors fixed bottom-5 right-4">
+        <p className="font-gilroy text-white text-[0.75rem] opacity-20 transition-colors fixed bottom-5 right-4">
           LIVE NOW!
-        </Link>
+        </p>
     </div>
     </footer>
   );
