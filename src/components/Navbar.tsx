@@ -159,7 +159,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors flex items-center gap-2 absolute right-[80px] top-[26px]">
+        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors flex items-center gap-2 fixed right-[80px] top-[26px]">
           LIVE NOW!
           <div className="w-[10px] h-[10px] rounded-full bg-secondary animate-fade-loop" />
           <style jsx>{`
