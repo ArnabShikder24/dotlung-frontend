@@ -29,6 +29,7 @@ const Navbar = () => {
   const menuItems = [
     { title: "ABOUT", path: PathNames.about, border: true },
     {title: false},
+    { title: "HOME", path: PathNames.home, border: false },
     { title: "WORK WITH DOT", path: PathNames.workWithDot, border: false },
     { title: "LEARN WITH DOT", path: PathNames.learnWithDot, border: false },
     { title: "TRAVEL & EAT WITH DOT", path: PathNames.travelEat, border: false },
