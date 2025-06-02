@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -49,11 +50,26 @@ export default function Home() {
         <div className="flex items-center justify-between px-5">
           {/* <Link href="/blog" className="font-bold text-sm hover:text-indigo-200">
           </Link> */}
-            <RippleButton href="/blog" className="font-bold text-sm hover:text-indigo-200">
+            <RippleButton href="/blog" className="font-gilroy text-[0.75rem] text-white hover:text-secondary transition-colors">
               BLOG
             </RippleButton>
           
-          <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="text-xs font-semibold hover:text-indigo-200">
+          <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors relative">
+            <div className="w-[10px] h-[10px] rounded-full bg-secondary absolute right-[25px] -top-5 animate-fade-loop" />
+            <style jsx>{`
+              @keyframes fadeLoop {
+                0%, 100% {
+                  opacity: 0;
+                }
+                50% {
+                  opacity: 1;
+                }
+              }
+
+              .animate-fade-loop {
+                animation: fadeLoop 2s ease-in-out infinite;
+              }
+            `}</style>
             LIVE NOW!
           </Link>
         </div>
