@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import dot from "../../public/Dotlungimages/Dotlungimages/dragon-Dot.png";
+import dot from "../../public/assets/images/dragon-Dot.png";
 import RippleButton from "../components/RippleButton";
 import { PathNames } from "../routes/index.route";
 import AnimatedLine from "../components/AnimatedLine";
