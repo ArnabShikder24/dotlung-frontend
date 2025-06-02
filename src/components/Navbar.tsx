@@ -140,6 +140,16 @@ const Navbar = () => {
       <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[100]">
         <div className="flex justify-between w-full items-center">
           <RippleButton className="fixed top-4 left-3 z-[100]" href={PathNames.home}>
+              <motion.div
+              className="absolute w-[17px] h-[17px] bg-primary top-[8px] left-[40px] rounded-full"
+              animate={{
+                x: mousePosition.x / 5 - 50, 
+              }}
+              whileHover={{
+                x: (mousePosition.x / 5 - 50) - 15, 
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            />
             <Image src={Logo} alt="Logo" width={50} />
           </RippleButton>
           <div className="fixed top-3 right-3 z-[100]">
