@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "../lib/cn";
 import RippleButton from "./RippleButton";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 const Navbar = () => {
@@ -157,6 +158,25 @@ const Navbar = () => {
             <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} color="#F64C3E"/>
           </div>
         </div>
+
+        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors flex items-center gap-2 absolute right-[80px] top-[26px]">
+          LIVE NOW!
+          <div className="w-[10px] h-[10px] rounded-full bg-secondary animate-fade-loop" />
+          <style jsx>{`
+            @keyframes fadeLoop {
+              0%, 100% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+            }
+
+            .animate-fade-loop {
+              animation: fadeLoop 2s ease-in-out infinite;
+            }
+          `}</style>
+        </Link>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
