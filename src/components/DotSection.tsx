@@ -29,7 +29,7 @@ const DotSection: React.FC<DotSectionProps> = ({
           {/* Top Right - Customizable Link */}
           <RippleButton
             href={topRightLink}
-            className="flex items-center justify-center whitespace-nowrap px-3 text-[0.75rem] text-white font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
+            className="flex items-center justify-center whitespace-nowrap uppercase px-3 text-[0.75rem] text-white font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
           >
             {topRightText}
             {/* <ArrowRight size={18} className="ml-2 text-secondary" /> */}
@@ -48,7 +48,7 @@ const DotSection: React.FC<DotSectionProps> = ({
               {
                 isShowArrow && <NavigationArrow direction="left" className="text-secondary" />
               }
-              <span className="ml-2 block">{bottomLeftText}</span>
+              <span className="ml-2 block uppercase">{bottomLeftText}</span>
             </div>
           </RippleButton>
 
@@ -66,7 +66,7 @@ const DotSection: React.FC<DotSectionProps> = ({
               {/* Bottom Left Text */}
               <RippleButton
                 href={bottomLeftLink}
-                className="w-[30%] lg:w-1/4 whitespace-nowrap px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
+                className="w-[30%] lg:w-1/4 uppercase whitespace-nowrap px-6 py-3 text-white hover:text-secondary transition-colors text-center border-r border-white"
               >
                 {bottomLeftText}
               </RippleButton>
@@ -85,7 +85,7 @@ const DotSection: React.FC<DotSectionProps> = ({
               <div className="relative w-[30%] lg:w-1/4">
                 <RippleButton
                   href={topRightLink}
-                  className="block px-6 py-3 whitespace-nowrap text-white hover:text-secondary transition-colors text-center border-l border-white"
+                  className="block px-6 py-3 uppercase whitespace-nowrap text-white hover:text-secondary transition-colors text-center border-l border-white"
                 >
                   {topRightText}
                 </RippleButton>
