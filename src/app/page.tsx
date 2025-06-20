@@ -23,7 +23,11 @@ export default function Home() {
         >
           <div className="z-10 text-left max-w-2xl px-6">
             <h1 className="text-[2rem] lg:text-[3.5rem] font-bold uppercase leading-[33px] lg:leading-[55px] -z-10">
-              Hey, I am Dot. Mother of social media dragons
+              the Mother of
+              Social
+              Dragons,
+              breaker of
+              algorithms.
             </h1>
             <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>
               <p className="text-secondary italic">
