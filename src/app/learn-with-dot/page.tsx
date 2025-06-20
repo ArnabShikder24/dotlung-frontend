@@ -12,6 +12,7 @@ import NavigationArrowRight from "../../components/NavigationArrowRight";
 import AnimatedLineVertical from "../../components/AnimatedLineVertical";
 import RevealOnScroll from "../../components/RevealOnScroll";
 import RevealOnScrollSpan from "../../components/RevealOnScrollSpan";
+import Link from "next/link";
 
 const LearnWithDot = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -21,41 +22,66 @@ const LearnWithDot = () => {
   };
 
   const tableItems = [
-  { 
-    width: "95%", 
-    title: "Universitat de Barcelona", 
-    content: "Founded in 1450, Universitat de Barcelona is one of the oldest and most prestigious academic institutions in Spain, known for its excellent programs in humanities, sciences, and arts."
-  },
-  { 
-    width: "87%", 
-    title: "Toulouse Business School", 
-    content: "A triple-accredited business school established in 1903, offering innovative programs focused on sustainable business practices, entrepreneurship, and global management."
-  },
-  { 
-    width: "92%", 
-    title: "ESdesign Barcelona", 
-    content: "A specialized design school in the heart of Barcelona focusing on graphic design, digital design, and creative direction with strong industry connections."
-  },
-  { 
-    width: "78%", 
-    title: "Instituto Europeo de Design", 
-    content: "IED is an international network of design schools with a campus in Barcelona that offers programs in fashion, visual communication, and product design with an innovative methodology."
-  },
-  { 
-    width: "90%", 
-    title: "Geneva Business School", 
-    content: "A dynamic international business school with campuses in Barcelona, Geneva, and Madrid, offering practical business education with a focus on digital innovation."
-  },
-  { 
-    width: "76%", 
-    title: "BAU, College of Arts & Design", 
-    content: "A center for higher education in design located in Barcelona's Poblenou district, featuring experimental approaches to design thinking and creative practices."
-  },
-  { 
-    width: "83%", 
-    title: "Barreira Arte + Diseño", 
-    content: "A leading educational institution that combines traditional arts with modern design disciplines to create innovative programs that bridge art, design, and technology."
-  }
+    {
+      width: "95%",
+      title: "Universitat de Barcelona",
+      content:
+        "University of Barcelona is a public university located in the city of Barcelona, Catalonia in Spain. With 75 undergraduate programs, 353 graduate programs and 96 doctorate programs to over 54,000 students, UB is considered to be the best university in Spain in the QS World University Rankings of 2018, which ranked the university 156th overall in the world.",
+      links: [
+        {
+          title: "WEBSITE",
+          url: "http://www.ub.edu/web/ub/ca/",
+        },
+      ],
+    },
+    {
+      width: "80%",
+      title: "Toulouse Business School",
+      content:
+        "Toulouse Business School(TBS) was founded in 1903 by the Toulouse Chamber of Commerce and Industry, the school's initial vocation was to respond to the needs of the local business community for able business administrators. TBS is one of the oldest well-known universities in France, it is affiliated to the French elite education system Grandes Ecoles. TBS is a famous aristocratic business school, which enjoys a high reputation in the European traditional uppertendom.",
+      links: [
+        {
+          title: "WEBSITE",
+          url: "http://www.tbs-education.fr/en",
+        },
+      ],
+    },
+    {
+      width: "87%",
+      title: "ESdesign Barcelona",
+      content:
+        "The School of Design of Barcelona (ESdesign) is an institution created with the aim of responding to the need for training of design professionals, with the ability to anticipate trends, analyze emerging situations and social needs, providing the most innovative solutions. ESdesign’s vision is to be the online design school of international reference, offering the best quality at the forefront of design and online training. Their mission is to train professionals and turn them into an engine of change that allows them to transform the environment, and generators of new spaces, developing creativity, innovation, entrepreneurship and design quality.",
+      links: [
+        {
+          title: "WEBSITE",
+          url: "https://www.esdesignbarcelona.com/es",
+        },
+      ],
+    },
+    {
+      width: "66%",
+      title: "Instituto Europeo de Design",
+      content:
+        "The Istituto Europeo di Design (IED) was born in Milan 50 years ago as a private institution specialized in the field of education and research on design and communication. Today, IED is an international network in continuous expansion, with seats in Milan, Rome, Florence, Turin, Venice, Como, Cagliari, Madrid, Barcelona, Sao Paulo and Rio de Janeiro. Its main interest, all throughout these years, has been to become a global reference of quality in the education and popularization of design and culture at international level. Around 10,000 people from about 90 different countries study at IED every year.",
+      links: [
+        {
+          title: "WEBSITE",
+          url: "https://www.ied.edu/",
+        },
+      ],
+    },
+    {
+      width: "90%",
+      title: "Geneva Business School",
+      content:
+        "GBS has developed into a leader in Swiss quality education with a purpose to educate future business leaders. With an international approach and passion for excellence in business, our goal at GBS is to help students reach their full potential and build real business connections, as they become future leaders.",
+      links: [
+        {
+          title: "WEBSITE",
+          url: "https://gbsge.com/",
+        },
+      ],
+    },
   ];
   // State to track which accordion item is currently open
   const [activeIndex, setActiveIndex] = useState(0);
@@ -66,14 +92,276 @@ const LearnWithDot = () => {
   };
 
   const events = [
-    { date: "05 APRIL 2018", location: "MILAN", name: "Digital Design Days" },
-    { date: "22 SEPTEMBER 2018", location: "ATHENS", name: "Digitized Athens" },
-    { date: "12 MAY 2018", location: "BARCELONA", name: "OFFF - Barcelona" },
-    { date: "05 APRIL 2018", location: "LONDON", name: "Digital Design Days" },
-    { date: "05 APRIL 2018", location: "LONDON", name: "Digitized Athens" },
-    { date: "05 APRIL 2018", location: "LONDON", name: "OFFF - Barcelona" },
-    { date: "05 APRIL 2018", location: "LONDON", name: "Digitized Athens" },
-    { date: "05 APRIL 2018", location: "LONDON", name: "OFFF - Barcelona" },
+    {
+      "date": "25 FEBRUARY 2020",
+      "location": "Tel Aviv",
+      "name": "Content Israel",
+      "url": "http://contentisrael.com/"
+    },
+    {
+      "date": "27 JANUARY 2020",
+      "location": "Soho House",
+      "name": "How to Win at Instagram",
+      "url": "https://dotlung.com/blog/work-with-dot/how-to-win-at-instagram/"
+    },
+    {
+      "date": "11 OCTOBER 2019",
+      "location": "Milan",
+      "name": "Digital Design Days Italy",
+      "url": "http://ddd.it/"
+    },
+    {
+      "date": "12 SEPTEMBER 2019",
+      "location": "Stavanger",
+      "name": "Social Media Days Norway",
+      "url": "https://socialmediadays.no/"
+    },
+    {
+      "date": "6 JUNE 2019",
+      "location": "Bergen",
+      "name": "Social Media Days Norway",
+      "url": "https://bergen.socialmediadays.no/"
+    },
+    {
+      "date": "2 JUNE 2019",
+      "location": "Tel Aviv",
+      "name": "Digital & Affiliate Marketing International Expo Israel",
+      "url": "https://www.dmiexpo.com/"
+    },
+    {
+      "date": "28 MAY 2019",
+      "location": "Mumbai",
+      "name": "Promax Asia",
+      "url": "http://www.promaxasia.tv/"
+    },
+    {
+      "date": "21 MAY 2019",
+      "location": "Barcelona",
+      "name": "Creative.Net",
+      "url": "https://thecreative.net/welcome"
+    },
+    {
+      "date": "20 MAY 2019",
+      "location": "Barcelona",
+      "name": "Imagin Cafe",
+      "url": "https://www.imagin.cafe/web/guest/agenda"
+    },
+    {
+      "date": "10 MAY 2019",
+      "location": "Malaga",
+      "name": "I-COM Global Summit",
+      "url": "https://www.i-com.org/"
+    },
+    {
+      "date": "5 MAY 2019",
+      "location": "Thessaloniki",
+      "name": "Thessaloniki Design Week",
+      "url": "#"
+    },
+    {
+      "date": "3 APRIL 2019",
+      "location": "Barcelona",
+      "name": "Entrepreneur Business Live",
+      "url": "#"
+    },
+    {
+      "date": "25 MARCH 2019",
+      "location": "Amsterdam",
+      "name": "Promax Europe 2019",
+      "url": "https://www.promax.org/events/current-events/promaxbda-europe-conference-2019"
+    },
+    {
+      "date": "20 MARCH 2019",
+      "location": "San Diego",
+      "name": "Social Media Marketing World",
+      "url": "https://www.socialmediaexaminer.com/smmworld/"
+    },
+    {
+      "date": "17 MARCH 2019",
+      "location": "Tel Aviv",
+      "name": "UX Salon 2019",
+      "url": "http://uxsalon.com/"
+    },
+    {
+      "date": "15 FEBRUARY 2019",
+      "location": "Geneva",
+      "name": "Digital Design Days - Switzerland",
+      "url": "http://ddd.ge/"
+    },
+    {
+      "date": "24 NOVEMBER 2018",
+      "location": "Antwerp",
+      "name": "Us By Night",
+      "url": "https://www.usbynight.be/venue/"
+    },
+    {
+      "date": "8 NOVEMBER 2018",
+      "location": "London",
+      "name": "SalesForce.org The Connected Non Profit UK",
+      "url": "http://www.salesforce.org/events/"
+    },
+    {
+      "date": "7 NOVEMBER 2018",
+      "location": "London",
+      "name": "Entrepreneur Business Live",
+      "url": "https://www.eventbrite.co.uk/e/entrepreneur-business-live-november-18-tickets-50214891091?aff=erelexpmlt"
+    },
+    {
+      "date": "7 NOVEMBER 2018",
+      "location": "Lisbon",
+      "name": "Women in Tech Awards",
+      "url": "https://women-in-tech.org/award-categories/"
+    },
+    {
+      "date": "29 OCTOBER 2018",
+      "location": "Barcelona",
+      "name": "David Carson Live on Social Media Mondays!",
+      "url": "https://www.facebook.com/events/488643024927057/"
+    },
+    {
+      "date": "23 OCTOBER 2018",
+      "location": "Barcelona",
+      "name": "SalesForce.org Higher Ed Summit Horizons",
+      "url": "http://www.salesforce.org/events/higher-ed-summit-horizons-2018/"
+    },
+    {
+      "date": "4 OCTOBER 2018",
+      "location": "Barcelona",
+      "name": "FuckUp Nights Barcelona",
+      "url": "https://www.conferize.com/fuckupnightsbarcelona1018/register"
+    },
+    {
+      "date": "18 SEPTEMBER 2018",
+      "location": "Barcelona",
+      "name": "Digital Marketing Strategy for Crowdfunding @RoadAhead",
+      "url": "https://business.facebook.com/events/183389675645238/"
+    },
+    {
+      "date": "24 JULY 2018",
+      "location": "Barcelona",
+      "name": "IGTV y el futuro del Instagram @RoadAhead",
+      "url": "https://roadahead.typeform.com/to/pHMbE9"
+    },
+    {
+      "date": "13 JULY 2018",
+      "location": "Lisbon",
+      "name": "Kinnernet Portugal",
+      "url": "http://kinnernet.pt/"
+    },
+    {
+      "date": "27 JUNE 2018",
+      "location": "Barcelona",
+      "name": "Ladies, Wine & Design @ Galleria Cromo",
+      "url": "http://ladieswinedesign.com/"
+    },
+    {
+      "date": "21 JUNE 2018",
+      "location": "Anaheim",
+      "name": "VidCon 2018 @ Anaheim Convention Center",
+      "url": "http://vidcon.com/"
+    },
+    {
+      "date": "14 JUNE 2018",
+      "location": "Barcelona",
+      "name": "Off at Forum @ Parc del Forum",
+      "url": "http://offatforum.com/"
+    },
+    {
+      "date": "12 JUNE 2018",
+      "location": "New York",
+      "name": "Pop Up F5 @ Hilton Midtown",
+      "url": "https://www.popupf5.com/"
+    },
+    {
+      "date": "11 JUNE 2018",
+      "location": "New York",
+      "name": "2018 PromaxBDA Conference",
+      "url": "https://promaxbda.org/events/current-events/promaxbda-the-conference-2018"
+    },
+    {
+      "date": "2 JUNE 2018",
+      "location": "Tokyo",
+      "name": "Motion Plus Design",
+      "url": "http://motion-plus-design.com/meetuptokyo2018/"
+    },
+    {
+      "date": "28 MAY 2018",
+      "location": "Barcelona",
+      "name": "David Carson @ Escuela Superior de Diseño de Barcelona",
+      "url": "https://www.esdesignbarcelona.com/es/eventos/conferencia-david-carson-en-esdesign"
+    },
+    {
+      "date": "24 MAY 2018",
+      "location": "Barcelona",
+      "name": "Ladies, Wine & Design: Paloma Rincón & Ms. Balloon",
+      "url": "https://ladieswinedesign.com/barcelona"
+    },
+    {
+      "date": "12 APRIL 2018",
+      "location": "Barcelona",
+      "name": "Comunicació Gastronómica @Universitat Abat Oliba",
+      "url": "https://www.uaoceu.es/"
+    },
+    {
+      "date": "9 APRIL 2018",
+      "location": "Barcelona",
+      "name": "LAB ESdesign",
+      "url": "http://esdesignbarcelona.com/"
+    },
+    {
+      "date": "3 APRIL 2018",
+      "location": "Barcelona",
+      "name": "Influencer Marketing for Brands with Brittany Kystle",
+      "url": "http://road.com.es/"
+    },
+    {
+      "date": "21 MARCH 2018",
+      "location": "Barcelona",
+      "name": "Ladies, Wine & Design: Cecilia Tham & Laura Fernandez, Future Funded",
+      "url": "http://ladieswinedesign.com/"
+    },
+    {
+      "date": "16 MARCH 2018",
+      "location": "Milan",
+      "name": "Digital Design Days @ Megawatt Court",
+      "url": "http://ddd.it/"
+    },
+    {
+      "date": "14 MARCH 2018",
+      "location": "Barcelona",
+      "name": "Build a Powerful YouTube Channel with Chris Do",
+      "url": "https://www.thefutur.com/"
+    },
+    {
+      "date": "13 MARCH 2018",
+      "location": "Barcelona",
+      "name": "Social Media Trends Research @ IED",
+      "url": "https://iedbarcelona.es/"
+    },
+    {
+      "date": "10 MARCH 2018",
+      "location": "Madrid",
+      "name": "The Futur Madrid @neoland",
+      "url": "https://www.thefutur.com/"
+    },
+    {
+      "date": "6 MARCH 2018",
+      "location": "Sitges",
+      "name": "Digital 1 to 1",
+      "url": "http://digital1to1spain.clubecommerce.com/"
+    },
+    {
+      "date": "27 FEBRUARY 2018",
+      "location": "Barcelona",
+      "name": "Ladies, Wine & Design: Ane Guerra, Domestic Streamers",
+      "url": "http://ladieswinedesign.com/"
+    },
+    {
+      "date": "20 JANUARY 2018",
+      "location": "Santa Monica",
+      "name": "Tai Lopez's Private Mentor Conference",
+      "url": "http://tailopez.com/"
+    }
   ];
 
   return (
@@ -192,7 +480,7 @@ const LearnWithDot = () => {
 
             {/* Top Right - Link */}
             <div
-              className="flex items-center justify-center px-3 text-[0.75rem] text-secondary font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary"
+              className="flex items-center justify-center px-3 text-[0.75rem] text-secondary font-bold col-span-2 row-span-1 relative z-10 transition-colors hover:text-secondary uppercase"
             >
               DATE & LOCATION
             </div>
@@ -201,8 +489,8 @@ const LearnWithDot = () => {
             <div
               className="border-t border-r border-white text-[0.75rem] col-span-2 row-span-1 relative flex items-start justify-start "
             >
-              <div className="flex items-center justify-center px-3 text-secondary font-bold relative z-10 text-left h-full w-full transition-colors hover:text-secondary">
-                <span className="ml-2 block">SPEAKING ENGAGEMENTS</span>
+              <div className="flex items-center justify-center px-3 text-secondary font-bold relative z-10 text-left h-full w-full transition-colors hover:text-secondary uppercase">
+                <span className="ml-2 block uppercase">SPEAKING ENGAGEMENTS</span>
               </div>
             </div>
 
@@ -219,7 +507,7 @@ const LearnWithDot = () => {
               <div className="border border-white flex w-full">
                 {/* Bottom Left Text */}
                 <div
-                  className="w-[30%] lg:w-[25%] whitespace-nowrap px-6 py-3 text-secondary transition-colors text-center border-r border-white"
+                  className="w-[30%] lg:w-[25%] whitespace-nowrap px-6 py-3 text-secondary transition-colors text-center border-r border-white uppercase"
                 >
                   DATE & LOCATION
                 </div>
@@ -233,9 +521,9 @@ const LearnWithDot = () => {
                 {/* Top Right Text */}
                 <div className="relative w-[30%] lg:w-[55%]">
                   <div
-                    className="block px-6 py-3 whitespace-nowrap text-secondary transition-colors text-start border-l border-white"
+                    className="block px-6 py-3 whitespace-nowrap text-secondary transition-colors text-start border-l border-white uppercase"
                   >
-                    SPEAKING ENGAGEMENTS
+                    Upcoming Events
                   </div>
                 </div>
               </div>
@@ -252,16 +540,18 @@ const LearnWithDot = () => {
             <RevealOnScroll
               key={index}
             >
-              <div
+              <Link
+                href={event.url}
+                target="_blank"
                 className="lg:flex justify-between items-center border-b-[0.8px] border-white/50 py-4"
               >
-                <div className="flex items-center gap-10 lg:w-[30%]">
-                  <span
-                    className={`w-2 h-2 rounded-full ${
+                <div className="flex items-center gap-10 lg:w-[40%]">
+                  <div
+                    className={`w-1.5 h-1.5 block rounded-full ml-2 ${
                       index < 4 ? "bg-secondary" : "bg-gray-400"
                     }`}
-                  ></span>
-                  <span className="text-sm font-gilroy font-semibold">
+                  ></div>
+                  <span className="text-sm font-gilroy font-semibold whitespace-nowrap">
                     {event.date} - {event.location}
                   </span>
                 </div>
@@ -269,7 +559,7 @@ const LearnWithDot = () => {
                   <span className="text-2xl font-caslon">{event.name}</span>
                   <NavigationArrowRight />
                 </div>
-              </div>
+              </Link>
           </RevealOnScroll>
           ))}
           <RevealOnScroll>
