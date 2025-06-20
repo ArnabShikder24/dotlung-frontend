@@ -31,16 +31,15 @@ const Footer = () => {
               <div className="lg:flex items-center gap-12 justify-between">
                 <div className="md:hidden mb-10">
                   <p className="italic text-secondary font-caslon text-[1.3rem] md:text-[1.375rem] mt-4">
-                    Don’t miss out on this!
+                    Don&apos;t be a stranger. Stay in touch!
                   </p>
                   <p className="mt-2 text-base font-asty">
-                    Get my top 5 tips to grow your Instagram / LinkedIn by
-                    entering your e-mail address here:
+                    Sign up to get awesome updates from Dot!
                   </p>  
                   <EmailInput />
                 </div>
                 <div className="mb-7 md:mb-0">
-                  <h1 className="text-[3.25rem] md:text-[4.1875rem] font-extrabold font-gilroy">LET’S TALK</h1>
+                  <h1 className="text-[3.25rem] md:text-[4.1875rem] font-extrabold font-gilroy uppercase">Let&apos;s chat.</h1>
                 </div>
                 <div className="text-[0.95rem] font-asty mb-8 md:mb-0">
                   <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
@@ -50,11 +49,10 @@ const Footer = () => {
               <div className="lg:flex gap-4 justify-between mt-3">
                 <div className="hidden md:block">
                   <p className="italic text-secondary font-caslon text-[1.3rem] md:text-[1.375rem] mt-4">
-                    Don’t miss out on this!
+                    Don&apos;t be a stranger. Stay in touch!
                   </p>
                   <p className="mt-2 text-base font-asty">
-                    Get my top 5 tips to grow your Instagram / LinkedIn <br/>by
-                    entering your e-mail address here:
+                    Sign up to get awesome updates from Dot!
                   </p>  
                   <EmailInput />
                 </div>
@@ -69,7 +67,7 @@ const Footer = () => {
                     LINKEDIN
                   </a>
                   <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
-                    THREADS
+                    Messenger
                   </a>
                 </div>
               </div>

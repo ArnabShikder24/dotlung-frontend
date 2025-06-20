@@ -5,7 +5,7 @@ import MouseFollower from "../components/MouseFollower";
 import MainLayout from "../layout/MainLayout";
 
 export const metadata: Metadata = {
-  title: "Dotlung",
+  title: "Dot Lung - Mother of social media dragons",
   description: "Dotlung",
 };
 

@@ -113,8 +113,8 @@ const WorkWithDot = () => {
 
       <RevealOnScroll>
         <DotSection
-          bottomLeftText="LEARN WITH DOT"
-          bottomLeftLink={PathNames.learnWithDot}
+          bottomLeftText="Travel & Eat with Dot "
+          bottomLeftLink={PathNames.travelEat}
           topRightText="WORK WITH DOT"
           topRightLink={PathNames.workWithDot}
         />

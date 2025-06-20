@@ -19,45 +19,198 @@ const WorkWithDot = () => {
   };
 
   const items = [
-    { 
-      width: "95%", 
-      title: "OFFF", 
-      content: "OFFF is a community inviting all those who are eager to learn to participate and get inspired in a three-day journey of conferences, workshops, activities, and performances."
+    {
+      width: "95%",
+      title: "Meta Viewpoints",
+      content:
+        "Launched Instagram profile. Created Facebook Ads Campaign for 12 countries. Lowered Cost Per Install by 35% with geo-localization content strategy. Lead community management strategy and implementation.",
+      links: [
+        {
+          title: "Viewpoints",
+          url: "https://viewpoints.fb.com/",
+        },
+        {
+          title: "Instagram",
+          url: "https://www.instagram.com/metaviewpoints/",
+        },
+        {
+          title: "YouTube",
+          url: "http://www.youtube.com/user/YouTube",
+        },
+      ],
     },
-    { 
-      width: "85%", 
-      title: "Motionographer", 
-      content: "Motionographer sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    {
+      width: "80%",
+      title: "Wix Playground",
+      content:
+        "Wix provides a world-class platform to over 150 million users in 190 countries, empowering everyone to express themselves and build their online presence. Whether you’re an entrepreneur, designer, developer, musician, photographer or restaurant owner, you’ll find specialized features to create a professional website and manage your business. With Wix Playground we created the social media strategy and Instagram account launch to showcase Wix Design Studio!",
+      links: [
+        {
+          title: "Wix Playground",
+          url: "https://www.wix.com/playground/",
+        },
+        {
+          title: "Wix Academy",
+          url: "https://www.wix.com/playground/academy",
+        },
+        {
+          title: "Instagram",
+          url: "http://instagram.com/wixplayground",
+        },
+      ],
     },
-    { 
-      width: "90%", 
-      title: "F5", 
-      content: "F5 is a creativity festival that brings together diverse creative professionals across design, art, and technology to share ideas and inspire innovation."
+    {
+      width: "87%",
+      title: "Mixtiles Art",
+      content:
+        "Your favorite art shop on the net! Mixtiles Art is the easiest and most affordable way to decorate with art! Discover unique art and support rising artists from around the world. High quality framed art prints all come with Mixtiles' patent sticky-on frames that last forever.",
+      links: [
+        {
+          title: "Mixtiles Art",
+          url: "http://mixtiles.com/art",
+        },
+        {
+          title: "Instagram",
+          url: "http://instagram.com/mixtiles_art",
+        },
+      ],
     },
-    { 
-      width: "70%", 
-      title: "Sonar+D", 
-      content: "Sonar+D is the international conference that brings together creativity, technology, and business, exploring how creativity is changing our present and imagining new futures."
-    },
-    { 
-      width: "80%", 
-      title: "DDD", 
-      content: "Design, Development, and Digital arts conference focusing on the intersection of creative disciplines and technical innovation."
-    },
-    { 
-      width: "85%", 
-      title: "Ladies Wine Design", 
-      content: "A global non-profit initiative started by Jessica Walsh to foster creative community among women in design through mentorship circles, portfolio reviews, and creative meetups."
-    },
-    { 
-      width: "70%", 
-      title: "Catalunya Cannabis", 
-      content: "Information and community forum discussing policies, research, and cultural aspects of cannabis in Catalunya."
-    },
-    { 
+    {
       width: "66%", 
-      title: "360VR.Barcelona", 
-      content: "Platform for immersive technology and virtual reality experiences showcasing the latest innovations in 360° content creation and VR applications." 
+      title: "OFFF",
+      content:
+        "OFFF is a community inviting all those who are eager to learn to participate and get inspired in a three-day journey of conferences, workshops, activities and performances. What is it about exactly? It’s a combination of Offline/Online designers, Motion Designers, Thinkers, Sound Designers, Graphic Designers, Theorists, Developers, Professionals, Students… Putting the titles aside, OFFF is made for the curious.",
+      links: [
+        {
+          title: "WEBSITE",
+          url: "http://offf.barcelona/",
+        },
+        {
+          title: "FACEBOOK",
+          url: "https://www.facebook.com/OFFFevents",
+        },
+        {
+          title: "INSTAGRAM",
+          url: "https://www.instagram.com/offfest/",
+        },
+      ],
+    },
+    {
+      width: "90%", 
+      title: "Motionographer",
+      content:
+        "Motionographer is a source of inspiration for designers, animators and storytellers sharing work from studios, freelancers, and students. It features stories giving readers a deep understanding of the work and industry. Motionographer is not just about motion design, it’s about inspiring those involved in the industry!",
+      links: [
+        {
+          title: "WEBSITE",
+          url: "http://motionographer.com/",
+        },
+        {
+          title: "FACEBOOK",
+          url: "https://www.facebook.com/motionographer",
+        },
+      ],
+    },
+    {
+      width: "75%",
+      title: "F5",
+      content:
+        "F5 IS A CREATIVITY FESTIVAL EXPLORING THE INTERSECTION OF DESIGN, ART & TECHNOLOGY. F5 brings together the thinkers and doers that are breaking ground and shaping new standards in media and design. It’s an essential meeting point for future-minded individuals with the power to create lasting change.",
+      links: [
+        { title: "WEBSITE", url: "http://f5fest.com/" },
+        { title: "INSTAGRAM", url: "http://instagram.com/f5fest" },
+        { title: "FACEBOOK", url: "http://fb.me/f5fest" },
+      ],
+    },
+    {
+      width: "82%",
+      title: "Sonar+D",
+      content:
+        "Sónar+D is an international congress that explores how creativity is changing our present and imagining new futures, in collaboration with researchers, innovators and business leaders.",
+      links: [
+        { title: "WEBSITE", url: "https://sonarplusd.com/" },
+        { title: "FACEBOOK", url: "https://www.facebook.com/sonarplusd" },
+        { title: "INSTAGRAM", url: "https://www.instagram.com/sonarplusd/" },
+      ],
+    },
+    {
+      width: "70%",
+      title: "Off at Forum",
+      content:
+        "Off at Forum — Barcelona's official Off Sonar parties at Parc del Forum with headliners like Circoloco, Diynamic Outdoor, Afterlife, A:rpia:r , Ricardo Villalobos, SecretSundaze, Soul Clap & Wolf + Lamb , Crewlove and many more.",
+      links: [
+        { title: "FACEBOOK", url: "https://www.facebook.com/offatforum/" },
+      ],
+    },
+    {
+      width: "93%",
+      title: "ESdesign Barcelona",
+      content:
+        "Formamos a profesionales para convertirles en motor del cambio que les permita la trasformación del entorno y la generación de nuevos espacios, desarrollando la creatividad y la innovación.",
+      links: [
+        { title: "ESdesign Website", url: "https://www.esdesignbarcelona.com/" },
+        { title: "ESdesign Instagram", url: "http://instagram.com/esdesignbarcelona" },
+      ],
+    },
+    {
+      width: "68%",
+      title: "Digital Design Days",
+      content:
+        "Digital Design Days is a 3-day event offering exclusive conferences, the third edition of Offf Milano, professional workshops, digital showcases & installations, a party and many networking activities.",
+      links: [
+        { title: "WEBSITE", url: "http://ddd.it/" },
+        { title: "FACEBOOK", url: "https://www.facebook.com/digitaldesigndays" },
+        { title: "INSTAGRAM", url: "https://www.instagram.com/digitaldesigndays/" },
+      ],
+    },
+    {
+      width: "85%",
+      title: "Nipple Magazine",
+      content:
+        "We launched the world's first Instastory Nipple Exhibition to fight gender inequality on Instagram.",
+      links: [
+        { title: "Nipple Magazine", url: "http://instagram.com/nipplemagazine" },
+        {
+          title: "Stop Nipple Censorship Campaign",
+          url: "http://stopnipplecensorship.org/",
+        },
+      ],
+    },
+    {
+      width: "78%",
+      title: "Ladies, Wine & Design Barcelona",
+      content:
+        "Ladies, Wine & Design was started by Jessica Walsh after writing this article as an initiative to foster women creativity. Only a tiny percent of creative directors are women, and LW&D wants to help change this through mentorship circles, portfolio reviews, and creative meet-ups.",
+      links: [
+        { title: "WEBSITE", url: "http://ladieswinedesign.com/" },
+        { title: "INSTAGRAM", url: "https://www.instagram.com/ladieswinedesignbcn/" },
+      ],
+    },
+    {
+      width: "91%",
+      title: "Catalunya Cannabis",
+      content:
+        "Catalunya Canabis is a private members club based in Barcelona sharing the culture of Canabis in a more exclusive environment focusing on experiential opportunities including food, beverages, locations, and the combination of those elements.",
+      links: [
+        { title: "INSTAGRAM", url: "http://instagram.com/catalunyacannabis/" },
+      ],
+    },
+    {
+      width: "73%",
+      title: "Paper Sessions by OCB",
+      content:
+        "OCB's Paper Sessions — a virtual concert venue to enjoy eclectic music all year long. Paper Sessions is a YouTube channel for livestream concerts with new artists every month hosted by OCB.",
+      links: [
+        { title: "WEBSITE", url: "http://ocbpapersessions.com/" },
+        { title: "FACEBOOK", url: "https://www.facebook.com/OCBsessions/" },
+        { title: "INSTAGRAM", url: "https://www.instagram.com/ocbsessions/" },
+      ],
+    },
+    {
+      width: "60%",
+      title: "Wok to Walk",
+      content: "Global Social Media Strategy across 200 franchises.",
+      links: [],
     },
   ];
 
@@ -93,22 +246,17 @@ const WorkWithDot = () => {
               <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{ lineHeight: "1.5" }}>
                 <RevealOnScroll>
                   <p className="text-secondary italic">
-                    Together we can work miracles.
+                    Mythical digital magic.
                   </p>{" "}
                 </RevealOnScroll>
                 <RevealOnScroll>
-                  <p>I create strong</p>
+                  <p>I have worked worldwide</p>
                 </RevealOnScroll>
                 <RevealOnScroll>
-                  <p>online identities & communities and develop</p>
+                  <p>weaving wonders for top brands, events, and</p>
                 </RevealOnScroll>
                 <RevealOnScroll>
-                  <p>kickass digital campaigns &</p>
-                </RevealOnScroll>
-                <RevealOnScroll>
-                  <p className="text-secondary italic">
-                    strong online identities and communities
-                  </p>{" "}
+                  <p>concepts.</p>
                 </RevealOnScroll>
               </p>
             <p className="uppercase items-center mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{ fontSize: "12px" }}>
@@ -139,50 +287,31 @@ const WorkWithDot = () => {
             <p className="absolute mx-5 lg:mx-0 lg:left-10 top-[22%] max-w-[30rem] font-caslon text-[1.375rem] lg:text-[1.75rem]">
                 <span className="italic text-secondary mr-1">
                   <RevealOnScrollSpan>
-                    Miracles happen.
+                    Together 
                   </RevealOnScrollSpan>
                 </span>
                   <RevealOnScrollSpan>
-                    But on their own. I create
+                    we can make mythical digital magic.
                   </RevealOnScrollSpan>
                   <RevealOnScrollSpan>
-                    strong online identities & communities and
+                    I create dominant and in demand online
                   </RevealOnScrollSpan>
                   <RevealOnScrollSpan>
-                    develop kickass digital campaigns all over the
+                    identities and communities by developing
                   </RevealOnScrollSpan>
                   <RevealOnScrollSpan>
-                    world.
+                    kick ass campaigns utilizing unique content
+                  </RevealOnScrollSpan>
+                  <RevealOnScrollSpan>
+                    specific to your brand ethos.
                   </RevealOnScrollSpan>
             </p>
             <div className="absolute mx-5 mt-10 md:mt-0 lg:mx-0 lg:right-0 top-[350px] md:top-[40%] lg:top-1/2 max-w-[500px] text-sm md:text-base leading-relaxed font-asty">
-              <RevealOnScrollSpan>
-                I&apos;m Dot Lung. Dot stands for Dorothy, and Lung means “Dragon”
-              </RevealOnScrollSpan>
-              <RevealOnScrollSpan>
-                in Mandarin. After growing up in Los Angeles, I traveled the world
-              </RevealOnScrollSpan>
-              <RevealOnScrollSpan>
-                working on a variety of campaigns until I found a home in
-              </RevealOnScrollSpan>
-              <RevealOnScrollSpan>
-                Barcelona. Since 2011, Barcelona has inspired me to be the
-              </RevealOnScrollSpan>
-              <RevealOnScrollSpan>
-                magical and fierce being I am today. I started my social media
-              </RevealOnScrollSpan>
-              <RevealOnScrollSpan>
-                career formally at OFFF Festival, where I was in charge of the
-              </RevealOnScrollSpan>
-              <RevealOnScrollSpan>
-                online community and audience engagement. We developed their
-              </RevealOnScrollSpan>
-              <RevealOnScrollSpan>
-                first steps of an authentic, organic messages which continues to
-              </RevealOnScrollSpan>
-              <RevealOnScrollSpan>
-                this day.
-              </RevealOnScrollSpan>
+              <RevealOnScrollSpan>The digital world can be a difficult one to navigate.</RevealOnScrollSpan>
+              <RevealOnScrollSpan>Sometimes you need that unicorn to guide you through the good and the bad to enhance, target, and execute your best strategy.</RevealOnScrollSpan>
+              <RevealOnScrollSpan>This is where I thrive.</RevealOnScrollSpan>
+              <RevealOnScrollSpan>I’ve run campaigns for agencies, headed up social media teams for a variety of companies, and have initiated my own start-ups in graphic design, video production, and more.</RevealOnScrollSpan>
+              <RevealOnScrollSpan>I can not only lend my expertise and experience, but I’ve walked the walk, not just talked the talk!</RevealOnScrollSpan>
             </div>
         </div>
       </div>

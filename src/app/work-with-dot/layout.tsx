@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Work-With-dot",
+  title: "Work With dot - Dot Lung",
   description: "Dotlung",
 };
 
