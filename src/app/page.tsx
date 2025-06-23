@@ -30,15 +30,15 @@ export default function Home() {
               algorithms.
             </h1>
             <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{lineHeight:"1.5"}}>
-              <p className="text-secondary italic">
+              <span className="text-secondary italic">
                 Hatching new eggs and startups
-              </p>{" "}
-              nurturing and <br /> growing them using my methodology into fully <br /> fledged
+              </span>{" "}
+              nurturing and growing them using my methodology into fully fledged
               digital dragons with
-              <p className="text-secondary italic">
+              <span className="text-secondary italic">
                 {" "}
                 strong online identities & communities
-              </p>
+              </span>
             </p>
             <p className="flex uppercase items-center gap-6 mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{fontSize:"12px"}}>
               <RippleButton href={PathNames.about}>COME ON CHASE THE DRAGON</RippleButton>
