@@ -81,11 +81,11 @@ const WorkWithDot = () => {
           <p className="absolute mx-5 lg:mx-0 lg:left-10 top-1/4 max-w-[30rem] font-caslon text-[1.375rem] lg:text-[1.75rem]">
             <span className="italic text-secondary mr-1">
               <RevealOnScrollSpan>
-                Digital equals life in todo 
+                Digital equals life in today’s age.
               </RevealOnScrollSpan>
             </span>
             <RevealOnScrollSpan>
-              I can help you navigate the challenging landscape that is digital to showcae your best you!
+              I can help you navigate the challenging landscape that is digital to showcase your best you!
             </RevealOnScrollSpan>
           </p>
 
