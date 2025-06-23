@@ -244,20 +244,20 @@ const WorkWithDot = () => {
               </h1>
             </RevealOnScroll>
               <p className="font-caslon lg:text-2xl mt-6 lg:mt-8" style={{ lineHeight: "1.5" }}>
-                <RevealOnScroll>
-                  <p className="text-secondary italic">
+                <RevealOnScrollSpan>
+                  <span className="text-secondary italic">
                     Mythical digital magic.
-                  </p>{" "}
-                </RevealOnScroll>
-                <RevealOnScroll>
-                  <p>I have worked worldwide</p>
-                </RevealOnScroll>
-                <RevealOnScroll>
-                  <p>weaving wonders for top brands, events, and</p>
-                </RevealOnScroll>
-                <RevealOnScroll>
-                  <p>concepts.</p>
-                </RevealOnScroll>
+                  </span>{" "}
+                </RevealOnScrollSpan>
+                <RevealOnScrollSpan>
+                  <span>I have worked worldwide</span>
+                </RevealOnScrollSpan>
+                <RevealOnScrollSpan>
+                  <span>weaving wonders for top brands, events, and</span>
+                </RevealOnScrollSpan>
+                <RevealOnScrollSpan>
+                  <span>concepts.</span>
+                </RevealOnScrollSpan>
               </p>
             <p className="uppercase items-center mt-2 lg:mt-10 py-3 text-white font-light font-gilroy" style={{ fontSize: "12px" }}>
               <RevealOnScroll>
