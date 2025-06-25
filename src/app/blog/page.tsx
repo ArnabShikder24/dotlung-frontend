@@ -60,8 +60,8 @@ export default function FeaturedSection() {
   return (
     <div className="container mx-auto max-w-3xl py-20 px-5 lg:px-0 mt-14 md:mt-0">
       <h1 className="text-6xl md:text-7xl font-gilroy text-white">BLOG</h1>
-      {posts.map((post) => (
-        <article key={post.id} className="my-10 border-b border-secondary pb-4">
+      {/* {posts.map((post) => (
+        <article key={post.id} className="my-10 border-b border-secondary pb-4 lg:w-[525px] mb-[200px] relative">
           <div className="flex items-center justify-between text-secondary mb-2">
             <span className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</span>
             <span className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.categories}</span>
@@ -80,13 +80,123 @@ export default function FeaturedSection() {
               width={450}
               height={300}
               alt={post.title.rendered}
-              className="mt-4"
+              className="mt-4 absolute -right-[300px] -z-50 top-[150px]"
             />
           ) : (
             <p className="text-white">No Image Available</p>
           )}
         </article>
-      ))}
+      ))} */}
+      {/* {posts.map((post, index) => {
+        const isOdd = index % 2 === 1;
+        
+        return (
+          <article 
+            key={post.id} 
+            className={`my-10 border-b border-secondary pb-4 lg:w-[525px] mb-[250px] relative ${
+              isOdd ? 'lg:ml-[300px]' : ''
+            }`}
+          >
+            <div className="flex items-center justify-between text-secondary mb-2">
+              <span className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">
+                {new Date(post.date).toLocaleDateString()}
+              </span>
+              <span className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">
+                #{post.categories}
+              </span>
+            </div>
+            
+            <RippleButton href={`/blog/${post.slug}`}>
+              <h2 className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
+                {post.title.rendered}
+              </h2>
+            </RippleButton>
+            
+            <p 
+              className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3] mb-4" 
+              dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} 
+            />
+            
+            <RippleButton 
+              href={`/blog/${post.slug}`} 
+              className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
+            >
+              READ MORE <NavigationArrow direction="right" className="mr-2 text-secondary" />
+            </RippleButton>
+
+            {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ? (
+              <Image
+                src={post._embedded["wp:featuredmedia"][0].source_url}
+                width={550}
+                height={300}
+                alt={post.title.rendered}
+                className={`mt-4 absolute -z-50 top-[170px] ${
+                  isOdd 
+                    ? '-left-[300px]'  // Odd index: image on left
+                    : '-right-[300px]' // Even index: image on right
+                }`}
+              />
+            ) : (
+              <p className="text-white">No Image Available</p>
+            )}
+          </article>
+        );
+      })} */}
+      {posts.map((post, index) => {
+        const isOdd = index % 2 === 1;
+        
+        return (
+          <article 
+            key={post.id} 
+            className={`my-10 border-b border-secondary pb-4 w-full max-w-[525px] mb-8 md:mb-16 lg:mb-[250px] relative ${
+              isOdd ? 'lg:ml-[300px]' : ''
+            }`}
+          >
+            <div className="flex items-center justify-between text-secondary mb-2">
+              <span className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">
+                {new Date(post.date).toLocaleDateString()}
+              </span>
+              <span className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">
+                #{post.categories}
+              </span>
+            </div>
+            
+            <RippleButton href={`/blog/${post.slug}`}>
+              <h2 className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
+                {post.title.rendered}
+              </h2>
+            </RippleButton>
+            
+            <p 
+              className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3] mb-4" 
+              dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} 
+            />
+            
+            <RippleButton 
+              href={`/blog/${post.slug}`} 
+              className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
+            >
+              READ MORE <NavigationArrow direction="right" className="mr-2 text-secondary" />
+            </RippleButton>
+
+            {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ? (
+              <Image
+                src={post._embedded["wp:featuredmedia"][0].source_url}
+                width={550}
+                height={350}
+                alt={post.title.rendered}
+                className={`mt-4 w-full h-auto rounded-lg sm:absolute sm:-z-50 sm:w-[300px] sm:h-[200px] md:w-[350px] md:h-[233px] lg:w-[550px] lg:h-[350px] object-cover ${
+                  isOdd 
+                    ? 'sm:top-[80px] md:top-[100px] lg:top-[150px] sm:-left-[150px] md:-left-[200px] lg:-left-[250px] xl:-left-[300px]'  // Odd index: image on left
+                    : 'sm:top-[80px] md:top-[100px] lg:top-[150px] sm:-right-[150px] md:-right-[200px] lg:-right-[250px] xl:-right-[300px]' // Even index: image on right
+                }`}
+              />
+            ) : (
+              <p className="text-white">No Image Available</p>
+            )}
+          </article>
+        );
+      })}
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}

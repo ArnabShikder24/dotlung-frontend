@@ -2,6 +2,7 @@
 import { useState } from "react";
 import DotImage from "../../assets/images/work-with-Dot.png";
 import girl1 from "../../assets/images/bg-sphere.png";
+import trapezoid from "../../assets/images/Trapezoid 3.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { PathNames } from "../../routes/index.route";
@@ -452,22 +453,31 @@ const LearnWithDot = () => {
         </div>
       </div>
 
-      <RevealOnScroll>
-        <SectionHeader title="TEACHING ENGAGEMENTS" />
-      </RevealOnScroll>
+      <div className="relative">
+        <RevealOnScroll className="">
+          <SectionHeader title="TEACHING ENGAGEMENTS" />
+        </RevealOnScroll>
 
-      <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden lg:ml-[320px]">
-        <div className="text-white text-2xl max-w-[500px]">
-          {tableItems.map((item, index) => (
-          <AccordionItem
-            key={index}
-            item={item}
-            isActive={activeIndex === index}
-            onToggle={() => toggleAccordion(index)}
+        <div className="flex mx-5 lg:justify-center mt-16 overflow-hidden lg:ml-[320px]">
+          <Image
+            src={trapezoid}
+            alt="Speaker"
+            className="absolute w-[700px] -top-[100px] left-[90px] -z-50"
           />
-        ))}
+          <div className="text-white text-2xl max-w-[500px]">
+            {tableItems.map((item, index) => (
+            <AccordionItem
+              key={index}
+              item={item}
+              isActive={activeIndex === index}
+              onToggle={() => toggleAccordion(index)}
+            />
+          ))}
+          </div>
         </div>
+
       </div>
+
 
       <RevealOnScroll>
         <>
