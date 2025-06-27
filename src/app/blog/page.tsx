@@ -93,15 +93,22 @@ export default function FeaturedSection() {
       <div className="flex items-center justify-between">
         <h1 className="text-6xl md:text-7xl font-gilroy text-white">BLOG</h1>
         <div
-            className="relative w-1/4"
+            className="relative min-w-[200px]"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
             <a
               href="#"
-              className="px-6 py-3.5 text-white hover:text-secondary transition-colors text-center border border-white font-gilroy text-[0.75rem] flex items-center justify-center gap-3"
-            >
-            FILTER BY
+              className="px-6 py-3.5 text-white transition-colors text-center border border-white font-gilroy text-[0.75rem] flex items-center justify-center gap-3 uppercase whitespace-nowrap"
+          >
+            <div>
+              FILTER BY {" "}
+              <span className="text-secondary">
+                {selectedCategory === "0"
+                  ? ""
+                  : menuItems.find(item => item.id === selectedCategory)?.title || ""}
+              </span>
+            </div>
             {
               !isHovering ? 
               <svg className="arrow-down w-3 h-3 text-secondary" fill="#f14336" viewBox="0 0 56 30" xmlns="http://www.w3.org/2000/svg" style={{ transform: "matrix(1, 0, 0, 1, 0, 0)" }}>
@@ -232,6 +239,10 @@ export default function FeaturedSection() {
           </article>
         );
       })} */}
+      {
+        posts.length === 0 && (
+          <p className="text-white text-center mt-10 font-gilroy text-[1rem py-20">No posts available for this category.</p>
+        )}
       {posts.map((post, index) => {
         const isOdd = index % 2 === 1;
         console.log(post);
