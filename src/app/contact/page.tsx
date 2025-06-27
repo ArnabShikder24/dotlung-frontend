@@ -60,14 +60,34 @@ const Contact = () => {
                   <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
                 </RevealOnScroll>
               </div>
-              <div className="flex flex-col text-lg gap-5 my-10">
-                {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "THREADS"].map((platform) => (
+              <div className="flex flex-col text-lg gap-5 my-10 font-bold font-gilroy">
+                {/* {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "THREADS"].map((platform) => (
                   <RevealOnScrollSpan key={platform}>
                     <a href="#" className="text-sm hover:underline font-bold font-gilroy uppercase">
                           {platform}
                     </a>
                   </RevealOnScrollSpan>
-                ))}
+                ))} */}
+                <RevealOnScrollSpan>
+                  <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                      FACEBOOK
+                  </a>
+                </RevealOnScrollSpan>
+                <RevealOnScrollSpan>
+                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    INSTAGRAM
+                  </a>
+                </RevealOnScrollSpan>
+                <RevealOnScrollSpan>
+                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    LINKEDIN
+                  </a>
+                </RevealOnScrollSpan>
+                <RevealOnScrollSpan>
+                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    threads
+                  </a>
+                </RevealOnScrollSpan>
               </div>
             </div>
             <div className="hidden md:block">
@@ -108,14 +128,34 @@ const Contact = () => {
                 <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
                 <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
               </div>
-              <div className="flex flex-col text-lg gap-5 mt-28">
-                {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "MESSENGER"].map((platform) => (
+              <div className="flex flex-col text-lg gap-5 mt-28 font-bold font-gilroy">
+                {/* {["FACEBOOK", "INSTAGRAM", "LINKEDIN", "THREADS"].map((platform) => (
                   <RevealOnScrollSpan key={platform}>
                   <a href="#" className="text-sm hover:underline font-bold font-gilroy">
                         {platform}
                   </a>
                   </RevealOnScrollSpan>
-                ))}
+                ))} */}
+                <RevealOnScrollSpan>
+                <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    FACEBOOK
+                  </a>
+                  </RevealOnScrollSpan>
+                  <RevealOnScrollSpan>
+                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    INSTAGRAM
+                  </a>
+                  </RevealOnScrollSpan>
+                  <RevealOnScrollSpan>
+                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    LINKEDIN
+                  </a>
+                  </RevealOnScrollSpan>
+                  <RevealOnScrollSpan>
+                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    threads
+                  </a>
+                  </RevealOnScrollSpan>
               </div>
             </div>
           </div>

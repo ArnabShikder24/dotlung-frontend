@@ -57,17 +57,17 @@ const Footer = () => {
                   <EmailInput />
                 </div>
                 <div className="flex flex-col text-[0.75rem] font-gilroy mt-10 lg:mt-4" style={{width:140}}>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
                     FACEBOOK
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
                     INSTAGRAM
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
                     LINKEDIN
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
-                    Messenger
+                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                    threads
                   </a>
                 </div>
               </div>
