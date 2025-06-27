@@ -11,6 +11,15 @@ export default function FeaturedSection() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [isHovering, setIsHovering] = useState(false);  
+
+  const menuItems = [
+    { title: "SHOW ALL" },
+    { title: "DESIGN WITH DOT"},
+    { title: "LEARN WITH DOT"},
+    { title: "TRAVEL & EAT WITH DOT"},
+    { title: "WORK WITH DOT"},
+  ];
 
   // useEffect(() => {
   //   async function fetchPosts() {
@@ -58,8 +67,64 @@ export default function FeaturedSection() {
   if (loading) return <p className="text-white">Loading...</p>;
 
   return (
-    <div className="container mx-auto max-w-3xl py-20 px-5 lg:px-0 mt-14 md:mt-0">
-      <h1 className="text-6xl md:text-7xl font-gilroy text-white">BLOG</h1>
+    <div className="container mx-auto max-w-3xl pt-40 pb-20 px-5 lg:px-0 md:mt-0">
+      <div className="flex items-center justify-between">
+        <h1 className="text-6xl md:text-7xl font-gilroy text-white">BLOG</h1>
+        <div
+            className="relative w-1/4"
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
+            <a
+              href="#"
+              className="px-6 py-3 text-white hover:text-secondary transition-colors text-center border border-white font-gilroy text-[0.75rem] flex items-center justify-center gap-3"
+            >
+            FILTER BY
+            {
+              !isHovering ? 
+              <svg className="arrow-down w-3 h-3 text-secondary" fill="#f14336" viewBox="0 0 56 30" xmlns="http://www.w3.org/2000/svg" style={{ transform: "matrix(1, 0, 0, 1, 0, 0)" }}>
+                <path d="M150,133.171573 L174.313708,108.857864 C175.094757,108.076816 176.361087,108.076816 177.142136,108.857864 C177.923184,109.638913 177.923184,110.905243 177.142136,111.686292 L151.686292,137.142136 C151.226398,137.602029 150.598256,137.79113 150,137.709439 C149.401744,137.79113 148.773602,137.602029 148.313708,137.142136 L122.857864,111.686292 C122.076816,110.905243 122.076816,109.638913 122.857864,108.857864 C123.638913,108.076816 124.905243,108.076816 125.686292,108.857864 L150,133.171573 Z" transform="translate(-122 -108)" fillRule="evenodd"></path>
+                </svg> :
+                <svg
+                  className="arrow-down w-3 h-3 text-secondary"
+                  fill="#f14336"
+                  viewBox="0 0 56 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ transform: "matrix(-1, 0, 0, -1, 0, 0)" }}
+                >
+                  <path
+                    d="M150,133.171573 L174.313708,108.857864 C175.094757,108.076816 176.361087,108.076816 177.142136,108.857864 C177.923184,109.638913 177.923184,110.905243 177.142136,111.686292 L151.686292,137.142136 C151.226398,137.602029 150.598256,137.79113 150,137.709439 C149.401744,137.79113 148.773602,137.602029 148.313708,137.142136 L122.857864,111.686292 C122.076816,110.905243 122.076816,109.638913 122.857864,108.857864 C123.638913,108.076816 124.905243,108.076816 125.686292,108.857864 L150,133.171573 Z"
+                    transform="translate(-122 -108)"
+                    fillRule="evenodd"
+                  ></path>
+                </svg>
+            }
+            </a>
+            {/* Dropdown Menu */}
+            {isHovering && (
+              <div className="absolute left-0 w-full z-20">
+                {menuItems.map((item, index) => (
+                  
+                  <div
+                    key={item.title}
+                    className={`border border-white opacity-0 bg-primary
+                            ${index === 0 ? "animate-slide-in-1" : ""}
+                            ${index === 1 ? "animate-slide-in-2" : ""}
+                            ${index === 2 ? "animate-slide-in-3" : ""}
+                            ${index === 3 ? "animate-slide-in-4" : ""}
+                            ${index === 4 ? "animate-slide-in-5" : ""}
+                            `}
+                  >
+                    <span className="block px-4 py-3 text-white hover:text-secondary transition-colors text-center text-xs">
+                      {item.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+      </div>
       {/* {posts.map((post) => (
         <article key={post.id} className="my-10 border-b border-secondary pb-4 lg:w-[525px] mb-[200px] relative">
           <div className="flex items-center justify-between text-secondary mb-2">
