@@ -69,22 +69,22 @@ const Contact = () => {
                   </RevealOnScrollSpan>
                 ))} */}
                 <RevealOnScrollSpan>
-                  <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                       FACEBOOK
                   </a>
                 </RevealOnScrollSpan>
                 <RevealOnScrollSpan>
-                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     INSTAGRAM
                   </a>
                 </RevealOnScrollSpan>
                 <RevealOnScrollSpan>
-                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     LINKEDIN
                   </a>
                 </RevealOnScrollSpan>
                 <RevealOnScrollSpan>
-                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     threads
                   </a>
                 </RevealOnScrollSpan>
@@ -137,22 +137,22 @@ const Contact = () => {
                   </RevealOnScrollSpan>
                 ))} */}
                 <RevealOnScrollSpan>
-                <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     FACEBOOK
                   </a>
                   </RevealOnScrollSpan>
                   <RevealOnScrollSpan>
-                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     INSTAGRAM
                   </a>
                   </RevealOnScrollSpan>
                   <RevealOnScrollSpan>
-                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     LINKEDIN
                   </a>
                   </RevealOnScrollSpan>
                   <RevealOnScrollSpan>
-                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     threads
                   </a>
                   </RevealOnScrollSpan>
