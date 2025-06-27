@@ -123,10 +123,10 @@ const BlogPage = () => {
           </RevealOnScroll>
           <div className="lg:w-[730px]" >
             <RevealOnScroll>
-              <p className="text-[1.25rem] md:text-[2.25rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">{post.title.rendered}</p> 
+              <p className="text-[1.375rem] md:text-[2.25rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">{post.title.rendered}</p> 
             </RevealOnScroll>
             <RevealOnScroll>
-              <p className="text-[1.25rem] md:text-[2.25rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+              <p className="text-[1.375rem] md:text-[2.25rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
             </RevealOnScroll>
           </div>
         </div>
