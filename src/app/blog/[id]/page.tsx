@@ -121,12 +121,12 @@ const BlogPage = () => {
           <RevealOnScroll>
             <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{category || "uncategorized"}</p>
           </RevealOnScroll>
-          <div className="lg:w-[530px]" >
+          <div className="lg:w-[730px]" >
             <RevealOnScroll>
-              <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">{post.title.rendered}</p> 
+              <p className="text-[1.25rem] md:text-[2.25rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">{post.title.rendered}</p> 
             </RevealOnScroll>
             <RevealOnScroll>
-              <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
+              <p className="text-[1.25rem] md:text-[2.25rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
             </RevealOnScroll>
           </div>
         </div>
