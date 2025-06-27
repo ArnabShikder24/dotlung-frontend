@@ -14,6 +14,7 @@ import RippleButton from "../../../components/RippleButton";
 import RevealOnScroll from "../../../components/RevealOnScroll";
 import DotSection from "../../../components/DotSection";
 import RevealOnScrollSpan from "../../../components/RevealOnScrollSpan";
+import ReadMoreLink from "../../../components/ReadMoreLink";
 
 const BlogPage = () => {
   const carouselImages = [
@@ -56,7 +57,7 @@ const BlogPage = () => {
   // need to change
   const nextBlogPath = relatedPosts[0]?.slug;
   const searchParams = useSearchParams();
-  const category = searchParams.get('category');
+  const category = searchParams.get('category') || "uncategorized";
   
   useEffect(() => {
     async function fetchPost() {
@@ -218,12 +219,13 @@ const BlogPage = () => {
                       <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
                     </RippleButton>
-                    <RippleButton
+                    {/* <RippleButton
                       href={`/blog/${post.slug}`}
                       className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
                     >
                       READ MORE{" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
-                    </RippleButton>
+                    </RippleButton> */}
+                    <ReadMoreLink href={`/blog/${post.slug}?category=${category}`} />
                   </div>
                 </div>
 

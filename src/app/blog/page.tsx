@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Pagination from "../../components/Pagination";
-import NavigationArrow from "../../components/NavigationArrow";
 import RippleButton from "../../components/RippleButton";
+import ReadMoreLink from "../../components/ReadMoreLink";
 
 export default function FeaturedSection() {
   const [posts, setPosts] = useState([]);
@@ -274,12 +274,7 @@ export default function FeaturedSection() {
               dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} 
             />
 
-            <RippleButton
-              href={`/blog/${post.slug}?category=${categoryTitle}`} 
-              className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
-            >
-              READ MORE <NavigationArrow direction="right" className="mr-2 text-secondary" />
-            </RippleButton>
+            <ReadMoreLink href={`/blog/${post.slug}?category=${categoryTitle}`} />
 
             {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ? (
               <Image
