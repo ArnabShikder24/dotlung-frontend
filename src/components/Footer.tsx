@@ -42,8 +42,8 @@ const Footer = () => {
                   <h1 className="text-[3.25rem] md:text-[4.1875rem] font-extrabold font-gilroy uppercase">Let&apos;s chat.</h1>
                 </div>
                 <div className="text-[0.95rem] font-asty mb-8 md:mb-0">
-                  <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
-                <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
+                  <p className="cursor-pointer hover:text-secondary"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
+                <p className="cursor-pointer hover:text-secondary"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
                 </div>
               </div>
               <div className="lg:flex gap-4 justify-between mt-3">
