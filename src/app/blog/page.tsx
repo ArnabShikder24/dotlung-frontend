@@ -20,7 +20,7 @@ export default function FeaturedSection() {
   useEffect(() => {
     async function fetchCategories() {
       try {
-        const res = await fetch("https://dotlung.com/wp-json/wp/v2/categories");
+        const res = await fetch("https://api.dotlung.com/wp-json/wp/v2/categories");
         const data = await res.json();
 
         const formattedItems = data.map(category => ({
@@ -45,7 +45,7 @@ export default function FeaturedSection() {
   //   async function fetchPosts() {
   //     try {
   //       const res = await fetch(
-  //         "https://dotlung.com/wp-json/wp/v2/posts?_embed"
+  //         "https://api.dotlung.com/wp-json/wp/v2/posts?_embed"
           
   //       );
   //       const data = await res.json();
@@ -66,7 +66,7 @@ export default function FeaturedSection() {
       const categoryQuery = selectedCategory !== "0" ? `&categories=${selectedCategory}` : "";
       try {
         const res = await fetch(
-          `https://dotlung.com/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=5${categoryQuery}`
+          `https://api.dotlung.com/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=5${categoryQuery}`
         );
 
         if (!res.ok) {

@@ -19,7 +19,7 @@ useEffect(() => {
   async function fetchRecentPosts() {
     try {
       const res = await fetch(
-        "https://dotlung.com/wp-json/wp/v2/posts?per_page=5&_embed"
+        "https://api.dotlung.com/wp-json/wp/v2/posts?per_page=5&_embed"
       );
       const data = await res.json();
       setRecentPosts(data);

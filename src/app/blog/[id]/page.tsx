@@ -62,7 +62,7 @@ const BlogPage = () => {
     async function fetchPost() {
       try {
         const res = await fetch(
-          `https://dotlung.com/wp-json/wp/v2/posts?slug=${id}&_embed`
+          `https://api.dotlung.com/wp-json/wp/v2/posts?slug=${id}&_embed`
         );
         const data = await res.json();
         if (data.length > 0) {
@@ -87,14 +87,14 @@ const BlogPage = () => {
       if (tags && tags.length > 1) {
         const tagQuery = tags.join(",");
         const res = await fetch(
-          `https://dotlung.com/wp-json/wp/v2/posts?tags=${tagQuery}&exclude=${currentPostId}&per_page=3&_embed`
+          `https://api.dotlung.com/wp-json/wp/v2/posts?tags=${tagQuery}&exclude=${currentPostId}&per_page=3&_embed`
         );
         const data = await res.json();
         setRelatedPosts(data);
       } else {
         // Optional: Fallback if no tags - maybe fetch latest posts
         const res = await fetch(
-          `https://dotlung.com/wp-json/wp/v2/posts?exclude=${currentPostId}&per_page=3&_embed`
+          `https://api.dotlung.com/wp-json/wp/v2/posts?exclude=${currentPostId}&per_page=3&_embed`
         );
         const data = await res.json();
         setRelatedPosts(data);
