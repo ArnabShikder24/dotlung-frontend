@@ -241,7 +241,7 @@ export default function FeaturedSection() {
       })} */}
       {
         posts.length === 0 && (
-          <p className="text-white text-center mt-10 font-gilroy text-[1rem py-20">No posts available for this category.</p>
+          <p className="text-white text-center mt-10 font-gilroy text-[1rem py-20">No posts available.</p>
         )}
       {posts.map((post, index) => {
         const isOdd = index % 2 === 1;
