@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import blog1 from "../../../assets/images/blog1.png";
 import blog2 from "../../../assets/images/blog2.png";
@@ -55,6 +55,8 @@ const BlogPage = () => {
   const [relatedPosts, setRelatedPosts] = useState([]);
   // need to change
   const nextBlogPath = relatedPosts[0]?.slug;
+  const searchParams = useSearchParams();
+  const category = searchParams.get('category');
   
   useEffect(() => {
     async function fetchPost() {
@@ -117,7 +119,7 @@ const BlogPage = () => {
         </RevealOnScroll>
         <div className="lg:flex justify-between mt-10">
           <RevealOnScroll>
-            <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
+            <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{category || "uncategorized"}</p>
           </RevealOnScroll>
           <div className="lg:w-[530px]" >
             <RevealOnScroll>

@@ -246,6 +246,7 @@ export default function FeaturedSection() {
       {posts.map((post, index) => {
         const isOdd = index % 2 === 1;
         console.log(post);
+        const categoryTitle = menuItems.find(item => item.id === post.categories[0])?.title.replace(/\s+/g, "");
         return (
           <article 
             key={post.id} 
@@ -262,7 +263,7 @@ export default function FeaturedSection() {
               </span>
             </div>
             
-            <RippleButton href={`/blog/${post.slug}`}>
+            <RippleButton href={`/blog/${post.slug}?category=${categoryTitle}`}>
               <h2 className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
                 {post.title.rendered}
               </h2>
@@ -272,9 +273,9 @@ export default function FeaturedSection() {
               className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3] mb-4" 
               dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} 
             />
-            
-            <RippleButton 
-              href={`/blog/${post.slug}`} 
+
+            <RippleButton
+              href={`/blog/${post.slug}?category=${categoryTitle}`} 
               className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
             >
               READ MORE <NavigationArrow direction="right" className="mr-2 text-secondary" />
