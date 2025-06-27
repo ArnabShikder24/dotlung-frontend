@@ -12,13 +12,14 @@ export default function FeaturedSection() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [isHovering, setIsHovering] = useState(false);  
+  const [selectedCategory, setSelectedCategory] = useState("1");
 
   const menuItems = [
     { title: "SHOW ALL" },
     { title: "DESIGN WITH DOT"},
     { title: "LEARN WITH DOT"},
     { title: "TRAVEL & EAT WITH DOT"},
-    { title: "WORK WITH DOT"},
+    { title: "WORK WITH DOT"},
   ];
 
   // useEffect(() => {
@@ -44,7 +45,7 @@ export default function FeaturedSection() {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://dotlung.com/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=5`
+          `https://dotlung.com/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=5&categories=${selectedCategory}`
         );
 
         if (!res.ok) {
@@ -62,7 +63,7 @@ export default function FeaturedSection() {
     }
 
     fetchPosts();
-  }, [currentPage]);
+  }, [currentPage, selectedCategory]);
 
   if (loading) return <p className="text-white">Loading...</p>;
 
@@ -104,16 +105,16 @@ export default function FeaturedSection() {
             {isHovering && (
               <div className="absolute left-0 w-full z-20">
                 {menuItems.map((item, index) => (
-                  
                   <div
                     key={item.title}
                     className={`border border-white opacity-0 bg-primary
-                            ${index === 0 ? "animate-slide-in-1" : ""}
-                            ${index === 1 ? "animate-slide-in-2" : ""}
-                            ${index === 2 ? "animate-slide-in-3" : ""}
-                            ${index === 3 ? "animate-slide-in-4" : ""}
-                            ${index === 4 ? "animate-slide-in-5" : ""}
-                            `}
+                      ${index === 0 ? "animate-slide-in-1" : ""}
+                      ${index === 1 ? "animate-slide-in-2" : ""}
+                      ${index === 2 ? "animate-slide-in-3" : ""}
+                      ${index === 3 ? "animate-slide-in-4" : ""}
+                      ${index === 4 ? "animate-slide-in-5" : ""}
+                    `}
+                    onClick={() => setSelectedCategory(item.title)}
                   >
                     <span className="block px-4 py-3 text-white hover:text-secondary transition-colors text-center text-xs">
                       {item.title}
@@ -209,7 +210,7 @@ export default function FeaturedSection() {
       })} */}
       {posts.map((post, index) => {
         const isOdd = index % 2 === 1;
-        
+        console.log(post);
         return (
           <article 
             key={post.id} 
