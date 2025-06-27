@@ -3,10 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
+    domains: ["api.dotlung.com"],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "dotlung.com", // Change this to match your WordPress domain
+        hostname: "api.dotlung.com", 
         pathname: "/wp-content/uploads/**",
       },
     ],

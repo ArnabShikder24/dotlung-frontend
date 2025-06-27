@@ -4,12 +4,12 @@ import DotImage from "../../assets/images/work-with-Dot.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeader from "../../components/SectionHeader";
-import NavigationArrow from "../../components/NavigationArrow";
 import AnimatedLineVertical from "../../components/AnimatedLineVertical";
 import RevealOnScroll from "../../components/RevealOnScroll";
 import RevealOnScrollSpan from "../../components/RevealOnScrollSpan";
 import { PathNames } from "../../routes/index.route";
 import RippleButton from "../../components/RippleButton";
+import ReadMoreLink from "../../components/ReadMoreLink";
 
 const TravelEat = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -19,7 +19,7 @@ useEffect(() => {
   async function fetchRecentPosts() {
     try {
       const res = await fetch(
-        "https://dotlung.com/wp-json/wp/v2/posts?per_page=5&_embed"
+        "https://api.dotlung.com/wp-json/wp/v2/posts?per_page=5&_embed"
       );
       const data = await res.json();
       setRecentPosts(data);
@@ -150,12 +150,13 @@ useEffect(() => {
                       <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
                       
                     </RippleButton>
-                    <RippleButton
+                    {/* <RippleButton
                       href={`/blog/${post.slug}`}
                       className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
                     >
                       READ MORE{" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
-                    </RippleButton>
+                    </RippleButton> */}
+                    <ReadMoreLink href={`/blog/${post.slug}`} />
                   </div>
                 </div>
 

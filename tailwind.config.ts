@@ -62,6 +62,8 @@ export default {
         'slide-in-1': 'slideIn 0.3s ease-out forwards',
         'slide-in-2': 'slideIn 0.3s ease-out 0.1s forwards',
         'slide-in-3': 'slideIn 0.3s ease-out 0.2s forwards',
+        'slide-in-4': 'slideIn 0.3s ease-out 0.3s forwards',
+        'slide-in-5': 'slideIn 0.3s ease-out 0.4s forwards',
       },
     },
   },

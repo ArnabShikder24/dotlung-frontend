@@ -27,7 +27,7 @@ const BlogFooter: React.FC<FooterProps> = ({
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-gilroy text-[.625rem] md:text-[0.85rem] text-secondary mb-4">RELATED LINKS</h3>
+            <h3 className="font-gilroy text-[.625rem] md:text-[0.75rem] text-secondary mb-4">RELATED LINKS</h3>
           </div>
           
           <div className="space-y-2">
@@ -35,7 +35,7 @@ const BlogFooter: React.FC<FooterProps> = ({
               <Link 
               key={index} 
               href={link.url}
-              className="block font-gilroy text-[.625rem] md:text-[0.85rem] hover:text-secondary transition-colors"
+              className="block font-gilroy text-[.625rem] md:text-[0.75rem] hover:text-secondary transition-colors"
               >
                 <RevealOnScrollSpan>
                   {link.title}
@@ -49,7 +49,7 @@ const BlogFooter: React.FC<FooterProps> = ({
               <Link 
                 key={index + 3} 
                 href={link.url}
-                className="block font-gilroy text-[.625rem] md:text-[0.85rem] hover:text-secondary transition-colors"
+                className="block font-gilroy text-[.625rem] md:text-[0.75rem] hover:text-secondary transition-colors"
               >
               <RevealOnScrollSpan>
                 {link.title}
@@ -68,12 +68,12 @@ const BlogFooter: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <RevealOnScroll>
-              <h3 className="font-gilroy text-[.625rem] md:text-[0.85rem] text-secondary">SHARE</h3>
+              <h3 className="font-gilroy text-[.625rem] md:text-[0.75rem] text-secondary">SHARE</h3>
             </RevealOnScroll>
           </div>
           
-          <div className="space-y-2 font-gilroy text-[.625rem] md:text-[0.85rem]">
-            {['FACEBOOK', 'INSTAGRAM', 'LINKEDIN'].map((platform, index) => (
+          <div className="space-y-2 font-gilroy text-[.625rem] md:text-[0.75rem]">
+            {/* {['FACEBOOK', 'INSTAGRAM', 'LINKEDIN'].map((platform, index) => (
               <Link 
                 key={index} 
                 href={`#share-${platform.toLowerCase()}`}
@@ -83,7 +83,27 @@ const BlogFooter: React.FC<FooterProps> = ({
                   {platform}
                 </RevealOnScrollSpan>
               </Link>
-            ))}
+            ))} */}
+            <RevealOnScroll>
+              <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase text-[0.75rem]">
+                  FACEBOOK
+              </a>
+            </RevealOnScroll>
+            <RevealOnScroll>
+              <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase text-[0.75rem]">
+                INSTAGRAM
+              </a>
+            </RevealOnScroll>
+            <RevealOnScroll>
+              <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase text-[0.75rem]">
+                LINKEDIN
+              </a>
+            </RevealOnScroll>
+            <RevealOnScroll>
+              <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase text-[0.75rem]">
+                threads
+              </a>
+            </RevealOnScroll>
           </div>
           
           <RevealOnScroll>
@@ -93,7 +113,7 @@ const BlogFooter: React.FC<FooterProps> = ({
                 className="flex items-center text-sm hover:text-secondary transition-colors"
               >
                 <NavigationArrow direction="left" className="mr-2 text-secondary" />
-                <p className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary">BACK TO BLOG</p>
+                <p className="font-gilroy text-[.625rem] md:text-[0.75rem] cursor-pointer hover:text-secondary">BACK TO BLOG</p>
               </RippleButton>
             </div>
           </RevealOnScroll>

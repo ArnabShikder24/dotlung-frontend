@@ -42,8 +42,8 @@ const Footer = () => {
                   <h1 className="text-[3.25rem] md:text-[4.1875rem] font-extrabold font-gilroy uppercase">Let&apos;s chat.</h1>
                 </div>
                 <div className="text-[0.95rem] font-asty mb-8 md:mb-0">
-                  <p className="cursor-pointer"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
-                <p className="cursor-pointer"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
+                  <p className="cursor-pointer hover:text-secondary"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
+                <p className="cursor-pointer hover:text-secondary"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
                 </div>
               </div>
               <div className="lg:flex gap-4 justify-between mt-3">
@@ -57,17 +57,17 @@ const Footer = () => {
                   <EmailInput />
                 </div>
                 <div className="flex flex-col text-[0.75rem] font-gilroy mt-10 lg:mt-4" style={{width:140}}>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     FACEBOOK
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     INSTAGRAM
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
+                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     LINKEDIN
                   </a>
-                  <a href="#" style={{fontSize:14}} className="hover:underline mb-3 uppercase">
-                    Messenger
+                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
+                    threads
                   </a>
                 </div>
               </div>
