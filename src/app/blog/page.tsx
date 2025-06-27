@@ -12,15 +12,34 @@ export default function FeaturedSection() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [isHovering, setIsHovering] = useState(false);  
-  const [selectedCategory, setSelectedCategory] = useState("1");
+  const [selectedCategory, setSelectedCategory] = useState("0");
+  const [menuItems, setMenuItems] = useState([
+    {title: "show all", id: "0"},
+  ]);
 
-  const menuItems = [
-    { title: "SHOW ALL" },
-    { title: "DESIGN WITH DOT"},
-    { title: "LEARN WITH DOT"},
-    { title: "TRAVEL & EAT WITH DOT"},
-    { title: "WORK WITH DOT"},
-  ];
+  useEffect(() => {
+    async function fetchCategories() {
+      try {
+        const res = await fetch("https://dotlung.com/wp-json/wp/v2/categories");
+        const data = await res.json();
+
+        const formattedItems = data.map(category => ({
+          title: category.name.replace("&amp;", "&"),
+          id: category.id,
+        }));
+
+        setMenuItems(prevItems => [
+          ...prevItems,
+          ...formattedItems
+        ]);
+        setSelectedCategory("0");
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    }
+
+    fetchCategories();
+  }, []);
 
   // useEffect(() => {
   //   async function fetchPosts() {
@@ -43,9 +62,11 @@ export default function FeaturedSection() {
   useEffect(() => {
     async function fetchPosts() {
       setLoading(true);
+      // If selectedCategory is "0", fetch all posts
+      const categoryQuery = selectedCategory !== "0" ? `&categories=${selectedCategory}` : "";
       try {
         const res = await fetch(
-          `https://dotlung.com/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=5&categories=${selectedCategory}`
+          `https://dotlung.com/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=5${categoryQuery}`
         );
 
         if (!res.ok) {
@@ -78,7 +99,7 @@ export default function FeaturedSection() {
           >
             <a
               href="#"
-              className="px-6 py-3 text-white hover:text-secondary transition-colors text-center border border-white font-gilroy text-[0.75rem] flex items-center justify-center gap-3"
+              className="px-6 py-3.5 text-white hover:text-secondary transition-colors text-center border border-white font-gilroy text-[0.75rem] flex items-center justify-center gap-3"
             >
             FILTER BY
             {
@@ -107,16 +128,19 @@ export default function FeaturedSection() {
                 {menuItems.map((item, index) => (
                   <div
                     key={item.title}
-                    className={`border border-white opacity-0 bg-primary
+                    className={`border border-white opacity-0 bg-primary cursor-pointer
                       ${index === 0 ? "animate-slide-in-1" : ""}
                       ${index === 1 ? "animate-slide-in-2" : ""}
                       ${index === 2 ? "animate-slide-in-3" : ""}
                       ${index === 3 ? "animate-slide-in-4" : ""}
                       ${index === 4 ? "animate-slide-in-5" : ""}
                     `}
-                    onClick={() => setSelectedCategory(item.title)}
+                    onClick={() => {
+                      setSelectedCategory(item.id);
+                      setIsHovering(false);
+                    }}
                   >
-                    <span className="block px-4 py-3 text-white hover:text-secondary transition-colors text-center text-xs">
+                    <span className={`block px-4 py-3.5 hover:text-secondary transition-colors text-center font-gilroy text-[.75rem] uppercase ${item.id === selectedCategory ? 'text-secondary' : ''}`}>
                       {item.title}
                     </span>
                   </div>
@@ -222,8 +246,8 @@ export default function FeaturedSection() {
               <span className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">
                 {new Date(post.date).toLocaleDateString()}
               </span>
-              <span className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">
-                #{post.categories}
+              <span className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem] lowercase">
+                #{menuItems.find(item => item.id === post.categories[0])?.title.replace(/\s+/g, "") || "uncategorized"}
               </span>
             </div>
             
