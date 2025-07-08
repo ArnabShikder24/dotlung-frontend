@@ -49,8 +49,8 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
                 
                 // Check for specific width patterns
                 const leftWidth = leftStyle.includes('33.33%') ? 33.33 : 
-                                 leftStyle.includes('25%') ? 25 : 
-                                 leftStyle.includes('50%') ? 50 : 33.33;
+                                  leftStyle.includes('25%') ? 25 : 
+                                  leftStyle.includes('50%') ? 50 : 33.33;
                 const rightWidth = rightStyle.includes('66.66%') ? 66.66 : 
                                   rightStyle.includes('75%') ? 75 : 
                                   rightStyle.includes('50%') ? 50 : 66.66;
@@ -103,8 +103,8 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
                 }
               });
             } else if (element.classList.contains('gallery-section') || 
-                       element.innerHTML.includes('gallery') ||
-                       element.querySelectorAll('img').length > 2) {
+                        element.innerHTML.includes('gallery') ||
+                        element.querySelectorAll('img').length > 2) {
               // Handle gallery sections
               blocks.push({
                 type: 'gallery',
@@ -158,15 +158,15 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
           
           // Determine column classes based on width
           const leftColumnClass = leftWidth === 33.33 ? "lg:w-[350px]" : 
-                                 leftWidth === 25 ? "lg:w-[250px]" : 
-                                 "lg:w-[400px]";
+                                  leftWidth === 25 ? "lg:w-[250px]" : 
+                                  "lg:w-[400px]";
           const rightColumnClass = rightWidth === 66.66 ? "lg:w-[600px]" : 
                                   rightWidth === 75 ? "lg:w-[700px]" : 
                                   "lg:w-[500px]";
           
           return (
             <div key={index} className={`lg:flex justify-between ${index === 0 ? 'mt-8' : 'mt-20'}`}>
-              <div className={`font-caslon font-italic ${leftColumnClass} text-secondary text-[1.125rem] lg:text-[1.375rem]`}>
+              <div className={`font-caslon italic ${leftColumnClass} text-secondary ${index !== 0 ? 'text-[1.0625rem] lg:text-[1.75rem]' : 'text-[1.125rem] lg:text-[1.375rem]'}`}>
                 <RevealOnScroll>
                   <div 
                     className="mb-4 "

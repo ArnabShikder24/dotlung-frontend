@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -9,13 +9,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 interface CarouselProps {
   images: {
-    src: any;
+    src: string;
     alt: string;
   }[];
 }
 
 const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
   const sliderRef = useRef<Slider>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const settings = {
     className: "center",
@@ -28,6 +29,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
     focusOnSelect: true,
     autoplay: false,
     pauseOnHover: true,
+    afterChange: (index: number) => setCurrentIndex(index),
     responsive: [
       {
         breakpoint: 1024,
@@ -106,31 +108,35 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
       </Slider>
       
       {/* Custom Navigation */}
-      <div className="flex items-center justify-center gap-8 mt-8">
-        <button
-          onClick={() => sliderRef.current?.slickPrev()}
-          className="w-10 h-10 flex items-center justify-center rounded-full border border-orange-500 bg-transparent transition-colors duration-200 hover:bg-orange-500/10 hover:border-orange-600"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft size={20} className="text-orange-500 group-hover:text-orange-600 transition-colors duration-200" />
-        </button>
-        <div className="flex gap-2">
-          {images.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => sliderRef.current?.slickGoTo(idx)}
-              className="w-2 h-2 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300"
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
+      <div className="flex items-center justify-center gap-20 mt-10">
+        {/* Pagination Indicators */}
+        <div className="flex justify-center items-center gap-2">
+          <span className="text-white text-sm">
+            {String(currentIndex + 1).padStart(2, '0')}
+          </span>
+          <span className="h-px w-20 bg-secondary"></span>
+          <span className="text-white text-sm">
+            {String(images.length).padStart(2, '0')}
+          </span>
         </div>
-        <button
-          onClick={() => sliderRef.current?.slickNext()}
-          className="w-10 h-10 flex items-center justify-center rounded-full border border-orange-500 bg-transparent transition-colors duration-200 hover:bg-orange-500/10 hover:border-orange-600"
-          aria-label="Next slide"
-        >
-          <ChevronRight size={20} className="text-orange-500 group-hover:text-orange-600 transition-colors duration-200" />
-        </button>
+        <div className="mt-8 flex items-center gap-5">
+          {/* Navigation Buttons */}
+          <button 
+            onClick={() => sliderRef.current?.slickPrev()} 
+            className="-translate-y-1/2  hover:bg-opacity-50 rounded-full p-2 text-secondary shadow-lg z-20 transition-all duration-300"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          
+          <button 
+            onClick={() => sliderRef.current?.slickNext()} 
+            className=" -translate-y-1/2 hover:bg-opacity-50 rounded-full p-2 text-secondary shadow-lg z-20 transition-all duration-300"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
       </div>
     </div>
   );
