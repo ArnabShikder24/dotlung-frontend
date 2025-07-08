@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import RevealOnScroll from './RevealOnScroll';
-import RevealOnScrollSpan from './RevealOnScrollSpan';
 import ImageCarousel from './ImageCarousel';
 import ImageGallery from './ImageGallery';
 
@@ -208,7 +207,7 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
           
         case 'carousel':
           return (
-            <div key={index} className="w-screen max-w-none px-0 left-1/2 right-1/2 -translate-x-1/2 relative overflow-visible">
+            <div key={index} className="w-screen max-w-none px-0 left-1/2 right-1/2 -translate-x-1/2 relative overflow-visible -ml-[10px]">
               <ImageCarousel images={block.data.images} />
             </div>
           );

@@ -1,21 +1,16 @@
 "use client";
-import Image from "next/image";
-import { useParams, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import blog1 from "../../../assets/images/blog1.png";
 import blog2 from "../../../assets/images/blog2.png";
-import ImageCarousel from "../../../components/ImageCarousel";
 import image1 from "../../../assets/images/g1.png";
 import image2 from "../../../assets/images/g2.png";
-import ImageGallery from "../../../components/ImageGallery";
 import BlogFooter from "../../../components/BlogFooter";
 import NavigationArrow from "../../../components/NavigationArrow";
 import RippleButton from "../../../components/RippleButton";
 import RevealOnScroll from "../../../components/RevealOnScroll";
 import DotSection from "../../../components/DotSection";
-import RevealOnScrollSpan from "../../../components/RevealOnScrollSpan";
-import ReadMoreLink from "../../../components/ReadMoreLink";
 import WordPressContentRenderer from "../../../components/WordPressContentRenderer";
+import { useParams } from "next/navigation";
 
 const BlogPage = () => {
   const carouselImages = [
@@ -57,8 +52,6 @@ const BlogPage = () => {
   const [relatedPosts, setRelatedPosts] = useState([]);
   // need to change
   const nextBlogPath = relatedPosts[0]?.slug;
-  const searchParams = useSearchParams();
-  const category = searchParams.get('category') || "uncategorized";
   
   useEffect(() => {
     async function fetchPost() {
