@@ -15,6 +15,7 @@ import RevealOnScroll from "../../../components/RevealOnScroll";
 import DotSection from "../../../components/DotSection";
 import RevealOnScrollSpan from "../../../components/RevealOnScrollSpan";
 import ReadMoreLink from "../../../components/ReadMoreLink";
+import WordPressContentRenderer from "../../../components/WordPressContentRenderer";
 
 const BlogPage = () => {
   const carouselImages = [
@@ -118,77 +119,13 @@ const BlogPage = () => {
             <RippleButton href="/blog" className="font-gilroy text-[.625rem] md:text-[0.85rem] cursor-pointer hover:text-secondary flex items-center"><NavigationArrow direction="left" className="mr-2 text-secondary" /> BACK TO BLOG</RippleButton>
           </div>
         </RevealOnScroll>
-        <div className="lg:flex justify-between mt-10">
-          <RevealOnScroll>
-            <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{category || "uncategorized"}</p>
-          </RevealOnScroll>
-          <div className="lg:w-[730px]" >
-            <RevealOnScroll>
-              <p className="text-[1.375rem] md:text-[2.25rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">{post.title.rendered}</p> 
-            </RevealOnScroll>
-            <RevealOnScroll>
-              <p className="text-[1.375rem] md:text-[2.25rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
-            </RevealOnScroll>
-          </div>
-        </div>
-
-        {post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
-          <div className="flex justify-center mt-20">
-          <RevealOnScroll>
-            <Image
-              src={post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
-              alt={post.title.rendered}
-              width={800}
-              height={800}
-            />
-          </RevealOnScroll>
-        </div>
-      )}
-        <div className="lg:flex justify-between mt-20">
-          <div className="font-asty lg:w-[350px] text-[1.25rem] md:text-[1.5rem]">
-          <RevealOnScroll>
-            <p className="font-caslon mb-4 leading-[1.5] md:leading-[1.3] text-secondary">{post.title.rendered}</p> <span className="font-caslon" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
-          </RevealOnScroll>
-          </div>
-          <RevealOnScroll>
-          <p className="font-asty lg:w-[600px] leading-6 mt-5 lg:mt-0"><span dangerouslySetInnerHTML={{ __html: post.content.rendered }} /></p>
-          </RevealOnScroll>
-        </div>
+        <WordPressContentRenderer 
+          content={post.content.rendered}
+          carouselImages={carouselImages}
+          galleryImages={galleryImages}
+        />
       </div>
-      <ImageCarousel images={carouselImages} />
-      <div className="lg:w-[1100px] mx-auto px-4 pb-8">
-        <div className="lg:flex justify-between mt-20">
-          <p className="lg:w-[350px] mt-10 text-[1.06rem] md:text-[1.75rem] text-secondary italic font-caslon">
-            <RevealOnScrollSpan>
-              <span className=" mb-4 leading-[1.5] md:leading-[1.3] ">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
-            </RevealOnScrollSpan>
-          </p>
-          <div className="lg:w-[600px] mt-5 lg:mt-0 font-asty">
-            <RevealOnScroll>
-              <p className="font-asty leading-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
-            </RevealOnScroll>
-            <RevealOnScroll>
-              <p className="mt-5 font-asty leading-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
-            </RevealOnScroll>
-          </div>
-        </div>
-      </div>
-      <RevealOnScroll>
-        <ImageGallery images={galleryImages} />
-      </RevealOnScroll>
       <div className="w-[100%] lg:w-[1100px] mx-auto px-4 pb-8">
-        <div className="lg:flex justify-between my-20">
-          <p className="lg:w-[350px] mt-10 text-[1.06rem] md:text-[1.75rem] text-secondary italic font-caslon">
-            <RevealOnScrollSpan>
-              <span className="mb-4 leading-[1.5] md:leading-[1.3] ">Ladies, Wine, Barcelona.</span> But not on their own. I create strong online identities & communities and develop kickass
-            </RevealOnScrollSpan>
-          </p>
-          <div className="lg:w-[600px]">
-            <RevealOnScroll>
-              <p className="font-asty leading-6">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit.</p>
-            </RevealOnScroll>
-          </div>
-        </div>
         <RevealOnScroll>
           <BlogFooter />
         </RevealOnScroll>
@@ -200,102 +137,6 @@ const BlogPage = () => {
             topRightLink={`/blog/${nextBlogPath ?? nextBlogPath}`}
           />
         </RevealOnScroll>
-        <div className="">
-            {relatedPosts.map((post, index) => (
-              <article
-                key={index}
-                className="grid md:grid-cols-2 items-center gap-4"
-              >
-                <div className="flex justify-center items-center border-b-2 border-secondary" style={{height:'100%'}}>
-                  <div>
-                    <div className="flex justify-between mb-5">
-                      <p className="font-gilroy text-white text-[.625rem] md:text-[0.75rem] font-bold">{new Date(post.date).toLocaleDateString()}</p>
-                      <p className="text-secondary font-caslon italic text-[1.125rem] md:text-[1.1875rem]">#{post.tags?.[0] || "blog"}</p>
-                    </div>
-                    <RippleButton href={`/blog/${post.slug}`} className="block mt-2 mb-4">
-                      <p className="text-[1.25rem] md:text-[1.5rem] font-caslon mb-4 leading-[1.5] md:leading-[1.3]">
-                        {post.title.rendered}{" "}
-                      </p>
-                      <p className="text-[1.25rem] md:text-[1.5rem] font-caslon leading-[1.5] md:leading-[1.3]" dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}/>
-                      
-                    </RippleButton>
-                    {/* <RippleButton
-                      href={`/blog/${post.slug}`}
-                      className="text-[0.75rem] flex items-center gap-2 font-gilroy mt-3 font-bold"
-                    >
-                      READ MORE{" "}<NavigationArrow direction="right" className="mr-2 text-secondary" />
-                    </RippleButton> */}
-                    <ReadMoreLink href={`/blog/${post.slug}?category=${category}`} />
-                  </div>
-                </div>
-
-                {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
-                  <figure className="relative w-full ">
-                    <a href={`/blog/${post.slug}`}>
-                      <Image
-                          src={post._embedded["wp:featuredmedia"][0].source_url}
-                          alt={post.title.rendered}
-                          width={500}
-                        height={500}
-                        className="w-full"
-                        // fill
-                        style={{ objectFit: "cover", }}
-                      />
-                    </a>
-                  </figure>
-                )}
-              </article>
-            ))}
-          </div>
-        {/* <div className="mt-10 mb-20">
-          {relatedPosts.map((post, index) => (
-            <article key={index} className="grid md:grid-cols-2 items-center gap-4">
-              <div className="flex justify-center items-center border-b-2 border-secondary" style={{ height: "100%" }}>
-                <div>
-                  <div className="text-sm opacity-80 flex justify-between pr-5">
-                    <p>{new Date(post.date).toLocaleDateString()}</p>
-                    <p className="text-secondary">
-                      {/* Show first tag name or tag id */}
-                      {/* #{post.tags?.[0]} */}
-                    {/* </p>
-                  </div> */}
-
-                  {/* <a href={`/blog/${post.slug}`} className="block mt-2">
-                    <span className="text-2xl italic text-secondary">
-                      {post.title.rendered}
-                    </span>
-
-                    {/* Excerpt */}
-                    {/* <div
-                      className="text-white text-lg mt-1"
-                      dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-                    />
-                  </a> */}
-
-                  {/* <a href={`/blog/${post.slug}`} className="text-white text-sm inline-block mt-3 font-bold">
-                    Read more →
-                  </a>
-                </div>
-              </div> */} 
-
-              {/* Featured Image */}
-              {/* {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
-                <figure className="relative w-full">
-                  <a href={`/blog/${post.slug}`}>
-                    <Image
-                      src={post._embedded["wp:featuredmedia"][0].source_url}
-                      alt={post.title.rendered}
-                      width={500}
-                      height={500}
-                      style={{ objectFit: "cover" }}
-                    />
-                  </a>
-                </figure>
-              )}
-            </article>
-          ))}
-        </div>  */}
-
       </div>
     </>
   );
