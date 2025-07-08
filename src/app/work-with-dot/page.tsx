@@ -171,7 +171,7 @@ const WorkWithDot = () => {
       links: [
         { title: "Nipple Magazine", url: "http://instagram.com/nipplemagazine" },
         {
-          title: "Stop Nipple Censorship Campaign",
+          title: "Stop Nipple Censorship",
           url: "http://stopnipplecensorship.org/",
         },
       ],
