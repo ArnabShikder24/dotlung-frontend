@@ -98,7 +98,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
                 src={img.src}
                 alt={img.alt}
                 fill
-                className="rounded-xl object-cover shadow-2xl"
+                className="object-cover shadow-2xl"
                 sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
                 priority={idx < 3}
               />
