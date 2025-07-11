@@ -50,6 +50,11 @@ const BlogPage = () => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [relatedPosts, setRelatedPosts] = useState([]);
+  const [relatedLinks, setRelatedLinks] = useState({
+    firstColumn: { title: 'RELATED LINKS', content: '' },
+    secondColumn: [],
+    thirdColumn: []
+  });
   // need to change
   const nextBlogPath = relatedPosts[0]?.slug;
   
@@ -116,11 +121,12 @@ const BlogPage = () => {
           content={post.content.rendered}
           carouselImages={carouselImages}
           galleryImages={galleryImages}
+          onRelatedLinksParsed={setRelatedLinks}
         />
       </div>
       <div className="w-[100%] lg:w-[1100px] mx-auto px-4 pb-8">
         <RevealOnScroll>
-          <BlogFooter />
+          <BlogFooter relatedLinks={relatedLinks} />
         </RevealOnScroll>
         <RevealOnScroll>
           <DotSection

@@ -9,17 +9,23 @@ interface WordPressContentRendererProps {
   content: string;
   carouselImages?: Array<{ src: any; alt: string }>;
   galleryImages?: Array<{ src: any; alt: string }>;
+  onRelatedLinksParsed?: (columns: {
+    firstColumn: { title: string; content: string };
+    secondColumn: { title: string; url: string }[];
+    thirdColumn: { title: string; url: string }[];
+  }) => void;
 }
 
 interface ParsedBlock {
-  type: 'columns' | 'image' | 'carousel' | 'gallery' | 'text';
+  type: 'columns' | 'image' | 'carousel' | 'gallery' | 'text' | 'related-links';
   data: any;
 }
 
 const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
   content,
   carouselImages = [],
-  galleryImages = []
+  galleryImages = [],
+  onRelatedLinksParsed
 }) => {
   const [parsedBlocks, setParsedBlocks] = useState<ParsedBlock[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -39,7 +45,70 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
             if (element.classList.contains('wp-block-columns')) {
               // Handle column layout
               const columns = Array.from(element.querySelectorAll('.wp-block-column'));
-              if (columns.length >= 2) {
+              
+              // Check if this is a related links section (by content or class)
+              const isRelatedLinksSection = element.innerHTML.toLowerCase().includes('related links') ||
+                                           element.innerHTML.toLowerCase().includes('related') ||
+                                           element.classList.contains('related-links') ||
+                                           element.querySelector('.related-links');
+              
+              // Check for 3-column layout (related links section)
+              if (columns.length === 3) {
+                const firstColumn = columns[0];
+                const secondColumn = columns[1];
+                const thirdColumn = columns[2];
+                
+                // Parse first column (title/content)
+                const firstColumnTitle = firstColumn.textContent?.trim() || 'RELATED LINKS';
+                const firstColumnContent = firstColumn.innerHTML;
+                
+                // Parse second column (links)
+                const secondColumnLinks: { title: string; url: string }[] = [];
+                const secondColumnLinksElements = Array.from(secondColumn.querySelectorAll('a'));
+                secondColumnLinksElements.forEach(link => {
+                  const title = link.textContent?.trim() || '';
+                  const url = link.getAttribute('href') || '#';
+                  if (title) {
+                    secondColumnLinks.push({ title, url });
+                  }
+                });
+                
+                // Parse third column (links)
+                const thirdColumnLinks: { title: string; url: string }[] = [];
+                const thirdColumnLinksElements = Array.from(thirdColumn.querySelectorAll('a'));
+                thirdColumnLinksElements.forEach(link => {
+                  const title = link.textContent?.trim() || '';
+                  const url = link.getAttribute('href') || '#';
+                  if (title) {
+                    thirdColumnLinks.push({ title, url });
+                  }
+                });
+                
+                // Create the three column objects
+                const columnData = {
+                  firstColumn: {
+                    title: firstColumnTitle,
+                    content: firstColumnContent
+                  },
+                  secondColumn: secondColumnLinks,
+                  thirdColumn: thirdColumnLinks
+                };
+                
+                // If we found any content, create a special block and notify parent
+                if (firstColumnContent || secondColumnLinks.length > 0 || thirdColumnLinks.length > 0) {
+                  blocks.push({
+                    type: 'related-links',
+                    data: {
+                      columns: columnData
+                    }
+                  });
+                  
+                  // Notify parent component about the three columns
+                  if (onRelatedLinksParsed) {
+                    onRelatedLinksParsed(columnData);
+                  }
+                }
+              } else if (columns.length >= 2 && !isRelatedLinksSection) {
                 const leftColumn = columns[0];
                 const rightColumn = columns[1];
                 
@@ -68,6 +137,50 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
                     }
                   }
                 });
+              } else if (columns.length >= 2 && isRelatedLinksSection) {
+                // Handle related links section with 2 columns
+                const firstColumn = columns[0];
+                const secondColumn = columns[1];
+                
+                // Parse first column (title/content)
+                const firstColumnTitle = firstColumn.textContent?.trim() || 'RELATED LINKS';
+                const firstColumnContent = firstColumn.innerHTML;
+                
+                // Parse second column (links)
+                const secondColumnLinks: { title: string; url: string }[] = [];
+                const secondColumnLinksElements = Array.from(secondColumn.querySelectorAll('a'));
+                secondColumnLinksElements.forEach(link => {
+                  const title = link.textContent?.trim() || '';
+                  const url = link.getAttribute('href') || '#';
+                  if (title) {
+                    secondColumnLinks.push({ title, url });
+                  }
+                });
+                
+                // Create the column objects (with empty third column)
+                const columnData = {
+                  firstColumn: {
+                    title: firstColumnTitle,
+                    content: firstColumnContent
+                  },
+                  secondColumn: secondColumnLinks,
+                  thirdColumn: []
+                };
+                
+                // If we found any content, create a special block and notify parent
+                if (firstColumnContent || secondColumnLinks.length > 0) {
+                  blocks.push({
+                    type: 'related-links',
+                    data: {
+                      columns: columnData
+                    }
+                  });
+                  
+                  // Notify parent component about the columns
+                  if (onRelatedLinksParsed) {
+                    onRelatedLinksParsed(columnData);
+                  }
+                }
               }
             } else if (element.tagName === 'FIGURE' && element.classList.contains('wp-block-image')) {
               // Handle images
@@ -232,6 +345,10 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
               </RevealOnScroll>
             </div>
           );
+          
+        case 'related-links':
+          // Don't render this in the main content - it will be handled by BlogFooter
+          return null;
           
         default:
           return null;
