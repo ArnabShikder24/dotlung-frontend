@@ -376,7 +376,7 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
   }
 
   return (
-    <div className="lg:w-[1100px] mx-auto px-4">
+    <div className="lg:w-[1100px] mx-auto pr-4">
       {parsedBlocks.length > 0 ? (
         parsedBlocks.map((block, index) => renderBlock(block, index))
       ) : (
