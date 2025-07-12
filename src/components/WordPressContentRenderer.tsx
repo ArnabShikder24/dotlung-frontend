@@ -312,7 +312,7 @@ const WordPressContentRenderer: React.FC<WordPressContentRendererProps> = ({
                   alt={block.data.alt}
                   width={parseInt(block.data.width) || 800}
                   height={parseInt(block.data.height) || 800}
-                  className="w-full h-auto"
+                  className="w-screen h-auto"
                 />
               </RevealOnScroll>
             </div>
