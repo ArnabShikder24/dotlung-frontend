@@ -23,7 +23,7 @@ const BlogFooter: React.FC<FooterProps> = ({
     <div className="w-full text-white py-8">
       {/* Related Links Section - Only show if there are related links */}
       {relatedLinks && (relatedLinks.secondColumn.length > 0 || relatedLinks.thirdColumn.length > 0) && (
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="px-4 md:px-5">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="font-gilroy text-[.625rem] md:text-[0.75rem] text-secondary mb-4 uppercase">
@@ -31,7 +31,7 @@ const BlogFooter: React.FC<FooterProps> = ({
               </h3>
             </div>
             
-            <div className="space-y-2">
+            <div className="space-y-2 lg:pl-[7rem]">
               {relatedLinks.secondColumn.map((link, index) => (
                 <Link 
                 key={index} 
@@ -45,7 +45,7 @@ const BlogFooter: React.FC<FooterProps> = ({
               ))}
             </div>
             
-            <div className="space-y-2">
+            <div className="space-y-2 lg:pl-[7rem]">
               {relatedLinks.thirdColumn.map((link, index) => (
                 <Link 
                   key={index} 
@@ -63,10 +63,10 @@ const BlogFooter: React.FC<FooterProps> = ({
       )}
       
       {/* Divider */}
-      <div className="border-t border-secondary my-8 mx-4 md:mx-8"></div>
+      <div className="border-t border-secondary my-8 mx-4 md:mx-5"></div>
       
       {/* Social Media Sharing Section */}
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="px-4 md:px-5">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <RevealOnScroll>
@@ -74,7 +74,7 @@ const BlogFooter: React.FC<FooterProps> = ({
             </RevealOnScroll>
           </div>
           
-          <div className="space-y-2 font-gilroy text-[.625rem] md:text-[0.75rem]">
+          <div className="space-y-2 font-gilroy text-[.625rem] md:text-[0.75rem] lg:pl-[7rem]">
             {/* {['FACEBOOK', 'INSTAGRAM', 'LINKEDIN'].map((platform, index) => (
               <Link 
                 key={index} 
@@ -109,7 +109,7 @@ const BlogFooter: React.FC<FooterProps> = ({
           </div>
           
           <RevealOnScroll>
-            <div className="flex justify-start items-start">
+            <div className="flex justify-start items-start lg:pl-[7rem]">
               <RippleButton
                 href="/blog"
                 className="flex items-center text-sm hover:text-secondary transition-colors"
@@ -124,7 +124,7 @@ const BlogFooter: React.FC<FooterProps> = ({
       
       {/* Bottom Divider */}
       <RevealOnScroll>
-      <div className="border-t border-secondary mt-8 mx-4 md:mx-8"></div>
+      <div className="border-t border-secondary mt-8 mx-4 md:mx-5"></div>
       </RevealOnScroll>
     </div>
   );
