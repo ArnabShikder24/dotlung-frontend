@@ -26,7 +26,7 @@ const BlogFooter: React.FC<FooterProps> = ({
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-gilroy text-[.625rem] md:text-[0.75rem] text-secondary mb-4">
+              <h3 className="font-gilroy text-[.625rem] md:text-[0.75rem] text-secondary mb-4 uppercase">
                 {relatedLinks.firstColumn.title}
               </h3>
             </div>
@@ -36,7 +36,7 @@ const BlogFooter: React.FC<FooterProps> = ({
                 <Link 
                 key={index} 
                 href={link.url}
-                className="block font-gilroy text-[.625rem] md:text-[0.75rem] hover:text-secondary transition-colors"
+                className="block font-gilroy text-[.625rem] md:text-[0.75rem] hover:text-secondary transition-colors uppercase"
                 >
                   <RevealOnScrollSpan>
                     {link.title}
@@ -50,7 +50,7 @@ const BlogFooter: React.FC<FooterProps> = ({
                 <Link 
                   key={index} 
                   href={link.url}
-                  className="block font-gilroy text-[.625rem] md:text-[0.75rem] hover:text-secondary transition-colors"
+                  className="block font-gilroy text-[.625rem] md:text-[0.75rem] hover:text-secondary transition-colors uppercase"
                 >
                 <RevealOnScrollSpan>
                   {link.title}
@@ -70,7 +70,7 @@ const BlogFooter: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <RevealOnScroll>
-              <h3 className="font-gilroy text-[.625rem] md:text-[0.75rem] text-secondary">SHARE</h3>
+              <h3 className="font-gilroy text-[.625rem] md:text-[0.75rem] text-secondary uppercase">SHARE</h3>
             </RevealOnScroll>
           </div>
           
@@ -109,7 +109,7 @@ const BlogFooter: React.FC<FooterProps> = ({
           </div>
           
           <RevealOnScroll>
-            <div className="flex justify-end items-start">
+            <div className="flex justify-start items-start">
               <RippleButton
                 href="/blog"
                 className="flex items-center text-sm hover:text-secondary transition-colors"
