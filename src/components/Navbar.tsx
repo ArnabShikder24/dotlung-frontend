@@ -143,7 +143,7 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <nav className="w-full font-gilroy md:hidden flex flex-col items-center relative text-white z-[100]">
         <div className="flex justify-between w-full items-center">
-          <RippleButton className="fixed top-4 left-3 z-[100]" href={PathNames.home}>
+          <RippleButton className="fixed top-14 left-3 z-[100]" href={PathNames.home}>
               <motion.div
               className="absolute w-[17px] h-[17px] bg-primary top-[8px] left-[40px] rounded-full"
               animate={{
@@ -156,12 +156,12 @@ const Navbar = () => {
             />
             <Image src={Logo} alt="Logo" width={50} />
           </RippleButton>
-          <div className="fixed top-3 right-3 z-[100]">
+          <div className="fixed top-12 right-3 z-[100]">
             <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} color="#F64C3E"/>
           </div>
         </div>
 
-        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors flex items-center gap-2 fixed right-[80px] top-[26px]">
+        <Link target="_blank" href="https://www.domestika.org/es/courses/1102-estrategias-de-instagram-para-desarrollo-de-marcas" className="font-gilroy text-white text-[0.75rem] hover:text-secondary transition-colors flex items-center gap-2 fixed right-[80px] top-[62px]">
           LIVE NOW!
           <div className="w-[10px] h-[10px] rounded-full bg-secondary animate-fade-loop" />
           <style jsx>{`
