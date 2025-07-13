@@ -9,6 +9,7 @@ import { cn } from "../lib/cn";
 import RippleButton from "./RippleButton";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import TopAnimateText from "./TopAnimateText";
 
 
 const Navbar = () => {
@@ -72,6 +73,7 @@ const Navbar = () => {
 
   return (
     <>
+      <TopAnimateText />
       {/* Desktop Navbar */}
       <nav className="w-full p-4 font-gilroy mt-2 hidden md:flex justify-between items-center z-[100]">
         <RippleButton  href={PathNames.home} onMouseMove={handleMouseMove} className="fixed">
