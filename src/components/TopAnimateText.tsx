@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function TopAnimateText() {
@@ -6,6 +7,10 @@ export default function TopAnimateText() {
     "NEW Personal Brand Strategy Course!"
   ];
 
+  const links = [
+    "http://bit.ly/dotbranding",
+    "https://www.domestika.org/en/courses/1102-instagram-strategy-for-business-growth"
+  ]
   
   const svgs = [
     (
@@ -58,7 +63,9 @@ export default function TopAnimateText() {
         }`}
       >
         {svgs[index]}
-        {titles[index]}
+        <Link href={links[index]} target="_blank">
+          {titles[index]}
+        </Link>
       </p>
     </div>
   );
