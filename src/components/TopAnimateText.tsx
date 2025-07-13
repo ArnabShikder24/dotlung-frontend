@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
 
 export default function TopAnimateText() {
   const titles = [
-    "Personal Branding Strategy for Social Media",
-    "Instagram Strategy for Business Growth"
+    "Plan Your Instagram Strategy",
+    "Start Your Personal Brand"
   ];
 
   const links = [
-    "https://www.domestika.org/en/courses/1487-personal-branding-strategy-for-social-media?atag=2d170f&utm_medium=affiliates&utm_source=dotlung_2d170f",
-    "https://www.domestika.org/en/courses/1102-instagram-strategy-for-business-growth"
+    "https://www.domestika.org/en/courses/1102-instagram-strategy-for-business-growth",
+    "https://www.domestika.org/en/courses/1487-personal-branding-strategy-for-social-media?atag=2d170f&utm_medium=affiliates&utm_source=dotlung_2d170f"
   ]
   
   // const svgs = [
