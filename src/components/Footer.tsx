@@ -25,10 +25,10 @@ const Footer = () => {
   return (
     <footer className="w-full p-5 mt-5">
       <div className="flex items-center justify-center lg:mb-28">
-        <div className="max-w-3xl flex-1 lg:mx-20  flex justify-center">
-          <div className="flex w-full">
+        <div className="max-w-3xl flex-1 lg:mx-20">
+          <div className="w-full relative">
             <div className="mx-auto w-full">
-              <div className="lg:flex items-center gap-12 justify-between">
+              <div className="lg:flex items-center gap-[90px]">
                 <div className="md:hidden mb-10">
                   <p className="italic text-secondary font-caslon text-[1.3rem] md:text-[1.375rem] mt-4">
                     Don&apos;t be a stranger. Stay in touch!
@@ -43,10 +43,10 @@ const Footer = () => {
                 </div>
                 <div className="text-[0.95rem] font-asty mb-8 md:mb-0">
                   <p className="cursor-pointer hover:text-secondary"><a href="https://wa.me/16613685864" target="_blank">+1 661 368 5864</a></p>
-                <p className="cursor-pointer hover:text-secondary"><a href="mailto:hello@dotlung.com">hello@dotlung.com</a></p>
+                <p className="cursor-pointer hover:text-secondary"><a href="mailto:dragons@dotlung.com">dragons@dotlung.com</a></p>
                 </div>
               </div>
-              <div className="lg:flex gap-4 justify-between mt-3">
+              <div className="lg:flex gap-12 mt-3">
                 <div className="hidden md:block">
                   <p className="italic text-secondary font-caslon text-[1.3rem] md:text-[1.375rem] mt-4">
                     Don&apos;t be a stranger. Stay in touch!
@@ -56,23 +56,23 @@ const Footer = () => {
                   </p>  
                   <EmailInput />
                 </div>
-                <div className="flex flex-col text-[0.75rem] font-gilroy mt-10 lg:mt-4" style={{width:140}}>
+                <div className="flex flex-col text-[0.75rem] font-gilroy mt-10 lg:mt-4 mr-[22px]" style={{width:140}}>
                   <a target="_blank" href="https://www.facebook.com/dotlung.co/?ref=_xav_ig_profile_page_web" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
                     FACEBOOK
                   </a>
-                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
+                  <a target="_blank" href="https://www.instagram.com/dotlung/?hl=en" style={{fontSize:14}} className="hover:text-secondary mb-3.5 uppercase">
                     INSTAGRAM
                   </a>
-                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
+                  <a target="_blank" href="https://www.linkedin.com/in/dotlung/" style={{fontSize:14}} className="hover:text-secondary mb-3.5 uppercase">
                     LINKEDIN
                   </a>
-                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:text-secondary mb-3 uppercase">
+                  <a target="_blank" href="https://www.threads.com/@dotlung" style={{fontSize:14}} className="hover:text-secondary mb-3.5 uppercase">
                     threads
                   </a>
                 </div>
               </div>
             </div>
-              <Image src={model1} alt='' width={250} height={50} className="opacity-[1] h-[11.25rem] hidden lg:block relative top-[14rem] left-10"   />
+              <Image src={model1} alt='' width={200} height={50} className="opacity-[1] h-[12rem] absolute -bottom-24 -right-8"   />
           </div>
         </div>
       </div>
