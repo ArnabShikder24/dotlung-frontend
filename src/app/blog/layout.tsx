@@ -3,11 +3,11 @@ import React from "react";
 import Footer from "../../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Travel / Eat With Dot",
+  title: "Blog",
   description: "Dotlung",
 };
 
-export default function TravelLayout({
+export default function BlogLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
