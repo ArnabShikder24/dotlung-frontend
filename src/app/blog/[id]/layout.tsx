@@ -13,9 +13,10 @@ function slugToTitle(slug: string): string {
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const title = slugToTitle(params.id);
+  const { id } = await params;
+  const title = slugToTitle(id);
   
   return {
     title: title,
