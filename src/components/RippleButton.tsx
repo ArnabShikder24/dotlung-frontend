@@ -110,7 +110,6 @@ const RippleButton = ({
       setTimeout(() => {
         document.body.style.opacity = '1';
         // In a real app, this is where router.push(href) would happen
-        console.log(`Navigating to: ${href}`);
       }, 400);
     }, transitionTime * 0.75);
     
