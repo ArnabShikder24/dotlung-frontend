@@ -93,7 +93,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images }) => {
       <Slider ref={sliderRef} {...settings}>
         {images.map((img, idx) => (
           <div key={idx} className="px-2">
-            <div className="relative aspect-square w-full max-w-[400px] mx-auto">
+            <div className="relative aspect-square w-full max-w-[400px] mx-auto overflow-hidden">
               <Image
                 src={img.src}
                 alt={img.alt}
