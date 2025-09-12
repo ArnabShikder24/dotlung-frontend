@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="container mx-auto mt-10 md:mt-0 overflow-hidden h-[90vh] lg:h-auto">
       <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[100%] lg:h-auto">
-        <div className="flex-1 flex justify-center items-center lg:flex-none">
+        <div className="flex-1 flex justify-center items-center xl:flex-none">
           <Image
             className="w-full scale-[1.4] md:scale-100 md:w-[1000px] -z-20"
             src={dot}

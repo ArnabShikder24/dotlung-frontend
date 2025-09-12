@@ -19,7 +19,7 @@ const WorkWithDot = () => {
   return (
     <div className="container mx-auto overflow-x-hidden mt-20 md:mt-0">
       <div className="flex flex-col justify-between lg:justify-start lg:flex-row items-center font-gilroy h-[90vh] lg:h-[75vh]">
-        <div className="lg:w-[50%] flex-1 flex justify-center items-center lg:flex-none">
+        <div className="lg:w-[50%] flex-1 flex justify-center items-center xl:flex-none">
           <RevealOnScroll className="-z-10 lg:absolute">
             <Image
               className="w-full scale-[1.2] md:scale-100 md:w-[780px] -z-20 hidden lg:block"
