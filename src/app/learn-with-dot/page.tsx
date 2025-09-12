@@ -100,12 +100,6 @@ const LearnWithDot = () => {
       "url": "http://contentisrael.com/"
     },
     {
-      "date": "27 JANUARY 2020",
-      "location": "Soho House",
-      "name": "How to Win at Instagram",
-      "url": "https://dotlung.com/blog/work-with-dot/how-to-win-at-instagram/"
-    },
-    {
       "date": "11 OCTOBER 2019",
       "location": "Milan",
       "name": "Digital Design Days Italy",
@@ -130,40 +124,10 @@ const LearnWithDot = () => {
       "url": "https://www.dmiexpo.com/"
     },
     {
-      "date": "28 MAY 2019",
-      "location": "Mumbai",
-      "name": "Promax Asia",
-      "url": "http://www.promaxasia.tv/"
-    },
-    {
-      "date": "21 MAY 2019",
-      "location": "Barcelona",
-      "name": "Creative.Net",
-      "url": "https://thecreative.net/welcome"
-    },
-    {
-      "date": "20 MAY 2019",
-      "location": "Barcelona",
-      "name": "Imagin Cafe",
-      "url": "https://www.imagin.cafe/web/guest/agenda"
-    },
-    {
       "date": "10 MAY 2019",
       "location": "Malaga",
       "name": "I-COM Global Summit",
       "url": "https://www.i-com.org/"
-    },
-    {
-      "date": "5 MAY 2019",
-      "location": "Thessaloniki",
-      "name": "Thessaloniki Design Week",
-      "url": "#"
-    },
-    {
-      "date": "3 APRIL 2019",
-      "location": "Barcelona",
-      "name": "Entrepreneur Business Live",
-      "url": "#"
     },
     {
       "date": "25 MARCH 2019",
@@ -184,12 +148,6 @@ const LearnWithDot = () => {
       "url": "http://uxsalon.com/"
     },
     {
-      "date": "15 FEBRUARY 2019",
-      "location": "Geneva",
-      "name": "Digital Design Days - Switzerland",
-      "url": "http://ddd.ge/"
-    },
-    {
       "date": "24 NOVEMBER 2018",
       "location": "Antwerp",
       "name": "Us By Night",
@@ -208,12 +166,6 @@ const LearnWithDot = () => {
       "url": "https://www.eventbrite.co.uk/e/entrepreneur-business-live-november-18-tickets-50214891091?aff=erelexpmlt"
     },
     {
-      "date": "7 NOVEMBER 2018",
-      "location": "Lisbon",
-      "name": "Women in Tech Awards",
-      "url": "https://women-in-tech.org/award-categories/"
-    },
-    {
       "date": "29 OCTOBER 2018",
       "location": "Barcelona",
       "name": "David Carson Live on Social Media Mondays!",
@@ -224,30 +176,6 @@ const LearnWithDot = () => {
       "location": "Barcelona",
       "name": "SalesForce.org Higher Ed Summit Horizons",
       "url": "http://www.salesforce.org/events/higher-ed-summit-horizons-2018/"
-    },
-    {
-      "date": "4 OCTOBER 2018",
-      "location": "Barcelona",
-      "name": "FuckUp Nights Barcelona",
-      "url": "https://www.conferize.com/fuckupnightsbarcelona1018/register"
-    },
-    {
-      "date": "18 SEPTEMBER 2018",
-      "location": "Barcelona",
-      "name": "Digital Marketing Strategy for Crowdfunding @RoadAhead",
-      "url": "https://business.facebook.com/events/183389675645238/"
-    },
-    {
-      "date": "24 JULY 2018",
-      "location": "Barcelona",
-      "name": "IGTV y el futuro del Instagram @RoadAhead",
-      "url": "https://roadahead.typeform.com/to/pHMbE9"
-    },
-    {
-      "date": "13 JULY 2018",
-      "location": "Lisbon",
-      "name": "Kinnernet Portugal",
-      "url": "http://kinnernet.pt/"
     },
     {
       "date": "27 JUNE 2018",
@@ -262,22 +190,10 @@ const LearnWithDot = () => {
       "url": "http://vidcon.com/"
     },
     {
-      "date": "14 JUNE 2018",
-      "location": "Barcelona",
-      "name": "Off at Forum @ Parc del Forum",
-      "url": "http://offatforum.com/"
-    },
-    {
       "date": "12 JUNE 2018",
       "location": "New York",
       "name": "Pop Up F5 @ Hilton Midtown",
       "url": "https://www.popupf5.com/"
-    },
-    {
-      "date": "11 JUNE 2018",
-      "location": "New York",
-      "name": "2018 PromaxBDA Conference",
-      "url": "https://promaxbda.org/events/current-events/promaxbda-the-conference-2018"
     },
     {
       "date": "2 JUNE 2018",
@@ -344,12 +260,6 @@ const LearnWithDot = () => {
       "location": "Madrid",
       "name": "The Futur Madrid @neoland",
       "url": "https://www.thefutur.com/"
-    },
-    {
-      "date": "6 MARCH 2018",
-      "location": "Sitges",
-      "name": "Digital 1 to 1",
-      "url": "http://digital1to1spain.clubecommerce.com/"
     },
     {
       "date": "27 FEBRUARY 2018",
